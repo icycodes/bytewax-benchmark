@@ -1,0 +1,7 @@
+{
+  "library_name": "Bytewax",
+  "task_name": "session_window_aggregator",
+  "complexity_level": "multi-step sequential command set",
+  "research_plan_path": "plan.md",
+  "output_dir": "tasks/"
+}

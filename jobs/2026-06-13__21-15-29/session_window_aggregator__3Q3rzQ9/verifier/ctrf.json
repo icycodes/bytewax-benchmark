@@ -1,0 +1,65 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-13T13:23:11.023370+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781356989376,
+            "stop": 1781356991023
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_two_sessions_for_single_user_with_gap_over_threshold",
+                "status": "passed",
+                "duration": 381,
+                "start": 1781356989400,
+                "stop": 1781356989781,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_multiple_users_interleaved_events",
+                "status": "passed",
+                "duration": 415,
+                "start": 1781356989782,
+                "stop": 1781356990197,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_integer_user_id_is_coerced_to_string",
+                "status": "passed",
+                "duration": 409,
+                "start": 1781356990198,
+                "stop": 1781356990607,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_boundary_ten_second_gap_stays_in_same_session",
+                "status": "passed",
+                "duration": 415,
+                "start": 1781356990607,
+                "stop": 1781356991022,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}
