@@ -286,3 +286,9 @@ These high-level evaluation ideas can be expanded into concrete coding tasks to 
 4. [Bytewax Recovery Documentation](https://docs.bytewax.io/stable/guide/concepts/recovery.html): In-depth guide on SQLite recovery initialization, snapshotting, and rescaling.
 5. [Tessl PyPI Bytewax Registry Documentation](https://tessl.io/registry/tessl/pypi-bytewax/0.21.0/files/docs/index.md): Dense API signatures and typing details for Bytewax operators.
 6. [Bytewax Substack - Stream Processing with Python](https://bytewax.substack.com/): Official blog posts on architecture, patterns, and cheatsheets.
+
+
+## Notes for Task Generation
+
+* When a test requires a version check, use `importlib.metadata.version('bytewax')` — the standard way to retrieve installed package versions. Do **not** use `bytewax.__version__`, as Bytewax does not expose a `__version__` attribute.
+
