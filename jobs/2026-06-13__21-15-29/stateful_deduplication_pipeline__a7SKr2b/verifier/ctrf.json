@@ -1,0 +1,92 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-13T13:20:33.356005+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 7,
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781356832915,
+            "stop": 1781356833355
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_bytewax_version_pinned",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781356832929,
+                "stop": 1781356832930,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_pipeline_exits_with_code_zero",
+                "status": "passed",
+                "duration": 419,
+                "start": 1781356832930,
+                "stop": 1781356833349,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_non_empty",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781356833349,
+                "stop": 1781356833351,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_records_have_required_fields",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781356833352,
+                "stop": 1781356833353,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_has_expected_unique_pair_count",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781356833353,
+                "stop": 1781356833354,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_unique_pairs_match_expected",
+                "status": "passed",
+                "duration": 0,
+                "start": 1781356833354,
+                "stop": 1781356833354,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_payload_preserves_first_occurrence",
+                "status": "passed",
+                "duration": 0,
+                "start": 1781356833355,
+                "stop": 1781356833355,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "library_name": "Bytewax",
+  "task_name": "tumbling_window_click_counter",
+  "complexity_level": "multi-step sequential command set",
+  "research_plan_path": "plan.md",
+  "output_dir": "tasks/"
+}

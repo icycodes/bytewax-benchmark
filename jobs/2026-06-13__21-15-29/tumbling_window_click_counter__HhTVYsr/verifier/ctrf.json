@@ -1,0 +1,74 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-13T13:20:45.788254+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781356844749,
+            "stop": 1781356845788
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_dataflow_exits_zero",
+                "status": "passed",
+                "duration": 845,
+                "start": 1781356844762,
+                "stop": 1781356845607,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_exists_and_non_empty",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781356845607,
+                "stop": 1781356845609,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_lines_are_valid_json_objects",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781356845610,
+                "stop": 1781356845611,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_matches_expected_aggregates",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781356845612,
+                "stop": 1781356845613,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_flow_is_module_level_dataflow_instance",
+                "status": "passed",
+                "duration": 173,
+                "start": 1781356845614,
+                "stop": 1781356845787,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

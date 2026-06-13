@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /bootstrap
+plugins: json-ctrf-0.5.2
+collected 5 items
+
+bootstrap/test_initial_state.py::test_project_directory_exists PASSED
+bootstrap/test_initial_state.py::test_bytewax_is_importable PASSED
+bootstrap/test_initial_state.py::test_bytewax_version_is_0_21_1 PASSED
+bootstrap/test_initial_state.py::test_bytewax_run_module_is_available PASSED
+bootstrap/test_initial_state.py::test_bytewax_file_connectors_available PASSED
+
+============================== 5 passed in 0.05s ===============================
