@@ -1,0 +1,5 @@
+{
+  "title": "Bytewax Benchmark",
+  "description": "Performance results of AI coding models on Bytewax tasks, measuring success rate and execution time with high precision.",
+  "github_repo": "https://github.com/icycodes/bytewax-benchmark"
+}
