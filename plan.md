@@ -291,4 +291,4 @@ These high-level evaluation ideas can be expanded into concrete coding tasks to 
 ## Notes for Task Generation
 
 * When a test requires a version check, use `importlib.metadata.version('bytewax')` — the standard way to retrieve installed package versions. Do **not** use `bytewax.__version__`, as Bytewax does not expose a `__version__` attribute.
-
+* When writing final tests, do not assert on Bytewax pipeline stdout/stderr unless strictly necessary. In most cases, asserting that the command exits with code 0 is sufficient.
