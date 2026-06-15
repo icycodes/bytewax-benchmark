@@ -1,0 +1,2 @@
+{"type": "unknown", "data": "Some unknown type event", "timestamp": "2026-06-15T11:03:00Z"}
+{"message": "Missing type field", "timestamp": "2026-06-15T11:04:00Z"}

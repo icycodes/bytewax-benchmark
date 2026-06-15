@@ -1,0 +1,50 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T13:18:12.718350+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781529491984,
+            "stop": 1781529492718
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_run_script_exists",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781529492010,
+                "stop": 1781529492012,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_recovery_pipeline",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 705,
+                "start": 1781529492012,
+                "stop": 1781529492717,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "run_id = 'zr-jtvfmig'\n\n    def test_recovery_pipeline(run_id):\n        # Setup paths\n        input1_path = os.path.join(PROJECT_DIR, \"input1.txt\")\n        output1_path = os.path.join(PROJECT_DIR, \"output1.txt\")\n        input2_path = os.path.join(PROJECT_DIR, \"input2.txt\")\n        output2_path = os.path.join(PROJECT_DIR, \"output2.txt\")\n        recovery_dir = os.path.join(PROJECT_DIR, f\"recovery_data_{run_id}\")\n    \n        # First Run\n        with open(input1_path, \"w\") as f:\n            f.write(\"A,10\\nB,5\\nA,20\\n\")\n    \n        result1 = subprocess.run(\n            [\"bash\", \"run.sh\", input1_path, output1_path, recovery_dir],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n        assert result1.returncode == 0, f\"First run failed with error: {result1.stderr}\\nStdout: {result1.stdout}\"\n    \n        # Verify first output\n        assert os.path.isfile(output1_path), f\"Output file {output1_path} was not created.\"\n        with open(output1_path, \"r\") as f:\n            out1_content = f.read()\n    \n        # The output format is key,running_max. For A, it first sees 10, then 20. B sees 5.\n        assert \"A,10\" in out1_content, f\"Expected 'A,10' in output1.txt, got: {out1_content}\"\n        assert \"B,5\" in out1_content, f\"Expected 'B,5' in output1.txt, got: {out1_content}\"\n        assert \"A,20\" in out1_content, f\"Expected 'A,20' in output1.txt, got: {out1_content}\"\n    \n        # Verify recovery dir exists\n        assert os.path.isdir(recovery_dir), f\"Recovery directory {recovery_dir} was not created.\"\n        sqlite_files = [f for f in os.listdir(recovery_dir) if f.endswith(\".sqlite3\")]\n        assert len(sqlite_files) > 0, f\"No SQLite recovery databases found in {recovery_dir}\"\n    \n        # Second Run (Recovery Test)\n        with open(input2_path, \"w\") as f:\n            f.write(\"A,15\\nB,25\\nC,100\\n\")\n    \n        result2 = subprocess.run(\n            [\"bash\", \"run.sh\", input2_path, output2_path, recovery_dir],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert result2.returncode == 0, f\"Second run failed with error: {result2.stderr}\\nStdout: {result2.stdout}\"\nE       AssertionError: Second run failed with error: thread '<unnamed>' panicked at src/timely.rs:782:37:\nE         Key StateKey(\"0x5a::/home/user/bytewax_recovery/input1.txt\") is not in this worker's routing map; known keys are [StateKey(\"0x5a::/home/user/bytewax_recovery/input2.txt\")]\nE         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\nE         \nE         Traceback (most recent call last):\nE           File \"<frozen runpy>\", line 198, in _run_module_as_main\nE           File \"<frozen runpy>\", line 88, in _run_code\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 355, in <module>\nE             cli_main(**kwargs)\nE         RuntimeError: (src/run.rs:167:13) Key StateKey(\"0x5a::/home/user/bytewax_recovery/input1.txt\") is not in this worker's routing map; known keys are [StateKey(\"0x5a::/home/user/bytewax_recovery/input2.txt\")]\nE         \nE         Stdout: \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['bash', 'run.sh', '/home/user/bytewax_recovery/input2.txt', '/home/user/bytewax_recovery/output...t\") is not in this worker\\'s routing map; known keys are [StateKey(\"0x5a::/home/user/bytewax_recovery/input2.txt\")]\\n').returncode\n\ntests/test_final_state.py:60: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

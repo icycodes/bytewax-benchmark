@@ -1,0 +1,4 @@
+{"type": "metric", "name": "cpu_usage", "value": 72.4, "unit": "percent", "host": "web-01", "ts": "2026-06-15T10:00:02Z"}
+{"type": "metric", "name": "memory_usage", "value": 55.1, "unit": "percent", "host": "web-01", "ts": "2026-06-15T10:00:05Z"}
+{"type": "metric", "name": "request_latency_ms", "value": 142, "host": "api-gw", "ts": "2026-06-15T10:00:09Z"}
+{"type": "metric", "name": "active_connections", "value": 318, "host": "lb-01", "ts": "2026-06-15T10:00:14Z"}

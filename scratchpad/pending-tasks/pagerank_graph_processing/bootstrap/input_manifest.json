@@ -1,7 +1,0 @@
-{
-  "library_name": "Bytewax",
-  "task_name": "pagerank_graph_processing",
-  "complexity_level": "much more complicated task that is not easy for LLM agents to solve and provides only a simple instruction.md",
-  "research_plan_path": "plan.md",
-  "output_dir": "tasks"
-}

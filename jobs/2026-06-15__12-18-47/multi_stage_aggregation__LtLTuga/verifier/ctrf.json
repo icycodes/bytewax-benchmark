@@ -1,0 +1,41 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T12:24:48.424579+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781526288153,
+            "stop": 1781526288424
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution_and_output",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 255,
+                "start": 1781526288169,
+                "stop": 1781526288424,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_pipeline_execution_and_output():\n        \"\"\"Run the Bytewax pipeline and verify the final global aggregation output.\"\"\"\n        result = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.run\", \"pipeline:flow\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n    \n        assert result.returncode == 0, \\\n            f\"Pipeline execution failed with return code {result.returncode}. Stderr: {result.stderr}\"\n    \n>       assert \"('global', 75)\" in result.stdout or \"('global', 75.0)\" in result.stdout, \\\n            f\"Expected final global aggregation result ('global', 75) in stdout, but got: {result.stdout}\"\nE       AssertionError: Expected final global aggregation result ('global', 75) in stdout, but got: ('global', 60)\nE         \nE       assert (\"('global', 75)\" in \"('global', 60)\\n\" or \"('global', 75.0)\" in \"('global', 60)\\n\")\nE        +  where \"('global', 60)\\n\" = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow'], returncode=0, stdout=\"('global', 60)\\n\", stderr='').stdout\nE        +  and   \"('global', 60)\\n\" = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow'], returncode=0, stdout=\"('global', 60)\\n\", stderr='').stdout\n\ntests/test_final_state.py:19: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

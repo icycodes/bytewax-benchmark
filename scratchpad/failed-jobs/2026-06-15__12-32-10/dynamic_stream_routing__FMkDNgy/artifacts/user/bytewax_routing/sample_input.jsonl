@@ -1,0 +1,10 @@
+{"type": "error", "message": "Disk full", "host": "server1"}
+{"type": "metric", "name": "cpu_usage", "value": 87.3, "unit": "percent"}
+{"type": "log", "level": "info", "msg": "Service started"}
+{"type": "error", "message": "Connection timeout", "host": "server2"}
+{"type": "metric", "name": "memory_usage", "value": 62.1, "unit": "percent"}
+{"type": "log", "level": "warn", "msg": "Slow query detected"}
+{"message": "unknown event without type"}
+{"type": "unknown", "data": "something"}
+{"type": "log", "level": "error", "msg": "Failed to connect to database"}
+{"type": "metric", "name": "disk_io", "value": 1234, "unit": "ops/s"}

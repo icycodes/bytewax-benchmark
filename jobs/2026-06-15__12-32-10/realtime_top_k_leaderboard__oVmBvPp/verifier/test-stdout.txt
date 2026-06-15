@@ -1,0 +1,43 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py FF                                             [100%]
+
+=================================== FAILURES ===================================
+________________________ test_leaderboard_script_exists ________________________
+
+    def test_leaderboard_script_exists():
+        """Check that the script was created."""
+>       assert os.path.isfile(SCRIPT_FILE), f"leaderboard.py not found at {SCRIPT_FILE}"
+E       AssertionError: leaderboard.py not found at /home/user/bytewax_project/leaderboard.py
+E       assert False
+E        +  where False = <function isfile at 0x7fa8a8bd8220>('/home/user/bytewax_project/leaderboard.py')
+E        +    where <function isfile at 0x7fa8a8bd8220> = <module 'posixpath' (frozen)>.isfile
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_final_state.py:44: AssertionError
+________________________ test_run_leaderboard_dataflow _________________________
+
+    def test_run_leaderboard_dataflow():
+        """Run the user script and verify the output."""
+        # Run the script
+        result = subprocess.run(
+            ["python3", "leaderboard.py", "--input", "input.jsonl", "--output", "output.json", "--k", "3"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+>       assert result.returncode == 0, f"Script execution failed. stdout: {result.stdout}, stderr: {result.stderr}"
+E       AssertionError: Script execution failed. stdout: , stderr: python3: can't open file '/home/user/bytewax_project/leaderboard.py': [Errno 2] No such file or directory
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['python3', 'leaderboard.py', '--input', 'input.jsonl', '--output', 'output.json', '--k', '3'], ..., stderr="python3: can't open file '/home/user/bytewax_project/leaderboard.py': [Errno 2] No such file or directory\n").returncode
+
+tests/test_final_state.py:55: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_leaderboard_script_exists - AssertionE...
+FAILED tests/test_final_state.py::test_run_leaderboard_dataflow - AssertionEr...
+============================== 2 failed in 0.07s ===============================

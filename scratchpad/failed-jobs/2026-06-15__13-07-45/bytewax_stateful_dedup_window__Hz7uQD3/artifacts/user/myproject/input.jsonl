@@ -1,0 +1,12 @@
+{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:00Z"}
+{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:05Z"}
+{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:11Z"}
+{"user_id": "u1", "event_id": "e2", "timestamp": "2023-01-01T12:00:00Z"}
+{"user_id": "u1", "event_id": "e2", "timestamp": "2023-01-01T12:00:09Z"}
+{"user_id": "u1", "event_id": "e2", "timestamp": "2023-01-01T12:00:11Z"}
+{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:00Z"}
+{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:10Z"}
+{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:10Z"}
+{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:21Z"}
+{"user_id": "u3", "event_id": "e1", "timestamp": "2023-01-01T12:00:00Z"}
+{"user_id": "u3", "event_id": "e2", "timestamp": "2023-01-01T12:00:00Z"}

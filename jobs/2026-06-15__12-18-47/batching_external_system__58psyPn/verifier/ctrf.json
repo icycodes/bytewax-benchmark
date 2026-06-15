@@ -1,0 +1,92 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T12:25:28.370233+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 3,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781526328301,
+            "stop": 1781526328369
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_log_exists_and_contains_success_message",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781526328324,
+                "stop": 1781526328326,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_sqlite_db_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 18,
+                "start": 1781526328326,
+                "stop": 1781526328344,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_sqlite_db_exists():\n        run_id = get_run_id()\n        db_file = os.path.join(PROJECT_DIR, f\"metrics-{run_id}.db\")\n>       assert os.path.isfile(db_file), f\"SQLite database {db_file} does not exist.\"\nE       AssertionError: SQLite database /home/user/bytewax_batching/metrics-zr-58psypn.db does not exist.\nE       assert False\nE        +  where False = <function isfile at 0x7f6d9df78220>('/home/user/bytewax_batching/metrics-zr-58psypn.db')\nE        +    where <function isfile at 0x7f6d9df78220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:23: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_sqlite_db_total_count",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 9,
+                "start": 1781526328344,
+                "stop": 1781526328353,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_sqlite_db_total_count():\n        run_id = get_run_id()\n        db_file = os.path.join(PROJECT_DIR, f\"metrics-{run_id}.db\")\n    \n        result = subprocess.run(\n            [\"sqlite3\", db_file, \"SELECT COUNT(*) FROM device_metrics;\"],\n            capture_output=True, text=True\n        )\n>       assert result.returncode == 0, f\"sqlite3 query failed: {result.stderr}\"\nE       AssertionError: sqlite3 query failed: Error: in prepare, no such table: device_metrics\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['sqlite3', '/home/user/bytewax_batching/metrics-zr-58psypn.db', 'SELECT COUNT(*) FROM device_metrics;'], returncode=1, stdout='', stderr='Error: in prepare, no such table: device_metrics\\n').returncode\n\ntests/test_final_state.py:33: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_sqlite_db_filtered_data",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 9,
+                "start": 1781526328353,
+                "stop": 1781526328362,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_sqlite_db_filtered_data():\n        run_id = get_run_id()\n        db_file = os.path.join(PROJECT_DIR, f\"metrics-{run_id}.db\")\n    \n        result = subprocess.run(\n            [\"sqlite3\", db_file, \"SELECT COUNT(*) FROM device_metrics WHERE device_id = 'dev_01' AND metric_value < 0;\"],\n            capture_output=True, text=True\n        )\n>       assert result.returncode == 0, f\"sqlite3 query failed: {result.stderr}\"\nE       AssertionError: sqlite3 query failed: Error: in prepare, no such table: device_metrics\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['sqlite3', '/home/user/bytewax_batching/metrics-zr-58psypn.db', \"SELECT COUNT(*) FROM device_me...'dev_01' AND metric_value < 0;\"], returncode=1, stdout='', stderr='Error: in prepare, no such table: device_metrics\\n').returncode\n\ntests/test_final_state.py:46: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_source_code_uses_collect_operator",
+                "status": "passed",
+                "duration": 3,
+                "start": 1781526328363,
+                "stop": 1781526328366,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_source_code_uses_executemany",
+                "status": "passed",
+                "duration": 3,
+                "start": 1781526328366,
+                "stop": 1781526328369,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

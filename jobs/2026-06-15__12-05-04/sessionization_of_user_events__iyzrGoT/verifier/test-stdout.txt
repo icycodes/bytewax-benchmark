@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 3 items
+
+tests/test_final_state.py ..F                                            [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_session_metrics _____________________________
+
+    def test_session_metrics():
+        """Verify the exact contents of the output file against expected sessionization logic."""
+        output_file = os.path.join(PROJECT_DIR, "sessions.jsonl")
+    
+        sessions = []
+        with open(output_file, "r") as f:
+            for line in f:
+                if line.strip():
+                    sessions.append(json.loads(line))
+    
+        assert len(sessions) > 0, "The output file sessions.jsonl is empty."
+    
+        # Sort sessions by user_id and then session_start to make assertions deterministic
+        sessions.sort(key=lambda x: (x["user_id"], x["session_start"]))
+    
+        # We expect specific sessions based on the user_events.jsonl generated in the Dockerfile
+        expected_sessions = [
+            {
+                "user_id": "user1",
+                "session_start": "2023-10-01T10:00:00Z",
+                "session_end": "2023-10-01T10:15:00Z",
+                "event_count": 2
+            },
+            {
+                "user_id": "user1",
+                "session_start": "2023-10-01T11:00:00Z",
+                "session_end": "2023-10-01T11:00:00Z",
+                "event_count": 1
+            },
+            {
+                "user_id": "user2",
+                "session_start": "2023-10-01T10:05:00Z",
+                "session_end": "2023-10-01T10:30:00Z",
+                "event_count": 3
+            }
+        ]
+    
+        assert len(sessions) == len(expected_sessions), f"Expected {len(expected_sessions)} sessions, got {len(sessions)}"
+    
+        for i, expected in enumerate(expected_sessions):
+            actual = sessions[i]
+            assert actual["user_id"] == expected["user_id"], f"Expected user_id {expected['user_id']}, got {actual['user_id']}"
+>           assert actual["session_start"] == expected["session_start"], f"Expected session_start {expected['session_start']}, got {actual['session_start']}"
+E           AssertionError: Expected session_start 2023-10-01T10:00:00Z, got 2023-10-01T10:00:00+00:00
+E           assert '2023-10-01T10:00:00+00:00' == '2023-10-01T10:00:00Z'
+E             - 2023-10-01T10:00:00Z
+E             ?                    ^
+E             + 2023-10-01T10:00:00+00:00
+E             ?                    ^^^^^^
+
+tests/test_final_state.py:73: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_dataflow_execution
+PASSED tests/test_final_state.py::test_output_file_exists
+FAILED tests/test_final_state.py::test_session_metrics - AssertionError: Expe...
+========================= 1 failed, 2 passed in 0.32s ==========================

@@ -1,0 +1,3 @@
+{"user_id": "u1", "ad_id": "ad_001", "timestamp": "2026-06-15T10:00:05Z", "device": "mobile"}
+{"user_id": "u2", "ad_id": "ad_002", "timestamp": "2026-06-15T10:01:30Z", "device": "desktop"}
+{"user_id": "u5", "ad_id": "ad_005", "timestamp": "2026-06-15T10:04:00Z", "device": "tablet"}

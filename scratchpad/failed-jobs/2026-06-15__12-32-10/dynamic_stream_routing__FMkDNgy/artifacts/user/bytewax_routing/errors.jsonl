@@ -1,0 +1,2 @@
+{"type": "error", "message": "Disk full", "host": "server1"}
+{"type": "error", "message": "Connection timeout", "host": "server2"}

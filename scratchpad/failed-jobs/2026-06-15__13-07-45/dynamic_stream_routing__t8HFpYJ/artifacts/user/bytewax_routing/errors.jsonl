@@ -1,0 +1,4 @@
+{"type": "error", "message": "Connection refused", "timestamp": "2024-01-01T00:00:01Z"}
+{"type": "error", "message": "Timeout exceeded", "timestamp": "2024-01-01T00:00:04Z"}
+{"type": "error", "message": "Null pointer exception", "timestamp": "2024-01-01T00:00:09Z"}
+{"type": "error", "message": "Segfault in worker", "timestamp": "2024-01-01T00:00:14Z"}

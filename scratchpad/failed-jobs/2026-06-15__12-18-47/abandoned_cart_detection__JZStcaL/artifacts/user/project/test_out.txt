@@ -1,0 +1,2 @@
+{"user_id": "u2", "abandoned_items": ["keyboard"]}
+{"user_id": "u3", "abandoned_items": ["monitor"]}

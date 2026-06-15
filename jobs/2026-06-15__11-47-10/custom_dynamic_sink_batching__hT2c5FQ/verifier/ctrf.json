@@ -1,0 +1,74 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T12:00:32.706708+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781524832379,
+            "stop": 1781524832706
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_directory_files_count",
+                "status": "passed",
+                "duration": 293,
+                "start": 1781524832403,
+                "stop": 1781524832696,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_names",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781524832697,
+                "stop": 1781524832698,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_total_record_count",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781524832698,
+                "stop": 1781524832700,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_file_line_limits",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781524832700,
+                "stop": 1781524832702,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_json_content_and_values",
+                "status": "passed",
+                "duration": 3,
+                "start": 1781524832703,
+                "stop": 1781524832706,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

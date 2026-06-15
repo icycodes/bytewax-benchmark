@@ -1,0 +1,83 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T11:57:31.047007+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781524650968,
+            "stop": 1781524651046
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_log_exists_and_contains_success_message",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781524651014,
+                "stop": 1781524651016,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_sqlite_db_exists",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781524651016,
+                "stop": 1781524651017,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_sqlite_db_total_count",
+                "status": "passed",
+                "duration": 14,
+                "start": 1781524651017,
+                "stop": 1781524651031,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_sqlite_db_filtered_data",
+                "status": "passed",
+                "duration": 5,
+                "start": 1781524651032,
+                "stop": 1781524651037,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_source_code_uses_collect_operator",
+                "status": "passed",
+                "duration": 4,
+                "start": 1781524651038,
+                "stop": 1781524651042,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_source_code_uses_executemany",
+                "status": "passed",
+                "duration": 4,
+                "start": 1781524651042,
+                "stop": 1781524651046,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

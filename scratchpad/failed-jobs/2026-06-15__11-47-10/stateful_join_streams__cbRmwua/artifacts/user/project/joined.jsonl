@@ -1,0 +1,2 @@
+{"user_id": "user1", "impression": {"user_id": "user1", "timestamp": "2026-06-15T11:00:00", "ad_id": "ad1", "campaign_id": "camp1"}, "click": {"user_id": "user1", "timestamp": "2026-06-15T11:05:00", "click_id": "click1"}}
+{"user_id": "user3", "impression": {"user_id": "user3", "timestamp": "2026-06-15T11:02:00", "ad_id": "ad3", "campaign_id": "camp2"}, "click": {"user_id": "user3", "timestamp": "2026-06-15T11:06:00", "click_id": "click2"}}

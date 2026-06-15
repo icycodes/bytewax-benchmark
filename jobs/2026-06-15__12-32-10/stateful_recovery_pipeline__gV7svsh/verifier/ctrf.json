@@ -1,0 +1,59 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T13:00:40.319665+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 0,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781528440055,
+            "stop": 1781528440319
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "failed",
+                "duration": 215,
+                "start": 1781528440086,
+                "stop": 1781528440301,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "@pytest.fixture(scope=\"session\", autouse=True)\n    def setup_and_run_pipeline():\n        \"\"\"Set up the environment and run the Bytewax pipeline.\"\"\"\n        # 1. Clean up previous runs\n        if os.path.exists(OUTPUT_FILE):\n            os.remove(OUTPUT_FILE)\n    \n        if os.path.exists(RECOVERY_DIR):\n            import shutil\n            shutil.rmtree(RECOVERY_DIR)\n    \n        os.makedirs(RECOVERY_DIR, exist_ok=True)\n    \n        # 2. Initialize recovery partitions\n        init_res = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.recovery\", \"recovery_dir\", \"1\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n        assert init_res.returncode == 0, f\"Failed to initialize recovery dir: {init_res.stderr}\"\n    \n        # 3. Create input.jsonl\n        input_data = [\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:10Z\", \"temp\": 10.0},\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:20Z\", \"temp\": 20.0},\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:40Z\", \"temp\": 30.0}\n        ]\n        with open(INPUT_FILE, \"w\") as f:\n            for record in input_data:\n                f.write(json.dumps(record) + \"\\n\")\n    \n        # 4. Run the pipeline\n        run_res = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.run\", \"pipeline:flow\", \"-r\", \"./recovery_dir\", \"-s\", \"1\", \"-b\", \"0\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert run_res.returncode == 0, f\"Bytewax pipeline failed to run: {run_res.stderr}\\nStdout: {run_res.stdout}\"\nE       AssertionError: Bytewax pipeline failed to run: Traceback (most recent call last):\nE           File \"<frozen runpy>\", line 198, in _run_module_as_main\nE           File \"<frozen runpy>\", line 88, in _run_code\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 353, in <module>\nE             kwargs[\"flow\"] = _locate_dataflow(mod_str, attr_str)\nE                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 42, in _locate_dataflow\nE             __import__(module_name)\nE         ModuleNotFoundError: No module named 'pipeline'\nE         \nE         Stdout: \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow', '-r', './recovery_dir', '-s', '1', '-b', '0'], ...n.py\", line 42, in _locate_dataflow\\n    __import__(module_name)\\nModuleNotFoundError: No module named \\'pipeline\\'\\n').returncode\n\ntests/test_final_state.py:51: AssertionError"
+            },
+            {
+                "name": "test_final_state.py::test_first_window_results",
+                "status": "failed",
+                "duration": 8,
+                "start": 1781528440302,
+                "stop": 1781528440310,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "@pytest.fixture(scope=\"session\", autouse=True)\n    def setup_and_run_pipeline():\n        \"\"\"Set up the environment and run the Bytewax pipeline.\"\"\"\n        # 1. Clean up previous runs\n        if os.path.exists(OUTPUT_FILE):\n            os.remove(OUTPUT_FILE)\n    \n        if os.path.exists(RECOVERY_DIR):\n            import shutil\n            shutil.rmtree(RECOVERY_DIR)\n    \n        os.makedirs(RECOVERY_DIR, exist_ok=True)\n    \n        # 2. Initialize recovery partitions\n        init_res = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.recovery\", \"recovery_dir\", \"1\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n        assert init_res.returncode == 0, f\"Failed to initialize recovery dir: {init_res.stderr}\"\n    \n        # 3. Create input.jsonl\n        input_data = [\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:10Z\", \"temp\": 10.0},\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:20Z\", \"temp\": 20.0},\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:40Z\", \"temp\": 30.0}\n        ]\n        with open(INPUT_FILE, \"w\") as f:\n            for record in input_data:\n                f.write(json.dumps(record) + \"\\n\")\n    \n        # 4. Run the pipeline\n        run_res = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.run\", \"pipeline:flow\", \"-r\", \"./recovery_dir\", \"-s\", \"1\", \"-b\", \"0\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert run_res.returncode == 0, f\"Bytewax pipeline failed to run: {run_res.stderr}\\nStdout: {run_res.stdout}\"\nE       AssertionError: Bytewax pipeline failed to run: Traceback (most recent call last):\nE           File \"<frozen runpy>\", line 198, in _run_module_as_main\nE           File \"<frozen runpy>\", line 88, in _run_code\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 353, in <module>\nE             kwargs[\"flow\"] = _locate_dataflow(mod_str, attr_str)\nE                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 42, in _locate_dataflow\nE             __import__(module_name)\nE         ModuleNotFoundError: No module named 'pipeline'\nE         \nE         Stdout: \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow', '-r', './recovery_dir', '-s', '1', '-b', '0'], ...n.py\", line 42, in _locate_dataflow\\n    __import__(module_name)\\nModuleNotFoundError: No module named \\'pipeline\\'\\n').returncode\n\ntests/test_final_state.py:51: AssertionError"
+            },
+            {
+                "name": "test_final_state.py::test_second_window_results",
+                "status": "failed",
+                "duration": 8,
+                "start": 1781528440311,
+                "stop": 1781528440319,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "@pytest.fixture(scope=\"session\", autouse=True)\n    def setup_and_run_pipeline():\n        \"\"\"Set up the environment and run the Bytewax pipeline.\"\"\"\n        # 1. Clean up previous runs\n        if os.path.exists(OUTPUT_FILE):\n            os.remove(OUTPUT_FILE)\n    \n        if os.path.exists(RECOVERY_DIR):\n            import shutil\n            shutil.rmtree(RECOVERY_DIR)\n    \n        os.makedirs(RECOVERY_DIR, exist_ok=True)\n    \n        # 2. Initialize recovery partitions\n        init_res = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.recovery\", \"recovery_dir\", \"1\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n        assert init_res.returncode == 0, f\"Failed to initialize recovery dir: {init_res.stderr}\"\n    \n        # 3. Create input.jsonl\n        input_data = [\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:10Z\", \"temp\": 10.0},\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:20Z\", \"temp\": 20.0},\n            {\"sensor_id\": \"S1\", \"time\": \"2026-01-01T00:00:40Z\", \"temp\": 30.0}\n        ]\n        with open(INPUT_FILE, \"w\") as f:\n            for record in input_data:\n                f.write(json.dumps(record) + \"\\n\")\n    \n        # 4. Run the pipeline\n        run_res = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.run\", \"pipeline:flow\", \"-r\", \"./recovery_dir\", \"-s\", \"1\", \"-b\", \"0\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert run_res.returncode == 0, f\"Bytewax pipeline failed to run: {run_res.stderr}\\nStdout: {run_res.stdout}\"\nE       AssertionError: Bytewax pipeline failed to run: Traceback (most recent call last):\nE           File \"<frozen runpy>\", line 198, in _run_module_as_main\nE           File \"<frozen runpy>\", line 88, in _run_code\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 353, in <module>\nE             kwargs[\"flow\"] = _locate_dataflow(mod_str, attr_str)\nE                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 42, in _locate_dataflow\nE             __import__(module_name)\nE         ModuleNotFoundError: No module named 'pipeline'\nE         \nE         Stdout: \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow', '-r', './recovery_dir', '-s', '1', '-b', '0'], ...n.py\", line 42, in _locate_dataflow\\n    __import__(module_name)\\nModuleNotFoundError: No module named \\'pipeline\\'\\n').returncode\n\ntests/test_final_state.py:51: AssertionError"
+            }
+        ]
+    }
+}

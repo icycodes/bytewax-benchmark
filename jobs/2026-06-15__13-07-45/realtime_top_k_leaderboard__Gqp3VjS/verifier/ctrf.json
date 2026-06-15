@@ -1,0 +1,50 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T13:18:13.792556+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781529493501,
+            "stop": 1781529493792
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_leaderboard_script_exists",
+                "status": "passed",
+                "duration": 3,
+                "start": 1781529493525,
+                "stop": 1781529493528,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_run_leaderboard_dataflow",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 263,
+                "start": 1781529493528,
+                "stop": 1781529493791,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_run_leaderboard_dataflow():\n        \"\"\"Run the user script and verify the output.\"\"\"\n        # Run the script\n        result = subprocess.run(\n            [\"python3\", \"leaderboard.py\", \"--input\", \"input.jsonl\", \"--output\", \"output.json\", \"--k\", \"3\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n        assert result.returncode == 0, f\"Script execution failed. stdout: {result.stdout}, stderr: {result.stderr}\"\n    \n        # Verify the output file exists\n        assert os.path.isfile(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} was not created.\"\n    \n        # Read and verify output content\n        with open(OUTPUT_FILE, \"r\") as f:\n            try:\n                output_data = json.load(f)\n            except json.JSONDecodeError:\n                pytest.fail(\"Output file does not contain valid JSON.\")\n    \n        assert isinstance(output_data, list), \"Output should be a JSON array.\"\n        assert len(output_data) == 3, f\"Expected exactly 3 objects in output, got {len(output_data)}.\"\n    \n        expected_output = [\n            {\"player_id\": \"p4\", \"score\": 300},\n            {\"player_id\": \"p5\", \"score\": 250},\n            {\"player_id\": \"p2\", \"score\": 200}\n        ]\n    \n>       assert output_data == expected_output, f\"Output data does not match expected Top-K leaderboard. Expected: {expected_output}, Got: {output_data}\"\nE       AssertionError: Output data does not match expected Top-K leaderboard. Expected: [{'player_id': 'p4', 'score': 300}, {'player_id': 'p5', 'score': 250}, {'player_id': 'p2', 'score': 200}], Got: [{'player_id': 'p2', 'score': 200}, {'player_id': 'p1', 'score': 150}, {'player_id': 'p3', 'score': 50}]\nE       assert [{'player_id'... 'score': 50}] == [{'player_id'...'score': 200}]\nE         At index 0 diff: {'player_id': 'p2', 'score': 200} != {'player_id': 'p4', 'score': 300}\nE         Use -v to get more diff\n\ntests/test_final_state.py:76: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

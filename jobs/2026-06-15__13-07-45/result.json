@@ -1,0 +1,73 @@
+{
+    "id": "edc9daee-211d-43c2-a3cc-375da297d6c3",
+    "started_at": "2026-06-15T13:07:47.703886",
+    "updated_at": "2026-06-15T13:45:35.408974",
+    "finished_at": "2026-06-15T13:45:35.408974",
+    "n_total_trials": 22,
+    "stats": {
+        "n_completed_trials": 22,
+        "n_errored_trials": 8,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pochi__deepseek-4-pro__pending-tasks": {
+                "n_trials": 22,
+                "n_errors": 8,
+                "metrics": [
+                    {
+                        "mean": 0.5
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "custom_partitioning_data_skew__MXywbqi",
+                            "ohlcv_tumbling_window__BoKTksw",
+                            "robust_checkpointing_recovery__jtVfmiG",
+                            "realtime_top_k_leaderboard__Gqp3VjS",
+                            "fraud_detection_state_machine__FSiPDPZ",
+                            "bytewax_stateful_moving_average__i9T6YdG",
+                            "stream_enrichment_static_dataset__v8FuUo5",
+                            "real_time_apdex_score__PTCTdne",
+                            "stateful_recovery_pipeline__9GmkYK4",
+                            "custom_dynamic_sink_batching__qJ5PGoV",
+                            "streaming_connected_components__FTLDkni"
+                        ],
+                        "1.0": [
+                            "dynamic_stream_routing__t8HFpYJ",
+                            "bytewax_stateful_dedup_window__Hz7uQD3",
+                            "multi_stage_aggregation__iTqFscA",
+                            "batching_external_system__mvoLos3",
+                            "session_window_activity_tracker__M7p2F9b",
+                            "sessionization_of_user_events__TRBYLJa",
+                            "stateful_join_streams__TEvpjEp",
+                            "abandoned_cart_detection__vmp67pA",
+                            "bytewax_stateful_map_time_window__Z3fWJ8v",
+                            "stateful_rate_limiter__jZ6DZtn",
+                            "async_dynamic_source__8fKFQc3"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "robust_checkpointing_recovery__jtVfmiG",
+                        "realtime_top_k_leaderboard__Gqp3VjS",
+                        "stream_enrichment_static_dataset__v8FuUo5",
+                        "session_window_activity_tracker__M7p2F9b",
+                        "sessionization_of_user_events__TRBYLJa",
+                        "real_time_apdex_score__PTCTdne",
+                        "stateful_recovery_pipeline__9GmkYK4",
+                        "abandoned_cart_detection__vmp67pA"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 0,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 367096,
+        "cost_usd": null
+    }
+}

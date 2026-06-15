@@ -1,0 +1,3 @@
+{"user_id": "u1", "events": ["login", "view_item"]}
+{"user_id": "u1", "events": ["add_to_cart"]}
+{"user_id": "u2", "events": ["login", "checkout"]}

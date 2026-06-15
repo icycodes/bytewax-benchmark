@@ -1,0 +1,4 @@
+{"user_id": "u1", "ad_id": "ad_001", "timestamp": "2026-06-15T10:00:00Z", "placement": "homepage"}
+{"user_id": "u2", "ad_id": "ad_002", "timestamp": "2026-06-15T10:01:00Z", "placement": "sidebar"}
+{"user_id": "u3", "ad_id": "ad_003", "timestamp": "2026-06-15T10:02:00Z", "placement": "footer"}
+{"user_id": "u4", "ad_id": "ad_004", "timestamp": "2026-06-15T10:03:00Z", "placement": "homepage"}

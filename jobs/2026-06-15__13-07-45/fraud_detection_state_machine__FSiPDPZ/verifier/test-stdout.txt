@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 3 items
+
+tests/test_final_state.py ..F                                            [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_bytewax_usage ______________________________
+
+    def test_bytewax_usage():
+        """Inspect run.py to ensure bytewax is imported and a stateful operator is used."""
+        assert os.path.exists(RUN_FILE), "run.py does not exist."
+    
+        with open(RUN_FILE, "r") as f:
+            content = f.read()
+    
+        assert "bytewax" in content, "Bytewax is not imported in run.py."
+>       assert "stateful" in content or "fold_window" in content or "reduce_window" in content, \
+            "No stateful operator (e.g., stateful_map, stateful_batch) found in run.py."
+E       AssertionError: No stateful operator (e.g., stateful_map, stateful_batch) found in run.py.
+E       assert ('stateful' in '"""Entry point for the fraud detection Bytewax dataflow.\n\nUsage:\n    python run.py --input input.jsonl --output ou...\n    flow = build_dataflow(args.input, args.output)\n    run_main(flow)\n\n\nif __name__ == "__main__":\n    main()\n' or 'fold_window' in '"""Entry point for the fraud detection Bytewax dataflow.\n\nUsage:\n    python run.py --input input.jsonl --output ou...\n    flow = build_dataflow(args.input, args.output)\n    run_main(flow)\n\n\nif __name__ == "__main__":\n    main()\n' or 'reduce_window' in '"""Entry point for the fraud detection Bytewax dataflow.\n\nUsage:\n    python run.py --input input.jsonl --output ou...\n    flow = build_dataflow(args.input, args.output)\n    run_main(flow)\n\n\nif __name__ == "__main__":\n    main()\n')
+
+tests/test_final_state.py:80: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_run_script_executes_successfully
+PASSED tests/test_final_state.py::test_output_contains_correct_fraud_alerts
+FAILED tests/test_final_state.py::test_bytewax_usage - AssertionError: No sta...
+========================= 1 failed, 2 passed in 0.30s ==========================

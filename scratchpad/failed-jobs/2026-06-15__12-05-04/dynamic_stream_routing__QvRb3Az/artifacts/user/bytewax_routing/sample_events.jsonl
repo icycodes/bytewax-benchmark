@@ -1,0 +1,14 @@
+{"type": "error", "message": "NullPointerException in handler", "service": "auth", "severity": "critical", "ts": "2026-06-15T10:00:01Z"}
+{"type": "metric", "name": "cpu_usage", "value": 72.4, "unit": "percent", "host": "web-01", "ts": "2026-06-15T10:00:02Z"}
+{"type": "log", "level": "INFO", "message": "User login successful", "user_id": "u-001", "ts": "2026-06-15T10:00:03Z"}
+{"type": "error", "message": "Timeout connecting to database", "service": "orders", "severity": "high", "ts": "2026-06-15T10:00:04Z"}
+{"type": "metric", "name": "memory_usage", "value": 55.1, "unit": "percent", "host": "web-01", "ts": "2026-06-15T10:00:05Z"}
+{"type": "log", "level": "WARN", "message": "Disk space below 20%", "host": "db-02", "ts": "2026-06-15T10:00:06Z"}
+{"message": "Heartbeat", "ts": "2026-06-15T10:00:07Z"}
+{"type": "unknown_type", "payload": "some data", "ts": "2026-06-15T10:00:08Z"}
+{"type": "metric", "name": "request_latency_ms", "value": 142, "host": "api-gw", "ts": "2026-06-15T10:00:09Z"}
+{"type": "log", "level": "ERROR", "message": "Failed to parse config", "component": "scheduler", "ts": "2026-06-15T10:00:10Z"}
+{"type": "error", "message": "Out of memory", "service": "worker", "severity": "critical", "ts": "2026-06-15T10:00:11Z"}
+{"type": "log", "level": "DEBUG", "message": "Cache hit for key user:99", "ts": "2026-06-15T10:00:12Z"}
+{"ts": "2026-06-15T10:00:13Z"}
+{"type": "metric", "name": "active_connections", "value": 318, "host": "lb-01", "ts": "2026-06-15T10:00:14Z"}

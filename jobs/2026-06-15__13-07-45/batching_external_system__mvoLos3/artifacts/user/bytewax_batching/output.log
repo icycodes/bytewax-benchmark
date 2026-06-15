@@ -1,0 +1,7 @@
+2026-06-15 13:22:34,815 [INFO] Starting dataflow for run-id=zr-mvolos3
+2026-06-15 13:22:34,815 [INFO] Input: /home/user/bytewax_batching/input.jsonl
+2026-06-15 13:22:34,816 [INFO] Output DB: /home/user/bytewax_batching/metrics-zr-mvolos3.db
+2026-06-15 13:22:34,831 [INFO] SQLite table 'device_metrics' ready at /home/user/bytewax_batching/metrics-zr-mvolos3.db
+2026-06-15 13:22:34,843 [INFO] Inserted 20 rows into device_metrics
+2026-06-15 13:22:34,843 [INFO] SQLite connection closed.
+2026-06-15 13:22:34,844 [INFO] Pipeline finished.

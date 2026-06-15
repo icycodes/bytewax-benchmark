@@ -1,0 +1,50 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T13:23:45.643714+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781529825391,
+            "stop": 1781529825643
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution",
+                "status": "passed",
+                "duration": 217,
+                "start": 1781529825408,
+                "stop": 1781529825625,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_csv_contents",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 17,
+                "start": 1781529825626,
+                "stop": 1781529825643,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_csv_contents():\n        \"\"\"Verify that the output CSV contains the correct moving averages.\"\"\"\n        assert os.path.exists(OUTPUT_CSV), \"output.csv was not created by the pipeline.\"\n    \n        with open(OUTPUT_CSV, \"r\") as f:\n            lines = [line.strip() for line in f if line.strip()]\n    \n        expected_lines = [\n            \"s1,10.00\",\n            \"s2,20.00\",\n            \"s1,12.50\",\n            \"s1,15.00\",\n            \"s2,22.50\",\n            \"s1,20.00\",\n            \"s3,5.00\"\n        ]\n    \n>       assert lines == expected_lines, (\n            f\"Output CSV contents do not match expected moving averages.\\n\"\n            f\"Expected: {expected_lines}\\n\"\n            f\"Got: {lines}\"\n        )\nE       AssertionError: Output CSV contents do not match expected moving averages.\nE         Expected: ['s1,10.00', 's2,20.00', 's1,12.50', 's1,15.00', 's2,22.50', 's1,20.00', 's3,5.00']\nE         Got: ['s1,10.00', 's1,12.50', 's1,15.00', 's1,20.00', 's2,20.00', 's2,22.50', 's3,5.00']\nE       assert ['s1,10.00', ...2,22.50', ...] == ['s1,10.00', ...1,20.00', ...]\nE         At index 1 diff: 's1,12.50' != 's2,20.00'\nE         Use -v to get more diff\n\ntests/test_final_state.py:57: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

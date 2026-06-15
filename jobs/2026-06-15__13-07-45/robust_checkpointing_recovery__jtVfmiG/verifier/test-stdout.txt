@@ -1,0 +1,80 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py .F                                             [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_recovery_pipeline ____________________________
+
+run_id = 'zr-jtvfmig'
+
+    def test_recovery_pipeline(run_id):
+        # Setup paths
+        input1_path = os.path.join(PROJECT_DIR, "input1.txt")
+        output1_path = os.path.join(PROJECT_DIR, "output1.txt")
+        input2_path = os.path.join(PROJECT_DIR, "input2.txt")
+        output2_path = os.path.join(PROJECT_DIR, "output2.txt")
+        recovery_dir = os.path.join(PROJECT_DIR, f"recovery_data_{run_id}")
+    
+        # First Run
+        with open(input1_path, "w") as f:
+            f.write("A,10\nB,5\nA,20\n")
+    
+        result1 = subprocess.run(
+            ["bash", "run.sh", input1_path, output1_path, recovery_dir],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+        assert result1.returncode == 0, f"First run failed with error: {result1.stderr}\nStdout: {result1.stdout}"
+    
+        # Verify first output
+        assert os.path.isfile(output1_path), f"Output file {output1_path} was not created."
+        with open(output1_path, "r") as f:
+            out1_content = f.read()
+    
+        # The output format is key,running_max. For A, it first sees 10, then 20. B sees 5.
+        assert "A,10" in out1_content, f"Expected 'A,10' in output1.txt, got: {out1_content}"
+        assert "B,5" in out1_content, f"Expected 'B,5' in output1.txt, got: {out1_content}"
+        assert "A,20" in out1_content, f"Expected 'A,20' in output1.txt, got: {out1_content}"
+    
+        # Verify recovery dir exists
+        assert os.path.isdir(recovery_dir), f"Recovery directory {recovery_dir} was not created."
+        sqlite_files = [f for f in os.listdir(recovery_dir) if f.endswith(".sqlite3")]
+        assert len(sqlite_files) > 0, f"No SQLite recovery databases found in {recovery_dir}"
+    
+        # Second Run (Recovery Test)
+        with open(input2_path, "w") as f:
+            f.write("A,15\nB,25\nC,100\n")
+    
+        result2 = subprocess.run(
+            ["bash", "run.sh", input2_path, output2_path, recovery_dir],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+>       assert result2.returncode == 0, f"Second run failed with error: {result2.stderr}\nStdout: {result2.stdout}"
+E       AssertionError: Second run failed with error: thread '<unnamed>' panicked at src/timely.rs:782:37:
+E         Key StateKey("0x5a::/home/user/bytewax_recovery/input1.txt") is not in this worker's routing map; known keys are [StateKey("0x5a::/home/user/bytewax_recovery/input2.txt")]
+E         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+E         
+E         Traceback (most recent call last):
+E           File "<frozen runpy>", line 198, in _run_module_as_main
+E           File "<frozen runpy>", line 88, in _run_code
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/run.py", line 355, in <module>
+E             cli_main(**kwargs)
+E         RuntimeError: (src/run.rs:167:13) Key StateKey("0x5a::/home/user/bytewax_recovery/input1.txt") is not in this worker's routing map; known keys are [StateKey("0x5a::/home/user/bytewax_recovery/input2.txt")]
+E         
+E         Stdout: 
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['bash', 'run.sh', '/home/user/bytewax_recovery/input2.txt', '/home/user/bytewax_recovery/output...t") is not in this worker\'s routing map; known keys are [StateKey("0x5a::/home/user/bytewax_recovery/input2.txt")]\n').returncode
+
+tests/test_final_state.py:60: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_run_script_exists
+FAILED tests/test_final_state.py::test_recovery_pipeline - AssertionError: Se...
+========================= 1 failed, 1 passed in 0.73s ==========================

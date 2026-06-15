@@ -1,0 +1,59 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T13:24:08.580867+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781529848279,
+            "stop": 1781529848580
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_run_script_executes_successfully",
+                "status": "passed",
+                "duration": 252,
+                "start": 1781529848302,
+                "stop": 1781529848554,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_contains_correct_fraud_alerts",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781529848554,
+                "stop": 1781529848556,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_bytewax_usage",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 24,
+                "start": 1781529848556,
+                "stop": 1781529848580,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_bytewax_usage():\n        \"\"\"Inspect run.py to ensure bytewax is imported and a stateful operator is used.\"\"\"\n        assert os.path.exists(RUN_FILE), \"run.py does not exist.\"\n    \n        with open(RUN_FILE, \"r\") as f:\n            content = f.read()\n    \n        assert \"bytewax\" in content, \"Bytewax is not imported in run.py.\"\n>       assert \"stateful\" in content or \"fold_window\" in content or \"reduce_window\" in content, \\\n            \"No stateful operator (e.g., stateful_map, stateful_batch) found in run.py.\"\nE       AssertionError: No stateful operator (e.g., stateful_map, stateful_batch) found in run.py.\nE       assert ('stateful' in '\"\"\"Entry point for the fraud detection Bytewax dataflow.\\n\\nUsage:\\n    python run.py --input input.jsonl --output ou...\\n    flow = build_dataflow(args.input, args.output)\\n    run_main(flow)\\n\\n\\nif __name__ == \"__main__\":\\n    main()\\n' or 'fold_window' in '\"\"\"Entry point for the fraud detection Bytewax dataflow.\\n\\nUsage:\\n    python run.py --input input.jsonl --output ou...\\n    flow = build_dataflow(args.input, args.output)\\n    run_main(flow)\\n\\n\\nif __name__ == \"__main__\":\\n    main()\\n' or 'reduce_window' in '\"\"\"Entry point for the fraud detection Bytewax dataflow.\\n\\nUsage:\\n    python run.py --input input.jsonl --output ou...\\n    flow = build_dataflow(args.input, args.output)\\n    run_main(flow)\\n\\n\\nif __name__ == \"__main__\":\\n    main()\\n')\n\ntests/test_final_state.py:80: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

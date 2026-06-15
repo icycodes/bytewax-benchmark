@@ -1,0 +1,8 @@
+{"user_id": "u1", "event_type": "login", "timestamp": 1000}
+{"user_id": "u1", "event_type": "transaction", "amount": 1200, "timestamp": 1010}
+{"user_id": "u1", "event_type": "transaction", "amount": 1500, "timestamp": 1020}
+{"user_id": "u1", "event_type": "transaction", "amount": 2000, "timestamp": 1030}
+{"user_id": "u1", "event_type": "login", "timestamp": 2000}
+{"user_id": "u1", "event_type": "transaction", "amount": 1200, "timestamp": 2010}
+{"user_id": "u1", "event_type": "transaction", "amount": 1500, "timestamp": 2020}
+{"user_id": "u1", "event_type": "transaction", "amount": 2000, "timestamp": 2030}

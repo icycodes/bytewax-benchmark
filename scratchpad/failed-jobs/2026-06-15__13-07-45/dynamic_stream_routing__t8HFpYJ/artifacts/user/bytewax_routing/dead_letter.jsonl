@@ -1,0 +1,3 @@
+{"foo": "bar", "value": 42}
+{"type": "unknown_kind", "data": "something"}
+{"no_type_field": true}

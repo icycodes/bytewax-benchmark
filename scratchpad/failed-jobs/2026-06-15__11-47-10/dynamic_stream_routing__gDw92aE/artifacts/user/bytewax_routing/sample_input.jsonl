@@ -1,0 +1,8 @@
+{"type": "error", "message": "Database connection failed", "timestamp": "2026-06-15T11:00:00Z"}
+{"type": "metric", "name": "cpu_usage", "value": 75.2, "timestamp": "2026-06-15T11:01:00Z"}
+{"type": "log", "level": "info", "message": "Application started", "timestamp": "2026-06-15T11:02:00Z"}
+{"type": "unknown", "data": "Some unknown type event", "timestamp": "2026-06-15T11:03:00Z"}
+{"message": "Missing type field", "timestamp": "2026-06-15T11:04:00Z"}
+{"type": "error", "message": "Null pointer exception", "timestamp": "2026-06-15T11:05:00Z"}
+{"type": "metric", "name": "memory_usage", "value": 45.8, "timestamp": "2026-06-15T11:06:00Z"}
+{"type": "log", "level": "debug", "message": "Fetching user profile", "timestamp": "2026-06-15T11:07:00Z"}

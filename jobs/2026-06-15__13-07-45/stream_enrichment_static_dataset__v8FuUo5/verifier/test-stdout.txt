@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 1 item
+
+tests/test_final_state.py F                                              [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_bytewax_pipeline_output _________________________
+
+    def test_bytewax_pipeline_output():
+        result = subprocess.run(
+            ["python", "-m", "bytewax.run", "enrichment:flow"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+    
+>       assert result.returncode == 0, f"Bytewax pipeline failed with error: {result.stderr}"
+E       AssertionError: Bytewax pipeline failed with error: thread '<unnamed>' panicked at src/operators.rs:764:33:
+E         Box<dyn Any>
+E         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+E         
+E         Traceback (most recent call last):
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py", line 1121, in on_batch
+E             value_timestamp, watermark = self.clock.on_item(value)
+E                                          ^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py", line 265, in on_item
+E             value_event_timestamp = self.timestamp_getter(value)
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "/home/user/bytewax_project/enrichment.py", line 48, in _parse_timestamp
+E             ts = txn["timestamp"]
+E                  ~~~^^^^^^^^^^^^^
+E         TypeError: 'float' object is not subscriptable
+E         
+E         The above exception was the direct cause of the following exception:
+E         
+E         Traceback (most recent call last):
+E           File "<frozen runpy>", line 198, in _run_module_as_main
+E           File "<frozen runpy>", line 88, in _run_code
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/run.py", line 355, in <module>
+E             cli_main(**kwargs)
+E         bytewax.errors.BytewaxRuntimeError: (src/operators.rs:786:50): error calling `StatefulBatchLogic.on_batch` in step "enrichment.windowed_revenue.window.stateful_batch" for key "books"
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'enrichment:flow'], returncode=1, stdout='', stderr='thread \'<u...r calling `StatefulBatchLogic.on_batch` in step "enrichment.windowed_revenue.window.stateful_batch" for key "books"\n').returncode
+
+tests/test_final_state.py:38: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_bytewax_pipeline_output - AssertionErr...
+============================== 1 failed in 0.30s ===============================

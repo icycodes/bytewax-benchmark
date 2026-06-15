@@ -1,0 +1,73 @@
+{
+    "id": "36e2bd48-1ba0-41a2-9fc9-1c0cf5ab6fc3",
+    "started_at": "2026-06-15T12:32:12.776089",
+    "updated_at": "2026-06-15T13:07:43.170535",
+    "finished_at": "2026-06-15T13:07:43.170535",
+    "n_total_trials": 22,
+    "stats": {
+        "n_completed_trials": 22,
+        "n_errored_trials": 7,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pochi__glm-5.1__pending-tasks": {
+                "n_trials": 21,
+                "n_errors": 7,
+                "metrics": [
+                    {
+                        "mean": 0.6818181818181818
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "custom_partitioning_data_skew__u53bwpU",
+                            "ohlcv_tumbling_window__KsttnFQ",
+                            "realtime_top_k_leaderboard__oVmBvPp",
+                            "stream_enrichment_static_dataset__Jtsqp2s",
+                            "real_time_apdex_score__v3cDaPR",
+                            "stateful_recovery_pipeline__gV7svsh"
+                        ],
+                        "1.0": [
+                            "dynamic_stream_routing__FMkDNgy",
+                            "bytewax_stateful_dedup_window__7vEv6ro",
+                            "fraud_detection_state_machine__FCCtbNU",
+                            "bytewax_stateful_moving_average__aogwPVS",
+                            "multi_stage_aggregation__uuGN3pb",
+                            "batching_external_system__EtwqW9n",
+                            "session_window_activity_tracker__DZM5LPD",
+                            "sessionization_of_user_events__NnSh4Jo",
+                            "custom_dynamic_sink_batching__xmFP6Kp",
+                            "stateful_join_streams__U4TBC5x",
+                            "abandoned_cart_detection__K4uQnWg",
+                            "bytewax_stateful_map_time_window__wEinakG",
+                            "stateful_rate_limiter__hdwaxpR",
+                            "streaming_connected_components__iZmNWqD",
+                            "async_dynamic_source__Bnmqg47"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "ohlcv_tumbling_window__KsttnFQ",
+                        "realtime_top_k_leaderboard__oVmBvPp",
+                        "fraud_detection_state_machine__FCCtbNU",
+                        "stream_enrichment_static_dataset__Jtsqp2s",
+                        "real_time_apdex_score__v3cDaPR",
+                        "stateful_recovery_pipeline__gV7svsh"
+                    ],
+                    "NonZeroAgentExitCodeError": [
+                        "robust_checkpointing_recovery__fD8Lcna"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 0,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 418874,
+        "cost_usd": null
+    }
+}

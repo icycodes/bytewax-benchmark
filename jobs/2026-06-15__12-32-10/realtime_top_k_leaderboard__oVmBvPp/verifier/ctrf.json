@@ -1,0 +1,53 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T12:42:40.045939+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781527359963,
+            "stop": 1781527360045
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_leaderboard_script_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 22,
+                "start": 1781527359994,
+                "stop": 1781527360016,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_leaderboard_script_exists():\n        \"\"\"Check that the script was created.\"\"\"\n>       assert os.path.isfile(SCRIPT_FILE), f\"leaderboard.py not found at {SCRIPT_FILE}\"\nE       AssertionError: leaderboard.py not found at /home/user/bytewax_project/leaderboard.py\nE       assert False\nE        +  where False = <function isfile at 0x7fa8a8bd8220>('/home/user/bytewax_project/leaderboard.py')\nE        +    where <function isfile at 0x7fa8a8bd8220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:44: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_run_leaderboard_dataflow",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 29,
+                "start": 1781527360016,
+                "stop": 1781527360045,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_run_leaderboard_dataflow():\n        \"\"\"Run the user script and verify the output.\"\"\"\n        # Run the script\n        result = subprocess.run(\n            [\"python3\", \"leaderboard.py\", \"--input\", \"input.jsonl\", \"--output\", \"output.json\", \"--k\", \"3\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert result.returncode == 0, f\"Script execution failed. stdout: {result.stdout}, stderr: {result.stderr}\"\nE       AssertionError: Script execution failed. stdout: , stderr: python3: can't open file '/home/user/bytewax_project/leaderboard.py': [Errno 2] No such file or directory\nE         \nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['python3', 'leaderboard.py', '--input', 'input.jsonl', '--output', 'output.json', '--k', '3'], ..., stderr=\"python3: can't open file '/home/user/bytewax_project/leaderboard.py': [Errno 2] No such file or directory\\n\").returncode\n\ntests/test_final_state.py:55: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

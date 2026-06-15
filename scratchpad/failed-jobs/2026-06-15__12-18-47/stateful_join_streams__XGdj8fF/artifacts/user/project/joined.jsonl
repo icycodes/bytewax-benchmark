@@ -1,0 +1,2 @@
+{"user_id": "u2", "impression": {"user_id": "u2", "ad_id": "a2"}, "click": {"user_id": "u2", "click_time": "10:00"}}
+{"user_id": "u3", "impression": {"user_id": "u3", "ad_id": "a3"}, "click": {"user_id": "u3", "click_time": "10:05"}}

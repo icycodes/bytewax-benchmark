@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 5 items
+
+tests/test_final_state.py .....                                          [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_output_directory_files_count
+PASSED tests/test_final_state.py::test_output_file_names
+PASSED tests/test_final_state.py::test_total_record_count
+PASSED tests/test_final_state.py::test_file_line_limits
+PASSED tests/test_final_state.py::test_json_content_and_values
+============================== 5 passed in 0.32s ===============================

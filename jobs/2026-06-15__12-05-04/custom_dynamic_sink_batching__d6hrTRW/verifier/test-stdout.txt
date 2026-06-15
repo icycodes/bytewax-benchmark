@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 5 items
+
+tests/test_final_state.py ....F                                          [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_json_content_and_values _________________________
+
+    def test_json_content_and_values():
+        """Verify JSON content, min/max values, and worker distribution."""
+        values = []
+        workers = set()
+    
+        for filepath in glob.glob(os.path.join(OUT_DIR, "*.jsonl")):
+            with open(filepath, "r") as f:
+                for line in f:
+                    record = json.loads(line.strip())
+                    values.append(record["value"])
+                    workers.add(record["worker"])
+    
+        values.sort()
+        assert len(values) > 0, "No records found to check values."
+        assert values[0] == 0, f"Expected minimum value 0, found {values[0]}."
+        assert values[-1] == 199, f"Expected maximum value 199, found {values[-1]}."
+>       assert len(workers) >= 2, f"Expected data to be distributed across multiple workers, but only found workers: {workers}."
+E       AssertionError: Expected data to be distributed across multiple workers, but only found workers: {0}.
+E       assert 1 >= 2
+E        +  where 1 = len({0})
+
+tests/test_final_state.py:77: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_output_directory_files_count
+PASSED tests/test_final_state.py::test_output_file_names
+PASSED tests/test_final_state.py::test_total_record_count
+PASSED tests/test_final_state.py::test_file_line_limits
+FAILED tests/test_final_state.py::test_json_content_and_values - AssertionErr...
+========================= 1 failed, 4 passed in 0.32s ==========================

@@ -1,0 +1,4 @@
+{"type": "log", "level": "INFO", "message": "User login successful", "user_id": "u-001", "ts": "2026-06-15T10:00:03Z"}
+{"type": "log", "level": "WARN", "message": "Disk space below 20%", "host": "db-02", "ts": "2026-06-15T10:00:06Z"}
+{"type": "log", "level": "ERROR", "message": "Failed to parse config", "component": "scheduler", "ts": "2026-06-15T10:00:10Z"}
+{"type": "log", "level": "DEBUG", "message": "Cache hit for key user:99", "ts": "2026-06-15T10:00:12Z"}

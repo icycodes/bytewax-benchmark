@@ -1,0 +1,5 @@
+{"user_id": "u1", "timestamp": "2023-01-01T10:00:00Z", "event_type": "login"}
+{"user_id": "u1", "timestamp": "2023-01-01T10:00:02Z", "event_type": "view_item"}
+{"user_id": "u1", "timestamp": "2023-01-01T10:00:08Z", "event_type": "add_to_cart"}
+{"user_id": "u2", "timestamp": "2023-01-01T10:00:01Z", "event_type": "login"}
+{"user_id": "u2", "timestamp": "2023-01-01T10:00:05Z", "event_type": "checkout"}

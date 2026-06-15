@@ -1,0 +1,53 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T12:18:33.021530+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781525912983,
+            "stop": 1781525913021
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 16,
+                "start": 1781525913000,
+                "stop": 1781525913016,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_file_exists():\n        run_id = get_run_id()\n        output_file = os.path.join(PROJECT_DIR, f\"output_events_{run_id}.jsonl\")\n>       assert os.path.isfile(output_file), f\"Output file {output_file} does not exist.\"\nE       AssertionError: Output file /home/user/graph_pipeline/output_events_zr-eto9dpf.jsonl does not exist.\nE       assert False\nE        +  where False = <function isfile at 0x7fd91e018220>('/home/user/graph_pipeline/output_events_zr-eto9dpf.jsonl')\nE        +    where <function isfile at 0x7fd91e018220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:16: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_contents",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 4,
+                "start": 1781525913017,
+                "stop": 1781525913021,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_file_contents():\n        run_id = get_run_id()\n        output_file = os.path.join(PROJECT_DIR, f\"output_events_{run_id}.jsonl\")\n    \n>       with open(output_file, \"r\", encoding=\"utf-8\") as f:\nE       FileNotFoundError: [Errno 2] No such file or directory: '/home/user/graph_pipeline/output_events_zr-eto9dpf.jsonl'\n\ntests/test_final_state.py:22: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}

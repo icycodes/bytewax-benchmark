@@ -1,0 +1,4 @@
+{"sensor_id": "S1", "window_start": "2025-12-31T23:59:30Z", "window_end": "2026-01-01T00:00:30Z", "mean": 20.0, "stddev": 0.0}
+{"sensor_id": "S1", "window_start": "2026-01-01T00:00:00Z", "window_end": "2026-01-01T00:01:00Z", "mean": 21.0, "stddev": 1.0}
+{"sensor_id": "S1", "window_start": "2026-01-01T00:00:30Z", "window_end": "2026-01-01T00:01:30Z", "mean": 23.0, "stddev": 1.0}
+{"sensor_id": "S1", "window_start": "2026-01-01T00:01:00Z", "window_end": "2026-01-01T00:02:00Z", "mean": 24.0, "stddev": 0.0}

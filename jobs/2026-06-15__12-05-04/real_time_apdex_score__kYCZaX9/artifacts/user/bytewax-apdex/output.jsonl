@@ -1,0 +1,4 @@
+{"window_start": "2023-10-01T10:00:00Z", "service": "auth", "apdex_score": 0.7}
+{"window_start": "2023-10-01T10:00:00Z", "service": "payments", "apdex_score": 0.62}
+{"window_start": "2023-10-01T10:00:10Z", "service": "auth", "apdex_score": 0.62}
+{"window_start": "2023-10-01T10:00:10Z", "service": "payments", "apdex_score": 0.83}

@@ -1,0 +1,2 @@
+{"type": "log", "level": "info", "message": "Application started", "timestamp": "2026-06-15T11:02:00Z"}
+{"type": "log", "level": "debug", "message": "Fetching user profile", "timestamp": "2026-06-15T11:07:00Z"}

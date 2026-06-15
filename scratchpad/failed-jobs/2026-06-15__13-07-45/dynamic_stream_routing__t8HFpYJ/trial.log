@@ -1,0 +1,83 @@
+Skipping image OS validation for hb__dynamic_stream_routing: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-t8hfpyj > /logs/artifacts/run-id && echo dynamic_stream_routing__t8HFpYJ > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model deepseek/deepseek-4-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Bytewax Dynamic Stream Routing
+
+## Background
+Build a Bytewax stream processing dataflow that reads JSON events and dynamically routes them to multiple different output sinks based on the payload content.
+
+## Requirements
+- Implement a Python script that runs a Bytewax dataflow.
+- The dataflow should read a JSONL file containing events.
+- Each event is a JSON object. The dataflow must route the events into four different categories based on the `type` field:
+  - `error`: Events with `"type": "error"`
+  - `metric`: Events with `"type": "metric"`
+  - `log`: Events with `"type": "log"`
+  - Dead letter: Events missing the `type` field or having an unknown `type`.
+- The dataflow must write the categorized events into four distinct output JSONL files.
+- You must use Bytewax operators (e.g., `branch` or `filter`) to achieve this routing.
+
+## Implementation Hints
+- Use Bytewax's `FileSource` or a custom input connector to read the JSONL file.
+- In Bytewax v0.18+, you can branch streams or apply multiple `filter` operators to the same upstream to route data to multiple downstream branches.
+- Use `FileSink` or standard Python file I/O within a custom sink to write the output files.
+- Parse the JSON strings into Python dictionaries to inspect the `type` field, then route them accordingly, and serialize them back to JSON strings before writing to the sinks.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax_routing
+- Command: `python run.py --input <input_file>`
+- The command must read the specified `<input_file>`.
+- Expected output files in the project directory after execution:
+  - `errors.jsonl`
+  - `metrics.jsonl`
+  - `logs.jsonl`
+  - `dead_letter.jsonl`
+- Each output file must contain only the events corresponding to its category, preserving the original JSON object structure, one per line.
+
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured

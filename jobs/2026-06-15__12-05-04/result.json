@@ -1,0 +1,62 @@
+{
+    "id": "fe006e37-b5ef-4612-b423-3158acec1b43",
+    "started_at": "2026-06-15T12:05:06.554877",
+    "updated_at": "2026-06-15T12:18:44.791937",
+    "finished_at": "2026-06-15T12:18:44.791937",
+    "n_total_trials": 22,
+    "stats": {
+        "n_completed_trials": 22,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pochi__claude-4-6-sonnet__pending-tasks": {
+                "n_trials": 22,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.7272727272727273
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "custom_partitioning_data_skew__XFKv4nu",
+                            "ohlcv_tumbling_window__Ju6JxTS",
+                            "bytewax_stateful_moving_average__UNQX3Vy",
+                            "sessionization_of_user_events__iyzrGoT",
+                            "custom_dynamic_sink_batching__d6hrTRW",
+                            "streaming_connected_components__eto9DpF"
+                        ],
+                        "1.0": [
+                            "dynamic_stream_routing__QvRb3Az",
+                            "robust_checkpointing_recovery__9jCjwNK",
+                            "realtime_top_k_leaderboard__2CZEPAU",
+                            "bytewax_stateful_dedup_window__mMDXqNr",
+                            "fraud_detection_state_machine__QRuhxeY",
+                            "stream_enrichment_static_dataset__rqVTj7D",
+                            "multi_stage_aggregation__PYUEyqS",
+                            "batching_external_system__7Ag2VcD",
+                            "session_window_activity_tracker__G7Pxr5C",
+                            "real_time_apdex_score__kYCZaX9",
+                            "stateful_recovery_pipeline__VwYKxQt",
+                            "stateful_join_streams__jpfXA6v",
+                            "abandoned_cart_detection__CubZ9GQ",
+                            "bytewax_stateful_map_time_window__LdK3ips",
+                            "stateful_rate_limiter__Tr9QTva",
+                            "async_dynamic_source__UfayozB"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 0,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 651519,
+        "cost_usd": null
+    }
+}

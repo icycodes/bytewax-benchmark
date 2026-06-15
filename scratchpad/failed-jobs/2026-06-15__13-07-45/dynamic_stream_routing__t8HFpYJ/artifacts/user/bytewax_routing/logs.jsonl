@@ -1,0 +1,4 @@
+{"type": "log", "level": "INFO", "message": "Service started", "timestamp": "2024-01-01T00:00:03Z"}
+{"type": "log", "level": "WARN", "message": "Disk space low", "timestamp": "2024-01-01T00:00:05Z"}
+{"type": "log", "level": "ERROR", "message": "Unexpected shutdown", "timestamp": "2024-01-01T00:00:08Z"}
+{"type": "log", "level": "DEBUG", "message": "Processing request", "timestamp": "2024-01-01T00:00:10Z"}

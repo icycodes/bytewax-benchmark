@@ -1,0 +1,2 @@
+{"user_id": "u1", "impression": {"user_id": "u1", "ad_id": "ad_001", "timestamp": "2026-06-15T10:00:00Z", "placement": "homepage"}, "click": {"user_id": "u1", "ad_id": "ad_001", "timestamp": "2026-06-15T10:00:05Z", "device": "mobile"}}
+{"user_id": "u2", "impression": {"user_id": "u2", "ad_id": "ad_002", "timestamp": "2026-06-15T10:01:00Z", "placement": "sidebar"}, "click": {"user_id": "u2", "ad_id": "ad_002", "timestamp": "2026-06-15T10:01:30Z", "device": "desktop"}}

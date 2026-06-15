@@ -1,0 +1,5 @@
+{"type": "error", "msg": "failed"}
+{"type": "metric", "value": 10}
+{"type": "log", "msg": "info"}
+{"type": "unknown", "data": "what"}
+{"msg": "no type"}

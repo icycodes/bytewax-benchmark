@@ -1,0 +1,15 @@
+{"type": "error", "message": "Connection refused", "timestamp": "2024-01-01T00:00:01Z"}
+{"type": "metric", "name": "cpu_usage", "value": 85.5, "timestamp": "2024-01-01T00:00:02Z"}
+{"type": "log", "level": "INFO", "message": "Service started", "timestamp": "2024-01-01T00:00:03Z"}
+{"type": "error", "message": "Timeout exceeded", "timestamp": "2024-01-01T00:00:04Z"}
+{"type": "log", "level": "WARN", "message": "Disk space low", "timestamp": "2024-01-01T00:00:05Z"}
+{"type": "metric", "name": "mem_usage", "value": 62.1, "timestamp": "2024-01-01T00:00:06Z"}
+{"type": "metric", "name": "disk_io", "value": 120.3, "timestamp": "2024-01-01T00:00:07Z"}
+{"type": "log", "level": "ERROR", "message": "Unexpected shutdown", "timestamp": "2024-01-01T00:00:08Z"}
+{"type": "error", "message": "Null pointer exception", "timestamp": "2024-01-01T00:00:09Z"}
+{"type": "log", "level": "DEBUG", "message": "Processing request", "timestamp": "2024-01-01T00:00:10Z"}
+{"foo": "bar", "value": 42}
+{"type": "unknown_kind", "data": "something"}
+{"type": "metric", "name": "requests_per_sec", "value": 500, "timestamp": "2024-01-01T00:00:12Z"}
+{"no_type_field": true}
+{"type": "error", "message": "Segfault in worker", "timestamp": "2024-01-01T00:00:14Z"}

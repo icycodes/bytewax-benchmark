@@ -1,0 +1,9 @@
+{"user_id": "user_a", "timestamp": 0.0, "cost": 5.0, "allowed": true}
+{"user_id": "user_a", "timestamp": 0.5, "cost": 5.0, "allowed": true}
+{"user_id": "user_a", "timestamp": 1.0, "cost": 5.0, "allowed": false}
+{"user_id": "user_b", "timestamp": 0.0, "cost": 3.0, "allowed": true}
+{"user_id": "user_b", "timestamp": 0.2, "cost": 8.0, "allowed": false}
+{"user_id": "user_a", "timestamp": 1.5, "cost": 10.0, "allowed": false}
+{"user_id": "user_a", "timestamp": 10.0, "cost": -1.0, "allowed": true}
+{"user_id": "user_a", "timestamp": 10.1, "cost": 10.0, "allowed": true}
+{"user_id": "user_a", "timestamp": 10.2, "cost": 1.0, "allowed": false}

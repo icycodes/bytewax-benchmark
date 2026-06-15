@@ -1,0 +1,3 @@
+{"type": "metric", "name": "cpu_usage", "value": 87.3, "unit": "percent"}
+{"type": "metric", "name": "memory_usage", "value": 62.1, "unit": "percent"}
+{"type": "metric", "name": "disk_io", "value": 1234, "unit": "ops/s"}

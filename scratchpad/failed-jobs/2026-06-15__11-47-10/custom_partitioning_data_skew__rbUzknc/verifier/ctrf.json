@@ -1,0 +1,62 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T11:50:10.268598+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 1,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781524209988,
+            "stop": 1781524210268
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_run_dataflow",
+                "status": "passed",
+                "duration": 237,
+                "start": 1781524210008,
+                "stop": 1781524210245,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_line_count",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 18,
+                "start": 1781524210245,
+                "stop": 1781524210263,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_file_line_count():\n        \"\"\"Verify the output file contains all the original lines.\"\"\"\n        input_file = os.path.join(PROJECT_DIR, \"input.jsonl\")\n        output_file = os.path.join(PROJECT_DIR, \"output.jsonl\")\n    \n>       assert os.path.isfile(output_file), \"output.jsonl was not created.\"\nE       AssertionError: output.jsonl was not created.\nE       assert False\nE        +  where False = <function isfile at 0x7f81d3a14220>('/home/user/myproject/output.jsonl')\nE        +    where <function isfile at 0x7f81d3a14220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:30: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_content_matches",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 5,
+                "start": 1781524210263,
+                "stop": 1781524210268,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_file_content_matches():\n        \"\"\"Verify the content of the output file matches the input file.\"\"\"\n        input_file = os.path.join(PROJECT_DIR, \"input.jsonl\")\n        output_file = os.path.join(PROJECT_DIR, \"output.jsonl\")\n    \n>       assert os.path.isfile(output_file), \"output.jsonl was not created.\"\nE       AssertionError: output.jsonl was not created.\nE       assert False\nE        +  where False = <function isfile at 0x7f81d3a14220>('/home/user/myproject/output.jsonl')\nE        +    where <function isfile at 0x7f81d3a14220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:46: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

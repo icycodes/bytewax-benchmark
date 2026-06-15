@@ -1,0 +1,65 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 6 items
+
+tests/test_final_state.py .FFF..                                         [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_sqlite_db_exists _____________________________
+
+    def test_sqlite_db_exists():
+        run_id = get_run_id()
+        db_file = os.path.join(PROJECT_DIR, f"metrics-{run_id}.db")
+>       assert os.path.isfile(db_file), f"SQLite database {db_file} does not exist."
+E       AssertionError: SQLite database /home/user/bytewax_batching/metrics-zr-58psypn.db does not exist.
+E       assert False
+E        +  where False = <function isfile at 0x7f6d9df78220>('/home/user/bytewax_batching/metrics-zr-58psypn.db')
+E        +    where <function isfile at 0x7f6d9df78220> = <module 'posixpath' (frozen)>.isfile
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_final_state.py:23: AssertionError
+__________________________ test_sqlite_db_total_count __________________________
+
+    def test_sqlite_db_total_count():
+        run_id = get_run_id()
+        db_file = os.path.join(PROJECT_DIR, f"metrics-{run_id}.db")
+    
+        result = subprocess.run(
+            ["sqlite3", db_file, "SELECT COUNT(*) FROM device_metrics;"],
+            capture_output=True, text=True
+        )
+>       assert result.returncode == 0, f"sqlite3 query failed: {result.stderr}"
+E       AssertionError: sqlite3 query failed: Error: in prepare, no such table: device_metrics
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['sqlite3', '/home/user/bytewax_batching/metrics-zr-58psypn.db', 'SELECT COUNT(*) FROM device_metrics;'], returncode=1, stdout='', stderr='Error: in prepare, no such table: device_metrics\n').returncode
+
+tests/test_final_state.py:33: AssertionError
+_________________________ test_sqlite_db_filtered_data _________________________
+
+    def test_sqlite_db_filtered_data():
+        run_id = get_run_id()
+        db_file = os.path.join(PROJECT_DIR, f"metrics-{run_id}.db")
+    
+        result = subprocess.run(
+            ["sqlite3", db_file, "SELECT COUNT(*) FROM device_metrics WHERE device_id = 'dev_01' AND metric_value < 0;"],
+            capture_output=True, text=True
+        )
+>       assert result.returncode == 0, f"sqlite3 query failed: {result.stderr}"
+E       AssertionError: sqlite3 query failed: Error: in prepare, no such table: device_metrics
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['sqlite3', '/home/user/bytewax_batching/metrics-zr-58psypn.db', "SELECT COUNT(*) FROM device_me...'dev_01' AND metric_value < 0;"], returncode=1, stdout='', stderr='Error: in prepare, no such table: device_metrics\n').returncode
+
+tests/test_final_state.py:46: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_output_log_exists_and_contains_success_message
+PASSED tests/test_final_state.py::test_source_code_uses_collect_operator
+PASSED tests/test_final_state.py::test_source_code_uses_executemany
+FAILED tests/test_final_state.py::test_sqlite_db_exists - AssertionError: SQL...
+FAILED tests/test_final_state.py::test_sqlite_db_total_count - AssertionError...
+FAILED tests/test_final_state.py::test_sqlite_db_filtered_data - AssertionErr...
+========================= 3 failed, 3 passed in 0.07s ==========================

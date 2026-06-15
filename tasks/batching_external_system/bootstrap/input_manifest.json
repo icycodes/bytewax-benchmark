@@ -1,0 +1,7 @@
+{
+  "library_name": "bytewax",
+  "task_name": "batching_external_system",
+  "complexity_level": "much more complicated task that is not easy for LLM agents to solve and provides only a simple instruction.md",
+  "research_plan_path": "",
+  "output_dir": "tasks"
+}

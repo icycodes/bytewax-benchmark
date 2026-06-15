@@ -1,0 +1,2 @@
+{"type": "metric", "name": "cpu_usage", "value": 75.2, "timestamp": "2026-06-15T11:01:00Z"}
+{"type": "metric", "name": "memory_usage", "value": 45.8, "timestamp": "2026-06-15T11:06:00Z"}

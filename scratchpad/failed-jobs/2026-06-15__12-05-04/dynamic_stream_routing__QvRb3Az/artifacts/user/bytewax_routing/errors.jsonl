@@ -1,0 +1,3 @@
+{"type": "error", "message": "NullPointerException in handler", "service": "auth", "severity": "critical", "ts": "2026-06-15T10:00:01Z"}
+{"type": "error", "message": "Timeout connecting to database", "service": "orders", "severity": "high", "ts": "2026-06-15T10:00:04Z"}
+{"type": "error", "message": "Out of memory", "service": "worker", "severity": "critical", "ts": "2026-06-15T10:00:11Z"}

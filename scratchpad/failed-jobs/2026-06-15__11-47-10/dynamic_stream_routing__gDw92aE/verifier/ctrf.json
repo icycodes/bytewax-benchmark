@@ -1,0 +1,74 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T11:51:44.303172+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781524304015,
+            "stop": 1781524304303
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_run_dataflow",
+                "status": "passed",
+                "duration": 256,
+                "start": 1781524304041,
+                "stop": 1781524304297,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_logs_output",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781524304297,
+                "stop": 1781524304299,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_errors_output",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781524304299,
+                "stop": 1781524304300,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_metrics_output",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781524304300,
+                "stop": 1781524304301,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_dead_letter_output",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781524304301,
+                "stop": 1781524304302,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

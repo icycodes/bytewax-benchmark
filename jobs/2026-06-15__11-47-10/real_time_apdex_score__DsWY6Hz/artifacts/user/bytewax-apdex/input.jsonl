@@ -1,0 +1,8 @@
+{"timestamp": "2023-10-01T10:00:01Z", "service": "auth", "response_time_ms": 200}
+{"timestamp": "2023-10-01T10:00:02Z", "service": "payment", "response_time_ms": 100}
+{"timestamp": "2023-10-01T10:00:03Z", "service": "auth", "response_time_ms": 600}
+{"timestamp": "2023-10-01T10:00:04Z", "service": "payment", "response_time_ms": 150}
+{"timestamp": "2023-10-01T10:00:05Z", "service": "auth", "response_time_ms": 2500}
+{"timestamp": "2023-10-01T10:00:08Z", "service": "auth", "response_time_ms": 400}
+{"timestamp": "2023-10-01T10:00:11Z", "service": "auth", "response_time_ms": 1200}
+{"timestamp": "2023-10-01T10:00:12Z", "service": "auth", "response_time_ms": 1500}

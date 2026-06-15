@@ -1,0 +1,77 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T12:14:23.821739+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781525663499,
+            "stop": 1781525663821
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_directory_files_count",
+                "status": "passed",
+                "duration": 268,
+                "start": 1781525663521,
+                "stop": 1781525663789,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_names",
+                "status": "passed",
+                "duration": 3,
+                "start": 1781525663789,
+                "stop": 1781525663792,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_total_record_count",
+                "status": "passed",
+                "duration": 3,
+                "start": 1781525663792,
+                "stop": 1781525663795,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_file_line_limits",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781525663795,
+                "stop": 1781525663797,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_json_content_and_values",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 24,
+                "start": 1781525663797,
+                "stop": 1781525663821,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_json_content_and_values():\n        \"\"\"Verify JSON content, min/max values, and worker distribution.\"\"\"\n        values = []\n        workers = set()\n    \n        for filepath in glob.glob(os.path.join(OUT_DIR, \"*.jsonl\")):\n            with open(filepath, \"r\") as f:\n                for line in f:\n                    record = json.loads(line.strip())\n                    values.append(record[\"value\"])\n                    workers.add(record[\"worker\"])\n    \n        values.sort()\n        assert len(values) > 0, \"No records found to check values.\"\n        assert values[0] == 0, f\"Expected minimum value 0, found {values[0]}.\"\n        assert values[-1] == 199, f\"Expected maximum value 199, found {values[-1]}.\"\n>       assert len(workers) >= 2, f\"Expected data to be distributed across multiple workers, but only found workers: {workers}.\"\nE       AssertionError: Expected data to be distributed across multiple workers, but only found workers: {0}.\nE       assert 1 >= 2\nE        +  where 1 = len({0})\n\ntests/test_final_state.py:77: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

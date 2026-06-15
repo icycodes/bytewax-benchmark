@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 1 item
+
+tests/test_final_state.py F                                              [100%]
+
+=================================== FAILURES ===================================
+______________________ test_pipeline_execution_and_output ______________________
+
+    def test_pipeline_execution_and_output():
+        """Run the Bytewax pipeline and verify the final global aggregation output."""
+        result = subprocess.run(
+            ["python", "-m", "bytewax.run", "pipeline:flow"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+    
+        assert result.returncode == 0, \
+            f"Pipeline execution failed with return code {result.returncode}. Stderr: {result.stderr}"
+    
+>       assert "('global', 75)" in result.stdout or "('global', 75.0)" in result.stdout, \
+            f"Expected final global aggregation result ('global', 75) in stdout, but got: {result.stdout}"
+E       AssertionError: Expected final global aggregation result ('global', 75) in stdout, but got: ('global', 60)
+E         
+E       assert ("('global', 75)" in "('global', 60)\n" or "('global', 75.0)" in "('global', 60)\n")
+E        +  where "('global', 60)\n" = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow'], returncode=0, stdout="('global', 60)\n", stderr='').stdout
+E        +  and   "('global', 60)\n" = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow'], returncode=0, stdout="('global', 60)\n", stderr='').stdout
+
+tests/test_final_state.py:19: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_pipeline_execution_and_output - Assert...
+============================== 1 failed in 0.27s ===============================

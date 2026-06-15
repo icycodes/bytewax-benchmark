@@ -1,0 +1,5 @@
+{"u": "A", "v": "B", "status": "merged", "new_component_size": 2}
+{"u": "B", "v": "C", "status": "merged", "new_component_size": 3}
+{"u": "A", "v": "C", "status": "already_connected", "component_size": 3}
+{"u": "D", "v": "E", "status": "merged", "new_component_size": 2}
+{"u": "C", "v": "E", "status": "merged", "new_component_size": 5}

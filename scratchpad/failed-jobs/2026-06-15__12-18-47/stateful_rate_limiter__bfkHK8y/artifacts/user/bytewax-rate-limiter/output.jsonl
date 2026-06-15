@@ -1,0 +1,6 @@
+{"user_id": "user1", "timestamp": 100.0, "cost": 5.0, "allowed": true}
+{"user_id": "user1", "timestamp": 101.0, "cost": 6.0, "allowed": true}
+{"user_id": "user1", "timestamp": 102.0, "cost": 4.0, "allowed": false}
+{"user_id": "user2", "timestamp": 100.0, "cost": 15.0, "allowed": false}
+{"user_id": "user2", "timestamp": 100.0, "cost": -1, "allowed": true}
+{"user_id": "user2", "timestamp": 100.0, "cost": 5.0, "allowed": true}

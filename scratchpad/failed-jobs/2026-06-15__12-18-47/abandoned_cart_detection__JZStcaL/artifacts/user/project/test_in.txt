@@ -1,0 +1,5 @@
+{"user_id": "u1", "type": "add_to_cart", "item": "laptop"}
+{"user_id": "u1", "type": "add_to_cart", "item": "mouse"}
+{"user_id": "u2", "type": "add_to_cart", "item": "keyboard"}
+{"user_id": "u1", "type": "checkout"}
+{"user_id": "u3", "type": "add_to_cart", "item": "monitor"}

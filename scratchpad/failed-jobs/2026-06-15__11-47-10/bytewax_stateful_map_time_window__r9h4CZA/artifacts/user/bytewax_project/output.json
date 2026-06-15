@@ -1,0 +1,4 @@
+{"user_id": "u1", "event_id": "e1", "timestamp": "2026-01-01T12:00:00Z", "payload": "A"}
+{"user_id": "u1", "event_id": "e2", "timestamp": "2026-01-01T12:00:08Z", "payload": "B"}
+{"user_id": "u1", "event_id": "e1", "timestamp": "2026-01-01T12:00:11Z", "payload": "A-dup-after-10s"}
+{"user_id": "u2", "event_id": "e1", "timestamp": "2026-01-01T12:00:00Z", "payload": "C"}
