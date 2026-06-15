@@ -1,0 +1,7 @@
+{
+  "library_name": "Bytewax",
+  "task_name": "sessionization_of_user_events",
+  "complexity_level": "much more complicated task that is not easy for LLM agents to solve and provides only a simple instruction.md",
+  "research_plan_path": "https://docs.bytewax.io/stable/guide/concepts/windowing.html",
+  "output_dir": "tasks/"
+}

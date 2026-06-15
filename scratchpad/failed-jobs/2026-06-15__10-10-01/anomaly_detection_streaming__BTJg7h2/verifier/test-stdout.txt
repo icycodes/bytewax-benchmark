@@ -1,0 +1,70 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py FF                                             [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_pipeline_execution ____________________________
+
+    def test_pipeline_execution():
+        """Run the Bytewax pipeline with recovery enabled."""
+        result = subprocess.run(
+            ["python", "-m", "bytewax.run", "pipeline:flow", "-r", "./recovery_dir", "-s", "1", "-b", "0"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+>       assert result.returncode == 0, f"Pipeline execution failed. stderr: {result.stderr}"
+E       AssertionError: Pipeline execution failed. stderr: thread '<unnamed>' panicked at src/inputs.rs:446:37:
+E         Box<dyn Any>
+E         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+E         
+E         Traceback (most recent call last):
+E           File "/home/user/anomaly_detection/pipeline.py", line 55, in next_batch
+E             return [json.loads(line)]
+E                     ^^^^^^^^^^^^^^^^
+E           File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+E             return _default_decoder.decode(s)
+E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+E             raise JSONDecodeError("Extra data", s, end)
+E         json.decoder.JSONDecodeError: Extra data: line 1 column 78 (char 77)
+E         
+E         The above exception was the direct cause of the following exception:
+E         
+E         Traceback (most recent call last):
+E           File "<frozen runpy>", line 198, in _run_module_as_main
+E           File "<frozen runpy>", line 88, in _run_code
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/run.py", line 355, in <module>
+E             cli_main(**kwargs)
+E         bytewax.errors.BytewaxRuntimeError: (src/inputs.rs:453:50): error calling `StatefulSourcePartition.next_batch` in step "anomaly_detection.read_jsonl" for partition "0"
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow', '-r', './recovery_dir', '-s', '1', '-b', '0'], ...53:50): error calling `StatefulSourcePartition.next_batch` in step "anomaly_detection.read_jsonl" for partition "0"\n').returncode
+
+tests/test_final_state.py:63: AssertionError
+____________________________ test_anomalies_output _____________________________
+
+    def test_anomalies_output():
+        """Verify that the anomalies were correctly identified and written to the output file."""
+        assert os.path.exists(ANOMALIES_FILE), f"Output file {ANOMALIES_FILE} was not created."
+    
+        anomalies = []
+        with open(ANOMALIES_FILE, "r") as f:
+            for line in f:
+                if line.strip():
+                    anomalies.append(json.loads(line))
+    
+>       assert len(anomalies) > 0, "No anomalies were detected in the output."
+E       AssertionError: No anomalies were detected in the output.
+E       assert 0 > 0
+E        +  where 0 = len([])
+
+tests/test_final_state.py:75: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_pipeline_execution - AssertionError: P...
+FAILED tests/test_final_state.py::test_anomalies_output - AssertionError: No ...
+============================== 2 failed in 0.45s ===============================

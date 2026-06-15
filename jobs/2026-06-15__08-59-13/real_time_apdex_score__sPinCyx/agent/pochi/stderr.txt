@@ -1,0 +1,134 @@
+[37m2026-06-15 09:05:04.625[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	pochi v0.6.14
+[37m2026-06-15 09:05:05.060[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	BuiltInBundle[39m[22m[0m[0m	Materializing 16 built-in files to /tmp/pochi-builtin-5f7c1b2d4157fa59
+[37m2026-06-15 09:05:05.553[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517730[39m[0m[0m[1m[37m	loadAgents[39m[22m[0m[0m	Loaded 6 custom agents (6 valid, 0 invalid)
+[37m2026-06-15 09:05:05.707[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517731[39m[0m[0m[1m[37m	loadSkills[39m[22m[0m[0m	Loaded 3 skills (3 valid, 0 invalid)
+[37m2026-06-15 09:05:05.801[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:442311[39m[0m[0m[1m[37m	PochiVendor[39m[22m[0m[0m	JWT is expiring or missing, fetching a new one
+[37m2026-06-15 09:05:07.553[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418456[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	MCP servers configuration changed via signal:
+[37m2026-06-15 09:05:07.556[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418568[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	Build MCPHub Status
+[37m2026-06-15 09:05:07.722[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Starting task runner...
+[37m2026-06-15 09:05:07.993[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: null, new: # Real-Time Apdex Score Calculation with Bytewax
+[37m2026-06-15 09:05:16.472[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516111[39m[0m[0m[1m[37m	listFiles[39m[22m[0m[0m	handling listFile with dirPath /home/user/bytewax-apdex and recursive [90mundefined[39m
+[37m2026-06-15 09:05:18.919[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516111[39m[0m[0m[1m[37m	listFiles[39m[22m[0m[0m	handling listFile with dirPath /home/user and recursive [90mundefined[39m
+[37m2026-06-15 09:05:21.116[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: # Real-Time Apdex Score Calculation with Bytewax, new: Calculate real-time Apdex score using Bytewax
+[37m2026-06-15 09:05:58.907[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax def fold_window [90mundefined[39m
+[37m2026-06-15 09:05:58.908[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'def fold_window' '/usr/local/lib/python3.12/dist-packages/bytewax'
+[37m2026-06-15 09:06:01.416[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax TumblingWindower [90mundefined[39m
+[37m2026-06-15 09:06:01.417[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'TumblingWindower' '/usr/local/lib/python3.12/dist-packages/bytewax'
+[37m2026-06-15 09:06:01.477[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	Failed to parse rg JSON output line: {"type":"match","data":{"path":{"text":"/usr/local/lib/python3.12/dist-packages/bytewax/operators/__pycache__/windowing.cpython-312.pyc"},"lines":{"bytes":"Wgt5BykI2hBUdW1ibGluZ1dpbmRvd2VyYRQCCg=="},"line_number":10691,"absolute_offset":38206,"submatches":[{"match":{"text":"TumblingWindower"},"start":8,"end":24}]}}
+
+[97m[101m[1m TypeError [22m[49m[39m[0m[0m undefined is not an object (evaluating 'matchData.lines.text.replace'), 463327, 42, 463327, 42, /$bunfs/root/pochi[0m[0m
+error stack:
+  • [33mpochi[39m[0m[0m	searchFilesWithRipgrep[0m[0m
+	[37m$bunfs/root/pochi:463327[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async <anonymous>[0m[0m
+	[37m$bunfs/root/pochi:516831[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCall2[0m[0m
+	[37m$bunfs/root/pochi:516941[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCallItem[0m[0m
+	[37m$bunfs/root/pochi:517333[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async runToolCall[0m[0m
+	[37m$bunfs/root/pochi:517312[39m[0m[0m
+  • [33mnative[39m[0m[0m	processTicksAndRejections[0m[0m
+	[37mnative:7[39m[0m[0m[0m[0m
+[37m2026-06-15 09:06:01.478[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	Failed to parse rg JSON output line: {"type":"match","data":{"path":{"text":"/usr/local/lib/python3.12/dist-packages/bytewax/operators/__pycache__/windowing.cpython-312.pyc"},"lines":{"bytes":"ehZUdW1ibGluZ1dpbmRvd2VyLmJ1aWxkmQMK"},"line_number":10858,"absolute_offset":38981,"submatches":[{"match":{"text":"TumblingWindower"},"start":2,"end":18}]}}
+
+[97m[101m[1m TypeError [22m[49m[39m[0m[0m undefined is not an object (evaluating 'matchData.lines.text.replace'), 463327, 42, 463327, 42, /$bunfs/root/pochi[0m[0m
+error stack:
+  • [33mpochi[39m[0m[0m	searchFilesWithRipgrep[0m[0m
+	[37m$bunfs/root/pochi:463327[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async <anonymous>[0m[0m
+	[37m$bunfs/root/pochi:516831[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCall2[0m[0m
+	[37m$bunfs/root/pochi:516941[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCallItem[0m[0m
+	[37m$bunfs/root/pochi:517333[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async runToolCall[0m[0m
+	[37m$bunfs/root/pochi:517312[39m[0m[0m
+  • [33mnative[39m[0m[0m	processTicksAndRejections[0m[0m
+	[37mnative:7[39m[0m[0m[0m[0m
+[37m2026-06-15 09:06:04.160[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" isVirtual=false cacheExists=true shouldCache=true startLine=1700 endLine=1850
+[37m2026-06-15 09:06:04.160[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 09:06:04.165[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" mtime=1781514116085 contentLen=4408
+[37m2026-06-15 09:06:06.523[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" isVirtual=false cacheExists=true shouldCache=true startLine=1400 endLine=1550
+[37m2026-06-15 09:06:06.524[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=1700, endLine=1850, timestamp=1781514116085}
+[37m2026-06-15 09:06:06.528[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" mtime=1781514116085 contentLen=4312
+[37m2026-06-15 09:06:09.132[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py class WindowOut [90mundefined[39m
+[37m2026-06-15 09:06:09.133[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'class WindowOut' '/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py'
+[37m2026-06-15 09:06:11.570[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" isVirtual=false cacheExists=true shouldCache=true startLine=1190 endLine=1210
+[37m2026-06-15 09:06:11.571[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=1400, endLine=1550, timestamp=1781514116085}
+[37m2026-06-15 09:06:11.574[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" mtime=1781514116085 contentLen=533
+[37m2026-06-15 09:06:13.753[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" isVirtual=false cacheExists=true shouldCache=true startLine=1210 endLine=1230
+[37m2026-06-15 09:06:13.753[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=1190, endLine=1210, timestamp=1781514116085}
+[37m2026-06-15 09:06:13.756[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" mtime=1781514116085 contentLen=670
+[37m2026-06-15 09:06:34.953[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax/operators KeyedStream [90mundefined[39m
+[37m2026-06-15 09:06:34.953[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'KeyedStream' '/usr/local/lib/python3.12/dist-packages/bytewax/operators'
+[37m2026-06-15 09:06:34.961[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	Failed to parse rg JSON output line: {"type":"match","data":{"path":{"text":"/usr/local/lib/python3.12/dist-packages/bytewax/operators/__pycache__/windowing.cpython-312.pyc"},"lines":{"bytes":"TikC2gNBQkPaDmFic3RyYWN0bWV0aG9kKQLaCWRhdGFjbGFzc9oFZmllbGQpA9oIZGF0ZXRpbWXaCXRpbWVkZWx0YdoIdGltZXpvbmUpAdoHcGFydGlhbCkP2gNBbnnaCENhbGxhYmxl2gREaWN02gdHZW5lcmlj2ghJdGVyYWJsZdoETGlzdNoHTGl0ZXJhbNoIT3B0aW9uYWzaA1NldNoFVHVwbGXaBFR5cGXaB1R5cGVWYXLaBVVuaW9u2gRjYXN02ghvdmVybG9hZCkB2glwYXJ0aXRpb24pAtoGU3RyZWFt2ghvcGVyYXRvcikR2gZfRU1QVFnaAkRL2gJEVtoMSm9pbkVtaXRNb2Rl2g5Kb2luSW5zZXJ0TW9kZdoLS2V5ZWRTdHJlYW3aAVPaElN0YXRlZnVsQmF0Y2hMb2dpY9oBVdoBVtoBV9oEV19jb9oBWNoPX2dldF9zeXN0ZW1fdXRj2glfaWRlbnRpdHnaCg=="},"line_number":1473,"absolute_offset":4940,"submatches":[{"match":{"text":"KeyedStream"},"start":288,"end":299}]}}
+
+[97m[101m[1m TypeError [22m[49m[39m[0m[0m undefined is not an object (evaluating 'matchData.lines.text.replace'), 463327, 42, 463327, 42, /$bunfs/root/pochi[0m[0m
+error stack:
+  • [33mpochi[39m[0m[0m	searchFilesWithRipgrep[0m[0m
+	[37m$bunfs/root/pochi:463327[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async <anonymous>[0m[0m
+	[37m$bunfs/root/pochi:516831[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCall2[0m[0m
+	[37m$bunfs/root/pochi:516941[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCallItem[0m[0m
+	[37m$bunfs/root/pochi:517333[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async runToolCall[0m[0m
+	[37m$bunfs/root/pochi:517312[39m[0m[0m
+  • [33mnative[39m[0m[0m	processTicksAndRejections[0m[0m
+	[37mnative:7[39m[0m[0m[0m[0m
+[37m2026-06-15 09:06:34.962[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	Failed to parse rg JSON output line: {"type":"match","data":{"path":{"text":"/usr/local/lib/python3.12/dist-packages/bytewax/operators/__pycache__/__init__.cpython-312.pyc"},"lines":{"bytes":"TikC2gNBQkPaDmFic3RyYWN0bWV0aG9kKQLaCWRhdGFjbGFzc9oFZmllbGQpA9oIZGF0ZXRpbWXaCXRpbWVkZWx0YdoIdGltZXpvbmUpAdoHcGFydGlhbCkB2gVjaGFpbikM2gNBbnnaCENhbGxhYmxl2gREaWN02gdHZW5lcmlj2ghJdGVyYWJsZdoETGlzdNoHTGl0ZXJhbNoIT3B0aW9uYWzaBVR1cGxl2gdUeXBlVmFy2gVVbmlvbtoIb3ZlcmxvYWQpBNoIRGF0YWZsb3faBlN0cmVhbdoGZl9yZXBy2ghvcGVyYXRvcikB2gZTb3VyY2UpA9oLRHluYW1pY1NpbmvaBFNpbmvaFlN0YXRlbGVzc1NpbmtQYXJ0aXRpb24pBNoEU2VsZtoJVHlwZUFsaWFz2glUeXBlR3VhcmTaCG92ZXJyaWRl2gFY2gFZ2gFV2gFW2gFX2gRXX2NvVCkB2gljb3ZhcmlhbnTaAVPaAkRL2gJEVtoLS2V5ZWRTdHJlYW3aBl9FTVBUWdoBeNoGcmV0dXJuYwEK"},"line_number":1480,"absolute_offset":4968,"submatches":[{"match":{"text":"KeyedStream"},"start":378,"end":389}]}}
+
+[97m[101m[1m TypeError [22m[49m[39m[0m[0m undefined is not an object (evaluating 'matchData.lines.text.replace'), 463327, 42, 463327, 42, /$bunfs/root/pochi[0m[0m
+error stack:
+  • [33mpochi[39m[0m[0m	searchFilesWithRipgrep[0m[0m
+	[37m$bunfs/root/pochi:463327[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async <anonymous>[0m[0m
+	[37m$bunfs/root/pochi:516831[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCall2[0m[0m
+	[37m$bunfs/root/pochi:516941[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async executeToolCallItem[0m[0m
+	[37m$bunfs/root/pochi:517333[39m[0m[0m
+  • [33mpochi[39m[0m[0m	async runToolCall[0m[0m
+	[37m$bunfs/root/pochi:517312[39m[0m[0m
+  • [33mnative[39m[0m[0m	processTicksAndRejections[0m[0m
+	[37mnative:7[39m[0m[0m[0m[0m
+[37m2026-06-15 09:06:38.439[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" isVirtual=false cacheExists=true shouldCache=true startLine=1900 endLine=2050
+[37m2026-06-15 09:06:38.440[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=1210, endLine=1230, timestamp=1781514116085}
+[37m2026-06-15 09:06:38.446[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" mtime=1781514116085 contentLen=3396
+[37m2026-06-15 09:06:42.746[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/operators/__init__.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/operators/__init__.py" isVirtual=false cacheExists=true shouldCache=true startLine=2315 endLine=2370
+[37m2026-06-15 09:06:42.747[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 09:06:42.753[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/operators/__init__.py" mtime=1781514116089 contentLen=1690
+[37m2026-06-15 09:08:04.347[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py ts_getter [90mundefined[39m
+[37m2026-06-15 09:08:04.348[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'ts_getter' '/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py'
+[37m2026-06-15 09:08:06.955[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" isVirtual=false cacheExists=true shouldCache=true startLine=2100 endLine=2130
+[37m2026-06-15 09:08:06.956[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=1900, endLine=2050, timestamp=1781514116085}
+[37m2026-06-15 09:08:06.962[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py" mtime=1781514116085 contentLen=992
+[37m2026-06-15 09:08:39.608[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py class FileSink [90mundefined[39m
+[37m2026-06-15 09:08:39.609[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'class FileSink' '/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py'
+[37m2026-06-15 09:08:42.081[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" isVirtual=false cacheExists=true shouldCache=true startLine=415 endLine=460
+[37m2026-06-15 09:08:42.082[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 09:08:42.088[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" mtime=1781514116081 contentLen=1298
+[37m2026-06-15 09:08:45.971[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" isVirtual=false cacheExists=true shouldCache=true startLine=460 endLine=480
+[37m2026-06-15 09:08:45.972[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=415, endLine=460, timestamp=1781514116081}
+[37m2026-06-15 09:08:45.979[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" mtime=1781514116081 contentLen=262
+[37m2026-06-15 09:08:48.828[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py class _FileSinkPartition [90mundefined[39m
+[37m2026-06-15 09:08:48.828[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'class _FileSinkPartition' '/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py'
+[37m2026-06-15 09:08:51.305[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" resolvedPath="/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" isVirtual=false cacheExists=true shouldCache=true startLine=320 endLine=360
+[37m2026-06-15 09:08:51.305[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=460, endLine=480, timestamp=1781514116081}
+[37m2026-06-15 09:08:51.316[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/usr/local/lib/python3.12/dist-packages/bytewax/connectors/files.py" mtime=1781514116081 contentLen=1249
+[37m2026-06-15 09:08:54.526[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	searchFiles /usr/local/lib/python3.12/dist-packages/bytewax/outputs.py class FixedPartitionedSink [90mundefined[39m
+[37m2026-06-15 09:08:54.526[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516831[39m[0m[0m[1m[37m	RipgrepUtils[39m[22m[0m[0m	command "/usr/bin/rg" --json --case-sensitive --binary --sortr modified 'class FixedPartitionedSink' '/usr/local/lib/python3.12/dist-packages/bytewax/outputs.py'
+[37m2026-06-15 09:09:08.677[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/bytewax-apdex/output.jsonl" resolvedPath="/home/user/bytewax-apdex/output.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 09:09:08.677[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 09:09:08.684[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/bytewax-apdex/output.jsonl" mtime=1781514545766 contentLen=243
+[37m2026-06-15 09:09:25.130[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516088[39m[0m[0m[1m[37m	globFiles[39m[22m[0m[0m	handling globFiles with searchPath: /home/user/bytewax-apdex and pattern *
+[37m2026-06-15 09:09:25.153[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	globFiles[39m[22m[0m[0m	Found 3 files matching pattern *
+[37m2026-06-15 09:09:29.622[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/bytewax-apdex/apdex_flow.py" resolvedPath="/home/user/bytewax-apdex/apdex_flow.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 09:09:29.623[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=undefined, endLine=undefined, timestamp=1781514543042}
+[37m2026-06-15 09:09:29.631[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/bytewax-apdex/apdex_flow.py" mtime=1781514543042 contentLen=3549
+[37m2026-06-15 09:09:43.426[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Task runner finished successfully.
+[37m2026-06-15 09:09:43.426[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutting down...
+[37m2026-06-15 09:09:43.469[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutdown completed. Process will exit.
+[37m2026-06-15 09:09:43.469[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Process exiting with code 0

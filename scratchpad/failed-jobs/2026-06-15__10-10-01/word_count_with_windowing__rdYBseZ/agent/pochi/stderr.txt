@@ -1,0 +1,2603 @@
+[37m2026-06-15 10:25:27.814[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	pochi v0.6.14
+[37m2026-06-15 10:25:27.941[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	BuiltInBundle[39m[22m[0m[0m	Materializing 16 built-in files to /tmp/pochi-builtin-5f7c1b2d4157fa59
+[37m2026-06-15 10:25:28.197[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517730[39m[0m[0m[1m[37m	loadAgents[39m[22m[0m[0m	Loaded 6 custom agents (6 valid, 0 invalid)
+[37m2026-06-15 10:25:28.289[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517731[39m[0m[0m[1m[37m	loadSkills[39m[22m[0m[0m	Loaded 3 skills (3 valid, 0 invalid)
+[37m2026-06-15 10:25:28.315[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:442311[39m[0m[0m[1m[37m	PochiVendor[39m[22m[0m[0m	JWT is expiring or missing, fetching a new one
+[37m2026-06-15 10:25:29.692[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418456[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	MCP servers configuration changed via signal:
+[37m2026-06-15 10:25:29.692[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418568[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	Build MCPHub Status
+[37m2026-06-15 10:25:29.788[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Starting task runner...
+[37m2026-06-15 10:25:29.922[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: null, new: # Bytewax Windowed Word Count
+[37m2026-06-15 10:26:03.143[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516111[39m[0m[0m[1m[37m	listFiles[39m[22m[0m[0m	handling listFile with dirPath /home/user/myproject and recursive [33mtrue[39m
+[37m2026-06-15 10:26:05.990[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: # Bytewax Windowed Word Count, new: Implement a Bytewax windowed word count dataflow
+[37m2026-06-15 10:26:12.063[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:438793[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Tool call executeCommand (call_01_sVN33iswcFwPSYn7YRZJo4g2) cancelled: previous-tool-call-failed
+[37m2026-06-15 10:26:12.064[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:438793[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Tool call executeCommand (call_02_fowU5q4sCVMq8oVRqQ2IphMw) cancelled: previous-tool-call-failed
+[37m2026-06-15 10:27:42.143[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:27:42.167[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:28:42.224[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m AI_APICallError [22m[49m[39m[0m[0m upstream error, AI_APICallError, , https://app.getpochi.com/api/chat/v6/stream, [object Object], 502, [object Object], , true, , 447690, 31, 447690, 31, /$bunfs/root/pochi[0m[0m
+error stack:
+  • [33mpochi[39m[0m[0m	<anonymous>[0m[0m
+	[37m$bunfs/root/pochi:447690[39m[0m[0m
+  • [33mnative[39m[0m[0m	processTicksAndRejections[0m[0m
+	[37mnative:7[39m[0m[0m[0m[0m
+[37m2026-06-15 10:28:42.273[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'APICallError'[39m,
+  isRetryable: [33mtrue[39m,
+  message: [32m'upstream error'[39m,
+  requestBodyValues: {
+    model: [32m'deepseek/deepseek-4-pro'[39m,
+    callOptions: {
+      prompt: [
+        {
+          role: [32m'system'[39m,
+          content: [32m'You are Pochi, a highly skilled software engineer with extensive knowledge in many programming languages, frameworks, design patterns, and best practices.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: You must NEVER generate or guess URLs for the user unless you are confident that the URLs are for helping the user with programming. You may use URLs provided by the user in their messages or local files.\n'[39m +
+            [32m'\n'[39m +
+            [32m'====\n'[39m +
+            [32m'\n'[39m +
+            [32m'TASK MANAGEMENT\n'[39m +
+            [32m'\n'[39m +
+            [32m'You have access to the todoWrite tool to help you manage and plan tasks. Use these tools VERY frequently to ensure that you are tracking your tasks and giving the user visibility into your progress.\n'[39m +
+            [32m'These tools are also EXTREMELY helpful for planning tasks, and for breaking down larger complex tasks into smaller steps. If you do not use this tool when planning, you may forget to do important tasks - and that is unacceptable.\n'[39m +
+            [32m'\n'[39m +
+            [32m'It is critical that you mark todos as completed as soon as you are done with a task. Do not batch up multiple tasks before marking them as completed.\n'[39m +
+            [32m'\n'[39m +
+            [32m'====\n'[39m +
+            [32m'\n'[39m +
+            [32m'RULES\n'[39m +
+            [32m'\n'[39m +
+            [32m"- User messages may include <system-reminder> tags. <system-reminder> tags contain useful information and reminders. They are NOT part of the user's provided input or the tool result. You shall pay close attention to information in these tags and use it to inform you actions.\n"[39m +
+            [32m"- For simple, directed codebase searches (project structure, specific files/classes/functions), use the listFiles tool. If you pass 'true' for the recursive parameter, it will list files recursively. Use globFiles when you need to match files by pattern.\n"[39m +
+            [32m'- For broader codebase exploration and deep research, use the newTask tool with agentType="explore". Use this only when simple, directed searches prove insufficient or when your task will clearly require more than three queries.\n'[39m +
+            [32m'- All file paths used by tools must be relative to current working directory, do not use the ~ character or $HOME to refer to the home directory in file paths used by tools.\n'[39m +
+            [32m"- You can use `pochi://` URI schema to access the Pochi virtual file system. This allows you to read and write files that are stored in Pochi's internal storage.\n"[39m +
+            [32m"- Be sure to consider the type of project (e.g. Python, JavaScript, web application) when determining the appropriate structure and files to include. Also consider what files may be most relevant to accomplishing the task, for example looking at a project's manifest file would help you understand the project's dependencies, which you could incorporate into any code you write.\n"[39m +
+            [32m"- Do not ask for more information than necessary. Use the tools provided to accomplish the user's request efficiently and effectively. When you've completed your task, you must use the attemptCompletion tool to present the result to the user. The user may provide feedback, which you can use to make improvements and try again.\n"[39m +
+            [32m'- You are only allowed to ask the user questions using the askFollowupQuestion tool. Use this tool only when you need additional details to complete a task, and be sure to use a clear and concise question that will help you move forward with the task. However if you can use the available tools to avoid having to ask the user questions, you should do so. For example, if the user mentions a file that may be in an outside directory like the Desktop, you should use the listFiles tool to list the files in the Desktop and check if the file they are talking about is there, rather than asking the user to provide the file path themselves.\n'[39m +
+            [32m`- You are STRICTLY FORBIDDEN from starting your messages with "Great", "Certainly", "Okay", "Sure". You should NOT be conversational in your responses, but rather direct and to the point. For example you should NOT say "Great, I've updated the CSS" but instead something like "I've updated the CSS". It is important you be clear and technical in your messages.\n`[39m +
+            [32m"- Once you've completed the user's task, you MUST use the attemptCompletion tool to present the result of the task to the user. It is STRICTLY FORBIDDEN to complete the task without using this tool.\n"[39m +
+            [32m'- When planning large-scale changes, create a high-level diagram using mermaid in Markdown. This helps explain your plan and allows you to gather user feedback before implementation.'[39m
+        },
+        {
+          role: [32m'user'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'<system-reminder># System Information\n'[39m +
+                [32m'\n'[39m +
+                [32m'Operating System: linux\n'[39m +
+                [32m'Default Shell: \n'[39m +
+                [32m'Home Directory: /root\n'[39m +
+                [32m'Current Working Directory: /\n'[39m +
+                [32m'Current Time: Mon Jun 15 2026 10:25:29 GMT+0000 (Coordinated Universal Time)\n'[39m +
+                [32m'\n'[39m +
+                [32m'# GIT STATUS\n'[39m +
+                [32m'Current branch: \n'[39m +
+                [32m'Main branch (you will usually use this for PRs): \n'[39m +
+                [32m'\n'[39m +
+                [32m'Recent commits:\n'[39m +
+                [32m'\n'[39m +
+                [32m'\n'[39m +
+                [32m'# TODOs\n'[39m +
+                [32m'No TODOs yet, if you are working on tasks that would benefit from a todo list please use the todoWrite tool to create one.</system-reminder>'[39m
+            },
+            {
+              type: [32m'text'[39m,
+              text: [32m'# Bytewax Windowed Word Count\n'[39m +
+                [32m'\n'[39m +
+                [32m'## Background\n'[39m +
+                [32m'Implement a stream processing dataflow using Bytewax that counts the occurrences of words within specific time windows based on event time.\n'[39m +
+                [32m'\n'[39m +
+                [32m'## Requirements\n'[39m +
+                [32m'- Read a JSON Lines (JSONL) input file containing events with a word and a timestamp.\n'[39m +
+                [32m'- Use event time processing.\n'[39m +
+                [32m'- Group the words using a 1-hour tumbling window aligned to `2023-01-01T00:00:00Z`.\n'[39m +
+                [32m'- Count the occurrences of each word within each window.\n'[39m +
+                [32m'- Write the results to a JSON Lines (JSONL) output file.\n'[39m +
+                [32m'\n'[39m +
+                [32m'## Implementation Hints\n'[39m +
+                [32m'- Use `bytewax.operators.windowing.count_window`.\n'[39m +
+                [32m'- Use `EventClockConfig` to extract the timestamp from each event. You will need to parse the ISO8601 string into a `datetime` object with a UTC timezone.\n'[39m +
+                [32m'- Use `TumblingWindow` for the 1-hour windows.\n'[39m +
+                [32m'- Bytewax window operators expect keyed data `(key, value)`. You should key by the word.\n'[39m +
+                [32m'- The downstream output of `count_window` yields tuples like `(key, (window_id, count))`. Format this into a dictionary before writing to the output file.\n'[39m +
+                [32m'\n'[39m +
+                [32m'## Acceptance Criteria\n'[39m +
+                [32m'- Project path: `/home/user/myproject`\n'[39m +
+                [32m'- Command: `python dataflow.py <input_file> <output_file>`\n'[39m +
+                [32m'- Input format: JSON Lines where each line is `{"time": "ISO8601_string", "word": "string"}`.\n'[39m +
+                [32m'- Output format: JSON Lines where each line is `{"word": "string", "window_id": "ISO8601_string", "count": integer}`. The `window_id` should be the string representation of the window\'s start time in UTC.'[39m
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m"I'll start by exploring the project directory to understand the current state, then implement the Bytewax windowed word count dataflow."[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D1849EAW3N2CQB1NDNPC5'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_B7mpJsLPo4bxFtpNr58JZg6w'[39m,
+              toolName: [32m'listFiles'[39m,
+              input: {
+                path: [32m'/home/user/myproject'[39m,
+                recursive: [33mtrue[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_oqUwWgAnGnnS1vNBnkCZjjoN'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'pip list 2>/dev/null | grep -i bytewax || echo "bytewax not installed"'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_B7mpJsLPo4bxFtpNr58JZg6w'[39m,
+              toolName: [32m'listFiles'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  files: [],
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_oqUwWgAnGnnS1vNBnkCZjjoN'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'bytewax           0.21.1\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'The project directory is empty and Bytewax 0.21.1 is installed. Let me check the Bytewax API available in this version to ensure correct usage.'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D29D3XVYNK7Z98MPV10H0'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_AuA6dBmx5lqn5n5KrlgI3KL2'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "import bytewax; print(bytewax.__version__)" 2>&1'[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_sVN33iswcFwPSYn7YRZJo4g2'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.operators.windowing import count_window; print('count_window available')" 2>&1`[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_02_fowU5q4sCVMq8oVRqQ2IphMw'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.operators.windowing import EventClockConfig, TumblingWindow; print('EventClockConfig and TumblingWindow available')" 2>&1`[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_AuA6dBmx5lqn5n5KrlgI3KL2'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "<string>", line 1, in <module>\r\n'[39m +
+                    [32m"AttributeError: module 'bytewax' has no attribute '__version__'\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m,
+                  error: [32m'Command exited with code 1'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_sVN33iswcFwPSYn7YRZJo4g2'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  error: [32m'Tool call was cancelled because a previous tool call failed.'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_02_fowU5q4sCVMq8oVRqQ2IphMw'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  error: [32m'Tool call was cancelled because a previous tool call failed.'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_x3mBdfY8eK8EkCCITgbi1GxR'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.operators.windowing import count_window; print('ok')" 2>&1`[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D2H9QX34S1RC7W02VZRXN'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_Twg5mWbkE76ef024PyXldxIJ'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.operators.windowing import EventClockConfig, TumblingWindow; print('ok')" 2>&1`[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_x3mBdfY8eK8EkCCITgbi1GxR'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'ok\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D2H9QX34S1RC7W02VZRXN'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_Twg5mWbkE76ef024PyXldxIJ'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "<string>", line 1, in <module>\r\n'[39m +
+                    [32m"ImportError: cannot import name 'EventClockConfig' from 'bytewax.operators.windowing' (/usr/local/lib/python3.12/dist-packages/bytewax/operators/windowing.py). Did you mean: '_EventClockLogic'?\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m,
+                  error: [32m'Command exited with code 1'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_J1tmQfFbGDpgQSiiH5U6taBn'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.operators.windowing import EventClock; print('ok')" 2>&1`[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D2Q9VP8W3Y7MW6FXWE28R'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_UrH2f0CV8tqV1CNtrrQwQ1g6'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.operators.windowing import TumblingWindower; print('ok')" 2>&1`[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_02_VIPfPvnIQyhxzk5vJpL149DP'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "import bytewax.operators.windowing as w; print(dir(w))" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_J1tmQfFbGDpgQSiiH5U6taBn'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'ok\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D2Q9VP8W3Y7MW6FXWE28R'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_UrH2f0CV8tqV1CNtrrQwQ1g6'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'ok\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_02_VIPfPvnIQyhxzk5vJpL149DP'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"['ABC', 'Any', 'C', 'Callable', 'Clock', 'ClockLogic', 'DK', 'DV', 'Dict', 'EventClock', 'Generic', 'Iterable', 'JoinEmitMode', 'JoinInsertMode', 'KeyedStream', 'LATE_SESSION_ID', 'List', 'Literal', 'Optional', 'S', 'SC', 'SW', 'Self', 'SessionWindower', 'Set', 'SlidingWindower', 'StatefulBatchLogic', 'Stream', 'SystemClock', 'TumblingWindower', 'Tuple', 'Type', 'TypeAlias', 'TypeVar', 'U', 'UTC_MAX', 'UTC_MIN', 'Union', 'V', 'W', 'W_co', 'WindowLogic', 'WindowMetadata', 'WindowOut', 'Windower', 'WindowerLogic', 'X', 'ZERO_TD', '_EMPTY', '_Emit', '_EventClockLogic', '_EventClockState', '_FoldWindowLogic', '_JoinState', '_JoinWindowLogic', '_Late', '_Meta', '_SessionWindowerLogic', '_SessionWindowerState', '_SlidingWindowerLogic', '_SlidingWindowerState', '_SystemClockLogic', '_WindowEvent', '_WindowLogic', '_WindowQueueEntry', '_WindowSnapshot', '__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_collect_dict_merger', '_collect_get_callbacks', '_collect_list_folder', '_collect_set_folder', '_get_system_utc', '_identity', '_open_sort', '_session_find_merges', '_untyped_none', '_unwrap_emit', '_unwrap_late', '_unwrap_meta', 'abstractmethod', 'cast', 'collect_window', 'copy', 'count_window', 'dataclass', 'datetime', 'field', 'fold_window', 'join_window', 'max_window', 'min_window', 'op', 'operator', 'overload', 'override', 'partial', 'partition', 'reduce_window', 'timedelta', 'timezone', 'typing', 'window']\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now I can see the correct API names. Let me check the signatures:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D2X51CXZWN2T8G426WWWS'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_7zBc2djvyscJ6BP7TNNQ5UHY'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "import inspect; from bytewax.operators.windowing import EventClock, TumblingWindower, count_window; print('EventClock:', inspect.signature(EventClock)); print('TumblingWindower:', inspect.signature(TumblingWindower)); print('count_window:', inspect.signature(count_window))" 2>&1`[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_8t3z7ivmKsV69VGh4zWmN4u9'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "from bytewax.operators.windowing import EventClock; help(EventClock.__init__)" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_7zBc2djvyscJ6BP7TNNQ5UHY'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'EventClock: (ts_getter: Callable[[~V], datetime.datetime], wait_for_system_duration: datetime.timedelta, now_getter: Callable[[], datetime.datetime] = <function _get_system_utc at 0x7fc17d73dda0>, to_system_utc: Callable[[datetime.datetime], Optional[datetime.datetime]] = <function _identity at 0x7fc17e070180>) -> None\r\n'[39m +
+                    [32m'TumblingWindower: (length: datetime.timedelta, align_to: datetime.datetime) -> None\r\n'[39m +
+                    [32m'count_window: (step_id: str, up: bytewax.dataflow.Stream[~X], clock: bytewax.operators.windowing.Clock[~X, ~SC], windower: bytewax.operators.windowing.Windower[typing.Any], key: Callable[[~X], str]) -> bytewax.operators.windowing.WindowOut[~X, int]\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_8t3z7ivmKsV69VGh4zWmN4u9'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on function __init__ in module bytewax.operators.windowing:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'__init__(self, ts_getter: Callable[[~V], datetime.datetime], wait_for_system_duration: datetime.timedelta, now_getter: Callable[[], datetime.datetime] = <function _get_system_utc at 0x7f2d9179dda0>, to_system_utc: Callable[[datetime.datetime], Optional[datetime.datetime]] = <function _identity at 0x7f2d921320c0>) -> None\r\n'[39m +
+                    [32m'    Initialize self.  See help(type(self)) for accurate signature.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now let me check the dataflow API:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D32CF2PTYVDECS6J8CHT6'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_sN6LOayBc6zFZArdrTpJclWx'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "import inspect; from bytewax.dataflow import Dataflow; print(inspect.signature(Dataflow.__init__))" 2>&1'[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_RFz5Np7QUg9wYJtKh1QCqkJm'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.dataflow import Dataflow; d = Dataflow('test'); print(type(d)); print(dir(d))" 2>&1`[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_02_Gc7G3diFXQlJchUNPPNRbUX8'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.testing import run_main; print('run_main available')" 2>&1`[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_sN6LOayBc6zFZArdrTpJclWx'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'(self, flow_id: str, substeps: List[bytewax.dataflow.Operator] = <factory>, _scope: bytewax.dataflow._Scope = None) -> None\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_RFz5Np7QUg9wYJtKh1QCqkJm'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"<class 'bytewax.dataflow.Dataflow'>\r\n"[39m +
+                    [32m"['__annotations__', '__class__', '__dataclass_fields__', '__dataclass_params__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__match_args__', '__module__', '__ne__', '__new__', '__post_init__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_get_scopes', '_scope', '_to_ref', '_with_scope', 'flow_id', 'substeps']\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_02_Gc7G3diFXQlJchUNPPNRbUX8'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'run_main available\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_8lJf5LkFXQNQvsL9HjL3u05N'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "import inspect; from bytewax.operators import input, output; print('input:', inspect.signature(input)); print('output:', inspect.signature(output))" 2>&1`[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D3800XAMAS9N0JJZYY97T'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_W48M4vm1j1iHajO3eJXPcFLg'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.connectors.stdio import StdOutSink, StdInSource; print('stdio available')" 2>&1`[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_8lJf5LkFXQNQvsL9HjL3u05N'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'input: (step_id: str, flow: bytewax.dataflow.Dataflow, source: bytewax.inputs.Source[~X]) -> bytewax.dataflow.Stream[~X]\r\n'[39m +
+                    [32m'output: (step_id: str, up: bytewax.dataflow.Stream[~X], sink: bytewax.outputs.Sink[~X]) -> None\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D3800XAMAS9N0JJZYY97T'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_W48M4vm1j1iHajO3eJXPcFLg'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "<string>", line 1, in <module>\r\n'[39m +
+                    [32m"ImportError: cannot import name 'StdInSource' from 'bytewax.connectors.stdio' (/usr/local/lib/python3.12/dist-packages/bytewax/connectors/stdio.py)\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m,
+                  error: [32m'Command exited with code 1'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_RhNUM0DUKioN3FdiYRWVgehT'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "import bytewax.connectors.stdio as s; print(dir(s))" 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D3D3DGTV8C0GT79DQHZNG'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_XTg5mOb1nYpQk9Cz6zotnV9a'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.inputs import Source; print('Source base available')" 2>&1`[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_02_XFuDxNHGAOEIMJ8gw1R51vhF'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python -c "from bytewax.outputs import Sink; print('Sink base available')" 2>&1`[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_RhNUM0DUKioN3FdiYRWVgehT'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"['Any', 'DynamicSink', 'List', 'StatelessSinkPartition', 'StdOutSink', '_PrintSinkPartition', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'override', 'sys']\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D3D3DGTV8C0GT79DQHZNG'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_XTg5mOb1nYpQk9Cz6zotnV9a'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Source base available\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_02_XFuDxNHGAOEIMJ8gw1R51vhF'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Sink base available\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_6gVBUaeSJ4o3x14tFHOLQ5z7'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'from bytewax.inputs import Source, StatelessSourcePartition, DynamicSource\n'[39m +
+                  [32m'from bytewax.outputs import Sink, StatelessSinkPartition, DynamicSink\n'[39m +
+                  [32m"print('Source:', inspect.signature(Source.__init__))\n"[39m +
+                  [32m"print('DynamicSource:', inspect.signature(DynamicSource.__init__))\n"[39m +
+                  [32m"print('Sink:', inspect.signature(Sink.__init__))\n"[39m +
+                  [32m"print('DynamicSink:', inspect.signature(DynamicSink.__init__))\n"[39m +
+                  [32m"print('StatelessSourcePartition:', inspect.signature(StatelessSourcePartition.__init__))\n"[39m +
+                  [32m"print('StatelessSinkPartition:', inspect.signature(StatelessSinkPartition.__init__))\n"[39m +
+                  [32m'" 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D3PT7KS70A2Y36CK6R3N1'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_6gVBUaeSJ4o3x14tFHOLQ5z7'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Source: (self, /, *args, **kwargs)\r\n'[39m +
+                    [32m'DynamicSource: (self, /, *args, **kwargs)\r\n'[39m +
+                    [32m'Sink: (self, /, *args, **kwargs)\r\n'[39m +
+                    [32m'DynamicSink: (self, /, *args, **kwargs)\r\n'[39m +
+                    [32m'StatelessSourcePartition: (self, /, *args, **kwargs)\r\n'[39m +
+                    [32m'StatelessSinkPartition: (self, /, *args, **kwargs)\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D3PT7KS70A2Y36CK6R3N1'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Let me check the actual source code for examples of how to use these classes:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D3ZN5W887725GSB0YY8F6'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_D9JxVHvTvpirQO2aMTyR2y1z'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'from bytewax.inputs import StatelessSourcePartition, DynamicSource\n'[39m +
+                  [32m'print(inspect.getsource(StatelessSourcePartition))\n'[39m +
+                  [32m'" 2>&1 | head -60'[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_jPZ5R3QmYjSYonlQEZ7qc9Zt'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'from bytewax.outputs import StatelessSinkPartition, DynamicSink\n'[39m +
+                  [32m'print(inspect.getsource(StatelessSinkPartition))\n'[39m +
+                  [32m'" 2>&1 | head -60'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_D9JxVHvTvpirQO2aMTyR2y1z'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'class StatelessSourcePartition(ABC, Generic[X]):\r\n'[39m +
+                    [32m'    """Input partition that is stateless."""\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    @abstractmethod\r\n'[39m +
+                    [32m'    def next_batch(self) -> Iterable[X]:\r\n'[39m +
+                    [32m'        """Attempt to get the next batch of input items.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        This must participate in a kind of cooperative multi-tasking,\r\n'[39m +
+                    [32m'        never blocking but yielding an empty list if there are no new\r\n'[39m +
+                    [32m'        items yet.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :returns: Items immediately ready. May be empty if no new\r\n'[39m +
+                    [32m'            items.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :raises StopIteration: When the source is complete.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        """\r\n'[39m +
+                    [32m'        ...\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    def next_awake(self) -> Optional[datetime]:\r\n'[39m +
+                    [32m'        """When to next attempt to get input items.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        {py:obj}`next_batch` will not be called until the most\r\n'[39m +
+                    [32m'        recently returned time has past.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        This will be called upon initialization of the source and\r\n'[39m +
+                    [32m'        after {py:obj}`next_batch`, but also possibly at other times.\r\n'[39m +
+                    [32m'        Multiple times are not stored; you must return the next awake\r\n'[39m +
+                    [32m'        time on every call, if any.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        If this returns `None`, {py:obj}`next_batch` will be called\r\n'[39m +
+                    [32m'        immediately unless the previous batch had no items, in which\r\n'[39m +
+                    [32m'        case there is a 1 millisecond delay.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        Use this instead of {py:obj}`time.sleep` in\r\n'[39m +
+                    [32m'        {py:obj}`next_batch`.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :returns: Next awake time or `None` to indicate automatic\r\n'[39m +
+                    [32m'            behavior.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        """\r\n'[39m +
+                    [32m'        return None\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    def close(self) -> None:\r\n'[39m +
+                    [32m'        """Cleanup this partition when the dataflow completes.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        This is not guaranteed to be called. It will only be called\r\n'[39m +
+                    [32m'        when the dataflow finishes on finite input. It will not be\r\n'[39m +
+                    [32m'        called during an abrupt or abort shutdown.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        """\r\n'[39m +
+                    [32m'        return\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_jPZ5R3QmYjSYonlQEZ7qc9Zt'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'class StatelessSinkPartition(ABC, Generic[X]):\r\n'[39m +
+                    [32m'    """Output partition that is stateless."""\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    @abstractmethod\r\n'[39m +
+                    [32m'    def write_batch(self, items: List[X]) -> None:\r\n'[39m +
+                    [32m'        """Write a batch of output items.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        Called multiple times whenever new items are seen at this\r\n'[39m +
+                    [32m'        point in the dataflow.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :arg items: Items in the dataflow. Non-deterministically\r\n'[39m +
+                    [32m'            batched.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        """\r\n'[39m +
+                    [32m'        ...\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    def close(self) -> None:\r\n'[39m +
+                    [32m'        """Cleanup this partition when the dataflow completes.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        This is not guaranteed to be called. It will only be called\r\n'[39m +
+                    [32m'        when the dataflow finishes on finite input. It will not be\r\n'[39m +
+                    [32m'        called during an abrupt or abort shutdown.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        """\r\n'[39m +
+                    [32m'        return\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_NHqNGJUUCmfQumlmhiNr8TSA'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'from bytewax.inputs import DynamicSource\n'[39m +
+                  [32m'print(inspect.getsource(DynamicSource))\n'[39m +
+                  [32m'" 2>&1 | head -30'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D47B717V1RAJ5J1KG4J37'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_eswgy0YlwXHSSKtqL3t6zoar'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'from bytewax.outputs import DynamicSink\n'[39m +
+                  [32m'print(inspect.getsource(DynamicSink))\n'[39m +
+                  [32m'" 2>&1 | head -30'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_NHqNGJUUCmfQumlmhiNr8TSA'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'class DynamicSource(Source[X]):\r\n'[39m +
+                    [32m'    """An input source where all workers can read distinct items.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    Does not support storing any resume state. Thus these kind of\r\n'[39m +
+                    [32m'    sources only naively can support at-most-once processing.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    The source must somehow support supplying disjoint data for each\r\n'[39m +
+                    [32m'    worker. If you re-read the same items on multiple workers, the\r\n'[39m +
+                    [32m'    dataflow will process these as duplicate items.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    """\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    @abstractmethod\r\n'[39m +
+                    [32m'    def build(\r\n'[39m +
+                    [32m'        self, step_id: str, worker_index: int, worker_count: int\r\n'[39m +
+                    [32m'    ) -> StatelessSourcePartition[X]:\r\n'[39m +
+                    [32m'        """Build an input source for a worker.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        Will be called once on each worker.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :arg step_id: The step_id of the input operator.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :arg worker_index: Index of this worker. Workers are zero-indexed.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :arg worker_count: Total number of workers.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :returns: The built partition.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        """\r\n'[39m +
+                    [32m'        ...\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D47B717V1RAJ5J1KG4J37'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_eswgy0YlwXHSSKtqL3t6zoar'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'class DynamicSink(Sink[X]):\r\n'[39m +
+                    [32m'    """An output sink where all workers write items concurrently.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    Does not support storing any resume state. Thus these kind of\r\n'[39m +
+                    [32m'    outputs only naively can support at-least-once processing.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    """\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    @abstractmethod\r\n'[39m +
+                    [32m'    def build(\r\n'[39m +
+                    [32m'        self, step_id: str, worker_index: int, worker_count: int\r\n'[39m +
+                    [32m'    ) -> StatelessSinkPartition[X]:\r\n'[39m +
+                    [32m'        """Build an output partition for a worker.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        Will be called once on each worker.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :arg step_id: The step_id of the output operator.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :arg worker_index: Index of this worker.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :arg worker_count: Total number of workers.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        :returns: The built partition.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'        """\r\n'[39m +
+                    [32m'        ...\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now let me check how `count_window` output format looks:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D4HP6KPEVRMJ17P8RYXPZ'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_fSSIM8WKiKe6B2KObuHv5OYz'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'from bytewax.operators.windowing import WindowMetadata\n'[39m +
+                  [32m'print(inspect.getsource(WindowMetadata))\n'[39m +
+                  [32m'" 2>&1 | head -30'[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_kCNMJXtddjJQi3MH9BjuJZKa'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python -c "\n'[39m +
+                  [32m'from bytewax.operators.windowing import TumblingWindower\n'[39m +
+                  [32m'from datetime import datetime, timedelta, timezone\n'[39m +
+                  [32m'tw = TumblingWindower(length=timedelta(hours=1), align_to=datetime(2023,1,1, tzinfo=timezone.utc))\n'[39m +
+                  [32m"print('ok')\n"[39m +
+                  [32m'print(dir(tw))\n'[39m +
+                  [32m'" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_fSSIM8WKiKe6B2KObuHv5OYz'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'@dataclass\r\n'[39m +
+                    [32m'class WindowMetadata:\r\n'[39m +
+                    [32m'    """Metadata about a window.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    The exact semantics of the fields will depend on the windower\r\n'[39m +
+                    [32m'    used. E.g. for {py:obj}`SessionWindower`, `close_time` is\r\n'[39m +
+                    [32m'    inclusive; but for {py:obj}`SlidingWindower` it is not.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    """\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    open_time: datetime\r\n'[39m +
+                    [32m'    """The timestamp this window opened."""\r\n'[39m +
+                    [32m'    close_time: datetime\r\n'[39m +
+                    [32m'    """The timestamp this window closed."""\r\n'[39m +
+                    [32m'    merged_ids: Set[int] = field(default_factory=set)\r\n'[39m +
+                    [32m'    """Any original window IDs merged into this window before close."""\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_kCNMJXtddjJQi3MH9BjuJZKa'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'ok\r\n'[39m +
+                    [32m"['__abstractmethods__', '__annotations__', '__class__', '__class_getitem__', '__dataclass_fields__', '__dataclass_params__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__match_args__', '__module__', '__ne__', '__new__', '__orig_bases__', '__parameters__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', 'align_to', 'build', 'length']\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now I have enough information. Let me create the implementation.'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D4SXJFCMJJBV539RNBNYA'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_fQ3JEgR4vfkxpr7sQ8WMC9Il'[39m,
+              toolName: [32m'todoWrite'[39m,
+              input: {
+                todos: [
+                  {
+                    id: [32m'1'[39m,
+                    content: [32m'Create the dataflow.py implementation'[39m,
+                    status: [32m'in-progress'[39m,
+                    priority: [32m'high'[39m
+                  },
+                  {
+                    id: [32m'2'[39m,
+                    content: [32m'Test the dataflow with sample data'[39m,
+                    status: [32m'pending'[39m,
+                    priority: [32m'high'[39m
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_fQ3JEgR4vfkxpr7sQ8WMC9Il'[39m,
+              toolName: [32m'todoWrite'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_oVNgSKrexaU9olepemoK9JRc'[39m,
+              toolName: [32m'writeToFile'[39m,
+              input: {
+                path: [32m'/home/user/myproject/dataflow.py'[39m,
+                content: [32m'"""Bytewax dataflow for windowed word count using event time processing."""\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'import json\n'[39m +
+                  [32m'import sys\n'[39m +
+                  [32m'from datetime import datetime, timedelta, timezone\n'[39m +
+                  [32m'from typing import List, Optional\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'from bytewax.dataflow import Dataflow\n'[39m +
+                  [32m'from bytewax.inputs import DynamicSource, StatelessSourcePartition\n'[39m +
+                  [32m'from bytewax.outputs import DynamicSink, StatelessSinkPartition\n'[39m +
+                  [32m'from bytewax.operators import input as bytewax_input\n'[39m +
+                  [32m'from bytewax.operators import output as bytewax_output\n'[39m +
+                  [32m'from bytewax.operators.windowing import (\n'[39m +
+                  [32m'    EventClock,\n'[39m +
+                  [32m'    TumblingWindower,\n'[39m +
+                  [32m'    WindowMetadata,\n'[39m +
+                  [32m'    count_window,\n'[39m +
+                  [32m')\n'[39m +
+                  [32m'from bytewax.run import run_main\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'class JSONLSource(DynamicSource):\n'[39m +
+                  [32m'    """Source that reads a JSON Lines file and yields parsed events."""\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def __init__(self, filepath: str):\n'[39m +
+                  [32m'        self.filepath = filepath\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def build(\n'[39m +
+                  [32m'        self, step_id: str, worker_index: int, worker_count: int\n'[39m +
+                  [32m'    ) -> StatelessSourcePartition:\n'[39m +
+                  [32m'        return JSONLPartition(self.filepath)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'class JSONLPartition(StatelessSourcePartition):\n'[39m +
+                  [32m'    """Partition that reads all lines from a JSONL file."""\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def __init__(self, filepath: str):\n'[39m +
+                  [32m'        self._lines = None\n'[39m +
+                  [32m'        self._index = 0\n'[39m +
+                  [32m'        with open(filepath, "r") as f:\n'[39m +
+                  [32m'            self._lines = [line.strip() for line in f if line.strip()]\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def next_batch(self) -> List[dict]:\n'[39m +
+                  [32m'        if self._lines is None:\n'[39m +
+                  [32m'            raise StopIteration\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        batch = []\n'[39m +
+                  [32m'        while self._index < len(self._lines):\n'[39m +
+                  [32m'            line = self._lines[self._index]\n'[39m +
+                  [32m'            self._index += 1\n'[39m +
+                  [32m'            try:\n'[39m +
+                  [32m'                event = json.loads(line)\n'[39m +
+                  [32m'                batch.append(event)\n'[39m +
+                  [32m'            except json.JSONDecodeError:\n'[39m +
+                  [32m'                continue\n'[39m +
+                  [32m'            if len(batch) >= 100:\n'[39m +
+                  [32m'                return batch\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        self._lines = None\n'[39m +
+                  [32m'        if batch:\n'[39m +
+                  [32m'            return batch\n'[39m +
+                  [32m'        raise StopIteration\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'class JSONLSink(DynamicSink):\n'[39m +
+                  [32m'    """Sink that writes items as JSON Lines to a file."""\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def __init__(self, filepath: str):\n'[39m +
+                  [32m'        self.filepath = filepath\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def build(\n'[39m +
+                  [32m'        self, step_id: str, worker_index: int, worker_count: int\n'[39m +
+                  [32m'    ) -> StatelessSinkPartition:\n'[39m +
+                  [32m'        return JSONLSinkPartition(self.filepath)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'class JSONLSinkPartition(StatelessSinkPartition):\n'[39m +
+                  [32m'    """Partition that writes items as JSON Lines."""\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def __init__(self, filepath: str):\n'[39m +
+                  [32m'        self._file = open(filepath, "a")\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def write_batch(self, items: List[dict]) -> None:\n'[39m +
+                  [32m'        for item in items:\n'[39m +
+                  [32m'            self._file.write(json.dumps(item) + "\\n")\n'[39m +
+                  [32m'        self._file.flush()\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def close(self) -> None:\n'[39m +
+                  [32m'        self._file.close()\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def parse_iso8601_to_utc(ts_string: str) -> datetime:\n'[39m +
+                  [32m'    """Parse an ISO8601 string into a UTC datetime.\n'[39m +
+                  [32m'\n'[39m +
+                  [32m"    Handles both 'Z' suffix and '+00:00' offset formats.\n"[39m +
+                  [32m'    """\n'[39m +
+                  [32m'    ts_string = ts_string.strip()\n'[39m +
+                  [32m"    # Handle 'Z' suffix\n"[39m +
+                  [32m'    if ts_string.endswith("Z"):\n'[39m +
+                  [32m'        ts_string = ts_string[:-1] + "+00:00"\n'[39m +
+                  [32m'    dt = datetime.fromisoformat(ts_string)\n'[39m +
+                  [32m'    # Ensure UTC timezone\n'[39m +
+                  [32m'    if dt.tzinfo is None:\n'[39m +
+                  [32m'        dt = dt.replace(tzinfo=timezone.utc)\n'[39m +
+                  [32m'    else:\n'[39m +
+                  [32m'        dt = dt.astimezone(timezone.utc)\n'[39m +
+                  [32m'    return dt\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def run(input_file: str, output_file: str) -> None:\n'[39m +
+                  [32m'    """Build and run the windowed word count dataflow."""\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    flow = Dataflow("windowed_word_count")\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 1. Read input\n'[39m +
+                  [32m'    stream = bytewax_input("read_input", flow, JSONLSource(input_file))\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 2. Key by word (window operators expect (key, value) tuples)\n'[39m +
+                  [32m'    def key_by_word(event: dict) -> tuple:\n'[39m +
+                  [32m'        word = event["word"]\n'[39m +
+                  [32m'        return (word, event)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    keyed = stream.map(key_by_word)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 3. Configure event time clock: extract timestamp from the event\n'[39m +
+                  [32m'    def ts_getter(event: dict) -> datetime:\n'[39m +
+                  [32m'        return parse_iso8601_to_utc(event["time"])\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    clock = EventClock(\n'[39m +
+                  [32m'        ts_getter=ts_getter,\n'[39m +
+                  [32m'        wait_for_system_duration=timedelta(seconds=0),\n'[39m +
+                  [32m'    )\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 4. Configure 1-hour tumbling window aligned to 2023-01-01T00:00:00Z\n'[39m +
+                  [32m'    windower = TumblingWindower(\n'[39m +
+                  [32m'        length=timedelta(hours=1),\n'[39m +
+                  [32m'        align_to=datetime(2023, 1, 1, tzinfo=timezone.utc),\n'[39m +
+                  [32m'    )\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 5. Count words within windows\n'[39m +
+                  [32m'    windowed = count_window(\n'[39m +
+                  [32m'        step_id="count_words",\n'[39m +
+                  [32m'        up=keyed,\n'[39m +
+                  [32m'        clock=clock,\n'[39m +
+                  [32m'        windower=windower,\n'[39m +
+                  [32m'        key=lambda x: x,  # key is already the word from the (word, event) tuple\n'[39m +
+                  [32m'    )\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 6. Format output: (key, (window_metadata, count)) -> dict\n'[39m +
+                  [32m'    def format_output(item: tuple) -> dict:\n'[39m +
+                  [32m'        word, (window_meta, count) = item\n'[39m +
+                  [32m'        window_start = window_meta.open_time.isoformat()\n'[39m +
+                  [32m'        return {\n'[39m +
+                  [32m'            "word": word,\n'[39m +
+                  [32m'            "window_id": window_start,\n'[39m +
+                  [32m'            "count": count,\n'[39m +
+                  [32m'        }\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    formatted = windowed.down.map(format_output)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 7. Write output\n'[39m +
+                  [32m'    bytewax_output("write_output", formatted, JSONLSink(output_file))\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # Run the dataflow\n'[39m +
+                  [32m'    run_main(flow)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'if __name__ == "__main__":\n'[39m +
+                  [32m'    if len(sys.argv) != 3:\n'[39m +
+                  [32m'        print(f"Usage: python {sys.argv[0]} <input_file> <output_file>", file=sys.stderr)\n'[39m +
+                  [32m'        sys.exit(1)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    run(sys.argv[1], sys.argv[2])\n'[39m +
+                  [32m''[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D594EH9D889853HD7VTF7'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_oVNgSKrexaU9olepemoK9JRc'[39m,
+              toolName: [32m'writeToFile'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D594EH9D889853HD7VTF7'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now let me test it with sample data:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D6PBSK5VWJY0REXBXNHGZ'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_FOgnwISRV22LBGFTWrEcNUkz'[39m,
+              toolName: [32m'writeToFile'[39m,
+              input: {
+                path: [32m'/home/user/myproject/test_input.jsonl'[39m,
+                content: [32m'{"time": "2023-01-01T00:15:00Z", "word": "hello"}\n'[39m +
+                  [32m'{"time": "2023-01-01T00:30:00Z", "word": "world"}\n'[39m +
+                  [32m'{"time": "2023-01-01T00:45:00Z", "word": "hello"}\n'[39m +
+                  [32m'{"time": "2023-01-01T01:15:00Z", "word": "hello"}\n'[39m +
+                  [32m'{"time": "2023-01-01T01:30:00Z", "word": "world"}\n'[39m +
+                  [32m'{"time": "2023-01-01T02:00:00Z", "word": "hello"}\n'[39m +
+                  [32m'{"time": "2023-01-01T02:30:00Z", "word": "world"}\n'[39m +
+                  [32m'{"time": "2023-01-01T02:45:00Z", "word": "world"}\n'[39m +
+                  [32m''[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_FOgnwISRV22LBGFTWrEcNUkz'[39m,
+              toolName: [32m'writeToFile'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_leidlhL0oRGuTdmE6hMnR0QF'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'cd /home/user/myproject && python dataflow.py test_input.jsonl test_output.jsonl 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D6Y90BDRDSS0KSJFTP1CK'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_leidlhL0oRGuTdmE6hMnR0QF'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "/home/user/myproject/dataflow.py", line 19, in <module>\r\n'[39m +
+                    [32m'    from bytewax.run import run_main\r\n'[39m +
+                    [32m"ImportError: cannot import name 'run_main' from 'bytewax.run' (/usr/local/lib/python3.12/dist-packages/bytewax/run.py). Did you mean: 'cli_main'?\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m,
+                  error: [32m'Command exited with code 1'[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5D6Y90BDRDSS0KSJFTP1CK'[39m
+                }
+              }
+            }
+          ]
+        }
+      ],
+      tools: [
+        {
+          type: [32m'function'[39m,
+          name: [32m'applyDiff'[39m,
+          description: [32m"This is a tool for editing files. For moving or renaming files, you should generally use the executeCommand tool with the 'mv' command instead. For larger edits, use the writeFile tool to overwrite files.\n"[39m +
+            [32m'\n'[39m +
+            [32m"Before using this tool, use the readFile tool to understand the file's contents and context\n"[39m +
+            [32m'\n'[39m +
+            [32m'To make a file edit, provide the following:\n'[39m +
+            [32m'1. path: The path to the file to modify (relative to the current working directory, or an absolute path)\n'[39m +
+            [32m'2. searchContent: The text to replace (must match the file contents exactly, including all whitespace and indentation)\n'[39m +
+            [32m'3. replaceContent: The edited text to replace the searchContent (must be different from searchContent)\n'[39m +
+            [32m'4. expectedReplacements: The number of replacements you expect to make. Defaults to 1 if not specified.\n'[39m +
+            [32m'\n'[39m +
+            [32m'By default, the tool will replace ONE occurrence of searchContent with replaceContent in the specified file. If you want to replace multiple occurrences, provide the expectedReplacements parameter with the exact number of occurrences you expect.\n'[39m +
+            [32m'\n'[39m +
+            [32m'CRITICAL REQUIREMENTS FOR USING THIS TOOL:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. UNIQUENESS (when expectedReplacements is not specified): The searchContent MUST uniquely identify the specific instance you want to change. This means:\n'[39m +
+            [32m'   - Include AT LEAST 3-5 lines of context BEFORE the change point\n'[39m +
+            [32m'   - Include AT LEAST 3-5 lines of context AFTER the change point\n'[39m +
+            [32m'   - Include all whitespace, indentation, and surrounding code exactly as it appears in the file\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. EXPECTED MATCHES: If you want to replace multiple instances:\n'[39m +
+            [32m'   - Use the expectedReplacements parameter with the exact number of occurrences you expect to replace\n'[39m +
+            [32m'   - This will replace ALL occurrences of the searchContent with the replaceContent\n'[39m +
+            [32m"   - If the actual number of matches doesn't equal expectedReplacements, the edit will fail\n"[39m +
+            [32m'   - This is a safety feature to prevent unintended replacements\n'[39m +
+            [32m'\n'[39m +
+            [32m'3. VERIFICATION: Before using this tool:\n'[39m +
+            [32m'   - Check how many instances of the target text exist in the file\n'[39m +
+            [32m'   - If multiple instances exist, either:\n'[39m +
+            [32m'     a) Gather enough context to uniquely identify each one and make separate calls, OR\n'[39m +
+            [32m'     b) Use expectedReplacements parameter with the exact count of instances you expect to replace\n'[39m +
+            [32m'\n'[39m +
+            [32m'WARNING:\n'[39m +
+            [32m"- The tool will fail if searchContent matches multiple locations and expectedReplacements isn't specified\n"[39m +
+            [32m"- The tool will fail if the number of matches doesn't equal expectedReplacements when it's specified\n"[39m +
+            [32m"- The tool will fail if searchContent doesn't match the file contents exactly (including whitespace)\n"[39m +
+            [32m'- The tool will fail if searchContent and replaceContent are the same\n'[39m +
+            [32m'\n'[39m +
+            [32m'When making edits:\n'[39m +
+            [32m'   - Ensure the edit results in idiomatic, correct code\n'[39m +
+            [32m'   - Do not add trailing whitespace to lines (a newline at the end of a file is fine)\n'[39m +
+            [32m'   - Do not leave the code in a broken state\n'[39m +
+            [32m'\n'[39m +
+            [32m'If you want to create a new file, use:\n'[39m +
+            [32m'   - A new file path, including dir name if needed\n'[39m +
+            [32m'   - An empty searchContent\n'[39m +
+            [32m"   - The new file's contents as replaceContent\n"[39m +
+            [32m'\n'[39m +
+            [32m'Remember: when making multiple file edits in a row to the same file, you should prefer to send all edits in a single message with multiple calls to this tool, rather than multiple messages with a single call each.\n'[39m +
+            [32m'\n'[39m +
+            [32m'You may see the following fields in the result:\n'[39m +
+            [32m'- autoFormattingEdits: If the auto-formatter makes any changes, this field will contain a diff against the file content after your edits and any user edits have been applied.\n'[39m +
+            [32m'- newProblems: If any new problems are found after the edit, this field will contain information about them.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the file to modify (relative to the current working directory, or an absolute path).'[39m
+              },
+              searchContent: {
+                type: [32m'string'[39m,
+                description: [32m'The text to replace.'[39m
+              },
+              replaceContent: {
+                type: [32m'string'[39m,
+                description: [32m'The text to replace it with.'[39m
+              },
+              expectedReplacements: {
+                description: [32m'The expected number of replacements to perform. Defaults to 1 if not specified.'[39m,
+                type: [32m'number'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'searchContent'[39m,
+              [32m'replaceContent'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'askFollowupQuestion'[39m,
+          description: [32m'Ask the user a question to gather additional information needed to complete the task. \n'[39m +
+            [32m'\n'[39m +
+            [32m'## When to Use This Tool\n'[39m +
+            [32m'Use this tool in the following scenarios:\n'[39m +
+            [32m"1. The user's request is ambiguous or unclear and requires clarification.\n"[39m +
+            [32m'2. You need more details to proceed effectively.\n'[39m +
+            [32m'3. You have made several unsuccessful attempts to solve the issue and need user guidance to move forward.\n'[39m +
+            [32m'4. Offer choices to the user about what direction to take.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Usage Notes\n'[39m +
+            [32m'- Users will always be able to select "Other" to provide custom text input\n'[39m +
+            [32m'- Use multiSelect: true to allow multiple answers to be selected for a question\n'[39m +
+            [32m'- If you recommend a specific option, make that the first option in the list and add "(Recommended)" at the end of the label\n'[39m +
+            [32m'- Provide 1-4 questions per call\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: This tool CANNOT be used in combination with other tools (except todoWrite) in a single step. If you need to use other tools, you must do so in a separate step before calling this tool.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              questions: {
+                minItems: [33m1[39m,
+                maxItems: [33m4[39m,
+                type: [32m'array'[39m,
+                items: {
+                  type: [32m'object'[39m,
+                  properties: {
+                    question: {
+                      type: [32m'string'[39m,
+                      description: [32m'The complete question to ask the user. Should be clear, specific, and end with a question mark.'[39m
+                    },
+                    header: {
+                      type: [32m'string'[39m,
+                      maxLength: [33m12[39m,
+                      description: [32m'Very short label displayed as a chip/tag (max 12 chars). Examples: "Auth method", "Library", "Approach".'[39m
+                    },
+                    options: {
+                      minItems: [33m2[39m,
+                      maxItems: [33m4[39m,
+                      type: [32m'array'[39m,
+                      items: {
+                        type: [32m'object'[39m,
+                        properties: {
+                          label: {
+                            type: [32m'string'[39m,
+                            description: [32m'Short button label shown to the user. Should be concise (1-5 words) and clearly describe the choice.'[39m
+                          },
+                          description: {
+                            description: [32m'Explanation of what this option means or what will happen if chosen. Useful for providing context about trade-offs or implications.'[39m,
+                            type: [32m'string'[39m
+                          }
+                        },
+                        required: [
+                          [32m'label'[39m
+                        ],
+                        additionalProperties: [33mfalse[39m
+                      },
+                      description: [32m"The available choices for this question. Must have 2-4 options. Each option should be a distinct, mutually exclusive choice (unless multiSelect is enabled). There should be no 'Other' option, that will be provided automatically."[39m
+                    },
+                    multiSelect: {
+                      default: [33mfalse[39m,
+                      description: [32m'Set to true to allow the user to select multiple options instead of just one. Use when choices are not mutually exclusive.'[39m,
+                      type: [32m'boolean'[39m
+                    }
+                  },
+                  required: [
+                    [32m'question'[39m,
+                    [32m'header'[39m,
+                    [32m'options'[39m
+                  ],
+                  additionalProperties: [33mfalse[39m
+                },
+                description: [32m'Questions to ask the user (1-4 questions).'[39m
+              }
+            },
+            required: [
+              [32m'questions'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'attemptCompletion'[39m,
+          description: [32m"Once you've received the results of tool uses and can confirm that the task is complete, use this tool to present the result of your work to the user.\n"[39m +
+            [32m'\n'[39m +
+            [32m'You MUST NOT generate any text before this tool call. All conclusion text must be included within the result parameter of the attemptCompletion tool.\n'[39m +
+            [32m'Never use this tool with a question or request to engage in further conversation! Formulate the end of your result in a way that is final and does not require further input from the user.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: This tool CANNOT be used in combination with other tools (except todoWrite) in a single step. If you need to use other tools, you must do so in a separate step before calling this tool.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              result: {
+                type: [32m'string'[39m,
+                description: [32m'The result of the task. Formulate this result in a way that is final and does not require further input from the user.'[39m
+              }
+            },
+            required: [
+              [32m'result'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'executeCommand'[39m,
+          description: [32m'Executes a given bash command in a persistent shell session with optional timeout, ensuring proper handling and security measures.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: This tool is for terminal operations like git, npm, docker, etc. DO NOT use it for file operations (reading, writing, editing, searching, finding files) - use the specialized tools for this instead.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Before executing the command, please follow these steps:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. Directory Verification:\n'[39m +
+            [32m'   - If the command will create new directories or files, first use listFiles to verify the parent directory exists and is the correct location\n'[39m +
+            [32m'   - For example, before running "mkdir foo/bar", first use listFiles to check that "foo" exists and is the intended parent directory\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. Command Execution:\n'[39m +
+            [32m'   - Always quote file paths that contain spaces with double quotes (e.g., cd "path with spaces/file.txt")\n'[39m +
+            [32m'   - Examples of proper quoting:\n'[39m +
+            [32m'     - cd "/Users/name/My Documents" (correct)\n'[39m +
+            [32m'     - cd /Users/name/My Documents (incorrect - will fail)\n'[39m +
+            [32m'     - python "/path/with spaces/script.py" (correct)\n'[39m +
+            [32m'     - python /path/with spaces/script.py (incorrect - will fail)\n'[39m +
+            [32m'   - After ensuring proper quoting, execute the command.\n'[39m +
+            [32m'   - Capture the output of the command.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'- The command argument is required.\n'[39m +
+            [32m'- You can specify an optional timeout in seconds (up to 300s / 5 minutes). If not specified, commands will timeout after 60s (1 minute).\n'[39m +
+            [32m'- If the output exceeds 30000 characters, output will be truncated before being returned to you.\n'[39m +
+            [32m'- When issuing multiple commands:\n'[39m +
+            [32m'  - If the commands are independent and can run in parallel, make multiple executeCommand tool calls in a single message. For example, if you need to run "git status" and "git diff", send a single message with two executeCommand tool calls in parallel.\n'[39m +
+            [32m'  - If the commands depend on each other and must run sequentially, use a single executeCommand call with \'&&\' to chain them together (e.g., `git add . && git commit -m "message" && git push`). For instance, if one operation must complete before another starts (like mkdir before cp, Write before executeCommand for git operations, or git add before git commit), run these operations sequentially instead.\n'[39m +
+            [32m"  - Use ';' only when you need to run commands sequentially but don't care if earlier commands fail\n"[39m +
+            [32m'  - DO NOT use newlines to separate commands (newlines are ok in quoted strings)\n'[39m +
+            [32m"- You shall avoid use the markdown code block syntax (backtick, '`') in your command, as it will be interpreted as a command substitution.\n"[39m +
+            [32m"- Before using this tool, you must first think about the context provided in <system-reminder> to understand the user's environment and tailor your commands to ensure they are compatible with their system. You must also consider if the command you need to run should be executed in a specific directory rather than the current working directory, and properly set the `cwd` if necessary.\n"[39m +
+            [32m'\n'[39m +
+            [32m'# Committing changes with git\n'[39m +
+            [32m'\n'[39m +
+            [32m'Only create commits when requested by the user. If unclear, ask first. When the user asks you to create a new git commit, follow these steps carefully:\n'[39m +
+            [32m'\n'[39m +
+            [32m'Git Safety Protocol:\n'[39m +
+            [32m'- NEVER update the git config\n'[39m +
+            [32m"- NEVER run destructive git commands (push --force, reset --hard, checkout ., restore ., clean -f, branch -D) unless the user explicitly requests these actions. Taking unauthorized destructive actions is unhelpful and can result in lost work, so it's best to ONLY run these commands when given direct instructions \n"[39m +
+            [32m'- NEVER skip hooks (--no-verify, --no-gpg-sign, etc) unless the user explicitly requests it\n'[39m +
+            [32m'- NEVER run force push to main/master, warn the user if they request it\n'[39m +
+            [32m'- CRITICAL: Always create NEW commits rather than amending, unless the user explicitly requests a git amend. When a pre-commit hook fails, the commit did NOT happen  — so --amend would modify the PREVIOUS commit, which may result in destroying work or losing previous changes. Instead, after hook failure, fix the issue, re-stage, and create a NEW commit\n'[39m +
+            [32m'- When staging files, prefer adding specific files by name rather than using "git add -A" or "git add .", which can accidentally include sensitive files (.env, credentials) or large binaries\n'[39m +
+            [32m'- NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTANT to only commit when explicitly asked, otherwise the user will feel that you are being too proactive\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following bash commands in parallel, each using the executeCommand tool:\n'[39m +
+            [32m'  - Run a git status command to see all untracked files. IMPORTANT: Never use the -uall flag as it can cause memory issues on large repos.\n'[39m +
+            [32m'  - Run a git diff command to see both staged and unstaged changes that will be committed.\n'[39m +
+            [32m"  - Run a git log command to see recent commit messages, so that you can follow this repository's commit message style.\n"[39m +
+            [32m'2. Analyze all staged changes (both previously staged and newly added) and draft a commit message:\n'[39m +
+            [32m'  - Summarize the nature of the changes (eg. new feature, enhancement to an existing feature, bug fix, refactoring, test, docs, etc.). Ensure the message accurately reflects the changes and their purpose (i.e. "add" means a wholly new feature, "update" means an enhancement to an existing feature, "fix" means a bug fix, etc.).\n'[39m +
+            [32m'  - Do not commit files that likely contain secrets (.env, credentials.json, etc). Warn the user if they specifically request to commit those files\n'[39m +
+            [32m'  - Draft a concise (1-2 sentences) commit message that focuses on the "why" rather than the "what"\n'[39m +
+            [32m'  - Ensure it accurately reflects the changes and their purpose\n'[39m +
+            [32m'3. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following commands:\n'[39m +
+            [32m'   - Add relevant untracked files to the staging area.\n'[39m +
+            [32m'   - Create the commit with a message ending with:\n'[39m +
+            [32m'   🤖 Generated with [Pochi](https://getpochi.com) | [Task](<Share URL>)\n'[39m +
+            [32m'\n'[39m +
+            [32m'   Co-Authored-By: Pochi <noreply@getpochi.com>\n'[39m +
+            [32m'\n'[39m +
+            [32m'   Note: Replace <Share URL> with the Share URL from system information if available. If not available, omit the " | [Task](...)" part.\n'[39m +
+            [32m'\n'[39m +
+            [32m'   - Run git status after the commit completes to verify success.\n'[39m +
+            [32m'   Note: git status depends on the commit completing, so run it sequentially after the commit.\n'[39m +
+            [32m'4. If the commit fails due to pre-commit hook changes, retry the commit ONCE to include these automated changes. If it fails again, it usually means a pre-commit hook is preventing the commit. If the commit succeeds but you notice that files were modified by the pre-commit hook, you MUST amend your commit to include them.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Important notes:\n'[39m +
+            [32m'- NEVER update the git config\n'[39m +
+            [32m'- NEVER run additional commands to read or explore code, besides git bash commands\n'[39m +
+            [32m'- DO NOT push to the remote repository unless the user explicitly asks you to do so\n'[39m +
+            [32m'- IMPORTANT: Never use git commands with the -i flag (like git rebase -i or git add -i) since they require interactive input which is not supported.\n'[39m +
+            [32m'- IMPORTANT: Do not use --no-edit with git rebase commands, as the --no-edit flag is not a valid option for git rebase.\n'[39m +
+            [32m'- If there are no changes to commit (i.e., no untracked files and no modifications), do not create an empty commit\n'[39m +
+            [32m'- In order to ensure good formatting, ALWAYS pass the commit message via a HEREDOC, a la this example:\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m`git commit -m "$(cat <<'EOF'\n`[39m +
+            [32m'Commit message here.\n'[39m +
+            [32m'\n'[39m +
+            [32m'🤖 Generated with [Pochi](https://getpochi.com) | [Task](<Share URL>)\n'[39m +
+            [32m'\n'[39m +
+            [32m'Co-Authored-By: Pochi <noreply@getpochi.com>\n'[39m +
+            [32m'EOF\n'[39m +
+            [32m')"\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'# Creating pull requests\n'[39m +
+            [32m'Use the gh command via the executeCommand tool for ALL GitHub-related tasks including working with issues, pull requests, checks, and releases. If given a Github URL use the gh command to get the information needed.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: When the user asks you to create a pull request, follow these steps carefully:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following bash commands in parallel using the executeCommand tool, in order to understand the current state of the branch since it diverged from the main branch:\n'[39m +
+            [32m'   - Run a git status command to see all untracked files (never use -uall flag)\n'[39m +
+            [32m'   - Run a git diff command to see both staged and unstaged changes that will be committed\n'[39m +
+            [32m'   - Check if the current branch tracks a remote branch and is up to date with the remote, so you know if you need to push to the remote\n'[39m +
+            [32m'   - Run a git log command and `git diff [base-branch]...HEAD` to understand the full commit history for the current branch (from the time it diverged from the base branch)\n'[39m +
+            [32m'2. Analyze all changes that will be included in the pull request, making sure to look at all relevant commits (NOT just the latest commit, but ALL commits that will be included in the pull request!!!), and draft a pull request title and summary:\n'[39m +
+            [32m'   - Keep the PR title short (under 70 characters)\n'[39m +
+            [32m'   - Use the description/body for details, not the title\n'[39m +
+            [32m'3. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following commands in parallel:\n'[39m +
+            [32m'   - Create new branch if needed\n'[39m +
+            [32m'   - Push to remote with -u flag if needed\n'[39m +
+            [32m'   - Create PR using gh pr create with the format below. Use a HEREDOC to pass the body to ensure correct formatting.\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m`gh pr create --title "the pr title" --body "$(cat <<'EOF'\n`[39m +
+            [32m'## Summary\n'[39m +
+            [32m'<1-3 bullet points>\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Test plan\n'[39m +
+            [32m'[Checklist of TODOs for testing the pull request...]\n'[39m +
+            [32m'\n'[39m +
+            [32m'🤖 Generated with [Pochi](https://getpochi.com) | [Task](<Share URL>)\n'[39m +
+            [32m'EOF\n'[39m +
+            [32m')"\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'Important:\n'[39m +
+            [32m'- NEVER update the git confi'[39m... 355 more characters,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              command: {
+                type: [32m'string'[39m,
+                description: [32m'The CLI command to execute. This should be valid for the current operating system.'[39m
+              },
+              cwd: {
+                description: [32m'The working directory to execute the command in.'[39m,
+                type: [32m'string'[39m
+              },
+              timeout: {
+                description: [32m'Optional timeout in seconds, max 300 seconds. By default the timeout is 120 seconds.'[39m,
+                type: [32m'number'[39m,
+                minimum: [33m1[39m,
+                maximum: [33m300[39m
+              }
+            },
+            required: [
+              [32m'command'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'globFiles'[39m,
+          description: [32m'Request to find files matching a glob pattern within a specified directory. Use this to get a list of files based on a pattern.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the directory to search in (relative to the current working directory, or an absolute path)'[39m
+              },
+              globPattern: {
+                type: [32m'string'[39m,
+                description: [32m"The glob pattern to match files against (e.g., '*.ts', '**/*.js')"[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'globPattern'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'listFiles'[39m,
+          description: [32m'Request to list files and directories within the specified directory. If recursive is true, it will list all files and directories recursively. If recursive is false or not provided, it will only list the top-level contents. Do not use this tool to confirm the existence of files you may have created, as the user will let you know if the files were created successfully or not.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the directory to list contents for (relative to the current working directory, or an absolute path)'[39m
+              },
+              recursive: {
+                description: [32m'Whether to list files and directories recursively.'[39m,
+                type: [32m'boolean'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'readFile'[39m,
+          description: [32m'Request to read the contents of a file at the specified path. Use this when you need to examine the contents of an existing file you do not know the contents of, for example to analyze code, review text files, extract information from configuration files.\n'[39m +
+            [32m''[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the file to read (relative to the current working directory, or an absolute path)'[39m
+              },
+              startLine: {
+                description: [32m'The starting line number to read from (1-based). If not provided, it starts from the beginning of the file.'[39m,
+                type: [32m'number'[39m
+              },
+              endLine: {
+                description: [32m'The ending line number to read to (1-based, inclusive). If not provided, it reads to the end of the file.'[39m,
+                type: [32m'number'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'useSkill'[39m,
+          description: [32m'Execute a skill within the main conversation\n'[39m +
+            [32m'\n'[39m +
+            [32m'When users ask you to perform tasks, check if any of the available skills below can help complete the task more effectively. Skills provide specialized capabilities and domain knowledge.\n'[39m +
+            [32m'\n'[39m +
+            [32m'When users ask about a SPECIFIC skill (e.g., "How does the pdf skill work?", "What does the commit skill do?"), you must call this tool to get detailed information about that skill.\n'[39m +
+            [32m'\n'[39m +
+            [32m'When users ask general questions like "What skills are available?" or "List all skills", simply refer to the "Available skills" section below - do NOT call this tool.\n'[39m +
+            [32m'\n'[39m +
+            [32m"This tool returns the skill's detailed instructions which you must then follow to complete the task. The instructions contain step-by-step guidance on how to perform the specific task or workflow.\n"[39m +
+            [32m'\n'[39m +
+            [32m'How to invoke:\n'[39m +
+            [32m'- Use this tool with the skill name\n'[39m +
+            [32m'- Example: `skill: "pdf-processing"` - invoke the pdf-processing skill\n'[39m +
+            [32m"- The tool will return the skill's instructions\n"[39m +
+            [32m'- Follow the returned instructions carefully to complete the task\n'[39m +
+            [32m'\n'[39m +
+            [32m'Important:\n'[39m +
+            [32m'- When a skill is relevant for a task OR when users ask about a SPECIFIC skill, you must invoke this tool IMMEDIATELY as your first action\n'[39m +
+            [32m'- For general questions about available skills, simply refer to the "Available skills" list below without calling this tool\n'[39m +
+            [32m'- NEVER just announce or mention a skill in your text response without actually calling this tool (except for general skill listing requests)\n'[39m +
+            [32m'- This is a BLOCKING REQUIREMENT: invoke the relevant Skill tool BEFORE generating any other response about a specific skill or task\n'[39m +
+            [32m'- Only use skills listed in "Available skills" below\n'[39m +
+            [32m'- Check compatibility requirements before using a skill - ensure the skill is compatible with the current OS/environment\n'[39m +
+            [32m'- After calling this tool, follow the returned instructions step by step\n'[39m +
+            [32m'- The skill file location is shown in the [Location: filepath] section of each skill listing below - use this information to understand where the skill is defined\n'[39m +
+            [32m"- Use the directory containing the skill's source file as the base directory for resolving any resource files mentioned in the instructions\n"[39m +
+            [32m'- Proactively explore the skill directory for optional resources that enhance task completion:\n'[39m +
+            [32m'  * scripts/ - executable code that agents can run (Python, Bash, JavaScript, etc.)\n'[39m +
+            [32m'  * references/ - on-demand documentation (REFERENCE.md, FORMS.md, domain-specific files)\n'[39m +
+            [32m'  * assets/ - static resources (templates, images, data files, schemas)\n'[39m +
+            [32m'  Use these resources when they exist and are relevant to the current task\n'[39m +
+            [32m'\n'[39m +
+            [32m'Available skills:\n'[39m +
+            [32m'\n'[39m +
+            [32m'- **find-skills**: Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill. [Location: /tmp/pochi-builtin-5f7c1b2d4157fa59/skills/find-skills.md]\n'[39m +
+            [32m'- **create-skill**: Helps users create new custom agent skills. Use when the user wants to create a new skill, automate a workflow, or package specialized knowledge for reuse. [Location: /tmp/pochi-builtin-5f7c1b2d4157fa59/skills/create-skill.md]\n'[39m +
+            [32m'- **widget-guidelines**: Use before renderWidget when the user needs a visual widget, SVG diagram, UI mockup, chart, local interactive explainer, or generative art. [Location: /tmp/pochi-builtin-5f7c1b2d4157fa59/skills/widget-guidelines/SKILL.md]'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              skill: {
+                type: [32m'string'[39m,
+                description: [32m'The name of the skill to use.'[39m
+              }
+            },
+            required: [
+              [32m'skill'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'searchFiles'[39m,
+          description: [32m'- Fast content search tool that works with any codebase size\n'[39m +
+            [32m'- Searches file contents using regular expressions\n'[39m +
+            [32m'- Supports Rust regex syntax (eg. "log.*Error", "functions+w+", etc.)\n'[39m +
+            [32m'- Filter files by pattern with the include parameter (eg. "*.js", "*.{ts,tsx}")\n'[39m +
+            [32m'- Returns file paths with at least one match sorted by modification time\n'[39m +
+            [32m'- Use this tool when you need to find files containing specific patterns\n'[39m +
+            [32m'- Craft your regex patterns carefully to balance specificity and flexibility.\n'[39m +
+            [32m"- Based on the user's task you may use it to find code patterns, TODO comments, function definitions, or any text-based information across the project. The results include context, so analyze the surrounding code to better understand the matches. Leverage the this tool in combination with other tools for more comprehensive analysis. For example, use it to find specific code patterns, then use readFile to examine the full context of interesting matches before using applyDiff or writeToFile to make informed changes."[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the directory to search in (relative to the current working directory, or an absolute path).'[39m
+              },
+              regex: {
+                type: [32m'string'[39m,
+                description: [32m'The regular expression pattern to search for in file contents. Uses Rust regex syntax.'[39m
+              },
+              filePattern: {
+                description: [32m'File pattern to include in the search (e.g. "*.js", "*.{ts,tsx}"). If not provided, it will search all files.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'regex'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'todoWrite'[39m,
+          description: [32m'Use this tool to create and manage a structured task list for your current coding session. This helps you track progress, organize complex tasks, and demonstrate thoroughness to the user.\n'[39m +
+            [32m'It also helps the user understand the progress of the task and overall progress of their requests.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## When to Use This Tool\n'[39m +
+            [32m'Use this tool proactively in these scenarios:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. Complex multi-step tasks - When a task requires 3 or more distinct steps or actions\n'[39m +
+            [32m'2. Non-trivial and complex tasks - Tasks that require careful planning or multiple operations\n'[39m +
+            [32m'3. User explicitly requests todo list - When the user directly asks you to use the todo list\n'[39m +
+            [32m'4. User provides multiple tasks - When users provide a list of things to be done (numbered or comma-separated)\n'[39m +
+            [32m'5. After receiving new instructions - Immediately capture user requirements as todos. Feel free to edit the todo list based on new information.\n'[39m +
+            [32m'6. After completing a task - Mark it complete and add any new follow-up tasks\n'[39m +
+            [32m'7. When you start working on a new task, mark the todo as in-progress. Ideally you should only have one todo as in-progress at a time. Complete existing tasks before starting new ones.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## When NOT to Use This Tool\n'[39m +
+            [32m'\n'[39m +
+            [32m'Skip using this tool when:\n'[39m +
+            [32m'1. There is only a single, straightforward task\n'[39m +
+            [32m'2. The task is trivial and tracking it provides no organizational benefit\n'[39m +
+            [32m'3. The task can be completed in less than 3 trivial steps\n'[39m +
+            [32m'4. The task is purely conversational or informational\n'[39m +
+            [32m'\n'[39m +
+            [32m'NOTE that you should use should not use this tool if there is only one trivial task to do. In this case you are better off just doing the task directly.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Examples of When to Use the Todo List\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m"User: I want to add a dark mode toggle to the application settings. Make sure you run the tests and build when you're done!\n"[39m +
+            [32m"Assistant: I'll help add a dark mode toggle to your application settings. Let me create a todo list to track this implementation.\n"[39m +
+            [32m'*Creates todo list with the following items:*\n'[39m +
+            [32m'1. Create dark mode toggle component in Settings page\n'[39m +
+            [32m'2. Add dark mode state management (context/store)\n'[39m +
+            [32m'3. Implement CSS-in-JS styles for dark theme\n'[39m +
+            [32m'4. Update existing components to support theme switching\n'[39m +
+            [32m'5. Run tests and build process, addressing any failures or errors that occur\n'[39m +
+            [32m'*Begins working on the first task*\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. Adding dark mode is a multi-step feature requiring UI, state management, and styling changes\n'[39m +
+            [32m'2. The user explicitly requested tests and build be run afterward\n'[39m +
+            [32m'3. The assistant inferred that tests and build need to pass by adding "Ensure tests and build succeed" as the final task\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: Help me rename the function getCwd to getCurrentWorkingDirectory across my project\n'[39m +
+            [32m"Assistant: Let me first search through your codebase to find all occurrences of 'getCwd'.\n"[39m +
+            [32m'*Uses grep or search tools to locate all instances of getCwd in the codebase*\n'[39m +
+            [32m"Assistant: I've found 15 instances of 'getCwd' across 8 different files. Let me create a todo list to track these changes.\n"[39m +
+            [32m'*Creates todo list with specific items for each file that needs updating*\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. First, the assistant searched to understand the scope of the task\n'[39m +
+            [32m'2. Upon finding multiple occurrences across different files, it determined this was a complex task with multiple steps\n'[39m +
+            [32m'3. The todo list helps ensure every instance is tracked and updated systematically\n'[39m +
+            [32m'4. This approach prevents missing any occurrences and maintains code consistency\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: I need to implement these features for my e-commerce site: user registration, product catalog, shopping cart, and checkout flow.\n'[39m +
+            [32m"Assistant: I'll help implement these features. First, let's add all the features to the todo list.\n"[39m +
+            [32m'*Creates a todo list breaking down each feature into specific tasks based on the project architecture*\n'[39m +
+            [32m"Assistant: Let's start with user registration. This will involve creating database models, API endpoints, and frontend forms that integrate with your existing authentication system.\n"[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. The user provided multiple complex features to implement in a comma separated list\n'[39m +
+            [32m'2. The todo list helps organize these large features into manageable tasks\n'[39m +
+            [32m'3. This approach allows for tracking progress across the entire implementation\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m"User: Can you help optimize my React application? It's rendering slowly and has performance issues.</user>\n"[39m +
+            [32m"Assistant: I'll help optimize your React application. First, let me examine your codebase to identify potential performance bottlenecks.\n"[39m +
+            [32m'*Reviews component structure, render patterns, state management, and data fetching*\n'[39m +
+            [32m"Assistant: After analyzing your codebase, I've identified several performance issues. Let me create a todo list to track our optimization efforts.\n"[39m +
+            [32m'*Creates todo list with items like: 1) Implement memoization for expensive calculations in ProductList, 2) Add virtualization for long lists in Dashboard, 3) Optimize image loading in Gallery component, 4) Fix state update loops in ShoppingCart, 5) Review bundle size and implement code splitting*\n'[39m +
+            [32m"Let's start by implementing memoization for the expensive calculations in your ProductList component.</assistant>\n"[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. First, the assistant examined the codebase to identify specific performance issues\n'[39m +
+            [32m'2. Based on this analysis, it identified multiple optimization opportunities\n'[39m +
+            [32m'3. Performance optimization is a non-trivial task requiring multiple steps\n'[39m +
+            [32m'4. The todo list helps methodically track improvements across different components\n'[39m +
+            [32m'5. This systematic approach ensures all performance bottlenecks are addressed\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Examples of When NOT to Use the Todo List\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m"User: How do I print 'Hello World' in Python?\n"[39m +
+            [32m'Assistant: In Python, you can print "Hello World" with this simple code:\n'[39m +
+            [32m'\n'[39m +
+            [32m'python\n'[39m +
+            [32m'print("Hello World")\n'[39m +
+            [32m'\n'[39m +
+            [32m'This will output the text "Hello World" to the console when executed.</assistant>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m"The assistant did not use the todo list because this is a single, trivial task that can be completed in one step. There's no need to track multiple tasks or steps for such a straightforward request.\n"[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: What does the git status command do?\n'[39m +
+            [32m"Assistant: The git status command shows the current state of your working directory and staging area. It displays which changes have been staged, which haven't, and which files aren't being tracked by Git. This is a fundamental command for understanding the current state of your repository before making commits.\n"[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant did not use the todo list because this is an informational request with no actual coding task to complete. The user is simply asking for an explanation, not for the assistant to perform multiple steps or tasks.\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: Can you add a comment to the calculateTotal function to explain what it does?\n'[39m +
+            [32m'Assistant: Sure, let me add a comment to the calculateTotal function to explain what it does.\n'[39m +
+            [32m'* Uses the Edit tool to add a comment to the calculateTotal function *\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m"The assistant did not use the todo list because this is a single, straightforward task confined to one location in the code. Adding a comment doesn't require tracking multiple steps or systematic organization.\n"[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: Run npm install for me and tell me what happens.\n'[39m +
+            [32m"Assistant: I'll run the npm install command for you.\n"[39m +
+            [32m'\n'[39m +
+            [32m'*Executes: npm install*\n'[39m +
+            [32m'\n'[39m +
+            [32m"The command completed successfully. Here's the output:\n"[39m +
+            [32m'[Output of npm install command]\n'[39m +
+            [32m'\n'[39m +
+            [32m'All dependencies have been installed according to your package.json file.\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant did not use the todo list because this is a single command execution with immediate results. There are no multiple steps to track or organize, making the todo list unnecessary for this straightforward task.\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Task States and Management\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. **Task States**: Use these states to track progress:\n'[39m +
+            [32m'   - pending: Task not yet started\n'[39m +
+            [32m'   - in-progress: Currently working on (limit to ONE task at a time)\n'[39m +
+            [32m'   - completed: Task finished successfully\n'[39m +
+            [32m'   - cancelled: Task no longer needed\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. **Task Management**:\n'[39m +
+            [32m'   - Update task status in real-time as you work\n'[39m +
+            [32m"   - Mark tasks complete IMMEDIATELY after finishing (don't batch completions)\n"[39m +
+            [32m'   - Only have ONE task in-progress at any time\n'[39m +
+            [32m'   - Complete current tasks before starting new ones\n'[39m +
+            [32m'   - Cancel tasks that become irrelevant\n'[39m +
+            [32m'\n'[39m +
+            [32m'3. **Task Breakdown**:\n'[39m +
+            [32m'   - Create specific, actionable items\n'[39m +
+            [32m'   - Break complex tasks into smaller, manageable steps\n'[39m +
+            [32m'   - Use clear, descriptive task names\n'[39m +
+            [32m'\n'[39m +
+            [32m'When in doubt, use this tool. Being proactive with task management demonstrates attentiveness and ensures you complete all requirements successfully.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              todos: {
+                type: [32m'array'[39m,
+                items: {
+                  type: [32m'object'[39m,
+                  properties: {
+                    id: {
+                      type: [32m'string'[39m,
+                      description: [32m'The unique identifier of the task, e.g "collect-information".'[39m
+                    },
+                    content: {
+                      type: [32m'string'[39m,
+                      description: [32m'The content of the task.'[39m
+                    },
+                    status: {
+                      type: [32m'string'[39m,
+                      enum: [
+                        [32m'pending'[39m,
+                        [32m'in-progress'[39m,
+                        [32m'completed'[39m,
+                        [32m'cancelled'[39m
+                      ],
+                      description: [32m'The status of the task.'[39m
+                    },
+                    priority: {
+                      type: [32m'string'[39m,
+                      enum: [
+                        [32m'low'[39m,
+                        [32m'medium'[39m,
+                        [32m'high'[39m
+                      ],
+                      description: [32m'The priority of the task.'[39m
+                    }
+                  },
+                  required: [
+                    [32m'id'[39m,
+                    [32m'content'[39m,
+                    [32m'status'[39m,
+                    [32m'priority'[39m
+                  ],
+                  additionalProperties: [33mfalse[39m
+                }
+              }
+            },
+            required: [
+              [32m'todos'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'writeToFile'[39m,
+          description: [32m'Request to write full content to a file at the specified path.\n'[39m +
+            [32m'If the file exists, it will be overwritten with the provided content.\n'[39m +
+            [32m"If the file doesn't exist, it will be created. This tool will automatically create any directories needed to write the file.\n"[39m +
+            [32m'\n'[39m +
+            [32m'You may see the following fields in the result:\n'[39m +
+            [32m'- autoFormattingEdits: If the auto-formatter makes any changes, this field will contain a diff against the file content after your edits and any user edits have been applied.\n'[39m +
+            [32m'- newProblems: If any new problems are found after the edit, this field will contain information about them.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the file to write to (relative to the current working directory, or an absolute path).'[39m
+              },
+              content: {
+                type: [32m'string'[39m,
+                description: [32m'The content to write to the file.'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'content'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'editNotebook'[39m,
+          description: [32m'Edit a specific cell in a Jupyter notebook (.ipynb file) by its cell ID'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path to the notebook file (relative to the current working directory, or an absolute path)'[39m
+              },
+              cellId: {
+                type: [32m'string'[39m,
+                description: [32m'The ID of the cell to edit'[39m
+              },
+              content: {
+                type: [32m'string'[39m,
+                description: [32m'The new content of the cell'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'cellId'[39m,
+              [32m'content'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'newTask'[39m,
+          description: [32m'Launch a new agent to handle complex, multi-step tasks autonomously.\n'[39m +
+            [32m'When using the newTask tool, you may specify a agentType parameter to select which agent type to use.\n'[39m +
+            [32m'Available agent types and the tools they have access to:\n'[39m +
+            [32m'\n'[39m +
+            [32m'### guide\n'[39m +
+            [32m"A comprehensive guide for learning about Pochi's capabilities, features, and configuration.\n"[39m +
+            [32m'This agent helps users understand how to use Pochi effectively, fetch documentation, and modify their config file (.pochi/config.jsonc) with proper confirmation.\n'[39m +
+            [32m"**IMPORTANT: Any request to modify Pochi's configuration must be handled by this agent.**\n"[39m +
+            [32m'\n'[39m +
+            [32m'Trigger examples:\n'[39m +
+            [32m'- General info: "what can Pochi do?", "what agents/tools are available?", "how does Pochi work?"\n'[39m +
+            [32m'- Configuration: "how do I configure Pochi?", "explain config options", "help me modify my config", "set up a new provider", "add an MCP server"\n'[39m +
+            [32m'- Help & feedback: "join the discord", "report a bug", "where can I get help?"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### walkthrough\n'[39m +
+            [32m'Engage this agent to create a summary of the changes made in the current task.\n'[39m +
+            [32m'This agent is strictly limited to documentation and explanation; it DOES NOT execute code modifications.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of user requests this agent shall trigger:\n'[39m +
+            [32m'- "summarize what we have done"\n'[39m +
+            [32m'- "create a walkthrough for the changes"\n'[39m +
+            [32m'- "explain the changes made in this task"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### explore\n'[39m +
+            [32m'Use this agent to explore the codebase when you need to: understand project structure, find where features are implemented, locate specific functions or classes, analyze code patterns, investigate how something works, search for examples or usage, or gather information before making changes.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of questions this agent shall trigger:\n'[39m +
+            [32m'- "where is the authentication logic implemented"\n'[39m +
+            [32m'- "find all usages of the config parser"\n'[39m +
+            [32m'- "how does the ignore-walk module work"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### reviewer\n'[39m +
+            [32m'Engage this agent to perform code reviews and leave inline comments.\n'[39m +
+            [32m'This agent can analyze code and create review comments on specific lines.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of user requests this agent shall trigger:\n'[39m +
+            [32m'- "review the code in src/auth"\n'[39m +
+            [32m'- "add review comments to this file"\n'[39m +
+            [32m'- "check this code and leave feedback"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### browser\n'[39m +
+            [32m'Web browser automation agent for navigating websites, interacting with pages, and extracting information. Uses agent-browser CLI for browser control, including headless sessions and optional local Chrome auto-connect.\n'[39m +
+            [32m'\n'[39m +
+            [32m'### planner\n'[39m +
+            [32m'Engage this agent to formulate comprehensive, technical implementation strategies for feature development, system refactoring, or defect resolution.\n'[39m +
+            [32m'This agent is strictly limited to planning and architectural design; it DOES NOT execute code modifications.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of user requests this agent shall trigger:\n'[39m +
+            [32m'- "create a plan to implement the user authentication feature"\n'[39m +
+            [32m'- "how should we refactor the database schema"\n'[39m +
+            [32m'- "design a solution for the memory leak issue"\n'[39m +
+            [32m'\n'[39m +
+            [32m'\n'[39m +
+            [32m'Always include a reminder in your prompt to ensure the result will be submitted through the `attemptCompletion` tool.\n'[39m +
+            [32m'If the task stops without submitting the result, it will return an error message.\n'[39m +
+            [32m'\n'[39m +
+            [32m'When NOT to use the newTask tool:\n'[39m +
+            [32m'- If you want to read a specific file path, use the readFile or globFiles tool instead of the newTask tool, to find the match more quickly\n'[39m +
+            [32m'- If you are searching for a specific class definition like "class Foo", use the globFiles tool instead, to find the match more quickly\n'[39m +
+            [32m'- If you are searching for code within a specific file or set of 2-3 files, use the readFile tool instead of the newTask tool, to find the match more quickly\n'[39m +
+            [32m'- Other tasks that are not related to the agent descriptions above\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'1. Launch multiple agents tools concurrently whenever possible to maximize performance; to do that, use a single message with multiple tool uses\n'[39m +
+            [32m'2. When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result.\n'[39m +
+            [32m'3. Each agent invocation is stateless. You will not be able to send additional messages to the agent, nor will the agent be able to communicate with you outside of its final report. Therefore, your prompt should contain a highly detailed task description for the agent to perform autonomously and you should specify exactly what information the agent should return back to you in its final and only message to you.\n'[39m +
+            [32m"4. The agent's outputs should generally be trusted\n"[39m +
+            [32m"5. Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent\n"[39m +
+            [32m'6. If the agent description mentions that it should be used proactively, then you should try your best to use it without the user having to ask for it first. Use your judgement.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              description: {
+                type: [32m'string'[39m,
+                description: [32m'A short description of the task.'[39m
+              },
+              prompt: {
+                type: [32m'string'[39m,
+                description: [32m'The detailed prompt for the task to be performed.'[39m
+              },
+              agentType: {
+                description: [32m'The type of the specialized agent to use for the task.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'description'[39m,
+              [32m'prompt'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'startBackgroundJob'[39m,
+          description: [32m'Start a background job to execute a bash command, which allows you to continue working while the job runs.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Before starting the background job, please follow these steps:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. Directory Verification:\n'[39m +
+            [32m'   - If the command will create new directories or files, first use the listFiles tool to verify the parent directory exists and is the correct location\n'[39m +
+            [32m'   - For example, before running "mkdir foo/bar", first use listFiles to check that "foo" exists and is the intended parent directory\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. Job Execution:\n'[39m +
+            [32m'   - After ensuring proper quoting, start the background job.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'- The command argument is required.\n'[39m +
+            [32m'- Use readBackgroundJobOutput to monitor the output and status of the job.\n'[39m +
+            [32m'- Use killBackgroundJob to terminate the job if needed.\n'[39m +
+            [32m'- If the output exceeds 30000 characters, output will be truncated before being returned to you.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Common use cases and examples:\n'[39m +
+            [32m'- Development servers: `npm run dev`, `yarn start`, `bun run dev`\n'[39m +
+            [32m'- Build processes: `npm run build`, `make`, `cargo build`\n'[39m +
+            [32m'- File watchers: `npm run watch`, `tsc --watch`\n'[39m +
+            [32m'- Testing: `npm run test:watch`, `jest --watch`\n'[39m +
+            [32m'- Database services: `docker run -p 5432:5432 postgres`\n'[39m +
+            [32m'\n'[39m +
+            [32m'Command execution rules:\n'[39m +
+            [32m"- Never run 'sleep' as it will return immediately.\n"[39m +
+            [32m"- You do not need to use '&' at the end of the command.\n"[39m +
+            [32m"- When issuing multiple commands, use the ';' or '&&' operator to separate them. DO NOT use newlines (newlines are ok in quoted strings).\n"[39m +
+            [32m"- You shall avoid use the markdown code block syntax (backtick, '`') in your command, as it will be interpreted as a command substitution."[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              command: {
+                type: [32m'string'[39m,
+                description: [32m'The CLI command to execute. This should be valid for the current operating system.'[39m
+              },
+              cwd: {
+                description: [32m'The working directory to execute the command in.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'command'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'readBackgroundJobOutput'[39m,
+          description: [32m'- Retrieves output from a running or completed background job\n'[39m +
+            [32m'- Takes a backgroundJobId parameter identifying the job\n'[39m +
+            [32m'- For terminal jobs, returns only new output since the last check\n'[39m +
+            [32m'- Returns stdout and stderr output along with job status\n'[39m +
+            [32m'- Supports optional regex filtering to show only lines matching a pattern\n'[39m +
+            [32m'- Use this tool when you need to monitor or check the output of a long-running background job'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              backgroundJobId: {
+                type: [32m'string'[39m,
+                description: [32m'The ID of the background job to get output from'[39m
+              },
+              regex: {
+                description: [32m'Optional regular expression to filter the output lines. Only lines matching this regex will be included in the result. Any lines that do not match will no longer be available to read.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'backgroundJobId'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'killBackgroundJob'[39m,
+          description: [32m'- Kills a running background job by its ID\n'[39m +
+            [32m'- Takes a backgroundJobId parameter identifying the job to kill\n'[39m +
+            [32m'- Returns a success or failure status\n'[39m +
+            [32m'- Use this tool when you need to terminate a long-running background job'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              backgroundJobId: {
+                type: [32m'string'[39m,
+                description: [32m'The ID of the background job to kill.'[39m
+              }
+            },
+            required: [
+              [32m'backgroundJobId'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'renderWidget'[39m,
+          description: [32m'Render a local generative UI widget in the VSCode chat. Use this for SVG diagrams, UI mockups, local interactive explainers, charts, and art. IMPORTANT: Before calling this tool, use the `useSkill` tool to run `widget-guidelines` and follow the returned widget guidelines.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              title: {
+                type: [32m'string'[39m,
+                description: [32m'Short human-readable title for the widget.'[39m
+              },
+              widgetCode: {
+                type: [32m'string'[39m,
+                description: [32m'HTML/SVG fragment to render. Do not include doctype/html/head/body. Put visible content first and scripts last. Interactive widgets must use Static DOM + render() mutates existing nodes; do not use innerHTML for UI updates.'[39m
+              },
+              guidelinesRead: {
+                type: [32m'boolean'[39m,
+                description: [32m'Set true only after invoking the `widget-guidelines` skill via the `useSkill` tool and reading the returned guidelines.'[39m
+              }
+            },
+            required: [
+              [32m'title'[39m,
+              [32m'widgetCode'[39m,
+              [32m'guidelinesRead'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'webFetch'[39m,
+          description: [32m'- Fetches content from a specified URL and converts HTML to markdown\n'[39m +
+            [32m'- Use this tool when you need to retrieve and analyze web content\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'  - IMPORTANT: If an MCP-provided web fetch tool is available, prefer using that tool instead of this one, as it may have fewer restrictions.\n'[39m +
+            [32m'  - The URL must be a fully-formed valid URL\n'[39m +
+            [32m'  - The prompt should describe what information you want to extract from the page\n'[39m +
+            [32m'  - This tool is read-only and does not modify any files\n'[39m +
+            [32m'  - Includes a self-cleaning 10-minute cache for faster responses when repeatedly accessing the same URL'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'https://json-schema.org/draft/2020-12/schema'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              url: {
+                type: [32m'string'[39m,
+                format: [32m'uri'[39m
+              }
+            },
+            required: [
+              [32m'url'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'webSearch'[39m,
+          description: [32m'- Allows Pochi to search the web and use the results to inform responses\n'[39m +
+            [32m'- Provides up-to-date information for current events and recent data\n'[39m +
+            [32m'- Returns search result information formatted as search result blocks, including links as markdown hyperlinks\n'[39m +
+            [32m'- Searches are performed automatically within a single API call\n'[39m +
+            [32m'\n'[39m +
+            [32m'CRITICAL REQUIREMENT - You MUST follow this:\n'[39m +
+            [32m`  - After answering the user's question, you MUST include a "Sources:" section at the end of your response\n`[39m +
+            [32m'  - In the Sources section, list all relevant URLs from the search results as markdown hyperlinks: [Title](URL)\n'[39m +
+            [32m'  - This is MANDATORY - never skip including sources in your response\n'[39m +
+            [32m'  - Example format:\n'[39m +
+            [32m'\n'[39m +
+            [32m'    [Your answer here]\n'[39m +
+            [32m'\n'[39m +
+            [32m'    Sources:\n'[39m +
+            [32m'    - [Source Title 1](https://example.com/1)\n'[39m +
+            [32m'    - [Source Title 2](https://example.com/2)\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m`  - Account for "Today's date" in <system-reminder>. For example, if <system-reminder> says "Today's date: 2025-07-01", and the user wants the latest docs, do not use 2024 in the search query. Use 2025.\n`[39m +
+            [32m'  - To research several related facets in one round-trip, pass "query" as an array of up to 5 query strings instead of a single string. Prefer a single string for focused lookups.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'https://json-schema.org/draft/2020-12/schema'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              query: {
+                oneOf: [
+                  {
+                    type: [32m'string'[39m,
+                    minLength: [33m2[39m
+                  },
+                  {
+                    minItems: [33m1[39m,
+                    maxItems: [33m5[39m,
+                    type: [32m'array'[39m,
+                    items: {
+                      type: [32m'string'[39m,
+                      minLength: [33m2[39m
+                    }
+                  }
+                ],
+                description: [32m'A single search query string, OR an array of up to 5 related query strings to batch in one request. Prefer a single string for focused lookups; use an array when you want to research several related facets in one call.'[39m
+              },
+              country: {
+                description: [32m"Country code to filter search results by, e.g. 'US', 'GB', 'JP'"[39m,
+                type: [32m'string'[39m
+              },
+              searchDomainFilter: {
+                description: [32m"List of domains to filter search results. Use allowlist mode (e.g. ['github.com', 'stackoverflow.com']) to include only those domains, or denylist mode (e.g. ['-reddit.com', '-pinterest.com']) to exclude domains. Cannot mix both modes. Maximum 20 domains."[39m,
+                type: [32m'array'[39m,
+                items: {
+                  type: [32m'string'[39m
+                }
+              }
+            },
+            required: [
+              [32m'query'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        }
+      ],
+      providerOptions: {
+        pochi: {
+          taskId: [32m'b8fe6036-12fd-49aa-84ff-1d973072aac3'[39m,
+          client: [32m'PochiCli/0.6.14'[39m,
+          useCase: [32m'agent'[39m
+        }
+      }
+    }
+  }
+}
+[37m2026-06-15 10:29:06.954[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/dataflow.py" resolvedPath="/home/user/myproject/dataflow.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:29:06.955[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:29:06.959[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/dataflow.py" mtime=1781519308019 contentLen=4992
+[37m2026-06-15 10:30:42.767[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/dataflow.py" resolvedPath="/home/user/myproject/dataflow.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:30:42.768[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=undefined, endLine=undefined, timestamp=1781519355172}
+[37m2026-06-15 10:30:42.772[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/dataflow.py" mtime=1781519355172 contentLen=4996
+[37m2026-06-15 10:31:55.708[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/test_output.jsonl" resolvedPath="/home/user/myproject/test_output.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:31:55.709[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:31:55.713[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/test_output.jsonl" mtime=1781519511520 contentLen=432
+[37m2026-06-15 10:33:04.841[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/dataflow.py" resolvedPath="/home/user/myproject/dataflow.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:33:04.842[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=undefined, endLine=undefined, timestamp=1781519503060}
+[37m2026-06-15 10:33:04.847[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/dataflow.py" mtime=1781519503060 contentLen=5031
+[37m2026-06-15 10:34:37.484[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Task runner finished successfully.
+[37m2026-06-15 10:34:37.485[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutting down...
+[37m2026-06-15 10:34:37.510[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutdown completed. Process will exit.
+[37m2026-06-15 10:34:37.511[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Process exiting with code 0

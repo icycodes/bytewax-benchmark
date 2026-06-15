@@ -1,0 +1,17 @@
+[37m2026-06-15 10:10:29.129[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	pochi v0.6.14
+[37m2026-06-15 10:10:29.397[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	BuiltInBundle[39m[22m[0m[0m	Materializing 16 built-in files to /tmp/pochi-builtin-5f7c1b2d4157fa59
+[37m2026-06-15 10:10:29.884[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517730[39m[0m[0m[1m[37m	loadAgents[39m[22m[0m[0m	Loaded 6 custom agents (6 valid, 0 invalid)
+[37m2026-06-15 10:10:30.056[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517731[39m[0m[0m[1m[37m	loadSkills[39m[22m[0m[0m	Loaded 3 skills (3 valid, 0 invalid)
+[37m2026-06-15 10:10:30.152[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:442311[39m[0m[0m[1m[37m	PochiVendor[39m[22m[0m[0m	JWT is expiring or missing, fetching a new one
+[37m2026-06-15 10:10:32.845[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418456[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	MCP servers configuration changed via signal:
+[37m2026-06-15 10:10:32.847[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418568[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	Build MCPHub Status
+[37m2026-06-15 10:10:33.438[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Starting task runner...
+[37m2026-06-15 10:10:33.866[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: null, new: # Bytewax Batching and Micro-Batching Pipeline
+[37m2026-06-15 10:10:50.041[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516111[39m[0m[0m[1m[37m	listFiles[39m[22m[0m[0m	handling listFile with dirPath /home/user/app and recursive [33mtrue[39m
+[37m2026-06-15 10:10:53.829[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: # Bytewax Batching and Micro-Batching Pipeline, new: Implement SQLite batching and user-level micro-batching in a Bytewax pipeline
+[37m2026-06-15 10:10:55.992[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:438793[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Tool call executeCommand (call_01_Q6ltsuEDqdBxQ6OY9jDJwR4j) cancelled: previous-tool-call-failed
+[37m2026-06-15 10:10:55.995[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:438793[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Tool call executeCommand (call_02_NgtuURAKrOv6SdQPSs29E4aT) cancelled: previous-tool-call-failed
+[37m2026-06-15 10:13:42.234[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Task runner finished successfully.
+[37m2026-06-15 10:13:42.235[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutting down...
+[37m2026-06-15 10:13:42.255[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutdown completed. Process will exit.
+[37m2026-06-15 10:13:42.256[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Process exiting with code 0

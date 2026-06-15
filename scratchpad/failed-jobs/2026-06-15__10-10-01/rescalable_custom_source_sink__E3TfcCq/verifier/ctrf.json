@@ -1,0 +1,41 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T10:20:28.755482+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781518828376,
+            "stop": 1781518828755
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution_and_recovery",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 357,
+                "start": 1781518828397,
+                "stop": 1781518828754,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_pipeline_execution_and_recovery():\n        # Step 1: Create directories\n        os.makedirs(INPUT_DIR, exist_ok=True)\n        os.makedirs(OUTPUT_DIR, exist_ok=True)\n        os.makedirs(RECOVERY_DIR, exist_ok=True)\n    \n        # Step 2: Create initial input files\n        file1_input = os.path.join(INPUT_DIR, \"file1.txt\")\n        file2_input = os.path.join(INPUT_DIR, \"file2.txt\")\n    \n        with open(file1_input, \"w\") as f:\n            f.write(\"line1\\nline2\\nline3\\n\")\n    \n        with open(file2_input, \"w\") as f:\n            f.write(\"hello\\nworld\\n\")\n    \n        # Step 3: Initialize recovery directory\n        result = subprocess.run(\n            [\"python3\", \"-m\", \"bytewax.recovery\", RECOVERY_DIR, \"1\"],\n            capture_output=True, text=True, cwd=PROJECT_DIR\n        )\n        assert result.returncode == 0, f\"Failed to initialize recovery directory: {result.stderr}\"\n    \n        # Step 4: Run pipeline\n        result = subprocess.run(\n            [\"python3\", \"-m\", \"bytewax.run\", \"pipeline:flow\"],\n            capture_output=True, text=True, cwd=PROJECT_DIR\n        )\n>       assert result.returncode == 0, f\"Pipeline execution failed: {result.stderr}\"\nE       AssertionError: Pipeline execution failed: thread '<unnamed>' panicked at src/outputs.rs:332:45:\nE         Box<dyn Any>\nE         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\nE         \nE         Traceback (most recent call last):\nE           File \"<frozen runpy>\", line 198, in _run_module_as_main\nE           File \"<frozen runpy>\", line 88, in _run_code\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 355, in <module>\nE             cli_main(**kwargs)\nE           File \"/home/user/bytewax_project/connectors.py\", line 101, in write_batch\nE             _, line_content = item\nE             ^^^^^^^^^^^^^^^\nE         ValueError: too many values to unpack (expected 2)\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python3', '-m', 'bytewax.run', 'pipeline:flow'], returncode=1, stdout='', stderr='thread \\'<un...in write_batch\\n    _, line_content = item\\n    ^^^^^^^^^^^^^^^\\nValueError: too many values to unpack (expected 2)\\n').returncode\n\ntests/test_final_state.py:38: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

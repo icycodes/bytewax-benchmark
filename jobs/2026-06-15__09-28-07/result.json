@@ -1,0 +1,61 @@
+{
+    "id": "c913bc4e-128e-4232-b722-0374d902d92b",
+    "started_at": "2026-06-15T09:28:10.417579",
+    "updated_at": "2026-06-15T09:39:16.453623",
+    "finished_at": "2026-06-15T09:39:16.453623",
+    "n_total_trials": 18,
+    "stats": {
+        "n_completed_trials": 18,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pochi__gemini-3.1-pro__pending-tasks": {
+                "n_trials": 17,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.5555555555555556
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "event_time_session_windowing__ceCNomN",
+                            "custom_source_micro_batching__yzDiyRb",
+                            "complex_json_stream_filtering__nJE5Eee",
+                            "bytewax_stateful_dedup_window__tSTyqRk",
+                            "sessionization_of_user_events__7HBqp3u",
+                            "real_time_apdex_score__Td3HJ2J",
+                            "merge_streams_different_schemas__He9U9PB",
+                            "stateful_recovery_pipeline__5QsYABD",
+                            "dynamic_routing_branch__nDjssjm",
+                            "streaming_connected_components__s4cJA7w"
+                        ],
+                        "0.0": [
+                            "join_clicks_impressions__kgqA2zJ",
+                            "rescalable_custom_source_sink__cBJRGSG",
+                            "anomaly_detection_streaming__EX3FPA6",
+                            "bytewax_stateful_moving_average__SfLShv2",
+                            "rate_limit_stream__4jcbvqw",
+                            "word_count_with_windowing__8xFBvKN",
+                            "realtime_top_k_aggregation__87ASjBa"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "InitialStateError": [
+                        "ml_inference_stream__gTcKudG"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 0,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 397483,
+        "cost_usd": null
+    }
+}

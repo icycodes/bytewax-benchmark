@@ -1,0 +1,10 @@
+{"sensor_id": "S1", "time": "2026-01-01T00:00:15Z", "temp": 20.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:00:30Z", "temp": 22.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:00:45Z", "temp": 21.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:00:10Z", "temp": 35.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:00:40Z", "temp": 37.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:01:05Z", "temp": 23.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:01:20Z", "temp": 19.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:01:10Z", "temp": 36.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:01:50Z", "temp": 38.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:02:05Z", "temp": 24.0}

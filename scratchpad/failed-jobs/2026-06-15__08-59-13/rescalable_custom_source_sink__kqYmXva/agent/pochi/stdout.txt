@@ -1,0 +1,108 @@
+- Initializing MCP connections...
+You
+# Rescalable Custom Source and Sink ## Background Bytewax provides `FixedPartitionedSource` and `FixedPartitionedSink` to build stateful, rescalable input and output connectors. These connectors maintain their position in the stream, allowing dataflows to recover gracefully from failures without data loss or duplication (exactly-once processing). ## Requirements * Implement a `CustomFileSource` inheriting from `FixedPartitionedSource`. It should read all `.txt` files in a given `input_dir`. Each file acts as a distinct partition. * The source must yield string items representing the lines of the files (without trailing newlines) and maintain the current line number as `resume_state` in its `StatefulSourcePartition`. * Implement a `CustomFileSink` inheriting from `FixedPartitionedSink`. It should write items to a given `output_dir`. The partition key should be the filename, and the sink should append lines to the corresponding file. * The sink's `StatefulSinkPartition` must maintain the number of lines written as `resume_state`. Upon initialization (or recovery), it must truncate the file to the exact number of lines specified in the `resume_state` to prevent duplicate writes. * Create a dataflow in `pipeline.py` that reads from `CustomFileSource` (reading from `input_data/`), converts each line to uppercase using `op.map`, and writes to `CustomFileSink` (writing to `output_data/`). * The dataflow must be executable via the Bytewax CLI with recovery enabled. ## Implementation Hints * In `CustomFileSource.list_parts()`, return the list of filenames in the input directory. * In `CustomFileSource.build_part()`, return a custom `StatefulSourcePartition` that opens the file, seeks to the correct line based on `resume_state`, and yields batches of lines in `next_batch()`. * In `CustomFileSink.list_parts()`, return the same list of filenames. * In `CustomFileSink.part_fn()`, route the item to the correct partition (you can format the output of the source as `(filename, line)` or just rely on a static mapping if the dataflow processes items one by one. Actually, for simplicity, have the source yield `(filename, line_content)`, use that key for the sink, and write the `line_content` to the file). * Ensure both partitions return their current state in the `snapshot()` method. ## Acceptance Criteria * Project path: /home/user/bytewax\_project * Ensure the script is executed and the artifacts exist. * The source must read files from `/home/user/bytewax_project/input_data`. * The sink must write files to `/home/user/bytewax_project/output_data`. * The dataflow must process all lines, convert them to uppercase, and write them to the corresponding files in the output directory. * The pipeline must support recovery. If interrupted and restarted with the same recovery directory, it should not produce duplicate lines in the output files.   
+
+Pochi
+📂 Listing files in /home/user/bytewax_project ✔ 
+📂 Listing files in /home/user ✔ 
+📂 Listing files in /home/user/bytewax_project recursively ✔ 
+💭 Thinking for 182 characters   
+💫 Executing python3 -c "import bytewax; print(bytewax.__version__)" ✖ "Command exited with code 1"
+💫 Executing pip show bytewax ✔ 
+💭 Thinking for 318 characters   
+💫 Executing python3 -c "import bytewax.inputs as i; import bytewax.outputs as o; print(dir(i)); print(dir(o))" ✔ 
+💫 Executing python3 -c "import bytewax.inputs as i; help(i.FixedPartitionedSource)" ✔ 
+💫 Executing python3 -c "import bytewax.inputs as i; help(i.StatefulSourcePartition)" ✔ 
+💫 Executing python3 -c "import bytewax.outputs as o; help(o.FixedPartitionedSink)" ✔ 
+💫 Executing python3 -c "import bytewax.outputs as o; help(o.StatefulSinkPartition)" ✔ 
+📋 Updating todo list (5 items) ✔ 
+💭 Thinking for 3560 characters   
+💫 Executing python3 -c "
+import io
+content = b'line1\nline2\nline3\nline4\n'
+f = io.BytesIO(content)
+byte_offset = 0
+lines_found = 0
+for line in f:
+    byte_offset += len(line)
+    lines_found += 1
+    if lines_found == 2:
+        break
+print(byte_offset, content[:byte_offset])
+" ✔ 
+💭 Thinking for 921 characters   
+🛠️ Tool webSearch ✔ 
+💫 Executing python3 -m bytewax.run --help ✔ 
+🛠️ Tool webSearch ✔ 
+🛠️ Tool webSearch ✔ 
+💭 Thinking for 550 characters   
+📋 Updating todo list (5 items) ✔ 
+💭 Thinking for 177 characters   
+✏️  Writing /home/user/bytewax_project/input_data/file1.txt ✔ 
+✏️  Writing /home/user/bytewax_project/input_data/file2.txt ✔ 
+📋 Updating todo list (5 items) ✔ 
+💭 Thinking for 1543 characters   
+📋 Updating todo list (5 items) ✔ 
+💭 Thinking for 2750 characters   
+📋 Updating todo list (5 items) ✔ 
+💭 Thinking for 1883 characters   
+💫 Executing python3 -c "from bytewax.dataflow import Dataflow; help(Dataflow)" ✔ 
+✏️  Writing /home/user/bytewax_project/pipeline.py ✔ 
+📋 Updating todo list (5 items) ✔ 
+💫 Executing python3 -m bytewax.run pipeline:flow ✔ 
+📂 Listing files in /home/user/bytewax_project/output_data ✔ 
+📖 Reading /home/user/bytewax_project/output_data/file1.txt ✔ 
+📖 Reading /home/user/bytewax_project/output_data/file2.txt ✔ 
+💭 Thinking for 244 characters   
+💫 Executing python3 -m bytewax.recovery --help ✔ 
+💫 Executing python3 -m bytewax.recovery recovery_dir 2 ✖ "Command exited with code 1"
+💫 Executing mkdir recovery_dir && python3 -m bytewax.recovery recovery_dir 2 ✔ 
+📂 Listing files in /home/user/bytewax_project/recovery_dir ✔ 
+💭 Thinking for 2545 characters   
+✏️  Writing /home/user/bytewax_project/pipeline.py ✔ 
+💭 Thinking for 293 characters   
+✏️  Writing /home/user/bytewax_project/test_recovery.py ✔ 
+💫 Executing python3 test_recovery.py ✔ 
+💭 Thinking for 648 characters   
+📂 Listing files in /home/user/bytewax_project/input_data ✔ 
+💭 Thinking for 333 characters   
+💫 Executing rm -rf output_data && python3 -m bytewax.run pipeline:flow ✔ 
+📂 Listing files in /home/user/bytewax_project/output_data ✔ 
+📖 Reading /home/user/bytewax_project/output_data/file1.txt ✔ 
+📖 Reading /home/user/bytewax_project/output_data/file2.txt ✔ 
+📖 Reading /home/user/bytewax_project/output_data/test.txt ✔ 
+📋 Updating todo list (5 items) ✔ 
+💭 Thinking for 614 characters   
+🎉 Task Completed
+I have successfully implemented a rescalable custom source and sink using Bytewax with full support for exactly-once recovery.
+
+### Summary of Implementation:
+
+1. **CustomFileSource (`FixedPartitionedSource`)**:
+   - Inherits from `FixedPartitionedSource`.
+   - Reads all `.txt` files in `/home/user/bytewax_project/input_data`. Each file acts as an independent partition.
+   - Yields `(filename, line_content)` tuples where `line_content` has trailing newlines removed.
+   - Uses `FileSourcePartition` (`StatefulSourcePartition`) to maintain the current line number as `resume_state`. Upon recovery, it skips the already-processed lines and resumes from the correct position.
+
+2. **CustomFileSink (`FixedPartitionedSink`)**:
+   - Inherits from `FixedPartitionedSink`.
+   - Writes the processed items to `/home/user/bytewax_project/output_data`.
+   - Uses `FileSinkPartition` (`StatefulSinkPartition`) to maintain the number of lines written as `resume_state`.
+   - **Exactly-Once Recovery Guarantees**: Upon initialization or recovery, it truncates the output file to the exact number of lines specified in `resume_state` (using byte-offset-based truncation) before opening the file in append mode. This prevents any duplicate writes if a crash occurred mid-epoch.
+
+3. **Dataflow Pipeline (`pipeline.py`)**:
+   - Defines a Bytewax `Dataflow` that reads from `CustomFileSource`, maps lines to uppercase using `op.map`, and writes them to `CustomFileSink`.
+   - Can be run via the Bytewax CLI:
+     ```bash
+     python3 -m bytewax.run pipeline:flow
+     ```
+
+4. **Automated Recovery Testing (`test_recovery.py`)**:
+   - Clears output and recovery directories, and initializes a recovery database with `python3 -m bytewax.recovery recovery_dir 1`.
+   - Runs the pipeline with a slow-down and an intentional crash triggered on line 6 of a 10-line file.
+   - Verifies that the first run crashes, leaving the output file partially written (up to line 5).
+   - Resumes the pipeline using the same recovery directory.
+   - Verifies that the pipeline resumes from the exact checkpoint, truncates/appends correctly, and successfully outputs exactly 10 lines of uppercase content without any duplicates or missing lines.
+
+All components have been thoroughly tested and verified to work flawlessly!   
+  

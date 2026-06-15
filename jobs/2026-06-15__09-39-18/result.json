@@ -1,0 +1,69 @@
+{
+    "id": "60c6b908-aadb-4560-914a-85efd15c9c1e",
+    "started_at": "2026-06-15T09:39:21.883132",
+    "updated_at": "2026-06-15T10:09:59.430525",
+    "finished_at": "2026-06-15T10:09:59.430525",
+    "n_total_trials": 18,
+    "stats": {
+        "n_completed_trials": 18,
+        "n_errored_trials": 7,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pochi__glm-5.1__pending-tasks": {
+                "n_trials": 17,
+                "n_errors": 7,
+                "metrics": [
+                    {
+                        "mean": 0.3333333333333333
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "event_time_session_windowing__dVKdiS9",
+                            "custom_source_micro_batching__AUELYom",
+                            "complex_json_stream_filtering__zDJaC9W",
+                            "merge_streams_different_schemas__4sGc7hc",
+                            "dynamic_routing_branch__ydWJdJC",
+                            "streaming_connected_components__3WxfPg3"
+                        ],
+                        "0.0": [
+                            "join_clicks_impressions__YPvtBDM",
+                            "rescalable_custom_source_sink__vQT9fxL",
+                            "bytewax_stateful_dedup_window__Sacdojp",
+                            "anomaly_detection_streaming__qaKDxsq",
+                            "bytewax_stateful_moving_average__vYBMdZj",
+                            "sessionization_of_user_events__wkrYNg2",
+                            "real_time_apdex_score__k2BEMBz",
+                            "rate_limit_stream__tFc7Ugu",
+                            "stateful_recovery_pipeline__NV4AtZF",
+                            "word_count_with_windowing__GHSHwKt",
+                            "realtime_top_k_aggregation__zVJANZt"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "bytewax_stateful_dedup_window__Sacdojp",
+                        "anomaly_detection_streaming__qaKDxsq",
+                        "sessionization_of_user_events__wkrYNg2",
+                        "real_time_apdex_score__k2BEMBz",
+                        "stateful_recovery_pipeline__NV4AtZF",
+                        "realtime_top_k_aggregation__zVJANZt"
+                    ],
+                    "InitialStateError": [
+                        "ml_inference_stream__dZVTfxw"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 0,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 348191,
+        "cost_usd": null
+    }
+}

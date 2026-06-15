@@ -1,0 +1,56 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:33:44.166398+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781516023848,
+            "stop": 1781516024166
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_dataflow_execution",
+                "status": "passed",
+                "duration": 290,
+                "start": 1781516023873,
+                "stop": 1781516024163,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781516024163,
+                "stop": 1781516024164,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_session_metrics",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781516024164,
+                "stop": 1781516024165,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

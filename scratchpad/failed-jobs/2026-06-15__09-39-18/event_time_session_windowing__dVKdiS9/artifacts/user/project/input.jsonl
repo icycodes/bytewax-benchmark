@@ -1,0 +1,7 @@
+{"user_id": "user1", "page": "home", "timestamp": "2024-01-01T00:00:00Z"}
+{"user_id": "user1", "page": "about", "timestamp": "2024-01-01T00:00:05Z"}
+{"user_id": "user1", "page": "contact", "timestamp": "2024-01-01T00:00:08Z"}
+{"user_id": "user2", "page": "home", "timestamp": "2024-01-01T00:00:02Z"}
+{"user_id": "user2", "page": "products", "timestamp": "2024-01-01T00:00:06Z"}
+{"user_id": "user1", "page": "blog", "timestamp": "2024-01-01T00:00:30Z"}
+{"user_id": "user2", "page": "checkout", "timestamp": "2024-01-01T00:00:20Z"}

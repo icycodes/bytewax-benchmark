@@ -1,0 +1,61 @@
+{
+    "id": "724fce18-8390-494d-a120-6aef4f641078",
+    "started_at": "2026-06-15T09:15:42.049820",
+    "updated_at": "2026-06-15T09:28:06.046404",
+    "finished_at": "2026-06-15T09:28:06.046404",
+    "n_total_trials": 18,
+    "stats": {
+        "n_completed_trials": 18,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pochi__claude-4-6-sonnet__pending-tasks": {
+                "n_trials": 17,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.5
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "event_time_session_windowing__kcz5svD",
+                            "custom_source_micro_batching__7FttMEK",
+                            "complex_json_stream_filtering__4ymzVDW",
+                            "bytewax_stateful_dedup_window__BmBivfL",
+                            "bytewax_stateful_moving_average__8uXTc3k",
+                            "real_time_apdex_score__aoPWC53",
+                            "merge_streams_different_schemas__6DREfjE",
+                            "stateful_recovery_pipeline__56FCewU",
+                            "dynamic_routing_branch__RR6AzQ6"
+                        ],
+                        "0.0": [
+                            "join_clicks_impressions__UDQbaVb",
+                            "rescalable_custom_source_sink__RrChak8",
+                            "anomaly_detection_streaming__dccb8M9",
+                            "sessionization_of_user_events__WhiwkmR",
+                            "rate_limit_stream__wuPYHYV",
+                            "word_count_with_windowing__fVpotWb",
+                            "realtime_top_k_aggregation__DNFhjiM",
+                            "streaming_connected_components__cXgxFnu"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "InitialStateError": [
+                        "ml_inference_stream__Li7j4Lc"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 0,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 483695,
+        "cost_usd": null
+    }
+}

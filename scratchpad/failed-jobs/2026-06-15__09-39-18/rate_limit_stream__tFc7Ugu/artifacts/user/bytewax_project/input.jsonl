@@ -1,0 +1,9 @@
+{"user_id": "user1", "event_id": "e1", "timestamp": 1000.0}
+{"user_id": "user1", "event_id": "e2", "timestamp": 1000.1}
+{"user_id": "user1", "event_id": "e3", "timestamp": 1000.2}
+{"user_id": "user1", "event_id": "e4", "timestamp": 1000.3}
+{"user_id": "user1", "event_id": "e5", "timestamp": 1000.4}
+{"user_id": "user1", "event_id": "e6", "timestamp": 1000.5}
+{"user_id": "user1", "event_id": "e7", "timestamp": 1003.5}
+{"user_id": "user2", "event_id": "e8", "timestamp": 1000.0}
+{"user_id": "user2", "event_id": "e9", "timestamp": 1000.5}

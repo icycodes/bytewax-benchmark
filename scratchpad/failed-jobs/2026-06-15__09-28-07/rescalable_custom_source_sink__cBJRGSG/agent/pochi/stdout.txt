@@ -1,0 +1,360 @@
+- Initializing MCP connections...
+You
+# Rescalable Custom Source and Sink ## Background Bytewax provides `FixedPartitionedSource` and `FixedPartitionedSink` to build stateful, rescalable input and output connectors. These connectors maintain their position in the stream, allowing dataflows to recover gracefully from failures without data loss or duplication (exactly-once processing). ## Requirements * Implement a `CustomFileSource` inheriting from `FixedPartitionedSource`. It should read all `.txt` files in a given `input_dir`. Each file acts as a distinct partition. * The source must yield string items representing the lines of the files (without trailing newlines) and maintain the current line number as `resume_state` in its `StatefulSourcePartition`. * Implement a `CustomFileSink` inheriting from `FixedPartitionedSink`. It should write items to a given `output_dir`. The partition key should be the filename, and the sink should append lines to the corresponding file. * The sink's `StatefulSinkPartition` must maintain the number of lines written as `resume_state`. Upon initialization (or recovery), it must truncate the file to the exact number of lines specified in the `resume_state` to prevent duplicate writes. * Create a dataflow in `pipeline.py` that reads from `CustomFileSource` (reading from `input_data/`), converts each line to uppercase using `op.map`, and writes to `CustomFileSink` (writing to `output_data/`). * The dataflow must be executable via the Bytewax CLI with recovery enabled. ## Implementation Hints * In `CustomFileSource.list_parts()`, return the list of filenames in the input directory. * In `CustomFileSource.build_part()`, return a custom `StatefulSourcePartition` that opens the file, seeks to the correct line based on `resume_state`, and yields batches of lines in `next_batch()`. * In `CustomFileSink.list_parts()`, return the same list of filenames. * In `CustomFileSink.part_fn()`, route the item to the correct partition (you can format the output of the source as `(filename, line)` or just rely on a static mapping if the dataflow processes items one by one. Actually, for simplicity, have the source yield `(filename, line_content)`, use that key for the sink, and write the `line_content` to the file). * Ensure both partitions return their current state in the `snapshot()` method. ## Acceptance Criteria * Project path: /home/user/bytewax\_project * Ensure the script is executed and the artifacts exist. * The source must read files from `/home/user/bytewax_project/input_data`. * The sink must write files to `/home/user/bytewax_project/output_data`. * The dataflow must process all lines, convert them to uppercase, and write them to the corresponding files in the output directory. * The pipeline must support recovery. If interrupted and restarted with the same recovery directory, it should not produce duplicate lines in the output files.   
+
+Pochi
+💭 Thinking for 1761 characters   
+💫 Executing mkdir -p /home/user/bytewax_project/input_data /home/user/bytewax_project/output_data
+cat << 'EOF' > /home/user/bytewax_project/check_version.py
+import bytewax
+print(bytewax.__version__)
+from bytewax.outputs import FixedPartitionedSink
+print(dir(FixedPartitionedSink))
+EOF
+python3 /home/user/bytewax_project/check_version.py
+ ✖ "Command exited with code 1"
+💭 Thinking for 253 characters   
+💫 Executing pip show bytewax ✔ 
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/check_version.py
+from bytewax.outputs import FixedPartitionedSink
+import inspect
+print(inspect.getsource(FixedPartitionedSink))
+EOF
+python3 /home/user/bytewax_project/check_version.py ✔ 
+💭 Thinking for 716 characters   
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/check_source.py
+from bytewax.inputs import FixedPartitionedSource
+import inspect
+print(inspect.getsource(FixedPartitionedSource))
+EOF
+python3 /home/user/bytewax_project/check_source.py ✔ 
+💭 Thinking for 1149 characters   
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/check_part.py
+from bytewax.inputs import StatefulSourcePartition
+from bytewax.outputs import StatefulSinkPartition
+import inspect
+print("StatefulSourcePartition")
+print(inspect.getsource(StatefulSourcePartition))
+print("StatefulSinkPartition")
+print(inspect.getsource(StatefulSinkPartition))
+EOF
+python3 /home/user/bytewax_project/check_part.py ✔ 
+💭 Thinking for 524 characters   
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/test_flow.py
+import bytewax.operators as op
+from bytewax.dataflow import Dataflow
+from bytewax.testing import run_main
+from bytewax.inputs import FixedPartitionedSource, StatefulSourcePartition
+from bytewax.outputs import FixedPartitionedSink, StatefulSinkPartition
+
+class TestSourcePart(StatefulSourcePartition):
+    def __init__(self):
+        self.i = 0
+    def next_batch(self):
+        if self.i < 2:
+            self.i += 1
+            return [("part1", f"val{self.i}")]
+        raise StopIteration()
+    def snapshot(self):
+        return self.i
+
+class TestSource(FixedPartitionedSource):
+    def list_parts(self):
+        return ["part1"]
+    def build_part(self, step_id, for_part, resume_state):
+        return TestSourcePart()
+
+class TestSinkPart(StatefulSinkPartition):
+    def write_batch(self, values):
+        print(f"Sink received: {values}")
+    def snapshot(self):
+        return None
+
+class TestSink(FixedPartitionedSink):
+    def list_parts(self):
+        return ["part1"]
+    def part_fn(self, item_key):
+        return 0
+    def build_part(self, step_id, for_part, resume_state):
+        return TestSinkPart()
+
+flow = Dataflow("test")
+src = op.input("in", flow, TestSource())
+op.output("out", src, TestSink())
+
+run_main(flow)
+EOF
+python3 /home/user/bytewax_project/test_flow.py ✔ 
+💭 Thinking for 345 characters   
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/test_flow2.py
+import bytewax.operators as op
+from bytewax.dataflow import Dataflow
+from bytewax.testing import run_main
+from bytewax.inputs import FixedPartitionedSource, StatefulSourcePartition
+from bytewax.outputs import FixedPartitionedSink, StatefulSinkPartition
+
+class TestSourcePart(StatefulSourcePartition):
+    def __init__(self):
+        self.i = 0
+    def next_batch(self):
+        if self.i < 2:
+            self.i += 1
+            return [("my_key", f"val{self.i}")]
+        raise StopIteration()
+    def snapshot(self):
+        return self.i
+
+class TestSource(FixedPartitionedSource):
+    def list_parts(self):
+        return ["part1"]
+    def build_part(self, step_id, for_part, resume_state):
+        return TestSourcePart()
+
+class TestSinkPart(StatefulSinkPartition):
+    def write_batch(self, values):
+        print(f"Sink received values: {values}")
+    def snapshot(self):
+        return None
+
+class TestSink(FixedPartitionedSink):
+    def list_parts(self):
+        return ["part1"]
+    def part_fn(self, item_key):
+        print(f"part_fn received key: {item_key}")
+        return 0
+    def build_part(self, step_id, for_part, resume_state):
+        return TestSinkPart()
+
+flow = Dataflow("test")
+src = op.input("in", flow, TestSource())
+op.output("out", src, TestSink())
+
+run_main(flow)
+EOF
+python3 /home/user/bytewax_project/test_flow2.py ✔ 
+💭 Thinking for 674 characters   
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/test_flow3.py
+import bytewax.operators as op
+from bytewax.dataflow import Dataflow
+from bytewax.testing import run_main
+from bytewax.outputs import FixedPartitionedSink, StatefulSinkPartition
+
+class TestSinkPart(StatefulSinkPartition):
+    def __init__(self, name):
+        self.name = name
+    def write_batch(self, values):
+        print(f"Sink {self.name} received: {values}")
+    def snapshot(self):
+        return None
+
+class TestSink(FixedPartitionedSink):
+    def list_parts(self):
+        return ["B", "A", "C"]
+    def part_fn(self, item_key):
+        parts = sorted(self.list_parts())
+        return parts.index(item_key)
+    def build_part(self, step_id, for_part, resume_state):
+        return TestSinkPart(for_part)
+
+flow = Dataflow("test")
+src = op.inject("in", flow, [("A", "valA"), ("B", "valB"), ("C", "valC")])
+op.output("out", src, TestSink())
+
+run_main(flow)
+EOF
+python3 /home/user/bytewax_project/test_flow3.py ✖ "Command exited with code 1"
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/test_flow3.py
+import bytewax.operators as op
+from bytewax.dataflow import Dataflow
+from bytewax.testing import run_main, TestingSource
+from bytewax.outputs import FixedPartitionedSink, StatefulSinkPartition
+
+class TestSinkPart(StatefulSinkPartition):
+    def __init__(self, name):
+        self.name = name
+    def write_batch(self, values):
+        print(f"Sink {self.name} received: {values}")
+    def snapshot(self):
+        return None
+
+class TestSink(FixedPartitionedSink):
+    def list_parts(self):
+        return ["B", "A", "C"]
+    def part_fn(self, item_key):
+        parts = sorted(["B", "A", "C"])
+        return parts.index(item_key)
+    def build_part(self, step_id, for_part, resume_state):
+        return TestSinkPart(for_part)
+
+flow = Dataflow("test")
+src = op.input("in", flow, TestingSource([("A", "valA"), ("B", "valB"), ("C", "valC")]))
+op.output("out", src, TestSink())
+
+run_main(flow)
+EOF
+python3 /home/user/bytewax_project/test_flow3.py ✔ 
+💭 Thinking for 744 characters   
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/pipeline.py
+import os
+import glob
+from pathlib import Path
+
+from bytewax.inputs import FixedPartitionedSource, StatefulSourcePartition
+from bytewax.outputs import FixedPartitionedSink, StatefulSinkPartition
+import bytewax.operators as op
+from bytewax.dataflow import Dataflow
+
+class FileSourcePartition(StatefulSourcePartition):
+    def __init__(self, filepath, resume_state):
+        self.filepath = filepath
+        self.filename = os.path.basename(filepath)
+        self._current_line = resume_state or 0
+        self._f = open(self.filepath, 'r')
+        # Skip lines up to resume_state
+        for _ in range(self._current_line):
+            self._f.readline()
+
+    def next_batch(self):
+        line = self._f.readline()
+        if not line:
+            raise StopIteration()
+        self._current_line += 1
+        return [(self.filename, line.rstrip('\n'))]
+
+    def snapshot(self):
+        return self._current_line
+
+    def close(self):
+        self._f.close()
+
+class CustomFileSource(FixedPartitionedSource):
+    def __init__(self, input_dir):
+        self.input_dir = input_dir
+
+    def list_parts(self):
+        files = glob.glob(os.path.join(self.input_dir, '*.txt'))
+        return [os.path.basename(f) for f in files]
+
+    def build_part(self, step_id, for_part, resume_state):
+        filepath = os.path.join(self.input_dir, for_part)
+        return FileSourcePartition(filepath, resume_state)
+
+class FileSinkPartition(StatefulSinkPartition):
+    def __init__(self, filepath, resume_state):
+        self.filepath = filepath
+        self._lines_written = resume_state or 0
+        
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(self.filepath), exist_ok=True)
+        
+        # If file exists, truncate it to the number of lines written
+        if os.path.exists(self.filepath):
+            with open(self.filepath, 'r') as f:
+                lines = f.readlines()
+            
+            with open(self.filepath, 'w') as f:
+                f.writelines(lines[:self._lines_written])
+        else:
+            open(self.filepath, 'w').close()
+            
+        self._f = open(self.filepath, 'a')
+
+    def write_batch(self, values):
+        for value in values:
+            self._f.write(value + '\n')
+            self._lines_written += 1
+
+    def snapshot(self):
+        return self._lines_written
+
+    def close(self):
+        self._f.close()
+
+class CustomFileSink(FixedPartitionedSink):
+    def __init__(self, output_dir, input_dir):
+        self.output_dir = output_dir
+        self.input_dir = input_dir
+
+    def list_parts(self):
+        files = glob.glob(os.path.join(self.input_dir, '*.txt'))
+        return [os.path.basename(f) for f in files]
+
+    def part_fn(self, item_key):
+        parts = sorted(self.list_parts())
+        return parts.index(item_key)
+
+    def build_part(self, step_id, for_part, resume_state):
+        filepath = os.path.join(self.output_dir, for_part)
+        return FileSinkPartition(filepath, resume_state)
+
+def to_uppercase(item):
+    filename, line = item
+    return (filename, line.upper())
+
+flow = Dataflow("file_processor")
+input_dir = "/home/user/bytewax_project/input_data"
+output_dir = "/home/user/bytewax_project/output_data"
+
+src = op.input("file_input", flow, CustomFileSource(input_dir))
+uppercased = op.map("uppercase", src, to_uppercase)
+op.output("file_output", uppercased, CustomFileSink(output_dir, input_dir))
+EOF ✔ 
+💫 Executing cat << 'EOF' > /home/user/bytewax_project/input_data/file1.txt
+hello
+world
+this
+is
+file1
+EOF
+cat << 'EOF' > /home/user/bytewax_project/input_data/file2.txt
+bytewax
+is
+awesome
+EOF
+python3 -m bytewax.run /home/user/bytewax_project/pipeline.py
+cat /home/user/bytewax_project/output_data/file1.txt
+cat /home/user/bytewax_project/output_data/file2.txt ✔ 
+💭 Thinking for 456 characters   
+💫 Executing rm -rf /home/user/bytewax_project/output_data/*
+mkdir -p /home/user/bytewax_project/recovery
+python3 -m bytewax.run /home/user/bytewax_project/pipeline.py -d /home/user/bytewax_project/recovery
+cat /home/user/bytewax_project/output_data/file1.txt ✖ "Command exited with code 1"
+💭 Thinking for 153 characters   
+💫 Executing python3 -m bytewax.run /home/user/bytewax_project/pipeline.py -r /home/user/bytewax_project/recovery
+cat /home/user/bytewax_project/output_data/file1.txt ✖ "Command exited with code 1"
+💭 Thinking for 236 characters   
+💫 Executing python3 -m bytewax.run /home/user/bytewax_project/pipeline.py -r /home/user/bytewax_project/recovery -s 1 -b 1
+cat /home/user/bytewax_project/output_data/file1.txt ✖ "Command exited with code 1"
+💭 Thinking for 303 characters   
+💫 Executing python3 -m bytewax.recovery /home/user/bytewax_project/recovery init 1
+python3 -m bytewax.run /home/user/bytewax_project/pipeline.py -r /home/user/bytewax_project/recovery -s 1 -b 1
+cat /home/user/bytewax_project/output_data/file1.txt ✖ "Command exited with code 1"
+💭 Thinking for 322 characters   
+💫 Executing rm -rf /home/user/bytewax_project/recovery
+mkdir -p /home/user/bytewax_project/recovery
+python3 -m bytewax.recovery /home/user/bytewax_project/recovery 1
+python3 -m bytewax.run /home/user/bytewax_project/pipeline.py -r /home/user/bytewax_project/recovery -s 1 -b 1
+cat /home/user/bytewax_project/output_data/file1.txt ✔ 
+💭 Thinking for 673 characters   
+💫 Executing cat /home/user/bytewax_project/pipeline.py ✔ 
+💭 Thinking for 330 characters   
+🎉 Task Completed
+The custom rescalable source and sink have been successfully implemented and tested in the Bytewax dataflow pipeline.
+
+### Implementation Details:
+1. **`CustomFileSource`**:
+   - Inherits from `FixedPartitionedSource` and processes `.txt` files in `input_data/`.
+   - Each file acts as an independent partition. The stateful partition reads files sequentially, yielding `(filename, line_content)` without trailing newlines.
+   - It maintains the `_current_line` number as the partition's state and uses it to seek to the correct position (via skipping) when resuming from a snapshot.
+   
+2. **`CustomFileSink`**:
+   - Inherits from `FixedPartitionedSink` and writes processed output to `output_data/`.
+   - Routes incoming `(filename, line_content)` pairs back to their corresponding file. This is handled by overriding `part_fn` to return the index of the filename in the sorted list of partitions.
+   - Maintains the `_lines_written` as its state. Upon initialization or failure recovery, it truncates the file to the exact number of lines tracked in its `resume_state` to guarantee exactly-once processing and prevent duplicate lines.
+
+3. **Dataflow Pipeline**:
+   - The dataflow binds the custom file source, applies an `op.map` conversion to make the lines uppercase, and routes them to the custom file sink.
+   - The dataflow is set up in `/home/user/bytewax_project/pipeline.py`.
+
+The script was executed using the Bytewax CLI. The artifacts were successfully generated in the `output_data` directory, proving that the flow successfully reads lines, transforms them, and writes them with state tracking enabled.   
+  

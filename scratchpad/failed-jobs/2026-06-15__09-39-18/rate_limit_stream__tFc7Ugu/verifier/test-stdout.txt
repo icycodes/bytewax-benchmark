@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py FF                                             [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_pipeline_execution ____________________________
+
+    def test_pipeline_execution():
+        """Run the pipeline with recovery enabled and verify it succeeds."""
+        result = subprocess.run(
+            ["python", "-m", "bytewax.run", "dataflow:flow", "-r", "./recovery", "-b", "0"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+>       assert result.returncode == 0, f"Pipeline execution failed: {result.stderr}"
+E       AssertionError: Pipeline execution failed: usage: python -m bytewax.run [-h] [-r RECOVERY_DIRECTORY]
+E                                      [-s SNAPSHOT_INTERVAL] [-b BACKUP_INTERVAL]
+E                                      [-w WORKERS_PER_PROCESS] [-i PROCESS_ID]
+E                                      [-a ADDRESSES]
+E                                      import_str
+E         python -m bytewax.run: error: when running with recovery, the `-s/--snapshot_interval` and `-b/--backup_interval` values must be set. For more information about setting these values, please see https://bytewax.io/docs/concepts/recovery.
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'dataflow:flow', '-r', './recovery', '-b', '0'], returncode=2, s...must be set. For more information about setting these values, please see https://bytewax.io/docs/concepts/recovery.\n').returncode
+
+tests/test_final_state.py:42: AssertionError
+__________________________ test_rate_limiting_output ___________________________
+
+    def test_rate_limiting_output():
+        """Verify the output JSON lines match the expected rate-limited events."""
+>       assert os.path.exists(OUTPUT_FILE), "Output file was not created."
+E       AssertionError: Output file was not created.
+E       assert False
+E        +  where False = <function exists at 0x7fad0f05f560>('/home/user/bytewax_project/output.jsonl')
+E        +    where <function exists at 0x7fad0f05f560> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_final_state.py:46: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_pipeline_execution - AssertionError: P...
+FAILED tests/test_final_state.py::test_rate_limiting_output - AssertionError:...
+============================== 2 failed in 0.21s ===============================

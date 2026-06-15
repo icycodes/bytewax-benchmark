@@ -1,0 +1,8 @@
+{"user_id": "alice", "page": "/home", "timestamp": "2024-01-01T10:00:00Z"}
+{"user_id": "alice", "page": "/about", "timestamp": "2024-01-01T10:00:05Z"}
+{"user_id": "alice", "page": "/contact", "timestamp": "2024-01-01T10:00:08Z"}
+{"user_id": "bob", "page": "/home", "timestamp": "2024-01-01T10:00:01Z"}
+{"user_id": "bob", "page": "/products", "timestamp": "2024-01-01T10:00:04Z"}
+{"user_id": "alice", "page": "/shop", "timestamp": "2024-01-01T10:00:25Z"}
+{"user_id": "alice", "page": "/cart", "timestamp": "2024-01-01T10:00:30Z"}
+{"user_id": "bob", "page": "/checkout", "timestamp": "2024-01-01T10:00:20Z"}

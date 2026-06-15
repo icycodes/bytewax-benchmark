@@ -1,0 +1,56 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:38:55.787066+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781516335107,
+            "stop": 1781516335786
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "passed",
+                "duration": 613,
+                "start": 1781516335167,
+                "stop": 1781516335780,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_first_window_results",
+                "status": "passed",
+                "duration": 3,
+                "start": 1781516335781,
+                "stop": 1781516335784,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_second_window_results",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781516335785,
+                "stop": 1781516335786,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

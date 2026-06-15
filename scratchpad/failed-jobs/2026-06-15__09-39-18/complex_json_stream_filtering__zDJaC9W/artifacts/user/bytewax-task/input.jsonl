@@ -1,0 +1,10 @@
+{"type": "metric", "device_id": "dev1", "payload": {"temperature": 95.0}}
+{"type": "metric", "device_id": "dev1", "payload": {"temperature": 105.0}}
+{"type": "config", "device_id": "dev1", "payload": {"threshold": 90.0}}
+{"type": "metric", "device_id": "dev1", "payload": {"temperature": 92.0}}
+{"type": "metric", "device_id": "dev2", "payload": {"temperature": 150.0}}
+{"type": "config", "device_id": "dev2", "payload": {"threshold": 200.0}}
+{"type": "metric", "device_id": "dev2", "payload": {"temperature": 180.0}}
+invalid json line
+{"type": "metric", "device_id": "dev3"}
+{"missing": "fields"}

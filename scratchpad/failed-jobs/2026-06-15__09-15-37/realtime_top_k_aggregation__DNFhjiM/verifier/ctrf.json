@@ -1,0 +1,39 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:26:15.710864+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781515575600,
+            "stop": 1781515575710
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_output",
+                "status": "failed",
+                "duration": 90,
+                "start": 1781515575620,
+                "stop": 1781515575710,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "@pytest.fixture(scope=\"module\", autouse=True)\n    def setup_and_run_pipeline():\n        # 1. Prepare Input Data\n        input_data = [[\"A\", 1], [\"B\", 1], [\"C\", 1], [\"A\", 2], [\"D\", 4], [\"B\", 1], [\"C\", 5]]\n        with open(INPUT_FILE, \"w\") as f:\n            json.dump(input_data, f)\n    \n        # Clean up recovery dir if it exists\n        if os.path.exists(RECOVERY_DIR):\n            import shutil\n            shutil.rmtree(RECOVERY_DIR)\n    \n        # Clean up output log if it exists\n        if os.path.exists(OUTPUT_LOG):\n            os.remove(OUTPUT_LOG)\n    \n        # 2. Initialize Recovery\n        init_result = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.recovery\", \"./recovery_dir\", \"1\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert init_result.returncode == 0, f\"Failed to initialize recovery: {init_result.stderr}\"\nE       AssertionError: Failed to initialize recovery: Traceback (most recent call last):\nE           File \"<frozen runpy>\", line 198, in _run_module_as_main\nE           File \"<frozen runpy>\", line 88, in _run_code\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/recovery.py\", line 45, in <module>\nE             init_db_dir(args.db_dir, args.part_count)\nE         FileNotFoundError: recovery directory \"recovery_dir\" does not exist; please create it with `mkdir`\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.recovery', './recovery_dir', '1'], returncode=1, stdout='', stderr='Tr...rgs.part_count)\\nFileNotFoundError: recovery directory \"recovery_dir\" does not exist; please create it with `mkdir`\\n').returncode\n\ntests/test_final_state.py:34: AssertionError"
+            }
+        ]
+    }
+}

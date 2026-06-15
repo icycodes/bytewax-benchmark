@@ -1,0 +1,41 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T10:30:59.375124+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781519459077,
+            "stop": 1781519459374
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_apdex_flow",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 276,
+                "start": 1781519459098,
+                "stop": 1781519459374,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_apdex_flow():\n        # Setup: Create input.jsonl\n        input_data = [\n            {\"timestamp\": \"2023-10-01T10:00:00Z\", \"service\": \"auth\", \"response_time_ms\": 200},\n            {\"timestamp\": \"2023-10-01T10:00:02Z\", \"service\": \"auth\", \"response_time_ms\": 600},\n            {\"timestamp\": \"2023-10-01T10:00:05Z\", \"service\": \"auth\", \"response_time_ms\": 2500},\n            {\"timestamp\": \"2023-10-01T10:00:08Z\", \"service\": \"auth\", \"response_time_ms\": 400},\n            {\"timestamp\": \"2023-10-01T10:00:12Z\", \"service\": \"auth\", \"response_time_ms\": 100},\n            {\"timestamp\": \"2023-10-01T10:00:01Z\", \"service\": \"api\", \"response_time_ms\": 1000},\n            {\"timestamp\": \"2023-10-01T10:00:04Z\", \"service\": \"api\", \"response_time_ms\": 1500}\n        ]\n    \n        os.makedirs(PROJECT_DIR, exist_ok=True)\n        with open(INPUT_FILE, \"w\") as f:\n            for item in input_data:\n                f.write(json.dumps(item) + \"\\n\")\n    \n        # Clean up output.jsonl if it exists\n        if os.path.exists(OUTPUT_FILE):\n            os.remove(OUTPUT_FILE)\n    \n        # Run the dataflow\n        result = subprocess.run(\n            [\"python\", \"apdex_flow.py\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True,\n            timeout=60\n        )\n    \n>       assert result.returncode == 0, f\"apdex_flow.py failed with error: {result.stderr}\"\nE       AssertionError: apdex_flow.py failed with error: thread '<unnamed>' panicked at src/run.rs:128:17:\nE         Box<dyn Any>\nE         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\nE         \nE         TypeError: source must subclass `bytewax.inputs.Source`\nE         \nE         The above exception was the direct cause of the following exception:\nE         \nE         Traceback (most recent call last):\nE           File \"/home/user/bytewax-apdex/apdex_flow.py\", line 183, in <module>\nE             run_main(flow)\nE         bytewax.errors.BytewaxRuntimeError: (src/worker.rs:149:10): error building production dataflow\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python', 'apdex_flow.py'], returncode=1, stdout='', stderr='thread \\'<unnamed>\\' panicked at s...n    run_main(flow)\\nbytewax.errors.BytewaxRuntimeError: (src/worker.rs:149:10): error building production dataflow\\n').returncode\n\ntests/test_final_state.py:40: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

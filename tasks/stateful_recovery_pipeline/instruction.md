@@ -1,0 +1,27 @@
+# Bytewax Sliding Window Outlier Detector with Recovery
+
+## Background
+Build a fault-tolerant Bytewax (v0.21.1) dataflow to process sensor temperatures, calculate sliding-window statistics, and ensure state is picklable for SQLite-based recovery.
+
+## Requirements
+- Read JSON lines from `input.jsonl` containing `sensor_id`, `time` (ISO8601 string), and `temp` (float).
+- Process the stream using event-time based sliding windows.
+- Compute the mean and population standard deviation of the temperatures for each window per sensor.
+- The state used in the windowing logic must be fully picklable to support Bytewax's SQLite recovery mechanism.
+- Output the results as JSON lines to `output.jsonl`.
+
+## Implementation Hints
+- Keys for stateful operators must be strings.
+- Use `EventClock` parsing the `time` field into a timezone-aware `datetime` object (UTC).
+- Use `SlidingWindower` with a length of 60 seconds and an offset/step of 30 seconds. Align to `2026-01-01T00:00:00Z`.
+- Implement `builder`, `folder`, and `merger` for `win.fold_window` to accumulate temperature values.
+- Ensure all accumulator state structures are pure Python objects (no unpicklable types, like lambdas or unpicklable custom classes) to survive recovery snapshots.
+- Map the window output to the required JSON format and write to `output.jsonl`.
+
+## Acceptance Criteria
+- Project path: `/home/user/myproject`
+- Command: `python -m bytewax.run pipeline:flow -r ./recovery_dir -s 1 -b 0`
+- Input format (`input.jsonl`): `{"sensor_id": "S1", "time": "2026-01-01T00:00:15Z", "temp": 20.0}`
+- Output format (`output.jsonl`): Each line must be a JSON object with keys: `sensor_id` (string), `window_start` (ISO8601 string in UTC, e.g., `2026-01-01T00:00:00Z`), `window_end` (ISO8601 string in UTC), `mean` (float), and `stddev` (float, population standard deviation). The output stream should be formatted properly before writing.
+- The pipeline must execute successfully with recovery enabled (`-r ./recovery_dir`), meaning the state must be successfully pickled during snapshots.
+

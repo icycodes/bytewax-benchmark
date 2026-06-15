@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py FF                                             [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_output_file_exists ____________________________
+
+setup_and_run = CompletedProcess(args=['python3', 'run.py'], returncode=1, stdout='', stderr='thread \'<unnamed>\' panicked at src/ope...pstream for routing; got a `str` instead\nCaused by => TypeError: \'str\' object cannot be converted to \'PyTuple\'\n')
+
+    def test_output_file_exists(setup_and_run):
+        result = setup_and_run
+>       assert result.returncode == 0, f"run.py failed with stderr: {result.stderr}"
+E       AssertionError: run.py failed with stderr: thread '<unnamed>' panicked at src/operators.rs:390:25:
+E         Box<dyn Any>
+E         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+E         
+E         Traceback (most recent call last):
+E           File "/home/user/myproject/run.py", line 109, in <module>
+E             run_main(build_flow())
+E         TypeError: (src/operators.rs:395:38) step "dedup.write" requires `(key, value)` 2-tuple from upstream for routing; got a `str` instead
+E         Caused by => TypeError: 'str' object cannot be converted to 'PyTuple'
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python3', 'run.py'], returncode=1, stdout='', stderr='thread \'<unnamed>\' panicked at src/ope...pstream for routing; got a `str` instead\nCaused by => TypeError: \'str\' object cannot be converted to \'PyTuple\'\n').returncode
+
+tests/test_final_state.py:48: AssertionError
+_____________________________ test_output_contents _____________________________
+
+setup_and_run = CompletedProcess(args=['python3', 'run.py'], returncode=1, stdout='', stderr='thread \'<unnamed>\' panicked at src/ope...pstream for routing; got a `str` instead\nCaused by => TypeError: \'str\' object cannot be converted to \'PyTuple\'\n')
+
+    def test_output_contents(setup_and_run):
+        assert os.path.isfile(OUTPUT_FILE), f"Output file {OUTPUT_FILE} was not created."
+    
+        with open(OUTPUT_FILE, "r") as f:
+            lines = f.readlines()
+    
+>       assert len(lines) == 4, f"Expected exactly 4 lines in output.jsonl, got {len(lines)}"
+E       AssertionError: Expected exactly 4 lines in output.jsonl, got 0
+E       assert 0 == 4
+E        +  where 0 = len([])
+
+tests/test_final_state.py:57: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_output_file_exists - AssertionError: r...
+FAILED tests/test_final_state.py::test_output_contents - AssertionError: Expe...
+============================== 2 failed in 0.34s ===============================

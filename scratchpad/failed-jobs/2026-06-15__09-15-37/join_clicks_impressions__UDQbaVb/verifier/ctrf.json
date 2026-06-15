@@ -1,0 +1,59 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:19:00.285155+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781515140141,
+            "stop": 1781515140285
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 112,
+                "start": 1781515140169,
+                "stop": 1781515140281,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_pipeline_execution():\n        \"\"\"Run the bytewax pipeline and check for success.\"\"\"\n        result = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.run\", \"pipeline:flow\", \"-r\", \"./recovery_dir\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert result.returncode == 0, f\"Pipeline execution failed. stdout: {result.stdout}\\nstderr: {result.stderr}\"\nE       AssertionError: Pipeline execution failed. stdout: \nE         stderr: usage: python -m bytewax.run [-h] [-r RECOVERY_DIRECTORY]\nE                                      [-s SNAPSHOT_INTERVAL] [-b BACKUP_INTERVAL]\nE                                      [-w WORKERS_PER_PROCESS] [-i PROCESS_ID]\nE                                      [-a ADDRESSES]\nE                                      import_str\nE         python -m bytewax.run: error: when running with recovery, the `-s/--snapshot_interval` and `-b/--backup_interval` values must be set. For more information about setting these values, please see https://bytewax.io/docs/concepts/recovery.\nE         \nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow', '-r', './recovery_dir'], returncode=2, stdout='...must be set. For more information about setting these values, please see https://bytewax.io/docs/concepts/recovery.\\n').returncode\n\ntests/test_final_state.py:17: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781515140282,
+                "stop": 1781515140283,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_contents",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781515140283,
+                "stop": 1781515140284,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

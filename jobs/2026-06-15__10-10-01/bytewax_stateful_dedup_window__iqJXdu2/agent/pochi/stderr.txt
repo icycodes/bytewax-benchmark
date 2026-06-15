@@ -1,0 +1,3202 @@
+[37m2026-06-15 10:14:15.262[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	pochi v0.6.14
+[37m2026-06-15 10:14:15.656[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	BuiltInBundle[39m[22m[0m[0m	Materializing 16 built-in files to /tmp/pochi-builtin-5f7c1b2d4157fa59
+[37m2026-06-15 10:14:15.969[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517730[39m[0m[0m[1m[37m	loadAgents[39m[22m[0m[0m	Loaded 6 custom agents (6 valid, 0 invalid)
+[37m2026-06-15 10:14:16.216[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517731[39m[0m[0m[1m[37m	loadSkills[39m[22m[0m[0m	Loaded 3 skills (3 valid, 0 invalid)
+[37m2026-06-15 10:14:16.276[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:442311[39m[0m[0m[1m[37m	PochiVendor[39m[22m[0m[0m	JWT is expiring or missing, fetching a new one
+[37m2026-06-15 10:14:17.669[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418456[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	MCP servers configuration changed via signal:
+[37m2026-06-15 10:14:17.671[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418568[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	Build MCPHub Status
+[37m2026-06-15 10:14:17.821[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Starting task runner...
+[37m2026-06-15 10:14:17.951[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: null, new: # Bytewax Stateful Deduplication
+[37m2026-06-15 10:14:29.336[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516111[39m[0m[0m[1m[37m	listFiles[39m[22m[0m[0m	handling listFile with dirPath /home/user/myproject and recursive [33mtrue[39m
+[37m2026-06-15 10:14:32.605[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: # Bytewax Stateful Deduplication, new: Implement stateful deduplication with sliding time windows in Bytewax
+[37m2026-06-15 10:17:57.177[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/run.py" resolvedPath="/home/user/myproject/run.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:17:57.178[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=undefined, endLine=undefined, timestamp=1781518610882}
+[37m2026-06-15 10:17:57.182[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/run.py" mtime=1781518610882 contentLen=3690
+[37m2026-06-15 10:19:12.109[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m AI_APICallError [22m[49m[39m[0m[0m upstream error, AI_APICallError, , https://app.getpochi.com/api/chat/v6/stream, [object Object], 502, [object Object], , true, , 447690, 31, 447690, 31, /$bunfs/root/pochi[0m[0m
+error stack:
+  • [33mpochi[39m[0m[0m	<anonymous>[0m[0m
+	[37m$bunfs/root/pochi:447690[39m[0m[0m
+  • [33mnative[39m[0m[0m	processTicksAndRejections[0m[0m
+	[37mnative:7[39m[0m[0m[0m[0m
+[37m2026-06-15 10:19:12.148[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'APICallError'[39m,
+  isRetryable: [33mtrue[39m,
+  message: [32m'upstream error'[39m,
+  requestBodyValues: {
+    model: [32m'deepseek/deepseek-4-pro'[39m,
+    callOptions: {
+      prompt: [
+        {
+          role: [32m'system'[39m,
+          content: [32m'You are Pochi, a highly skilled software engineer with extensive knowledge in many programming languages, frameworks, design patterns, and best practices.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: You must NEVER generate or guess URLs for the user unless you are confident that the URLs are for helping the user with programming. You may use URLs provided by the user in their messages or local files.\n'[39m +
+            [32m'\n'[39m +
+            [32m'====\n'[39m +
+            [32m'\n'[39m +
+            [32m'TASK MANAGEMENT\n'[39m +
+            [32m'\n'[39m +
+            [32m'You have access to the todoWrite tool to help you manage and plan tasks. Use these tools VERY frequently to ensure that you are tracking your tasks and giving the user visibility into your progress.\n'[39m +
+            [32m'These tools are also EXTREMELY helpful for planning tasks, and for breaking down larger complex tasks into smaller steps. If you do not use this tool when planning, you may forget to do important tasks - and that is unacceptable.\n'[39m +
+            [32m'\n'[39m +
+            [32m'It is critical that you mark todos as completed as soon as you are done with a task. Do not batch up multiple tasks before marking them as completed.\n'[39m +
+            [32m'\n'[39m +
+            [32m'====\n'[39m +
+            [32m'\n'[39m +
+            [32m'RULES\n'[39m +
+            [32m'\n'[39m +
+            [32m"- User messages may include <system-reminder> tags. <system-reminder> tags contain useful information and reminders. They are NOT part of the user's provided input or the tool result. You shall pay close attention to information in these tags and use it to inform you actions.\n"[39m +
+            [32m"- For simple, directed codebase searches (project structure, specific files/classes/functions), use the listFiles tool. If you pass 'true' for the recursive parameter, it will list files recursively. Use globFiles when you need to match files by pattern.\n"[39m +
+            [32m'- For broader codebase exploration and deep research, use the newTask tool with agentType="explore". Use this only when simple, directed searches prove insufficient or when your task will clearly require more than three queries.\n'[39m +
+            [32m'- All file paths used by tools must be relative to current working directory, do not use the ~ character or $HOME to refer to the home directory in file paths used by tools.\n'[39m +
+            [32m"- You can use `pochi://` URI schema to access the Pochi virtual file system. This allows you to read and write files that are stored in Pochi's internal storage.\n"[39m +
+            [32m"- Be sure to consider the type of project (e.g. Python, JavaScript, web application) when determining the appropriate structure and files to include. Also consider what files may be most relevant to accomplishing the task, for example looking at a project's manifest file would help you understand the project's dependencies, which you could incorporate into any code you write.\n"[39m +
+            [32m"- Do not ask for more information than necessary. Use the tools provided to accomplish the user's request efficiently and effectively. When you've completed your task, you must use the attemptCompletion tool to present the result to the user. The user may provide feedback, which you can use to make improvements and try again.\n"[39m +
+            [32m'- You are only allowed to ask the user questions using the askFollowupQuestion tool. Use this tool only when you need additional details to complete a task, and be sure to use a clear and concise question that will help you move forward with the task. However if you can use the available tools to avoid having to ask the user questions, you should do so. For example, if the user mentions a file that may be in an outside directory like the Desktop, you should use the listFiles tool to list the files in the Desktop and check if the file they are talking about is there, rather than asking the user to provide the file path themselves.\n'[39m +
+            [32m`- You are STRICTLY FORBIDDEN from starting your messages with "Great", "Certainly", "Okay", "Sure". You should NOT be conversational in your responses, but rather direct and to the point. For example you should NOT say "Great, I've updated the CSS" but instead something like "I've updated the CSS". It is important you be clear and technical in your messages.\n`[39m +
+            [32m"- Once you've completed the user's task, you MUST use the attemptCompletion tool to present the result of the task to the user. It is STRICTLY FORBIDDEN to complete the task without using this tool.\n"[39m +
+            [32m'- When planning large-scale changes, create a high-level diagram using mermaid in Markdown. This helps explain your plan and allows you to gather user feedback before implementation.'[39m
+        },
+        {
+          role: [32m'user'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'<system-reminder># System Information\n'[39m +
+                [32m'\n'[39m +
+                [32m'Operating System: linux\n'[39m +
+                [32m'Default Shell: \n'[39m +
+                [32m'Home Directory: /root\n'[39m +
+                [32m'Current Working Directory: /\n'[39m +
+                [32m'Current Time: Mon Jun 15 2026 10:14:17 GMT+0000 (Coordinated Universal Time)\n'[39m +
+                [32m'\n'[39m +
+                [32m'# GIT STATUS\n'[39m +
+                [32m'Current branch: \n'[39m +
+                [32m'Main branch (you will usually use this for PRs): \n'[39m +
+                [32m'\n'[39m +
+                [32m'Recent commits:\n'[39m +
+                [32m'\n'[39m +
+                [32m'\n'[39m +
+                [32m'# TODOs\n'[39m +
+                [32m'No TODOs yet, if you are working on tasks that would benefit from a todo list please use the todoWrite tool to create one.</system-reminder>'[39m
+            },
+            {
+              type: [32m'text'[39m,
+              text: [32m'# Bytewax Stateful Deduplication\n'[39m +
+                [32m'\n'[39m +
+                [32m'## Background\n'[39m +
+                [32m'\n'[39m +
+                [32m"Bytewax is a Python stateful stream processing framework. In many streaming applications, you receive duplicate events that need to be filtered out. In this task, you will use Bytewax's stateful processing capabilities to deduplicate events over a sliding time window.\n"[39m +
+                [32m'\n'[39m +
+                [32m'## Requirements\n'[39m +
+                [32m'\n'[39m +
+                [32m'* Create a Bytewax dataflow in `run.py` that reads JSON objects from `input.jsonl`.\n'[39m +
+                [32m'* Each JSON object has the following format: `{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:00Z"}`.\n'[39m +
+                [32m'* The dataflow must group events by `user_id`.\n'[39m +
+                [32m"* Implement a stateful deduplication logic using Bytewax's `stateful` operator and `StatefulLogic`.\n"[39m +
+                [32m"* An event should be emitted to the downstream only if its `event_id` has not been seen for the same `user_id` within the last 10 seconds (based on the event's `timestamp`).\n"[39m +
+                [32m'* If the same `event_id` arrives within 10 seconds of the previous occurrence (inclusive of exactly 10 seconds, meaning `event_timestamp <= previous_timestamp + 10s`), it should be dropped. If it arrives strictly after 10 seconds, it should be emitted and the 10-second window restarts for that `event_id`.\n'[39m +
+                [32m"* The state must be cleaned up dynamically: any `event_id` that is older than 10 seconds from the *current event's timestamp* should be removed from the state to prevent memory leaks.\n"[39m +
+                [32m'* The deduplicated events must be written as JSON strings to `output.jsonl`.\n'[39m +
+                [32m'\n'[39m +
+                [32m'## Implementation Hints\n'[39m +
+                [32m'\n'[39m +
+                [32m'* Use `bytewax.connectors.files.FileSource` and `FileSink` (or `DirSink` depending on Bytewax 0.21 API) to read and write files, or write a custom input/output logic if needed.\n'[39m +
+                [32m'* Parse the JSON strings into Python dictionaries and parse the ISO 8601 timestamps into `datetime` objects.\n'[39m +
+                [32m'* To use the `stateful` operator, map your stream into a keyed stream: `(user_id, event_dict)`.\n'[39m +
+                [32m'* Create a class inheriting from `bytewax.operators.StatefulLogic`. In the `on_item` method, implement the deduplication and state cleanup logic.\n'[39m +
+                [32m'* The state should map `event_id` to the timestamp of its last emitted occurrence.\n'[39m +
+                [32m'* Format the output back to JSON strings before writing to the sink.\n'[39m +
+                [32m'* Execute the dataflow using `bytewax.testing.run_main` or the `bytewax.run` CLI.\n'[39m +
+                [32m'\n'[39m +
+                [32m'## Acceptance Criteria\n'[39m +
+                [32m'\n'[39m +
+                [32m'* Project path: /home/user/myproject\n'[39m +
+                [32m'* Command: python3 run.py\n'[39m +
+                [32m'* Input file: `/home/user/myproject/input.jsonl` (provided before running the command)\n'[39m +
+                [32m'* Output file: `/home/user/myproject/output.jsonl`\n'[39m +
+                [32m'* The output file must contain only the deduplicated events, in the same relative order as the input, formatted as valid JSON strings (one per line).'[39m
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'\n'[39m +
+                [32m'\n'[39m +
+                [32m"I'll start by exploring the project directory and understanding the existing structure, then implement the Bytewax stateful deduplication dataflow."[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CCQW4JVPCSFMA7AA8629H'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_CUFQrQrKcCATusMQcXPbEvWe'[39m,
+              toolName: [32m'listFiles'[39m,
+              input: {
+                path: [32m'/home/user/myproject'[39m,
+                recursive: [33mtrue[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_WvFX1cg5s0yNVLAJWAW9U9rY'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "import bytewax; print(bytewax.__version__)" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_CUFQrQrKcCATusMQcXPbEvWe'[39m,
+              toolName: [32m'listFiles'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  files: [],
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_WvFX1cg5s0yNVLAJWAW9U9rY'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "<string>", line 1, in <module>\r\n'[39m +
+                    [32m"AttributeError: module 'bytewax' has no attribute '__version__'\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m,
+                  error: [32m'Command exited with code 1'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_xV3s5ilaGaViykw7EBGQBGZk'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "import bytewax; print(dir(bytewax))" 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CD3ESCB5J7993C0NABMN1'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_ogzbqz9W2QLMSebLW23gYLUW'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'pip show bytewax 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_xV3s5ilaGaViykw7EBGQBGZk'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"['__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__']\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CD3ESCB5J7993C0NABMN1'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_ogzbqz9W2QLMSebLW23gYLUW'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Name: bytewax\r\n'[39m +
+                    [32m'Version: 0.21.1\r\n'[39m +
+                    [32m'Summary: \r\n'[39m +
+                    [32m'Home-page: \r\n'[39m +
+                    [32m'Author: \r\n'[39m +
+                    [32m'Author-email: \r\n'[39m +
+                    [32m'License: \r\n'[39m +
+                    [32m'Location: /usr/local/lib/python3.12/dist-packages\r\n'[39m +
+                    [32m'Requires: prometheus-client, typing-extensions\r\n'[39m +
+                    [32m'Required-by: \r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_gaueQktYk3s9o9YHKNNYjrmG'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python3 -c "from bytewax.operators import StatefulLogic; print('StatefulLogic imported')" 2>&1`[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CD9F1VHREXRT1MS73KM07'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_ttU6XfthkDZRRhuL2Nn3sWUs'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python3 -c "from bytewax.connectors.files import FileSource, FileSink; print('FileSource/FileSink imported')" 2>&1`[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_02_cm4yJhmp9HlHPP2Bef4rrilY'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.operators import stateful; help(stateful)" 2>&1 | head -60'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_gaueQktYk3s9o9YHKNNYjrmG'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'StatefulLogic imported\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CD9F1VHREXRT1MS73KM07'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_ttU6XfthkDZRRhuL2Nn3sWUs'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'FileSource/FileSink imported\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_02_cm4yJhmp9HlHPP2Bef4rrilY'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on function stateful in module bytewax.operators:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'stateful(step_id: str, up: bytewax.dataflow.Stream[typing.Tuple[str, ~V]], builder: Callable[[Optional[~S]], bytewax.operators.StatefulLogic[~V, ~W, ~S]]) -> bytewax.dataflow.Stream[typing.Tuple[str, ~W]]\r\n'[39m +
+                    [32m'    Advanced generic stateful operator.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    This is a low-level operator Bytewax provides and gives you\r\n'[39m +
+                    [32m'    control over most aspects of the operator processing and\r\n'[39m +
+                    [32m'    lifecycle. Usualy you will want to use a higher-level operator\r\n'[39m +
+                    [32m'    than this. Also see {py:obj}`stateful_batch` for even more\r\n'[39m +
+                    [32m'    control.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    Subclass {py:obj}`StatefulLogic` to define its behavior. See\r\n'[39m +
+                    [32m'    documentation there.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    :arg step_id: Unique ID.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    :arg up: Keyed stream.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    :arg builder: Called whenver a new key is encountered with the\r\n'[39m +
+                    [32m'        resume state returned from {py:obj}`StatefulLogic.snapshot`\r\n'[39m +
+                    [32m'        for this key, if any. This should close over any non-state\r\n'[39m +
+                    [32m'        configuration and combine it with the resume state to return\r\n'[39m +
+                    [32m'        the prepared {py:obj}`StatefulLogic` for the new key.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    :returns: Keyed stream of all items returned from\r\n'[39m +
+                    [32m'        {py:obj}`StatefulLogic.on_item`,\r\n'[39m +
+                    [32m'        {py:obj}`StatefulLogic.on_notify`, and\r\n'[39m +
+                    [32m'        {py:obj}`StatefulLogic.on_eof`.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_OM3qrrWCe4fIA8iaSQeywwJ6'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.operators import StatefulLogic; help(StatefulLogic)" 2>&1 | head -80'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CDFVXC2FTMZ5W4A3XKP34'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_Fvj8POC0YgyuONLg8lCRXNGl'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python3 -c "from bytewax.testing import run_main; print('run_main available')" 2>&1`[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_OM3qrrWCe4fIA8iaSQeywwJ6'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on class StatefulLogic in module bytewax.operators:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'class StatefulLogic(abc.ABC, typing.Generic)\r\n'[39m +
+                    [32m' |  Abstract class to define a {py:obj}`stateful` operator.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  The operator will call these methods in order: {py:obj}`on_item`\r\n'[39m +
+                    [32m' |  once for any items queued, then {py:obj}`on_notify` if the\r\n'[39m +
+                    [32m' |  notification time has passed, then {py:obj}`on_eof` if the\r\n'[39m +
+                    [32m' |  upstream is EOF and no new items will be received this execution.\r\n'[39m +
+                    [32m' |  If the logic is retained after all the above calls then\r\n'[39m +
+                    [32m' |  {py:obj}`notify_at` will be called. {py:obj}`snapshot` is\r\n'[39m +
+                    [32m' |  periodically called.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Method resolution order:\r\n'[39m +
+                    [32m' |      StatefulLogic\r\n'[39m +
+                    [32m' |      abc.ABC\r\n'[39m +
+                    [32m' |      typing.Generic\r\n'[39m +
+                    [32m' |      builtins.object\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Methods defined here:\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  notify_at(self) -> Optional[datetime.datetime]\r\n'[39m +
+                    [32m' |      Return the next notification time.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      This will be called once right after the logic is built, and\r\n'[39m +
+                    [32m' |      if any of the `on_*` methods were called if the logic was\r\n'[39m +
+                    [32m' |      retained.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      This must always return the next notification time. The\r\n'[39m +
+                    [32m' |      operator only stores a single next time, so if\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      :returns: Scheduled time. If `None`, no {py:obj}`on_notify`\r\n'[39m +
+                    [32m' |          callback will occur.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  on_eof(self) -> Tuple[Iterable[~W], bool]\r\n'[39m +
+                    [32m' |      The upstream has no more items on this execution.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      This will only be called once per execution after\r\n'[39m +
+                    [32m' |      {py:obj}`on_item` is done being called.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      :returns: 2-tuple of: any values to emit downstream and\r\n'[39m +
+                    [32m' |          wheither to discard this logic. Values will be wrapped in\r\n'[39m +
+                    [32m' |          `(key, value)` automatically.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  on_item(self, value: ~V) -> Tuple[Iterable[~W], bool]\r\n'[39m +
+                    [32m' |      Called on each new upstream item.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      This will be called multiple times in a row if there are\r\n'[39m +
+                    [32m' |      multiple items from upstream.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      :arg value: The value of the upstream `(key, value)`.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      :returns: A 2-tuple of: any values to emit downstream and\r\n'[39m +
+                    [32m' |          wheither to discard this logic. Values will be wrapped in\r\n'[39m +
+                    [32m' |          `(key, value)` automatically.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  on_notify(self) -> Tuple[Iterable[~W], bool]\r\n'[39m +
+                    [32m' |      Called when the scheduled notification time has passed.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      :returns: A 2-tuple of: any values to emit downstream and\r\n'[39m +
+                    [32m' |          wheither to discard this logic. Values will be wrapped in\r\n'[39m +
+                    [32m' |          `(key, value)` automatically.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  snapshot(self) -> ~S\r\n'[39m +
+                    [32m' |      Return a immutable copy of the state for recovery.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      This will be called periodically by the runtime.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      The value returned here will be passed back to the `builder`\r\n'[39m +
+                    [32m' |      function of {py:obj}`stateful` when resuming.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      The state must be {py:obj}`pickle`-able.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      :::{danger}\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |      **The state must be effectively immutable!** If any of the\r\n'[39m +
+                    [32m' |      other functions in this class might be able to mutate the\r\n'[39m +
+                    [32m' |      state, you must {py:obj}`copy.deepcopy` or something\r\n'[39m +
+                    [32m' |      equivalent before returning it here.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CDFVXC2FTMZ5W4A3XKP34'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_Fvj8POC0YgyuONLg8lCRXNGl'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'run_main available\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_qK9kBlMjeaLaKa2L68g1fYIM'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.connectors.files import FileSource; help(FileSource)" 2>&1 | head -30'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CDR4MBNJ65TZPSCVZ2G3F'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_6CAUVYZaBcFA8vZuroi1LpdO'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.connectors.files import FileSink; help(FileSink)" 2>&1 | head -30'[39m
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_02_tMmazRWhwdaRDTfAEQuHNYr1'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.dataflow import Dataflow; help(Dataflow.input)" 2>&1 | head -30'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_qK9kBlMjeaLaKa2L68g1fYIM'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on class FileSource in module bytewax.connectors.files:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'class FileSource(bytewax.inputs.FixedPartitionedSource)\r\n'[39m +
+                    [32m' |  FileSource(path: Union[pathlib.Path, str], batch_size: int = 1000, get_fs_id: Callable[[pathlib.Path], str] = <function _get_path_dev at 0x7fb1015c0f40>)\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Read a path line-by-line from the filesystem.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  The path must exist on at least one worker. Each worker can have a\r\n'[39m +
+                    [32m' |  unique file at the path if each worker mounts a distinct\r\n'[39m +
+                    [32m' |  filesystem. Tries to read only one instance of each unique file in\r\n'[39m +
+                    [32m' |  the whole cluster by deduplicating paths by filesystem ID. See\r\n'[39m +
+                    [32m' |  `get_fs_id` argument to adjust this.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Unique files are the unit of parallelism; only one worker will\r\n'[39m +
+                    [32m' |  read each unique file. Thus, lines from different files are\r\n'[39m +
+                    [32m' |  interleaved.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Method resolution order:\r\n'[39m +
+                    [32m' |      FileSource\r\n'[39m +
+                    [32m' |      bytewax.inputs.FixedPartitionedSource\r\n'[39m +
+                    [32m' |      bytewax.inputs.Source\r\n'[39m +
+                    [32m' |      abc.ABC\r\n'[39m +
+                    [32m' |      typing.Generic\r\n'[39m +
+                    [32m' |      builtins.object\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Methods defined here:\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __init__(self, path: Union[pathlib.Path, str], batch_size: int = 1000, get_fs_id: Callable[[pathlib.Path], str] = <function _get_path_dev at 0x7fb1015c0f40>)\r\n'[39m +
+                    [32m' |      Init.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CDR4MBNJ65TZPSCVZ2G3F'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_6CAUVYZaBcFA8vZuroi1LpdO'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on class FileSink in module bytewax.connectors.files:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'class FileSink(bytewax.outputs.FixedPartitionedSink)\r\n'[39m +
+                    [32m" |  FileSink(path: pathlib.Path, end: str = '\\n')\r\n"[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Write to a single file line-by-line on the filesystem.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Items consumed from the dataflow must look like a string. Use a\r\n'[39m +
+                    [32m' |  proceeding map step to do custom formatting.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  The file must exist and be identical on all workers.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  There is no parallelism; only one worker will actually write to\r\n'[39m +
+                    [32m' |  the file.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Can support exactly-once processing in a batch context. The file\r\n'[39m +
+                    [32m' |  will be truncated during resume so duplicates are\r\n'[39m +
+                    [32m' |  prevented. Tailing the output file will result in undefined\r\n'[39m +
+                    [32m' |  behavior.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Method resolution order:\r\n'[39m +
+                    [32m' |      FileSink\r\n'[39m +
+                    [32m' |      bytewax.outputs.FixedPartitionedSink\r\n'[39m +
+                    [32m' |      bytewax.outputs.Sink\r\n'[39m +
+                    [32m' |      abc.ABC\r\n'[39m +
+                    [32m' |      typing.Generic\r\n'[39m +
+                    [32m' |      builtins.object\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Methods defined here:\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_02_tMmazRWhwdaRDTfAEQuHNYr1'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "<string>", line 1, in <module>\r\n'[39m +
+                    [32m"AttributeError: type object 'Dataflow' has no attribute 'input'\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_SuTL1eYKmwQED39nZmgVnpt6'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.dataflow import Dataflow; help(Dataflow)" 2>&1 | head -40'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEBBY8JX9AZZME9GW0S2P'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_8LTZ9xgXChTldiudZG7afjfx'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python3 -c "from bytewax.connectors.stdio import StdOutSink; print('ok')" 2>&1`[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_SuTL1eYKmwQED39nZmgVnpt6'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on class Dataflow in module bytewax.dataflow:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'class Dataflow(builtins.object)\r\n'[39m +
+                    [32m' |  Dataflow(flow_id: str, substeps: List[bytewax.dataflow.Operator] = <factory>, _scope: bytewax.dataflow._Scope = None) -> None\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Dataflow definition.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Once you instantiate this, Use the {py:obj}`bytewax.operators`\r\n'[39m +
+                    [32m' |  (e.g. {py:obj}`~bytewax.operators.input`) to create\r\n'[39m +
+                    [32m' |  {py:obj}`Stream`s.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  Methods defined here:\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __delattr__(self, name)\r\n'[39m +
+                    [32m' |      Implement delattr(self, name).\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __eq__(self, other)\r\n'[39m +
+                    [32m' |      Return self==value.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __hash__(self)\r\n'[39m +
+                    [32m' |      Return hash(self).\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __init__(self, flow_id: str, substeps: List[bytewax.dataflow.Operator] = <factory>, _scope: bytewax.dataflow._Scope = None) -> None\r\n'[39m +
+                    [32m' |      Initialize self.  See help(type(self)) for accurate signature.\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __post_init__(self)\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __repr__(self)\r\n'[39m +
+                    [32m' |      Return repr(self).\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __setattr__(self, name, value)\r\n'[39m +
+                    [32m' |      Implement setattr(self, name, value).\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  ----------------------------------------------------------------------\r\n'[39m +
+                    [32m' |  Data descriptors defined here:\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __dict__\r\n'[39m +
+                    [32m' |      dictionary for instance variables\r\n'[39m +
+                    [32m' |\r\n'[39m +
+                    [32m' |  __weakref__\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEBBY8JX9AZZME9GW0S2P'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_8LTZ9xgXChTldiudZG7afjfx'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'ok\r\n'[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_JmGKN4gAUUMp8vpVuj1MAVOi'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m`python3 -c "import bytewax.operators as op; print([x for x in dir(op) if not x.startswith('_')])" 2>&1`[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEGQZWFKQVBX6T50R228W'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_JmGKN4gAUUMp8vpVuj1MAVOi'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"['ABC', 'Any', 'BranchOut', 'Callable', 'DK', 'DV', 'Dataflow', 'Dict', 'DynamicSink', 'Generic', 'Iterable', 'JoinEmitMode', 'JoinInsertMode', 'KeyedStream', 'List', 'Literal', 'Optional', 'S', 'Self', 'Sink', 'Source', 'StatefulBatchLogic', 'StatefulLogic', 'StatelessSinkPartition', 'Stream', 'TTLCache', 'Tuple', 'TypeAlias', 'TypeGuard', 'TypeVar', 'U', 'Union', 'V', 'W', 'W_co', 'X', 'Y', 'abstractmethod', 'branch', 'chain', 'collect', 'copy', 'count_final', 'dataclass', 'datetime', 'enrich_cached', 'f_repr', 'field', 'filter', 'filter_map', 'filter_map_value', 'filter_value', 'flat_map', 'flat_map_batch', 'flat_map_value', 'flatten', 'fold_final', 'input', 'inspect', 'inspect_debug', 'itertools', 'join', 'key_on', 'key_rm', 'map', 'map_value', 'max_final', 'merge', 'min_final', 'operator', 'output', 'overload', 'override', 'partial', 'raises', 'redistribute', 'reduce_final', 'stateful', 'stateful_batch', 'stateful_flat_map', 'stateful_map', 'timedelta', 'timezone', 'typing']\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEGQZWFKQVBX6T50R228W'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_f05lPGfCHuHFeCf6ZLp5KpsJ'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.operators import input, output; help(input)" 2>&1 | head -30'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEMXKSNM4SEM0YYHQ2BNP'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_01_tkW6oynnlfbWRQ7uE3Fh03F3'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "from bytewax.operators import output; help(output)" 2>&1 | head -30'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_f05lPGfCHuHFeCf6ZLp5KpsJ'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on function input in module bytewax.operators:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'input(step_id: str, flow: bytewax.dataflow.Dataflow, source: bytewax.inputs.Source[~X]) -> bytewax.dataflow.Stream[~X]\r\n'[39m +
+                    [32m'    Introduce items into a dataflow.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    ```{testcode}\r\n'[39m +
+                    [32m'    from bytewax.dataflow import Dataflow\r\n'[39m +
+                    [32m'    import bytewax.operators as op\r\n'[39m +
+                    [32m'    from bytewax.testing import TestingSource\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    flow = Dataflow("input_eg")\r\n'[39m +
+                    [32m'    nums = op.input("nums", flow, TestingSource([10, 20, 30]))\r\n'[39m +
+                    [32m'    op.inspect("out", nums)\r\n'[39m +
+                    [32m'    ```\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    ```{testcode}\r\n'[39m +
+                    [32m'    :hide:\r\n'[39m +
+                    [32m'    from bytewax.testing import run_main\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    run_main(flow)\r\n'[39m +
+                    [32m'    ```\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    ```{testoutput}\r\n'[39m +
+                    [32m'    input_eg.out: 10\r\n'[39m +
+                    [32m'    input_eg.out: 20\r\n'[39m +
+                    [32m'    input_eg.out: 30\r\n'[39m +
+                    [32m'    ```\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    See {py:obj}`bytewax.inputs` for more information on how input\r\n'[39m +
+                    [32m'    works. See {py:obj}`bytewax.connectors` for a buffet of our\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEMXKSNM4SEM0YYHQ2BNP'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_01_tkW6oynnlfbWRQ7uE3Fh03F3'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'Help on function output in module bytewax.operators:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'output(step_id: str, up: bytewax.dataflow.Stream[~X], sink: bytewax.outputs.Sink[~X]) -> None\r\n'[39m +
+                    [32m'    Write items out of a dataflow.\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    ```{testcode}\r\n'[39m +
+                    [32m'    from bytewax.dataflow import Dataflow\r\n'[39m +
+                    [32m'    import bytewax.operators as op\r\n'[39m +
+                    [32m'    from bytewax.testing import TestingSource\r\n'[39m +
+                    [32m'    from bytewax.connectors.stdio import StdOutSink\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    flow = Dataflow("output_eg")\r\n'[39m +
+                    [32m'    nums = op.input("nums", flow, TestingSource([1, 2, 3]))\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    # This will print the items to stdout.\r\n'[39m +
+                    [32m'    # You can replace this with any other sink.\r\n'[39m +
+                    [32m'    op.output("sink", nums, StdOutSink())\r\n'[39m +
+                    [32m'    ```\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    ```{testcode}\r\n'[39m +
+                    [32m'    :hide:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    from bytewax.testing import run_main\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    run_main(flow)\r\n'[39m +
+                    [32m'    ```\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'    ```{testoutput}\r\n'[39m +
+                    [32m'    1\r\n'[39m +
+                    [32m'    2\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now let me look at how `stateful` operator works with the builder pattern and understand the `KeyedStream`:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CESXWFMXNRFPX69621EZN'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_8SPTRxaMJZYDWcAQSUhytrOE'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "\n'[39m +
+                  [32m'from bytewax.operators import key_on, stateful, StatefulLogic\n'[39m +
+                  [32m'from bytewax.dataflow import Dataflow, Stream\n'[39m +
+                  [32m'from bytewax.testing import TestingSource, run_main\n'[39m +
+                  [32m'import bytewax.operators as op\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'# Quick test to understand the API\n'[39m +
+                  [32m"flow = Dataflow('test')\n"[39m +
+                  [32m"s = op.input('inp', flow, TestingSource([('k1', {'a': 1})]))\n"[39m +
+                  [32m"ks = op.key_on('key', s, lambda x: x[0])\n"[39m +
+                  [32m'print(type(ks))\n'[39m +
+                  [32m'" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_8SPTRxaMJZYDWcAQSUhytrOE'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"<class 'bytewax.dataflow.Stream'>\r\n"[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_wVvio1vuaXH46I71MdowJ6SU'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "\n'[39m +
+                  [32m'from bytewax.dataflow import Dataflow, Stream\n'[39m +
+                  [32m'from bytewax.operators import key_on, KeyedStream\n'[39m +
+                  [32m'import bytewax.operators as op\n'[39m +
+                  [32m'from bytewax.testing import TestingSource, run_main\n'[39m +
+                  [32m'\n'[39m +
+                  [32m"flow = Dataflow('test')\n"[39m +
+                  [32m"s = op.input('inp', flow, TestingSource([('k1', {'a': 1})]))\n"[39m +
+                  [32m'# key_on returns a KeyedStream\n'[39m +
+                  [32m"ks: KeyedStream = op.key_on('key', s, lambda x: x[0])\n"[39m +
+                  [32m'print(type(ks))\n'[39m +
+                  [32m'# stateful takes a KeyedStream\n'[39m +
+                  [32m'from bytewax.operators import stateful, StatefulLogic\n'[39m +
+                  [32m'" 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEZ5DQQF7JQ9C5X62QZ93'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_wVvio1vuaXH46I71MdowJ6SU'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"<class 'bytewax.dataflow.Stream'>\r\n"[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CEZ5DQQF7JQ9C5X62QZ93'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_spWFmUEmx6K67r0A9vy1s9e9'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "\n'[39m +
+                  [32m'from bytewax.operators import stateful, StatefulLogic\n'[39m +
+                  [32m'# Check the signature more carefully\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'sig = inspect.signature(stateful)\n'[39m +
+                  [32m"print('stateful params:', list(sig.parameters.keys()))\n"[39m +
+                  [32m'# Check what the builder returns\n'[39m +
+                  [32m'print()\n'[39m +
+                  [32m'# Check StatefulLogic abstract methods\n'[39m +
+                  [32m"print('StatefulLogic abstract methods:')\n"[39m +
+                  [32m'for name, method in inspect.getmembers(StatefulLogic, predicate=inspect.isfunction):\n'[39m +
+                  [32m"    if hasattr(method, '__isabstractmethod__') and method.__isabstractmethod__:\n"[39m +
+                  [32m"        print(f'  {name}')\n"[39m +
+                  [32m'" 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CF4RCTEB9NWA4V2TYEXB3'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_spWFmUEmx6K67r0A9vy1s9e9'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"stateful params: ['step_id', 'up', 'builder']\r\n"[39m +
+                    [32m'\r\n'[39m +
+                    [32m'StatefulLogic abstract methods:\r\n'[39m +
+                    [32m'  on_item\r\n'[39m +
+                    [32m'  snapshot\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CF4RCTEB9NWA4V2TYEXB3'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_WZQq4Z9gLJu5lipdBLsCx75X'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "\n'[39m +
+                  [32m'from bytewax.operators import stateful, StatefulLogic\n'[39m +
+                  [32m'# Check what the builder function should look like\n'[39m +
+                  [32m'# builder: Callable[[Optional[S]], StatefulLogic[V, W, S]]\n'[39m +
+                  [32m'# So builder receives optional snapshot state, returns StatefulLogic instance\n'[39m +
+                  [32m'\n'[39m +
+                  [32m"# Let's also check how on_item should work\n"[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'sig = inspect.signature(StatefulLogic.on_item)\n'[39m +
+                  [32m"print('on_item signature:', sig)\n"[39m +
+                  [32m"print('on_item return annotation:', sig.return_annotation)\n"[39m +
+                  [32m'" 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CFAZQE578XANF0X0Q5GXB'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_WZQq4Z9gLJu5lipdBLsCx75X'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'on_item signature: (self, value: ~V) -> Tuple[Iterable[~W], bool]\r\n'[39m +
+                    [32m'on_item return annotation: typing.Tuple[typing.Iterable[~W], bool]\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CFAZQE578XANF0X0Q5GXB'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now I have a clear understanding of the API. Let me also check how `map_value` works to convert back from keyed stream:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CFJ0Z2KPHE9SC29RAYXDT'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_FRcID3IbXzocRTTwlvJF1w8h'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "\n'[39m +
+                  [32m'from bytewax.operators import map_value, key_rm\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'sig = inspect.signature(map_value)\n'[39m +
+                  [32m"print('map_value params:', list(sig.parameters.keys()))\n"[39m +
+                  [32m'sig2 = inspect.signature(key_rm)\n'[39m +
+                  [32m"print('key_rm params:', list(sig2.parameters.keys()))\n"[39m +
+                  [32m'" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_FRcID3IbXzocRTTwlvJF1w8h'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"map_value params: ['step_id', 'up', 'mapper']\r\n"[39m +
+                    [32m"key_rm params: ['step_id', 'up']\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now let me create the `run.py` file:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CFSG75B9B1KEZQ6N7VGT3'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_f1zgUT7j25idp1Ej99lX2duA'[39m,
+              toolName: [32m'todoWrite'[39m,
+              input: {
+                todos: [
+                  {
+                    id: [32m'1'[39m,
+                    content: [32m'Create run.py with Bytewax stateful deduplication dataflow'[39m,
+                    status: [32m'in-progress'[39m,
+                    priority: [32m'high'[39m
+                  },
+                  {
+                    id: [32m'2'[39m,
+                    content: [32m'Create input.jsonl test file'[39m,
+                    status: [32m'pending'[39m,
+                    priority: [32m'high'[39m
+                  },
+                  {
+                    id: [32m'3'[39m,
+                    content: [32m'Test the dataflow and verify output'[39m,
+                    status: [32m'pending'[39m,
+                    priority: [32m'high'[39m
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_f1zgUT7j25idp1Ej99lX2duA'[39m,
+              toolName: [32m'todoWrite'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_bjlE6qRrAvova0vOo3FzAOWE'[39m,
+              toolName: [32m'writeToFile'[39m,
+              input: {
+                path: [32m'/home/user/myproject/run.py'[39m,
+                content: [32m'import json\n'[39m +
+                  [32m'from datetime import datetime, timedelta, timezone\n'[39m +
+                  [32m'from pathlib import Path\n'[39m +
+                  [32m'from typing import Dict, Iterable, Optional, Tuple\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'from bytewax.dataflow import Dataflow\n'[39m +
+                  [32m'import bytewax.operators as op\n'[39m +
+                  [32m'from bytewax.operators import StatefulLogic\n'[39m +
+                  [32m'from bytewax.connectors.files import FileSource, FileSink\n'[39m +
+                  [32m'from bytewax.testing import run_main\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'INPUT_PATH = Path("/home/user/myproject/input.jsonl")\n'[39m +
+                  [32m'OUTPUT_PATH = Path("/home/user/myproject/output.jsonl")\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def parse_line(line: str) -> Tuple[str, dict]:\n'[39m +
+                  [32m'    """Parse a JSON line into a (user_id, event_dict) tuple."""\n'[39m +
+                  [32m'    event = json.loads(line.strip())\n'[39m +
+                  [32m'    event["_ts"] = datetime.fromisoformat(event["timestamp"].replace("Z", "+00:00"))\n'[39m +
+                  [32m'    return (event["user_id"], event)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'class DedupLogic(StatefulLogic[dict, dict, Dict[str, datetime]]):\n'[39m +
+                  [32m'    """Stateful deduplication logic.\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    State is a dict mapping event_id -> datetime of its last emitted occurrence.\n'[39m +
+                  [32m'    An event is emitted only if its event_id has not been seen within the last\n'[39m +
+                  [32m'    10 seconds (inclusive). If more than 10 seconds have passed since the last\n'[39m +
+                  [32m'    occurrence, it is emitted and the timestamp is updated.\n'[39m +
+                  [32m'\n'[39m +
+                  [32m"    On each item, stale entries (older than 10s from the current event's\n"[39m +
+                  [32m'    timestamp) are cleaned up from the state.\n'[39m +
+                  [32m'    """\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def __init__(self, initial_state: Optional[Dict[str, datetime]] = None):\n'[39m +
+                  [32m'        self._state: Dict[str, datetime] = initial_state if initial_state is not None else {}\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def on_item(self, value: dict) -> Tuple[Iterable[dict], bool]:\n'[39m +
+                  [32m'        event_id = value["event_id"]\n'[39m +
+                  [32m'        current_ts = value["_ts"]\n'[39m +
+                  [32m'        window = timedelta(seconds=10)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        # Clean up stale entries: remove any event_id whose last seen timestamp\n'[39m +
+                  [32m"        # is older than 10 seconds from the current event's timestamp.\n"[39m +
+                  [32m'        stale_ids = [\n'[39m +
+                  [32m'            eid for eid, ts in self._state.items()\n'[39m +
+                  [32m'            if current_ts - ts > window\n'[39m +
+                  [32m'        ]\n'[39m +
+                  [32m'        for eid in stale_ids:\n'[39m +
+                  [32m'            del self._state[eid]\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        # Check if this event_id is a duplicate within the 10-second window.\n'[39m +
+                  [32m'        last_ts = self._state.get(event_id)\n'[39m +
+                  [32m'        if last_ts is not None and current_ts <= last_ts + window:\n'[39m +
+                  [32m'            # Duplicate within the window — drop it.\n'[39m +
+                  [32m'            return ([], False)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        # Not a duplicate — emit it and update state.\n'[39m +
+                  [32m'        self._state[event_id] = current_ts\n'[39m +
+                  [32m'        return ([value], False)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def snapshot(self) -> Dict[str, datetime]:\n'[39m +
+                  [32m'        return dict(self._state)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def builder(resume_state: Optional[Dict[str, datetime]]) -> DedupLogic:\n'[39m +
+                  [32m'    return DedupLogic(resume_state)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def format_output(keyed_event: Tuple[str, dict]) -> str:\n'[39m +
+                  [32m'    """Convert a (user_id, event_dict) back to a JSON string."""\n'[39m +
+                  [32m'    _, event = keyed_event\n'[39m +
+                  [32m'    # Remove the internal _ts field before serializing\n'[39m +
+                  [32m'    out = {k: v for k, v in event.items() if k != "_ts"}\n'[39m +
+                  [32m'    return json.dumps(out)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def build_dataflow() -> Dataflow:\n'[39m +
+                  [32m'    flow = Dataflow("dedup")\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 1. Read lines from the input file.\n'[39m +
+                  [32m'    lines = op.input("input", flow, FileSource(INPUT_PATH))\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 2. Parse JSON and key by user_id.\n'[39m +
+                  [32m'    keyed_events = op.map("parse", lines, parse_line)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 3. Key the stream by user_id (the first element of the tuple).\n'[39m +
+                  [32m'    #    map already produces (user_id, event) tuples, but we need a KeyedStream.\n'[39m +
+                  [32m'    keyed = op.key_on("key_on_user", keyed_events, lambda x: x[0])\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 4. Apply stateful deduplication.\n'[39m +
+                  [32m'    deduped = op.stateful("dedup", keyed, builder)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 5. Format back to JSON strings.\n'[39m +
+                  [32m'    json_lines = op.map("format", deduped, format_output)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 6. Write to output file.\n'[39m +
+                  [32m'    op.output("output", json_lines, FileSink(OUTPUT_PATH))\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    return flow\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'if __name__ == "__main__":\n'[39m +
+                  [32m'    flow = build_dataflow()\n'[39m +
+                  [32m'    run_main(flow)\n'[39m +
+                  [32m''[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CFZRZCKAF8MR0R853TNHB'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_bjlE6qRrAvova0vOo3FzAOWE'[39m,
+              toolName: [32m'writeToFile'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CFZRZCKAF8MR0R853TNHB'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_SZZjok4MRS6sQXypb2N6qcPG'[39m,
+              toolName: [32m'todoWrite'[39m,
+              input: {
+                todos: [
+                  {
+                    id: [32m'1'[39m,
+                    content: [32m'Create run.py with Bytewax stateful deduplication dataflow'[39m,
+                    status: [32m'completed'[39m,
+                    priority: [32m'high'[39m
+                  },
+                  {
+                    id: [32m'2'[39m,
+                    content: [32m'Create input.jsonl test file'[39m,
+                    status: [32m'in-progress'[39m,
+                    priority: [32m'high'[39m
+                  },
+                  {
+                    id: [32m'3'[39m,
+                    content: [32m'Test the dataflow and verify output'[39m,
+                    status: [32m'pending'[39m,
+                    priority: [32m'high'[39m
+                  }
+                ]
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CHD885TTVPPGW7QNZHZT6'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_SZZjok4MRS6sQXypb2N6qcPG'[39m,
+              toolName: [32m'todoWrite'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CHD885TTVPPGW7QNZHZT6'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'Now let me create a comprehensive test input file covering various deduplication scenarios:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CHH1BZQP8BTPKWMMCFW9E'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_Uw8C8cQ6ulIfFqxrySV8uE9v'[39m,
+              toolName: [32m'writeToFile'[39m,
+              input: {
+                path: [32m'/home/user/myproject/input.jsonl'[39m,
+                content: [32m'{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:00Z"}\n'[39m +
+                  [32m'{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:05Z"}\n'[39m +
+                  [32m'{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:10Z"}\n'[39m +
+                  [32m'{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:11Z"}\n'[39m +
+                  [32m'{"user_id": "u1", "event_id": "e2", "timestamp": "2023-01-01T12:00:03Z"}\n'[39m +
+                  [32m'{"user_id": "u1", "event_id": "e2", "timestamp": "2023-01-01T12:00:15Z"}\n'[39m +
+                  [32m'{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:01Z"}\n'[39m +
+                  [32m'{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:09Z"}\n'[39m +
+                  [32m'{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:11Z"}\n'[39m +
+                  [32m'{"user_id": "u2", "event_id": "e1", "timestamp": "2023-01-01T12:00:12Z"}\n'[39m +
+                  [32m'{"user_id": "u3", "event_id": "e3", "timestamp": "2023-01-01T12:00:00Z"}\n'[39m +
+                  [32m'{"user_id": "u3", "event_id": "e4", "timestamp": "2023-01-01T12:00:05Z"}\n'[39m +
+                  [32m'{"user_id": "u3", "event_id": "e3", "timestamp": "2023-01-01T12:00:07Z"}\n'[39m +
+                  [32m'{"user_id": "u3", "event_id": "e3", "timestamp": "2023-01-01T12:00:17Z"}\n'[39m +
+                  [32m'{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:22Z"}\n'[39m +
+                  [32m''[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_Uw8C8cQ6ulIfFqxrySV8uE9v'[39m,
+              toolName: [32m'writeToFile'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_I96gcQ6VkPsh3HZKt7nR8Utp'[39m,
+              toolName: [32m'todoWrite'[39m,
+              input: {
+                todos: [
+                  {
+                    id: [32m'1'[39m,
+                    content: [32m'Create run.py with Bytewax stateful deduplication dataflow'[39m,
+                    status: [32m'completed'[39m,
+                    priority: [32m'high'[39m
+                  },
+                  {
+                    id: [32m'2'[39m,
+                    content: [32m'Create input.jsonl test file'[39m,
+                    status: [32m'completed'[39m,
+                    priority: [32m'high'[39m
+                  },
+                  {
+                    id: [32m'3'[39m,
+                    content: [32m'Test the dataflow and verify output'[39m,
+                    status: [32m'in-progress'[39m,
+                    priority: [32m'high'[39m
+                  }
+                ]
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CJ0WNBM6WYCPDTYY49C48'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_I96gcQ6VkPsh3HZKt7nR8Utp'[39m,
+              toolName: [32m'todoWrite'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CJ0WNBM6WYCPDTYY49C48'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_EYncf0n743bsmFuKwI83kxCf'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'cd /home/user/myproject && python3 run.py 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CJM7RE5DD3HPM81V9RQDJ'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_EYncf0n743bsmFuKwI83kxCf'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"thread '<unnamed>' panicked at src/operators.rs:764:33:\r\n"[39m +
+                    [32m'Box<dyn Any>\r\n'[39m +
+                    [32m'note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "/usr/local/lib/python3.12/dist-packages/bytewax/operators/__init__.py", line 1036, in on_batch\r\n'[39m +
+                    [32m'    new_ws, discard = self.logic.on_item(v)\r\n'[39m +
+                    [32m'                      ^^^^^^^^^^^^^^^^^^^^^\r\n'[39m +
+                    [32m'  File "/home/user/myproject/run.py", line 40, in on_item\r\n'[39m +
+                    [32m'    event_id = value["event_id"]\r\n'[39m +
+                    [32m'               ~~~~~^^^^^^^^^^^^\r\n'[39m +
+                    [32m'TypeError: tuple indices must be integers or slices, not str\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'The above exception was the direct cause of the following exception:\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "/home/user/myproject/run.py", line 106, in <module>\r\n'[39m +
+                    [32m'    run_main(flow)\r\n'[39m +
+                    [32m'bytewax.errors.BytewaxRuntimeError: (src/operators.rs:786:50): error calling `StatefulBatchLogic.on_batch` in step "dedup.dedup.stateful_batch" for key "u1"\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m,
+                  error: [32m'Command exited with code 1'[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CJM7RE5DD3HPM81V9RQDJ'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'The issue is that `stateful` passes `(key, value)` tuples to `on_item`, but since we already keyed the stream, the value passed to `on_item` is the full `(user_id, event_dict)` tuple. Let me look at how the stateful operator passes values:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CJQ54EPGT0QHB0MD2702K'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_RcScqNUSxBLWApobOIOkbo9m'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "\n'[39m +
+                  [32m'from bytewax.operators import stateful, StatefulLogic\n'[39m +
+                  [32m'# The stateful operator receives a KeyedStream[V] where V is the value type.\n'[39m +
+                  [32m'# on_item receives V (the value part, not the key).\n'[39m +
+                  [32m'# Since we did key_on with lambda x: x[0], the key is user_id and the value\n'[39m +
+                  [32m'# is the tuple (user_id, event_dict).\n'[39m +
+                  [32m'# So on_item receives (user_id, event_dict) tuple.\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'# Let me check what key_on does more carefully\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'from bytewax.operators import key_on\n'[39m +
+                  [32m'print(inspect.signature(key_on))\n'[39m +
+                  [32m'" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_RcScqNUSxBLWApobOIOkbo9m'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m'(step_id: str, up: bytewax.dataflow.Stream[~X], key: Callable[[~X], str]) -> bytewax.dataflow.Stream[typing.Tuple[str, ~X]]\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m'So `key_on` takes a `Stream[X]` and a function `X -> str`, and returns `Stream[Tuple[str, X]]`. The key is extracted but the value remains the full original `X`. So in our case, `X` is `(user_id, event_dict)` from `parse_line`, and after `key_on`, the stream is `Stream[Tuple[str, Tuple[str, dict]]]`.\n'[39m +
+                [32m'\n'[39m +
+                [32m'Then `stateful` receives this keyed stream and passes the value part (the `Tuple[str, dict]`) to `on_item`. So `on_item` receives `(user_id, event_dict)` — a tuple, not just the dict.\n'[39m +
+                [32m'\n'[39m +
+                [32m'I need to fix this by either:\n'[39m +
+                [32m'1. Making `parse_line` just return the event dict, and using `key_on` to extract `user_id`, OR\n'[39m +
+                [32m'2. Adjusting `on_item` to handle the tuple.\n'[39m +
+                [32m'\n'[39m +
+                [32m'Option 1 is cleaner:'[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CK4TQ2G3WD860W2ENW5SJ'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_n1m6FAuj1uyrHIw4OWPJ4g2l'[39m,
+              toolName: [32m'readFile'[39m,
+              input: {
+                path: [32m'/home/user/myproject/run.py'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_n1m6FAuj1uyrHIw4OWPJ4g2l'[39m,
+              toolName: [32m'readFile'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  content: [32m'import json\n'[39m +
+                    [32m'from datetime import datetime, timedelta, timezone\n'[39m +
+                    [32m'from pathlib import Path\n'[39m +
+                    [32m'from typing import Dict, Iterable, Optional, Tuple\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'from bytewax.dataflow import Dataflow\n'[39m +
+                    [32m'import bytewax.operators as op\n'[39m +
+                    [32m'from bytewax.operators import StatefulLogic\n'[39m +
+                    [32m'from bytewax.connectors.files import FileSource, FileSink\n'[39m +
+                    [32m'from bytewax.testing import run_main\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'INPUT_PATH = Path("/home/user/myproject/input.jsonl")\n'[39m +
+                    [32m'OUTPUT_PATH = Path("/home/user/myproject/output.jsonl")\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'def parse_line(line: str) -> Tuple[str, dict]:\n'[39m +
+                    [32m'    """Parse a JSON line into a (user_id, event_dict) tuple."""\n'[39m +
+                    [32m'    event = json.loads(line.strip())\n'[39m +
+                    [32m'    event["_ts"] = datetime.fromisoformat(event["timestamp"].replace("Z", "+00:00"))\n'[39m +
+                    [32m'    return (event["user_id"], event)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'class DedupLogic(StatefulLogic[dict, dict, Dict[str, datetime]]):\n'[39m +
+                    [32m'    """Stateful deduplication logic.\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    State is a dict mapping event_id -> datetime of its last emitted occurrence.\n'[39m +
+                    [32m'    An event is emitted only if its event_id has not been seen within the last\n'[39m +
+                    [32m'    10 seconds (inclusive). If more than 10 seconds have passed since the last\n'[39m +
+                    [32m'    occurrence, it is emitted and the timestamp is updated.\n'[39m +
+                    [32m'\n'[39m +
+                    [32m"    On each item, stale entries (older than 10s from the current event's\n"[39m +
+                    [32m'    timestamp) are cleaned up from the state.\n'[39m +
+                    [32m'    """\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    def __init__(self, initial_state: Optional[Dict[str, datetime]] = None):\n'[39m +
+                    [32m'        self._state: Dict[str, datetime] = initial_state if initial_state is not None else {}\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    def on_item(self, value: dict) -> Tuple[Iterable[dict], bool]:\n'[39m +
+                    [32m'        event_id = value["event_id"]\n'[39m +
+                    [32m'        current_ts = value["_ts"]\n'[39m +
+                    [32m'        window = timedelta(seconds=10)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'        # Clean up stale entries: remove any event_id whose last seen timestamp\n'[39m +
+                    [32m"        # is older than 10 seconds from the current event's timestamp.\n"[39m +
+                    [32m'        stale_ids = [\n'[39m +
+                    [32m'            eid for eid, ts in self._state.items()\n'[39m +
+                    [32m'            if current_ts - ts > window\n'[39m +
+                    [32m'        ]\n'[39m +
+                    [32m'        for eid in stale_ids:\n'[39m +
+                    [32m'            del self._state[eid]\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'        # Check if this event_id is a duplicate within the 10-second window.\n'[39m +
+                    [32m'        last_ts = self._state.get(event_id)\n'[39m +
+                    [32m'        if last_ts is not None and current_ts <= last_ts + window:\n'[39m +
+                    [32m'            # Duplicate within the window — drop it.\n'[39m +
+                    [32m'            return ([], False)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'        # Not a duplicate — emit it and update state.\n'[39m +
+                    [32m'        self._state[event_id] = current_ts\n'[39m +
+                    [32m'        return ([value], False)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    def snapshot(self) -> Dict[str, datetime]:\n'[39m +
+                    [32m'        return dict(self._state)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'def builder(resume_state: Optional[Dict[str, datetime]]) -> DedupLogic:\n'[39m +
+                    [32m'    return DedupLogic(resume_state)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'def format_output(keyed_event: Tuple[str, dict]) -> str:\n'[39m +
+                    [32m'    """Convert a (user_id, event_dict) back to a JSON string."""\n'[39m +
+                    [32m'    _, event = keyed_event\n'[39m +
+                    [32m'    # Remove the internal _ts field before serializing\n'[39m +
+                    [32m'    out = {k: v for k, v in event.items() if k != "_ts"}\n'[39m +
+                    [32m'    return json.dumps(out)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'def build_dataflow() -> Dataflow:\n'[39m +
+                    [32m'    flow = Dataflow("dedup")\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    # 1. Read lines from the input file.\n'[39m +
+                    [32m'    lines = op.input("input", flow, FileSource(INPUT_PATH))\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    # 2. Parse JSON and key by user_id.\n'[39m +
+                    [32m'    keyed_events = op.map("parse", lines, parse_line)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    # 3. Key the stream by user_id (the first element of the tuple).\n'[39m +
+                    [32m'    #    map already produces (user_id, event) tuples, but we need a KeyedStream.\n'[39m +
+                    [32m'    keyed = op.key_on("key_on_user", keyed_events, lambda x: x[0])\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    # 4. Apply stateful deduplication.\n'[39m +
+                    [32m'    deduped = op.stateful("dedup", keyed, builder)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    # 5. Format back to JSON strings.\n'[39m +
+                    [32m'    json_lines = op.map("format", deduped, format_output)\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    # 6. Write to output file.\n'[39m +
+                    [32m'    op.output("output", json_lines, FileSink(OUTPUT_PATH))\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'    return flow\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'\n'[39m +
+                    [32m'if __name__ == "__main__":\n'[39m +
+                    [32m'    flow = build_dataflow()\n'[39m +
+                    [32m'    run_main(flow)\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_YviwuDK326temb224xEKJXoh'[39m,
+              toolName: [32m'writeToFile'[39m,
+              input: {
+                path: [32m'/home/user/myproject/run.py'[39m,
+                content: [32m'import json\n'[39m +
+                  [32m'from datetime import datetime, timedelta, timezone\n'[39m +
+                  [32m'from pathlib import Path\n'[39m +
+                  [32m'from typing import Dict, Iterable, Optional, Tuple\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'from bytewax.dataflow import Dataflow\n'[39m +
+                  [32m'import bytewax.operators as op\n'[39m +
+                  [32m'from bytewax.operators import StatefulLogic\n'[39m +
+                  [32m'from bytewax.connectors.files import FileSource, FileSink\n'[39m +
+                  [32m'from bytewax.testing import run_main\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'INPUT_PATH = Path("/home/user/myproject/input.jsonl")\n'[39m +
+                  [32m'OUTPUT_PATH = Path("/home/user/myproject/output.jsonl")\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def parse_line(line: str) -> dict:\n'[39m +
+                  [32m'    """Parse a JSON line into an event dict with parsed timestamp."""\n'[39m +
+                  [32m'    event = json.loads(line.strip())\n'[39m +
+                  [32m'    event["_ts"] = datetime.fromisoformat(event["timestamp"].replace("Z", "+00:00"))\n'[39m +
+                  [32m'    return event\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'class DedupLogic(StatefulLogic[dict, dict, Dict[str, datetime]]):\n'[39m +
+                  [32m'    """Stateful deduplication logic.\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    State is a dict mapping event_id -> datetime of its last emitted occurrence.\n'[39m +
+                  [32m'    An event is emitted only if its event_id has not been seen within the last\n'[39m +
+                  [32m'    10 seconds (inclusive). If more than 10 seconds have passed since the last\n'[39m +
+                  [32m'    occurrence, it is emitted and the timestamp is updated.\n'[39m +
+                  [32m'\n'[39m +
+                  [32m"    On each item, stale entries (older than 10s from the current event's\n"[39m +
+                  [32m'    timestamp) are cleaned up from the state.\n'[39m +
+                  [32m'    """\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def __init__(self, initial_state: Optional[Dict[str, datetime]] = None):\n'[39m +
+                  [32m'        self._state: Dict[str, datetime] = initial_state if initial_state is not None else {}\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def on_item(self, value: dict) -> Tuple[Iterable[dict], bool]:\n'[39m +
+                  [32m'        event_id = value["event_id"]\n'[39m +
+                  [32m'        current_ts = value["_ts"]\n'[39m +
+                  [32m'        window = timedelta(seconds=10)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        # Clean up stale entries: remove any event_id whose last seen timestamp\n'[39m +
+                  [32m"        # is older than 10 seconds from the current event's timestamp.\n"[39m +
+                  [32m'        stale_ids = [\n'[39m +
+                  [32m'            eid for eid, ts in self._state.items()\n'[39m +
+                  [32m'            if current_ts - ts > window\n'[39m +
+                  [32m'        ]\n'[39m +
+                  [32m'        for eid in stale_ids:\n'[39m +
+                  [32m'            del self._state[eid]\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        # Check if this event_id is a duplicate within the 10-second window.\n'[39m +
+                  [32m'        last_ts = self._state.get(event_id)\n'[39m +
+                  [32m'        if last_ts is not None and current_ts <= last_ts + window:\n'[39m +
+                  [32m'            # Duplicate within the window — drop it.\n'[39m +
+                  [32m'            return ([], False)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'        # Not a duplicate — emit it and update state.\n'[39m +
+                  [32m'        self._state[event_id] = current_ts\n'[39m +
+                  [32m'        return ([value], False)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    def snapshot(self) -> Dict[str, datetime]:\n'[39m +
+                  [32m'        return dict(self._state)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def builder(resume_state: Optional[Dict[str, datetime]]) -> DedupLogic:\n'[39m +
+                  [32m'    return DedupLogic(resume_state)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def format_output(keyed_event: Tuple[str, dict]) -> str:\n'[39m +
+                  [32m'    """Convert a (key, event_dict) back to a JSON string."""\n'[39m +
+                  [32m'    _, event = keyed_event\n'[39m +
+                  [32m'    # Remove the internal _ts field before serializing\n'[39m +
+                  [32m'    out = {k: v for k, v in event.items() if k != "_ts"}\n'[39m +
+                  [32m'    return json.dumps(out)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'def build_dataflow() -> Dataflow:\n'[39m +
+                  [32m'    flow = Dataflow("dedup")\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 1. Read lines from the input file.\n'[39m +
+                  [32m'    lines = op.input("input", flow, FileSource(INPUT_PATH))\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 2. Parse JSON strings into event dicts.\n'[39m +
+                  [32m'    events = op.map("parse", lines, parse_line)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 3. Key the stream by user_id.\n'[39m +
+                  [32m'    keyed = op.key_on("key_on_user", events, lambda e: e["user_id"])\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 4. Apply stateful deduplication.\n'[39m +
+                  [32m'    deduped = op.stateful("dedup", keyed, builder)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 5. Format back to JSON strings.\n'[39m +
+                  [32m'    json_lines = op.map("format", deduped, format_output)\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    # 6. Write to output file.\n'[39m +
+                  [32m'    op.output("output", json_lines, FileSink(OUTPUT_PATH))\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'    return flow\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'\n'[39m +
+                  [32m'if __name__ == "__main__":\n'[39m +
+                  [32m'    flow = build_dataflow()\n'[39m +
+                  [32m'    run_main(flow)\n'[39m +
+                  [32m''[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CKDZMBFP24RXPNTFWGB3H'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_YviwuDK326temb224xEKJXoh'[39m,
+              toolName: [32m'writeToFile'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  success: [33mtrue[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CKDZMBFP24RXPNTFWGB3H'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_6VdCJ9P8lHLxDGbrN5xB4XSr'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'cd /home/user/myproject && python3 run.py 2>&1'[39m
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CN85ZD529BWF29B54SR24'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_6VdCJ9P8lHLxDGbrN5xB4XSr'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"thread '<unnamed>' panicked at src/operators.rs:390:25:\r\n"[39m +
+                    [32m'Box<dyn Any>\r\n'[39m +
+                    [32m'note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\r\n'[39m +
+                    [32m'\r\n'[39m +
+                    [32m'Traceback (most recent call last):\r\n'[39m +
+                    [32m'  File "/home/user/myproject/run.py", line 105, in <module>\r\n'[39m +
+                    [32m'    run_main(flow)\r\n'[39m +
+                    [32m'TypeError: (src/operators.rs:395:38) step "dedup.output" requires `(key, value)` 2-tuple from upstream for routing; got a `str` instead\r\n'[39m +
+                    [32m"Caused by => TypeError: 'str' object cannot be converted to 'PyTuple'\r\n"[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m,
+                  error: [32m'Command exited with code 1'[39m
+                }
+              },
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CN85ZD529BWF29B54SR24'[39m
+                }
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'assistant'[39m,
+          content: [
+            {
+              type: [32m'text'[39m,
+              text: [32m"The issue is that `FileSink` expects a keyed stream (with `(key, value)` tuples), but we're passing plain strings. Let me check how `output` and `FileSink` work:"[39m,
+              providerOptions: {
+                gateway: {
+                  generationId: [32m'gen_01KV5CNCZBSYA6FKNKFSRRG1MK'[39m
+                }
+              }
+            },
+            {
+              type: [32m'tool-call'[39m,
+              toolCallId: [32m'call_00_iQVmmnEkCkvSfnuHRCUFACvj'[39m,
+              toolName: [32m'executeCommand'[39m,
+              input: {
+                command: [32m'python3 -c "\n'[39m +
+                  [32m'from bytewax.connectors.files import FileSink\n'[39m +
+                  [32m'import inspect\n'[39m +
+                  [32m'sig = inspect.signature(FileSink.__init__)\n'[39m +
+                  [32m"print('FileSink.__init__:', sig)\n"[39m +
+                  [32m'# Check what write expects\n'[39m +
+                  [32m'print()\n'[39m +
+                  [32m'from bytewax.outputs import FixedPartitionedSink\n'[39m +
+                  [32m'# check the class\n'[39m +
+                  [32m'" 2>&1'[39m
+              }
+            }
+          ]
+        },
+        {
+          role: [32m'tool'[39m,
+          content: [
+            {
+              type: [32m'tool-result'[39m,
+              toolCallId: [32m'call_00_iQVmmnEkCkvSfnuHRCUFACvj'[39m,
+              toolName: [32m'executeCommand'[39m,
+              output: {
+                type: [32m'json'[39m,
+                value: {
+                  output: [32m"FileSink.__init__: (self, path: pathlib.Path, end: str = '\\n')\r\n"[39m +
+                    [32m'\r\n'[39m +
+                    [32m''[39m,
+                  isTruncated: [33mfalse[39m
+                }
+              }
+            }
+          ]
+        }
+      ],
+      tools: [
+        {
+          type: [32m'function'[39m,
+          name: [32m'applyDiff'[39m,
+          description: [32m"This is a tool for editing files. For moving or renaming files, you should generally use the executeCommand tool with the 'mv' command instead. For larger edits, use the writeFile tool to overwrite files.\n"[39m +
+            [32m'\n'[39m +
+            [32m"Before using this tool, use the readFile tool to understand the file's contents and context\n"[39m +
+            [32m'\n'[39m +
+            [32m'To make a file edit, provide the following:\n'[39m +
+            [32m'1. path: The path to the file to modify (relative to the current working directory, or an absolute path)\n'[39m +
+            [32m'2. searchContent: The text to replace (must match the file contents exactly, including all whitespace and indentation)\n'[39m +
+            [32m'3. replaceContent: The edited text to replace the searchContent (must be different from searchContent)\n'[39m +
+            [32m'4. expectedReplacements: The number of replacements you expect to make. Defaults to 1 if not specified.\n'[39m +
+            [32m'\n'[39m +
+            [32m'By default, the tool will replace ONE occurrence of searchContent with replaceContent in the specified file. If you want to replace multiple occurrences, provide the expectedReplacements parameter with the exact number of occurrences you expect.\n'[39m +
+            [32m'\n'[39m +
+            [32m'CRITICAL REQUIREMENTS FOR USING THIS TOOL:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. UNIQUENESS (when expectedReplacements is not specified): The searchContent MUST uniquely identify the specific instance you want to change. This means:\n'[39m +
+            [32m'   - Include AT LEAST 3-5 lines of context BEFORE the change point\n'[39m +
+            [32m'   - Include AT LEAST 3-5 lines of context AFTER the change point\n'[39m +
+            [32m'   - Include all whitespace, indentation, and surrounding code exactly as it appears in the file\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. EXPECTED MATCHES: If you want to replace multiple instances:\n'[39m +
+            [32m'   - Use the expectedReplacements parameter with the exact number of occurrences you expect to replace\n'[39m +
+            [32m'   - This will replace ALL occurrences of the searchContent with the replaceContent\n'[39m +
+            [32m"   - If the actual number of matches doesn't equal expectedReplacements, the edit will fail\n"[39m +
+            [32m'   - This is a safety feature to prevent unintended replacements\n'[39m +
+            [32m'\n'[39m +
+            [32m'3. VERIFICATION: Before using this tool:\n'[39m +
+            [32m'   - Check how many instances of the target text exist in the file\n'[39m +
+            [32m'   - If multiple instances exist, either:\n'[39m +
+            [32m'     a) Gather enough context to uniquely identify each one and make separate calls, OR\n'[39m +
+            [32m'     b) Use expectedReplacements parameter with the exact count of instances you expect to replace\n'[39m +
+            [32m'\n'[39m +
+            [32m'WARNING:\n'[39m +
+            [32m"- The tool will fail if searchContent matches multiple locations and expectedReplacements isn't specified\n"[39m +
+            [32m"- The tool will fail if the number of matches doesn't equal expectedReplacements when it's specified\n"[39m +
+            [32m"- The tool will fail if searchContent doesn't match the file contents exactly (including whitespace)\n"[39m +
+            [32m'- The tool will fail if searchContent and replaceContent are the same\n'[39m +
+            [32m'\n'[39m +
+            [32m'When making edits:\n'[39m +
+            [32m'   - Ensure the edit results in idiomatic, correct code\n'[39m +
+            [32m'   - Do not add trailing whitespace to lines (a newline at the end of a file is fine)\n'[39m +
+            [32m'   - Do not leave the code in a broken state\n'[39m +
+            [32m'\n'[39m +
+            [32m'If you want to create a new file, use:\n'[39m +
+            [32m'   - A new file path, including dir name if needed\n'[39m +
+            [32m'   - An empty searchContent\n'[39m +
+            [32m"   - The new file's contents as replaceContent\n"[39m +
+            [32m'\n'[39m +
+            [32m'Remember: when making multiple file edits in a row to the same file, you should prefer to send all edits in a single message with multiple calls to this tool, rather than multiple messages with a single call each.\n'[39m +
+            [32m'\n'[39m +
+            [32m'You may see the following fields in the result:\n'[39m +
+            [32m'- autoFormattingEdits: If the auto-formatter makes any changes, this field will contain a diff against the file content after your edits and any user edits have been applied.\n'[39m +
+            [32m'- newProblems: If any new problems are found after the edit, this field will contain information about them.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the file to modify (relative to the current working directory, or an absolute path).'[39m
+              },
+              searchContent: {
+                type: [32m'string'[39m,
+                description: [32m'The text to replace.'[39m
+              },
+              replaceContent: {
+                type: [32m'string'[39m,
+                description: [32m'The text to replace it with.'[39m
+              },
+              expectedReplacements: {
+                description: [32m'The expected number of replacements to perform. Defaults to 1 if not specified.'[39m,
+                type: [32m'number'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'searchContent'[39m,
+              [32m'replaceContent'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'askFollowupQuestion'[39m,
+          description: [32m'Ask the user a question to gather additional information needed to complete the task. \n'[39m +
+            [32m'\n'[39m +
+            [32m'## When to Use This Tool\n'[39m +
+            [32m'Use this tool in the following scenarios:\n'[39m +
+            [32m"1. The user's request is ambiguous or unclear and requires clarification.\n"[39m +
+            [32m'2. You need more details to proceed effectively.\n'[39m +
+            [32m'3. You have made several unsuccessful attempts to solve the issue and need user guidance to move forward.\n'[39m +
+            [32m'4. Offer choices to the user about what direction to take.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Usage Notes\n'[39m +
+            [32m'- Users will always be able to select "Other" to provide custom text input\n'[39m +
+            [32m'- Use multiSelect: true to allow multiple answers to be selected for a question\n'[39m +
+            [32m'- If you recommend a specific option, make that the first option in the list and add "(Recommended)" at the end of the label\n'[39m +
+            [32m'- Provide 1-4 questions per call\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: This tool CANNOT be used in combination with other tools (except todoWrite) in a single step. If you need to use other tools, you must do so in a separate step before calling this tool.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              questions: {
+                minItems: [33m1[39m,
+                maxItems: [33m4[39m,
+                type: [32m'array'[39m,
+                items: {
+                  type: [32m'object'[39m,
+                  properties: {
+                    question: {
+                      type: [32m'string'[39m,
+                      description: [32m'The complete question to ask the user. Should be clear, specific, and end with a question mark.'[39m
+                    },
+                    header: {
+                      type: [32m'string'[39m,
+                      maxLength: [33m12[39m,
+                      description: [32m'Very short label displayed as a chip/tag (max 12 chars). Examples: "Auth method", "Library", "Approach".'[39m
+                    },
+                    options: {
+                      minItems: [33m2[39m,
+                      maxItems: [33m4[39m,
+                      type: [32m'array'[39m,
+                      items: {
+                        type: [32m'object'[39m,
+                        properties: {
+                          label: {
+                            type: [32m'string'[39m,
+                            description: [32m'Short button label shown to the user. Should be concise (1-5 words) and clearly describe the choice.'[39m
+                          },
+                          description: {
+                            description: [32m'Explanation of what this option means or what will happen if chosen. Useful for providing context about trade-offs or implications.'[39m,
+                            type: [32m'string'[39m
+                          }
+                        },
+                        required: [
+                          [32m'label'[39m
+                        ],
+                        additionalProperties: [33mfalse[39m
+                      },
+                      description: [32m"The available choices for this question. Must have 2-4 options. Each option should be a distinct, mutually exclusive choice (unless multiSelect is enabled). There should be no 'Other' option, that will be provided automatically."[39m
+                    },
+                    multiSelect: {
+                      default: [33mfalse[39m,
+                      description: [32m'Set to true to allow the user to select multiple options instead of just one. Use when choices are not mutually exclusive.'[39m,
+                      type: [32m'boolean'[39m
+                    }
+                  },
+                  required: [
+                    [32m'question'[39m,
+                    [32m'header'[39m,
+                    [32m'options'[39m
+                  ],
+                  additionalProperties: [33mfalse[39m
+                },
+                description: [32m'Questions to ask the user (1-4 questions).'[39m
+              }
+            },
+            required: [
+              [32m'questions'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'attemptCompletion'[39m,
+          description: [32m"Once you've received the results of tool uses and can confirm that the task is complete, use this tool to present the result of your work to the user.\n"[39m +
+            [32m'\n'[39m +
+            [32m'You MUST NOT generate any text before this tool call. All conclusion text must be included within the result parameter of the attemptCompletion tool.\n'[39m +
+            [32m'Never use this tool with a question or request to engage in further conversation! Formulate the end of your result in a way that is final and does not require further input from the user.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: This tool CANNOT be used in combination with other tools (except todoWrite) in a single step. If you need to use other tools, you must do so in a separate step before calling this tool.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              result: {
+                type: [32m'string'[39m,
+                description: [32m'The result of the task. Formulate this result in a way that is final and does not require further input from the user.'[39m
+              }
+            },
+            required: [
+              [32m'result'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'executeCommand'[39m,
+          description: [32m'Executes a given bash command in a persistent shell session with optional timeout, ensuring proper handling and security measures.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: This tool is for terminal operations like git, npm, docker, etc. DO NOT use it for file operations (reading, writing, editing, searching, finding files) - use the specialized tools for this instead.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Before executing the command, please follow these steps:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. Directory Verification:\n'[39m +
+            [32m'   - If the command will create new directories or files, first use listFiles to verify the parent directory exists and is the correct location\n'[39m +
+            [32m'   - For example, before running "mkdir foo/bar", first use listFiles to check that "foo" exists and is the intended parent directory\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. Command Execution:\n'[39m +
+            [32m'   - Always quote file paths that contain spaces with double quotes (e.g., cd "path with spaces/file.txt")\n'[39m +
+            [32m'   - Examples of proper quoting:\n'[39m +
+            [32m'     - cd "/Users/name/My Documents" (correct)\n'[39m +
+            [32m'     - cd /Users/name/My Documents (incorrect - will fail)\n'[39m +
+            [32m'     - python "/path/with spaces/script.py" (correct)\n'[39m +
+            [32m'     - python /path/with spaces/script.py (incorrect - will fail)\n'[39m +
+            [32m'   - After ensuring proper quoting, execute the command.\n'[39m +
+            [32m'   - Capture the output of the command.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'- The command argument is required.\n'[39m +
+            [32m'- You can specify an optional timeout in seconds (up to 300s / 5 minutes). If not specified, commands will timeout after 60s (1 minute).\n'[39m +
+            [32m'- If the output exceeds 30000 characters, output will be truncated before being returned to you.\n'[39m +
+            [32m'- When issuing multiple commands:\n'[39m +
+            [32m'  - If the commands are independent and can run in parallel, make multiple executeCommand tool calls in a single message. For example, if you need to run "git status" and "git diff", send a single message with two executeCommand tool calls in parallel.\n'[39m +
+            [32m'  - If the commands depend on each other and must run sequentially, use a single executeCommand call with \'&&\' to chain them together (e.g., `git add . && git commit -m "message" && git push`). For instance, if one operation must complete before another starts (like mkdir before cp, Write before executeCommand for git operations, or git add before git commit), run these operations sequentially instead.\n'[39m +
+            [32m"  - Use ';' only when you need to run commands sequentially but don't care if earlier commands fail\n"[39m +
+            [32m'  - DO NOT use newlines to separate commands (newlines are ok in quoted strings)\n'[39m +
+            [32m"- You shall avoid use the markdown code block syntax (backtick, '`') in your command, as it will be interpreted as a command substitution.\n"[39m +
+            [32m"- Before using this tool, you must first think about the context provided in <system-reminder> to understand the user's environment and tailor your commands to ensure they are compatible with their system. You must also consider if the command you need to run should be executed in a specific directory rather than the current working directory, and properly set the `cwd` if necessary.\n"[39m +
+            [32m'\n'[39m +
+            [32m'# Committing changes with git\n'[39m +
+            [32m'\n'[39m +
+            [32m'Only create commits when requested by the user. If unclear, ask first. When the user asks you to create a new git commit, follow these steps carefully:\n'[39m +
+            [32m'\n'[39m +
+            [32m'Git Safety Protocol:\n'[39m +
+            [32m'- NEVER update the git config\n'[39m +
+            [32m"- NEVER run destructive git commands (push --force, reset --hard, checkout ., restore ., clean -f, branch -D) unless the user explicitly requests these actions. Taking unauthorized destructive actions is unhelpful and can result in lost work, so it's best to ONLY run these commands when given direct instructions \n"[39m +
+            [32m'- NEVER skip hooks (--no-verify, --no-gpg-sign, etc) unless the user explicitly requests it\n'[39m +
+            [32m'- NEVER run force push to main/master, warn the user if they request it\n'[39m +
+            [32m'- CRITICAL: Always create NEW commits rather than amending, unless the user explicitly requests a git amend. When a pre-commit hook fails, the commit did NOT happen  — so --amend would modify the PREVIOUS commit, which may result in destroying work or losing previous changes. Instead, after hook failure, fix the issue, re-stage, and create a NEW commit\n'[39m +
+            [32m'- When staging files, prefer adding specific files by name rather than using "git add -A" or "git add .", which can accidentally include sensitive files (.env, credentials) or large binaries\n'[39m +
+            [32m'- NEVER commit changes unless the user explicitly asks you to. It is VERY IMPORTANT to only commit when explicitly asked, otherwise the user will feel that you are being too proactive\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following bash commands in parallel, each using the executeCommand tool:\n'[39m +
+            [32m'  - Run a git status command to see all untracked files. IMPORTANT: Never use the -uall flag as it can cause memory issues on large repos.\n'[39m +
+            [32m'  - Run a git diff command to see both staged and unstaged changes that will be committed.\n'[39m +
+            [32m"  - Run a git log command to see recent commit messages, so that you can follow this repository's commit message style.\n"[39m +
+            [32m'2. Analyze all staged changes (both previously staged and newly added) and draft a commit message:\n'[39m +
+            [32m'  - Summarize the nature of the changes (eg. new feature, enhancement to an existing feature, bug fix, refactoring, test, docs, etc.). Ensure the message accurately reflects the changes and their purpose (i.e. "add" means a wholly new feature, "update" means an enhancement to an existing feature, "fix" means a bug fix, etc.).\n'[39m +
+            [32m'  - Do not commit files that likely contain secrets (.env, credentials.json, etc). Warn the user if they specifically request to commit those files\n'[39m +
+            [32m'  - Draft a concise (1-2 sentences) commit message that focuses on the "why" rather than the "what"\n'[39m +
+            [32m'  - Ensure it accurately reflects the changes and their purpose\n'[39m +
+            [32m'3. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following commands:\n'[39m +
+            [32m'   - Add relevant untracked files to the staging area.\n'[39m +
+            [32m'   - Create the commit with a message ending with:\n'[39m +
+            [32m'   🤖 Generated with [Pochi](https://getpochi.com) | [Task](<Share URL>)\n'[39m +
+            [32m'\n'[39m +
+            [32m'   Co-Authored-By: Pochi <noreply@getpochi.com>\n'[39m +
+            [32m'\n'[39m +
+            [32m'   Note: Replace <Share URL> with the Share URL from system information if available. If not available, omit the " | [Task](...)" part.\n'[39m +
+            [32m'\n'[39m +
+            [32m'   - Run git status after the commit completes to verify success.\n'[39m +
+            [32m'   Note: git status depends on the commit completing, so run it sequentially after the commit.\n'[39m +
+            [32m'4. If the commit fails due to pre-commit hook changes, retry the commit ONCE to include these automated changes. If it fails again, it usually means a pre-commit hook is preventing the commit. If the commit succeeds but you notice that files were modified by the pre-commit hook, you MUST amend your commit to include them.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Important notes:\n'[39m +
+            [32m'- NEVER update the git config\n'[39m +
+            [32m'- NEVER run additional commands to read or explore code, besides git bash commands\n'[39m +
+            [32m'- DO NOT push to the remote repository unless the user explicitly asks you to do so\n'[39m +
+            [32m'- IMPORTANT: Never use git commands with the -i flag (like git rebase -i or git add -i) since they require interactive input which is not supported.\n'[39m +
+            [32m'- IMPORTANT: Do not use --no-edit with git rebase commands, as the --no-edit flag is not a valid option for git rebase.\n'[39m +
+            [32m'- If there are no changes to commit (i.e., no untracked files and no modifications), do not create an empty commit\n'[39m +
+            [32m'- In order to ensure good formatting, ALWAYS pass the commit message via a HEREDOC, a la this example:\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m`git commit -m "$(cat <<'EOF'\n`[39m +
+            [32m'Commit message here.\n'[39m +
+            [32m'\n'[39m +
+            [32m'🤖 Generated with [Pochi](https://getpochi.com) | [Task](<Share URL>)\n'[39m +
+            [32m'\n'[39m +
+            [32m'Co-Authored-By: Pochi <noreply@getpochi.com>\n'[39m +
+            [32m'EOF\n'[39m +
+            [32m')"\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'# Creating pull requests\n'[39m +
+            [32m'Use the gh command via the executeCommand tool for ALL GitHub-related tasks including working with issues, pull requests, checks, and releases. If given a Github URL use the gh command to get the information needed.\n'[39m +
+            [32m'\n'[39m +
+            [32m'IMPORTANT: When the user asks you to create a pull request, follow these steps carefully:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following bash commands in parallel using the executeCommand tool, in order to understand the current state of the branch since it diverged from the main branch:\n'[39m +
+            [32m'   - Run a git status command to see all untracked files (never use -uall flag)\n'[39m +
+            [32m'   - Run a git diff command to see both staged and unstaged changes that will be committed\n'[39m +
+            [32m'   - Check if the current branch tracks a remote branch and is up to date with the remote, so you know if you need to push to the remote\n'[39m +
+            [32m'   - Run a git log command and `git diff [base-branch]...HEAD` to understand the full commit history for the current branch (from the time it diverged from the base branch)\n'[39m +
+            [32m'2. Analyze all changes that will be included in the pull request, making sure to look at all relevant commits (NOT just the latest commit, but ALL commits that will be included in the pull request!!!), and draft a pull request title and summary:\n'[39m +
+            [32m'   - Keep the PR title short (under 70 characters)\n'[39m +
+            [32m'   - Use the description/body for details, not the title\n'[39m +
+            [32m'3. You can call multiple tools in a single response. When multiple independent pieces of information are requested and all commands are likely to succeed, run multiple tool calls in parallel for optimal performance. run the following commands in parallel:\n'[39m +
+            [32m'   - Create new branch if needed\n'[39m +
+            [32m'   - Push to remote with -u flag if needed\n'[39m +
+            [32m'   - Create PR using gh pr create with the format below. Use a HEREDOC to pass the body to ensure correct formatting.\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m`gh pr create --title "the pr title" --body "$(cat <<'EOF'\n`[39m +
+            [32m'## Summary\n'[39m +
+            [32m'<1-3 bullet points>\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Test plan\n'[39m +
+            [32m'[Checklist of TODOs for testing the pull request...]\n'[39m +
+            [32m'\n'[39m +
+            [32m'🤖 Generated with [Pochi](https://getpochi.com) | [Task](<Share URL>)\n'[39m +
+            [32m'EOF\n'[39m +
+            [32m')"\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'Important:\n'[39m +
+            [32m'- NEVER update the git confi'[39m... 355 more characters,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              command: {
+                type: [32m'string'[39m,
+                description: [32m'The CLI command to execute. This should be valid for the current operating system.'[39m
+              },
+              cwd: {
+                description: [32m'The working directory to execute the command in.'[39m,
+                type: [32m'string'[39m
+              },
+              timeout: {
+                description: [32m'Optional timeout in seconds, max 300 seconds. By default the timeout is 120 seconds.'[39m,
+                type: [32m'number'[39m,
+                minimum: [33m1[39m,
+                maximum: [33m300[39m
+              }
+            },
+            required: [
+              [32m'command'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'globFiles'[39m,
+          description: [32m'Request to find files matching a glob pattern within a specified directory. Use this to get a list of files based on a pattern.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the directory to search in (relative to the current working directory, or an absolute path)'[39m
+              },
+              globPattern: {
+                type: [32m'string'[39m,
+                description: [32m"The glob pattern to match files against (e.g., '*.ts', '**/*.js')"[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'globPattern'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'listFiles'[39m,
+          description: [32m'Request to list files and directories within the specified directory. If recursive is true, it will list all files and directories recursively. If recursive is false or not provided, it will only list the top-level contents. Do not use this tool to confirm the existence of files you may have created, as the user will let you know if the files were created successfully or not.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the directory to list contents for (relative to the current working directory, or an absolute path)'[39m
+              },
+              recursive: {
+                description: [32m'Whether to list files and directories recursively.'[39m,
+                type: [32m'boolean'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'readFile'[39m,
+          description: [32m'Request to read the contents of a file at the specified path. Use this when you need to examine the contents of an existing file you do not know the contents of, for example to analyze code, review text files, extract information from configuration files.\n'[39m +
+            [32m''[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the file to read (relative to the current working directory, or an absolute path)'[39m
+              },
+              startLine: {
+                description: [32m'The starting line number to read from (1-based). If not provided, it starts from the beginning of the file.'[39m,
+                type: [32m'number'[39m
+              },
+              endLine: {
+                description: [32m'The ending line number to read to (1-based, inclusive). If not provided, it reads to the end of the file.'[39m,
+                type: [32m'number'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'useSkill'[39m,
+          description: [32m'Execute a skill within the main conversation\n'[39m +
+            [32m'\n'[39m +
+            [32m'When users ask you to perform tasks, check if any of the available skills below can help complete the task more effectively. Skills provide specialized capabilities and domain knowledge.\n'[39m +
+            [32m'\n'[39m +
+            [32m'When users ask about a SPECIFIC skill (e.g., "How does the pdf skill work?", "What does the commit skill do?"), you must call this tool to get detailed information about that skill.\n'[39m +
+            [32m'\n'[39m +
+            [32m'When users ask general questions like "What skills are available?" or "List all skills", simply refer to the "Available skills" section below - do NOT call this tool.\n'[39m +
+            [32m'\n'[39m +
+            [32m"This tool returns the skill's detailed instructions which you must then follow to complete the task. The instructions contain step-by-step guidance on how to perform the specific task or workflow.\n"[39m +
+            [32m'\n'[39m +
+            [32m'How to invoke:\n'[39m +
+            [32m'- Use this tool with the skill name\n'[39m +
+            [32m'- Example: `skill: "pdf-processing"` - invoke the pdf-processing skill\n'[39m +
+            [32m"- The tool will return the skill's instructions\n"[39m +
+            [32m'- Follow the returned instructions carefully to complete the task\n'[39m +
+            [32m'\n'[39m +
+            [32m'Important:\n'[39m +
+            [32m'- When a skill is relevant for a task OR when users ask about a SPECIFIC skill, you must invoke this tool IMMEDIATELY as your first action\n'[39m +
+            [32m'- For general questions about available skills, simply refer to the "Available skills" list below without calling this tool\n'[39m +
+            [32m'- NEVER just announce or mention a skill in your text response without actually calling this tool (except for general skill listing requests)\n'[39m +
+            [32m'- This is a BLOCKING REQUIREMENT: invoke the relevant Skill tool BEFORE generating any other response about a specific skill or task\n'[39m +
+            [32m'- Only use skills listed in "Available skills" below\n'[39m +
+            [32m'- Check compatibility requirements before using a skill - ensure the skill is compatible with the current OS/environment\n'[39m +
+            [32m'- After calling this tool, follow the returned instructions step by step\n'[39m +
+            [32m'- The skill file location is shown in the [Location: filepath] section of each skill listing below - use this information to understand where the skill is defined\n'[39m +
+            [32m"- Use the directory containing the skill's source file as the base directory for resolving any resource files mentioned in the instructions\n"[39m +
+            [32m'- Proactively explore the skill directory for optional resources that enhance task completion:\n'[39m +
+            [32m'  * scripts/ - executable code that agents can run (Python, Bash, JavaScript, etc.)\n'[39m +
+            [32m'  * references/ - on-demand documentation (REFERENCE.md, FORMS.md, domain-specific files)\n'[39m +
+            [32m'  * assets/ - static resources (templates, images, data files, schemas)\n'[39m +
+            [32m'  Use these resources when they exist and are relevant to the current task\n'[39m +
+            [32m'\n'[39m +
+            [32m'Available skills:\n'[39m +
+            [32m'\n'[39m +
+            [32m'- **find-skills**: Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill. [Location: /tmp/pochi-builtin-5f7c1b2d4157fa59/skills/find-skills.md]\n'[39m +
+            [32m'- **create-skill**: Helps users create new custom agent skills. Use when the user wants to create a new skill, automate a workflow, or package specialized knowledge for reuse. [Location: /tmp/pochi-builtin-5f7c1b2d4157fa59/skills/create-skill.md]\n'[39m +
+            [32m'- **widget-guidelines**: Use before renderWidget when the user needs a visual widget, SVG diagram, UI mockup, chart, local interactive explainer, or generative art. [Location: /tmp/pochi-builtin-5f7c1b2d4157fa59/skills/widget-guidelines/SKILL.md]'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              skill: {
+                type: [32m'string'[39m,
+                description: [32m'The name of the skill to use.'[39m
+              }
+            },
+            required: [
+              [32m'skill'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'searchFiles'[39m,
+          description: [32m'- Fast content search tool that works with any codebase size\n'[39m +
+            [32m'- Searches file contents using regular expressions\n'[39m +
+            [32m'- Supports Rust regex syntax (eg. "log.*Error", "functions+w+", etc.)\n'[39m +
+            [32m'- Filter files by pattern with the include parameter (eg. "*.js", "*.{ts,tsx}")\n'[39m +
+            [32m'- Returns file paths with at least one match sorted by modification time\n'[39m +
+            [32m'- Use this tool when you need to find files containing specific patterns\n'[39m +
+            [32m'- Craft your regex patterns carefully to balance specificity and flexibility.\n'[39m +
+            [32m"- Based on the user's task you may use it to find code patterns, TODO comments, function definitions, or any text-based information across the project. The results include context, so analyze the surrounding code to better understand the matches. Leverage the this tool in combination with other tools for more comprehensive analysis. For example, use it to find specific code patterns, then use readFile to examine the full context of interesting matches before using applyDiff or writeToFile to make informed changes."[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the directory to search in (relative to the current working directory, or an absolute path).'[39m
+              },
+              regex: {
+                type: [32m'string'[39m,
+                description: [32m'The regular expression pattern to search for in file contents. Uses Rust regex syntax.'[39m
+              },
+              filePattern: {
+                description: [32m'File pattern to include in the search (e.g. "*.js", "*.{ts,tsx}"). If not provided, it will search all files.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'regex'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'todoWrite'[39m,
+          description: [32m'Use this tool to create and manage a structured task list for your current coding session. This helps you track progress, organize complex tasks, and demonstrate thoroughness to the user.\n'[39m +
+            [32m'It also helps the user understand the progress of the task and overall progress of their requests.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## When to Use This Tool\n'[39m +
+            [32m'Use this tool proactively in these scenarios:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. Complex multi-step tasks - When a task requires 3 or more distinct steps or actions\n'[39m +
+            [32m'2. Non-trivial and complex tasks - Tasks that require careful planning or multiple operations\n'[39m +
+            [32m'3. User explicitly requests todo list - When the user directly asks you to use the todo list\n'[39m +
+            [32m'4. User provides multiple tasks - When users provide a list of things to be done (numbered or comma-separated)\n'[39m +
+            [32m'5. After receiving new instructions - Immediately capture user requirements as todos. Feel free to edit the todo list based on new information.\n'[39m +
+            [32m'6. After completing a task - Mark it complete and add any new follow-up tasks\n'[39m +
+            [32m'7. When you start working on a new task, mark the todo as in-progress. Ideally you should only have one todo as in-progress at a time. Complete existing tasks before starting new ones.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## When NOT to Use This Tool\n'[39m +
+            [32m'\n'[39m +
+            [32m'Skip using this tool when:\n'[39m +
+            [32m'1. There is only a single, straightforward task\n'[39m +
+            [32m'2. The task is trivial and tracking it provides no organizational benefit\n'[39m +
+            [32m'3. The task can be completed in less than 3 trivial steps\n'[39m +
+            [32m'4. The task is purely conversational or informational\n'[39m +
+            [32m'\n'[39m +
+            [32m'NOTE that you should use should not use this tool if there is only one trivial task to do. In this case you are better off just doing the task directly.\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Examples of When to Use the Todo List\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m"User: I want to add a dark mode toggle to the application settings. Make sure you run the tests and build when you're done!\n"[39m +
+            [32m"Assistant: I'll help add a dark mode toggle to your application settings. Let me create a todo list to track this implementation.\n"[39m +
+            [32m'*Creates todo list with the following items:*\n'[39m +
+            [32m'1. Create dark mode toggle component in Settings page\n'[39m +
+            [32m'2. Add dark mode state management (context/store)\n'[39m +
+            [32m'3. Implement CSS-in-JS styles for dark theme\n'[39m +
+            [32m'4. Update existing components to support theme switching\n'[39m +
+            [32m'5. Run tests and build process, addressing any failures or errors that occur\n'[39m +
+            [32m'*Begins working on the first task*\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. Adding dark mode is a multi-step feature requiring UI, state management, and styling changes\n'[39m +
+            [32m'2. The user explicitly requested tests and build be run afterward\n'[39m +
+            [32m'3. The assistant inferred that tests and build need to pass by adding "Ensure tests and build succeed" as the final task\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: Help me rename the function getCwd to getCurrentWorkingDirectory across my project\n'[39m +
+            [32m"Assistant: Let me first search through your codebase to find all occurrences of 'getCwd'.\n"[39m +
+            [32m'*Uses grep or search tools to locate all instances of getCwd in the codebase*\n'[39m +
+            [32m"Assistant: I've found 15 instances of 'getCwd' across 8 different files. Let me create a todo list to track these changes.\n"[39m +
+            [32m'*Creates todo list with specific items for each file that needs updating*\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. First, the assistant searched to understand the scope of the task\n'[39m +
+            [32m'2. Upon finding multiple occurrences across different files, it determined this was a complex task with multiple steps\n'[39m +
+            [32m'3. The todo list helps ensure every instance is tracked and updated systematically\n'[39m +
+            [32m'4. This approach prevents missing any occurrences and maintains code consistency\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: I need to implement these features for my e-commerce site: user registration, product catalog, shopping cart, and checkout flow.\n'[39m +
+            [32m"Assistant: I'll help implement these features. First, let's add all the features to the todo list.\n"[39m +
+            [32m'*Creates a todo list breaking down each feature into specific tasks based on the project architecture*\n'[39m +
+            [32m"Assistant: Let's start with user registration. This will involve creating database models, API endpoints, and frontend forms that integrate with your existing authentication system.\n"[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. The user provided multiple complex features to implement in a comma separated list\n'[39m +
+            [32m'2. The todo list helps organize these large features into manageable tasks\n'[39m +
+            [32m'3. This approach allows for tracking progress across the entire implementation\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m"User: Can you help optimize my React application? It's rendering slowly and has performance issues.</user>\n"[39m +
+            [32m"Assistant: I'll help optimize your React application. First, let me examine your codebase to identify potential performance bottlenecks.\n"[39m +
+            [32m'*Reviews component structure, render patterns, state management, and data fetching*\n'[39m +
+            [32m"Assistant: After analyzing your codebase, I've identified several performance issues. Let me create a todo list to track our optimization efforts.\n"[39m +
+            [32m'*Creates todo list with items like: 1) Implement memoization for expensive calculations in ProductList, 2) Add virtualization for long lists in Dashboard, 3) Optimize image loading in Gallery component, 4) Fix state update loops in ShoppingCart, 5) Review bundle size and implement code splitting*\n'[39m +
+            [32m"Let's start by implementing memoization for the expensive calculations in your ProductList component.</assistant>\n"[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant used the todo list because:\n'[39m +
+            [32m'1. First, the assistant examined the codebase to identify specific performance issues\n'[39m +
+            [32m'2. Based on this analysis, it identified multiple optimization opportunities\n'[39m +
+            [32m'3. Performance optimization is a non-trivial task requiring multiple steps\n'[39m +
+            [32m'4. The todo list helps methodically track improvements across different components\n'[39m +
+            [32m'5. This systematic approach ensures all performance bottlenecks are addressed\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Examples of When NOT to Use the Todo List\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m"User: How do I print 'Hello World' in Python?\n"[39m +
+            [32m'Assistant: In Python, you can print "Hello World" with this simple code:\n'[39m +
+            [32m'\n'[39m +
+            [32m'python\n'[39m +
+            [32m'print("Hello World")\n'[39m +
+            [32m'\n'[39m +
+            [32m'This will output the text "Hello World" to the console when executed.</assistant>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m"The assistant did not use the todo list because this is a single, trivial task that can be completed in one step. There's no need to track multiple tasks or steps for such a straightforward request.\n"[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: What does the git status command do?\n'[39m +
+            [32m"Assistant: The git status command shows the current state of your working directory and staging area. It displays which changes have been staged, which haven't, and which files aren't being tracked by Git. This is a fundamental command for understanding the current state of your repository before making commits.\n"[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant did not use the todo list because this is an informational request with no actual coding task to complete. The user is simply asking for an explanation, not for the assistant to perform multiple steps or tasks.\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: Can you add a comment to the calculateTotal function to explain what it does?\n'[39m +
+            [32m'Assistant: Sure, let me add a comment to the calculateTotal function to explain what it does.\n'[39m +
+            [32m'* Uses the Edit tool to add a comment to the calculateTotal function *\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m"The assistant did not use the todo list because this is a single, straightforward task confined to one location in the code. Adding a comment doesn't require tracking multiple steps or systematic organization.\n"[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'<example>\n'[39m +
+            [32m'User: Run npm install for me and tell me what happens.\n'[39m +
+            [32m"Assistant: I'll run the npm install command for you.\n"[39m +
+            [32m'\n'[39m +
+            [32m'*Executes: npm install*\n'[39m +
+            [32m'\n'[39m +
+            [32m"The command completed successfully. Here's the output:\n"[39m +
+            [32m'[Output of npm install command]\n'[39m +
+            [32m'\n'[39m +
+            [32m'All dependencies have been installed according to your package.json file.\n'[39m +
+            [32m'\n'[39m +
+            [32m'<reasoning>\n'[39m +
+            [32m'The assistant did not use the todo list because this is a single command execution with immediate results. There are no multiple steps to track or organize, making the todo list unnecessary for this straightforward task.\n'[39m +
+            [32m'</reasoning>\n'[39m +
+            [32m'</example>\n'[39m +
+            [32m'\n'[39m +
+            [32m'## Task States and Management\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. **Task States**: Use these states to track progress:\n'[39m +
+            [32m'   - pending: Task not yet started\n'[39m +
+            [32m'   - in-progress: Currently working on (limit to ONE task at a time)\n'[39m +
+            [32m'   - completed: Task finished successfully\n'[39m +
+            [32m'   - cancelled: Task no longer needed\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. **Task Management**:\n'[39m +
+            [32m'   - Update task status in real-time as you work\n'[39m +
+            [32m"   - Mark tasks complete IMMEDIATELY after finishing (don't batch completions)\n"[39m +
+            [32m'   - Only have ONE task in-progress at any time\n'[39m +
+            [32m'   - Complete current tasks before starting new ones\n'[39m +
+            [32m'   - Cancel tasks that become irrelevant\n'[39m +
+            [32m'\n'[39m +
+            [32m'3. **Task Breakdown**:\n'[39m +
+            [32m'   - Create specific, actionable items\n'[39m +
+            [32m'   - Break complex tasks into smaller, manageable steps\n'[39m +
+            [32m'   - Use clear, descriptive task names\n'[39m +
+            [32m'\n'[39m +
+            [32m'When in doubt, use this tool. Being proactive with task management demonstrates attentiveness and ensures you complete all requirements successfully.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              todos: {
+                type: [32m'array'[39m,
+                items: {
+                  type: [32m'object'[39m,
+                  properties: {
+                    id: {
+                      type: [32m'string'[39m,
+                      description: [32m'The unique identifier of the task, e.g "collect-information".'[39m
+                    },
+                    content: {
+                      type: [32m'string'[39m,
+                      description: [32m'The content of the task.'[39m
+                    },
+                    status: {
+                      type: [32m'string'[39m,
+                      enum: [
+                        [32m'pending'[39m,
+                        [32m'in-progress'[39m,
+                        [32m'completed'[39m,
+                        [32m'cancelled'[39m
+                      ],
+                      description: [32m'The status of the task.'[39m
+                    },
+                    priority: {
+                      type: [32m'string'[39m,
+                      enum: [
+                        [32m'low'[39m,
+                        [32m'medium'[39m,
+                        [32m'high'[39m
+                      ],
+                      description: [32m'The priority of the task.'[39m
+                    }
+                  },
+                  required: [
+                    [32m'id'[39m,
+                    [32m'content'[39m,
+                    [32m'status'[39m,
+                    [32m'priority'[39m
+                  ],
+                  additionalProperties: [33mfalse[39m
+                }
+              }
+            },
+            required: [
+              [32m'todos'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'writeToFile'[39m,
+          description: [32m'Request to write full content to a file at the specified path.\n'[39m +
+            [32m'If the file exists, it will be overwritten with the provided content.\n'[39m +
+            [32m"If the file doesn't exist, it will be created. This tool will automatically create any directories needed to write the file.\n"[39m +
+            [32m'\n'[39m +
+            [32m'You may see the following fields in the result:\n'[39m +
+            [32m'- autoFormattingEdits: If the auto-formatter makes any changes, this field will contain a diff against the file content after your edits and any user edits have been applied.\n'[39m +
+            [32m'- newProblems: If any new problems are found after the edit, this field will contain information about them.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path of the file to write to (relative to the current working directory, or an absolute path).'[39m
+              },
+              content: {
+                type: [32m'string'[39m,
+                description: [32m'The content to write to the file.'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'content'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'editNotebook'[39m,
+          description: [32m'Edit a specific cell in a Jupyter notebook (.ipynb file) by its cell ID'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              path: {
+                type: [32m'string'[39m,
+                description: [32m'The path to the notebook file (relative to the current working directory, or an absolute path)'[39m
+              },
+              cellId: {
+                type: [32m'string'[39m,
+                description: [32m'The ID of the cell to edit'[39m
+              },
+              content: {
+                type: [32m'string'[39m,
+                description: [32m'The new content of the cell'[39m
+              }
+            },
+            required: [
+              [32m'path'[39m,
+              [32m'cellId'[39m,
+              [32m'content'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'newTask'[39m,
+          description: [32m'Launch a new agent to handle complex, multi-step tasks autonomously.\n'[39m +
+            [32m'When using the newTask tool, you may specify a agentType parameter to select which agent type to use.\n'[39m +
+            [32m'Available agent types and the tools they have access to:\n'[39m +
+            [32m'\n'[39m +
+            [32m'### guide\n'[39m +
+            [32m"A comprehensive guide for learning about Pochi's capabilities, features, and configuration.\n"[39m +
+            [32m'This agent helps users understand how to use Pochi effectively, fetch documentation, and modify their config file (.pochi/config.jsonc) with proper confirmation.\n'[39m +
+            [32m"**IMPORTANT: Any request to modify Pochi's configuration must be handled by this agent.**\n"[39m +
+            [32m'\n'[39m +
+            [32m'Trigger examples:\n'[39m +
+            [32m'- General info: "what can Pochi do?", "what agents/tools are available?", "how does Pochi work?"\n'[39m +
+            [32m'- Configuration: "how do I configure Pochi?", "explain config options", "help me modify my config", "set up a new provider", "add an MCP server"\n'[39m +
+            [32m'- Help & feedback: "join the discord", "report a bug", "where can I get help?"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### walkthrough\n'[39m +
+            [32m'Engage this agent to create a summary of the changes made in the current task.\n'[39m +
+            [32m'This agent is strictly limited to documentation and explanation; it DOES NOT execute code modifications.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of user requests this agent shall trigger:\n'[39m +
+            [32m'- "summarize what we have done"\n'[39m +
+            [32m'- "create a walkthrough for the changes"\n'[39m +
+            [32m'- "explain the changes made in this task"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### explore\n'[39m +
+            [32m'Use this agent to explore the codebase when you need to: understand project structure, find where features are implemented, locate specific functions or classes, analyze code patterns, investigate how something works, search for examples or usage, or gather information before making changes.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of questions this agent shall trigger:\n'[39m +
+            [32m'- "where is the authentication logic implemented"\n'[39m +
+            [32m'- "find all usages of the config parser"\n'[39m +
+            [32m'- "how does the ignore-walk module work"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### reviewer\n'[39m +
+            [32m'Engage this agent to perform code reviews and leave inline comments.\n'[39m +
+            [32m'This agent can analyze code and create review comments on specific lines.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of user requests this agent shall trigger:\n'[39m +
+            [32m'- "review the code in src/auth"\n'[39m +
+            [32m'- "add review comments to this file"\n'[39m +
+            [32m'- "check this code and leave feedback"\n'[39m +
+            [32m'\n'[39m +
+            [32m'### browser\n'[39m +
+            [32m'Web browser automation agent for navigating websites, interacting with pages, and extracting information. Uses agent-browser CLI for browser control, including headless sessions and optional local Chrome auto-connect.\n'[39m +
+            [32m'\n'[39m +
+            [32m'### planner\n'[39m +
+            [32m'Engage this agent to formulate comprehensive, technical implementation strategies for feature development, system refactoring, or defect resolution.\n'[39m +
+            [32m'This agent is strictly limited to planning and architectural design; it DOES NOT execute code modifications.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Examples of user requests this agent shall trigger:\n'[39m +
+            [32m'- "create a plan to implement the user authentication feature"\n'[39m +
+            [32m'- "how should we refactor the database schema"\n'[39m +
+            [32m'- "design a solution for the memory leak issue"\n'[39m +
+            [32m'\n'[39m +
+            [32m'\n'[39m +
+            [32m'Always include a reminder in your prompt to ensure the result will be submitted through the `attemptCompletion` tool.\n'[39m +
+            [32m'If the task stops without submitting the result, it will return an error message.\n'[39m +
+            [32m'\n'[39m +
+            [32m'When NOT to use the newTask tool:\n'[39m +
+            [32m'- If you want to read a specific file path, use the readFile or globFiles tool instead of the newTask tool, to find the match more quickly\n'[39m +
+            [32m'- If you are searching for a specific class definition like "class Foo", use the globFiles tool instead, to find the match more quickly\n'[39m +
+            [32m'- If you are searching for code within a specific file or set of 2-3 files, use the readFile tool instead of the newTask tool, to find the match more quickly\n'[39m +
+            [32m'- Other tasks that are not related to the agent descriptions above\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'1. Launch multiple agents tools concurrently whenever possible to maximize performance; to do that, use a single message with multiple tool uses\n'[39m +
+            [32m'2. When the agent is done, it will return a single message back to you. The result returned by the agent is not visible to the user. To show the user the result, you should send a text message back to the user with a concise summary of the result.\n'[39m +
+            [32m'3. Each agent invocation is stateless. You will not be able to send additional messages to the agent, nor will the agent be able to communicate with you outside of its final report. Therefore, your prompt should contain a highly detailed task description for the agent to perform autonomously and you should specify exactly what information the agent should return back to you in its final and only message to you.\n'[39m +
+            [32m"4. The agent's outputs should generally be trusted\n"[39m +
+            [32m"5. Clearly tell the agent whether you expect it to write code or just to do research (search, file reads, web fetches, etc.), since it is not aware of the user's intent\n"[39m +
+            [32m'6. If the agent description mentions that it should be used proactively, then you should try your best to use it without the user having to ask for it first. Use your judgement.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              description: {
+                type: [32m'string'[39m,
+                description: [32m'A short description of the task.'[39m
+              },
+              prompt: {
+                type: [32m'string'[39m,
+                description: [32m'The detailed prompt for the task to be performed.'[39m
+              },
+              agentType: {
+                description: [32m'The type of the specialized agent to use for the task.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'description'[39m,
+              [32m'prompt'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'startBackgroundJob'[39m,
+          description: [32m'Start a background job to execute a bash command, which allows you to continue working while the job runs.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Before starting the background job, please follow these steps:\n'[39m +
+            [32m'\n'[39m +
+            [32m'1. Directory Verification:\n'[39m +
+            [32m'   - If the command will create new directories or files, first use the listFiles tool to verify the parent directory exists and is the correct location\n'[39m +
+            [32m'   - For example, before running "mkdir foo/bar", first use listFiles to check that "foo" exists and is the intended parent directory\n'[39m +
+            [32m'\n'[39m +
+            [32m'2. Job Execution:\n'[39m +
+            [32m'   - After ensuring proper quoting, start the background job.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'- The command argument is required.\n'[39m +
+            [32m'- Use readBackgroundJobOutput to monitor the output and status of the job.\n'[39m +
+            [32m'- Use killBackgroundJob to terminate the job if needed.\n'[39m +
+            [32m'- If the output exceeds 30000 characters, output will be truncated before being returned to you.\n'[39m +
+            [32m'\n'[39m +
+            [32m'Common use cases and examples:\n'[39m +
+            [32m'- Development servers: `npm run dev`, `yarn start`, `bun run dev`\n'[39m +
+            [32m'- Build processes: `npm run build`, `make`, `cargo build`\n'[39m +
+            [32m'- File watchers: `npm run watch`, `tsc --watch`\n'[39m +
+            [32m'- Testing: `npm run test:watch`, `jest --watch`\n'[39m +
+            [32m'- Database services: `docker run -p 5432:5432 postgres`\n'[39m +
+            [32m'\n'[39m +
+            [32m'Command execution rules:\n'[39m +
+            [32m"- Never run 'sleep' as it will return immediately.\n"[39m +
+            [32m"- You do not need to use '&' at the end of the command.\n"[39m +
+            [32m"- When issuing multiple commands, use the ';' or '&&' operator to separate them. DO NOT use newlines (newlines are ok in quoted strings).\n"[39m +
+            [32m"- You shall avoid use the markdown code block syntax (backtick, '`') in your command, as it will be interpreted as a command substitution."[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              command: {
+                type: [32m'string'[39m,
+                description: [32m'The CLI command to execute. This should be valid for the current operating system.'[39m
+              },
+              cwd: {
+                description: [32m'The working directory to execute the command in.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'command'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'readBackgroundJobOutput'[39m,
+          description: [32m'- Retrieves output from a running or completed background job\n'[39m +
+            [32m'- Takes a backgroundJobId parameter identifying the job\n'[39m +
+            [32m'- For terminal jobs, returns only new output since the last check\n'[39m +
+            [32m'- Returns stdout and stderr output along with job status\n'[39m +
+            [32m'- Supports optional regex filtering to show only lines matching a pattern\n'[39m +
+            [32m'- Use this tool when you need to monitor or check the output of a long-running background job'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              backgroundJobId: {
+                type: [32m'string'[39m,
+                description: [32m'The ID of the background job to get output from'[39m
+              },
+              regex: {
+                description: [32m'Optional regular expression to filter the output lines. Only lines matching this regex will be included in the result. Any lines that do not match will no longer be available to read.'[39m,
+                type: [32m'string'[39m
+              }
+            },
+            required: [
+              [32m'backgroundJobId'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'killBackgroundJob'[39m,
+          description: [32m'- Kills a running background job by its ID\n'[39m +
+            [32m'- Takes a backgroundJobId parameter identifying the job to kill\n'[39m +
+            [32m'- Returns a success or failure status\n'[39m +
+            [32m'- Use this tool when you need to terminate a long-running background job'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              backgroundJobId: {
+                type: [32m'string'[39m,
+                description: [32m'The ID of the background job to kill.'[39m
+              }
+            },
+            required: [
+              [32m'backgroundJobId'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'renderWidget'[39m,
+          description: [32m'Render a local generative UI widget in the VSCode chat. Use this for SVG diagrams, UI mockups, local interactive explainers, charts, and art. IMPORTANT: Before calling this tool, use the `useSkill` tool to run `widget-guidelines` and follow the returned widget guidelines.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'http://json-schema.org/draft-07/schema#'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              title: {
+                type: [32m'string'[39m,
+                description: [32m'Short human-readable title for the widget.'[39m
+              },
+              widgetCode: {
+                type: [32m'string'[39m,
+                description: [32m'HTML/SVG fragment to render. Do not include doctype/html/head/body. Put visible content first and scripts last. Interactive widgets must use Static DOM + render() mutates existing nodes; do not use innerHTML for UI updates.'[39m
+              },
+              guidelinesRead: {
+                type: [32m'boolean'[39m,
+                description: [32m'Set true only after invoking the `widget-guidelines` skill via the `useSkill` tool and reading the returned guidelines.'[39m
+              }
+            },
+            required: [
+              [32m'title'[39m,
+              [32m'widgetCode'[39m,
+              [32m'guidelinesRead'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'webFetch'[39m,
+          description: [32m'- Fetches content from a specified URL and converts HTML to markdown\n'[39m +
+            [32m'- Use this tool when you need to retrieve and analyze web content\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m'  - IMPORTANT: If an MCP-provided web fetch tool is available, prefer using that tool instead of this one, as it may have fewer restrictions.\n'[39m +
+            [32m'  - The URL must be a fully-formed valid URL\n'[39m +
+            [32m'  - The prompt should describe what information you want to extract from the page\n'[39m +
+            [32m'  - This tool is read-only and does not modify any files\n'[39m +
+            [32m'  - Includes a self-cleaning 10-minute cache for faster responses when repeatedly accessing the same URL'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'https://json-schema.org/draft/2020-12/schema'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              url: {
+                type: [32m'string'[39m,
+                format: [32m'uri'[39m
+              }
+            },
+            required: [
+              [32m'url'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        },
+        {
+          type: [32m'function'[39m,
+          name: [32m'webSearch'[39m,
+          description: [32m'- Allows Pochi to search the web and use the results to inform responses\n'[39m +
+            [32m'- Provides up-to-date information for current events and recent data\n'[39m +
+            [32m'- Returns search result information formatted as search result blocks, including links as markdown hyperlinks\n'[39m +
+            [32m'- Searches are performed automatically within a single API call\n'[39m +
+            [32m'\n'[39m +
+            [32m'CRITICAL REQUIREMENT - You MUST follow this:\n'[39m +
+            [32m`  - After answering the user's question, you MUST include a "Sources:" section at the end of your response\n`[39m +
+            [32m'  - In the Sources section, list all relevant URLs from the search results as markdown hyperlinks: [Title](URL)\n'[39m +
+            [32m'  - This is MANDATORY - never skip including sources in your response\n'[39m +
+            [32m'  - Example format:\n'[39m +
+            [32m'\n'[39m +
+            [32m'    [Your answer here]\n'[39m +
+            [32m'\n'[39m +
+            [32m'    Sources:\n'[39m +
+            [32m'    - [Source Title 1](https://example.com/1)\n'[39m +
+            [32m'    - [Source Title 2](https://example.com/2)\n'[39m +
+            [32m'\n'[39m +
+            [32m'Usage notes:\n'[39m +
+            [32m`  - Account for "Today's date" in <system-reminder>. For example, if <system-reminder> says "Today's date: 2025-07-01", and the user wants the latest docs, do not use 2024 in the search query. Use 2025.\n`[39m +
+            [32m'  - To research several related facets in one round-trip, pass "query" as an array of up to 5 query strings instead of a single string. Prefer a single string for focused lookups.'[39m,
+          inputSchema: {
+            [32m'$schema'[39m: [32m'https://json-schema.org/draft/2020-12/schema'[39m,
+            type: [32m'object'[39m,
+            properties: {
+              query: {
+                oneOf: [
+                  {
+                    type: [32m'string'[39m,
+                    minLength: [33m2[39m
+                  },
+                  {
+                    minItems: [33m1[39m,
+                    maxItems: [33m5[39m,
+                    type: [32m'array'[39m,
+                    items: {
+                      type: [32m'string'[39m,
+                      minLength: [33m2[39m
+                    }
+                  }
+                ],
+                description: [32m'A single search query string, OR an array of up to 5 related query strings to batch in one request. Prefer a single string for focused lookups; use an array when you want to research several related facets in one call.'[39m
+              },
+              country: {
+                description: [32m"Country code to filter search results by, e.g. 'US', 'GB', 'JP'"[39m,
+                type: [32m'string'[39m
+              },
+              searchDomainFilter: {
+                description: [32m"List of domains to filter search results. Use allowlist mode (e.g. ['github.com', 'stackoverflow.com']) to include only those domains, or denylist mode (e.g. ['-reddit.com', '-pinterest.com']) to exclude domains. Cannot mix both modes. Maximum 20 domains."[39m,
+                type: [32m'array'[39m,
+                items: {
+                  type: [32m'string'[39m
+                }
+              }
+            },
+            required: [
+              [32m'query'[39m
+            ],
+            additionalProperties: [33mfalse[39m
+          }
+        }
+      ],
+      providerOptions: {
+        pochi: {
+          taskId: [32m'a8ea877e-5afb-45af-8040-d04e99d8ec7b'[39m,
+          client: [32m'PochiCli/0.6.14'[39m,
+          useCase: [32m'agent'[39m
+        }
+      }
+    }
+  }
+}
+[37m2026-06-15 10:19:22.851[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/run.py" resolvedPath="/home/user/myproject/run.py" isVirtual=false cacheExists=true shouldCache=true startLine=88 endLine=undefined
+[37m2026-06-15 10:19:22.852[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:19:22.853[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/run.py" mtime=1781518736703 contentLen=477
+[37m2026-06-15 10:19:27.507[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:19:27.528[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:19:47.352[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/run.py" resolvedPath="/home/user/myproject/run.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:19:47.353[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:19:47.356[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/run.py" mtime=1781518736703 contentLen=3547
+[37m2026-06-15 10:20:25.657[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/myproject/output.jsonl" resolvedPath="/home/user/myproject/output.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:20:25.658[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:20:25.662[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/myproject/output.jsonl" mtime=1781518821160 contentLen=730
+[37m2026-06-15 10:20:27.507[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:20:27.528[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:21:58.597[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Task runner finished successfully.
+[37m2026-06-15 10:21:58.597[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutting down...
+[37m2026-06-15 10:21:58.630[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutdown completed. Process will exit.
+[37m2026-06-15 10:21:58.630[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Process exiting with code 0

@@ -1,0 +1,2 @@
+{"window_start": "2023-10-01T10:00:00Z", "service": "auth", "apdex_score": 0.5}
+{"window_start": "2023-10-01T10:00:10Z", "service": "auth", "apdex_score": 1.0}

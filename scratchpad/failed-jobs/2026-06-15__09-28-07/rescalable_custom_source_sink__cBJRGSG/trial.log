@@ -1,0 +1,78 @@
+Skipping image OS validation for hb__rescalable_custom_source_sink: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-cbjrgsg > /logs/artifacts/run-id && echo rescalable_custom_source_sink__cBJRGSG > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Rescalable Custom Source and Sink
+
+## Background
+Bytewax provides `FixedPartitionedSource` and `FixedPartitionedSink` to build stateful, rescalable input and output connectors. These connectors maintain their position in the stream, allowing dataflows to recover gracefully from failures without data loss or duplication (exactly-once processing).
+
+## Requirements
+- Implement a `CustomFileSource` inheriting from `FixedPartitionedSource`. It should read all `.txt` files in a given `input_dir`. Each file acts as a distinct partition.
+- The source must yield string items representing the lines of the files (without trailing newlines) and maintain the current line number as `resume_state` in its `StatefulSourcePartition`.
+- Implement a `CustomFileSink` inheriting from `FixedPartitionedSink`. It should write items to a given `output_dir`. The partition key should be the filename, and the sink should append lines to the corresponding file.
+- The sink's `StatefulSinkPartition` must maintain the number of lines written as `resume_state`. Upon initialization (or recovery), it must truncate the file to the exact number of lines specified in the `resume_state` to prevent duplicate writes.
+- Create a dataflow in `pipeline.py` that reads from `CustomFileSource` (reading from `input_data/`), converts each line to uppercase using `op.map`, and writes to `CustomFileSink` (writing to `output_data/`).
+- The dataflow must be executable via the Bytewax CLI with recovery enabled.
+
+## Implementation Hints
+- In `CustomFileSource.list_parts()`, return the list of filenames in the input directory.
+- In `CustomFileSource.build_part()`, return a custom `StatefulSourcePartition` that opens the file, seeks to the correct line based on `resume_state`, and yields batches of lines in `next_batch()`.
+- In `CustomFileSink.list_parts()`, return the same list of filenames.
+- In `CustomFileSink.part_fn()`, route the item to the correct partition (you can format the output of the source as `(filename, line)` or just rely on a static mapping if the dataflow processes items one by one. Actually, for simplicity, have the source yield `(filename, line_content)`, use that key for the sink, and write the `line_content` to the file).
+- Ensure both partitions return their current state in the `snapshot()` method.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax_project
+- Ensure the script is executed and the artifacts exist.
+- The source must read files from `/home/user/bytewax_project/input_data`.
+- The sink must write files to `/home/user/bytewax_project/output_data`.
+- The dataflow must process all lines, convert them to uppercase, and write them to the corresponding files in the output directory.
+- The pipeline must support recovery. If interrupted and restarted with the same recovery directory, it should not produce duplicate lines in the output files.
+
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured

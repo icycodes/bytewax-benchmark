@@ -1,0 +1,6 @@
+{"user_id": "user1", "event_type": "click", "timestamp": "2023-10-01T10:00:00Z"}
+{"user_id": "user1", "event_type": "view", "timestamp": "2023-10-01T10:15:00Z"}
+{"user_id": "user1", "event_type": "click", "timestamp": "2023-10-01T11:00:00Z"}
+{"user_id": "user2", "event_type": "click", "timestamp": "2023-10-01T10:05:00Z"}
+{"user_id": "user2", "event_type": "view", "timestamp": "2023-10-01T10:20:00Z"}
+{"user_id": "user2", "event_type": "click", "timestamp": "2023-10-01T10:30:00Z"}

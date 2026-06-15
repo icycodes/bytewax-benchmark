@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /bootstrap
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+bootstrap/test_initial_state.py::test_bytewax_importable PASSED
+bootstrap/test_initial_state.py::test_project_dir_exists PASSED
+
+============================== 2 passed in 0.04s ===============================

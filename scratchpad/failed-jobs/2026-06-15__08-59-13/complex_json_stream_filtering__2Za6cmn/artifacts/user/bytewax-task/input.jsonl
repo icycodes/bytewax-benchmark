@@ -1,0 +1,9 @@
+{"type": "metric", "device_id": "device_A", "payload": {"temperature": 99.0}}
+{"type": "metric", "device_id": "device_A", "payload": {"temperature": 101.0}}
+{invalid json}
+{"type": "metric", "payload": {"temperature": 105.0}}
+{"type": "config", "device_id": "device_A", "payload": {"threshold": 80.0}}
+{"type": "metric", "device_id": "device_A", "payload": {"temperature": 90.0}}
+{"type": "metric", "device_id": "device_B", "payload": {"temperature": 90.0}}
+{"type": "config", "device_id": "device_B", "payload": {"threshold": 110.0}}
+{"type": "metric", "device_id": "device_B", "payload": {"temperature": 105.0}}

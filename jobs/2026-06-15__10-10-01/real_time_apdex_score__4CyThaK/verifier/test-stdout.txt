@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 1 item
+
+tests/test_final_state.py F                                              [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_apdex_flow ________________________________
+
+    def test_apdex_flow():
+        # Setup: Create input.jsonl
+        input_data = [
+            {"timestamp": "2023-10-01T10:00:00Z", "service": "auth", "response_time_ms": 200},
+            {"timestamp": "2023-10-01T10:00:02Z", "service": "auth", "response_time_ms": 600},
+            {"timestamp": "2023-10-01T10:00:05Z", "service": "auth", "response_time_ms": 2500},
+            {"timestamp": "2023-10-01T10:00:08Z", "service": "auth", "response_time_ms": 400},
+            {"timestamp": "2023-10-01T10:00:12Z", "service": "auth", "response_time_ms": 100},
+            {"timestamp": "2023-10-01T10:00:01Z", "service": "api", "response_time_ms": 1000},
+            {"timestamp": "2023-10-01T10:00:04Z", "service": "api", "response_time_ms": 1500}
+        ]
+    
+        os.makedirs(PROJECT_DIR, exist_ok=True)
+        with open(INPUT_FILE, "w") as f:
+            for item in input_data:
+                f.write(json.dumps(item) + "\n")
+    
+        # Clean up output.jsonl if it exists
+        if os.path.exists(OUTPUT_FILE):
+            os.remove(OUTPUT_FILE)
+    
+        # Run the dataflow
+        result = subprocess.run(
+            ["python", "apdex_flow.py"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+    
+>       assert result.returncode == 0, f"apdex_flow.py failed with error: {result.stderr}"
+E       AssertionError: apdex_flow.py failed with error: thread '<unnamed>' panicked at src/run.rs:128:17:
+E         Box<dyn Any>
+E         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+E         
+E         TypeError: source must subclass `bytewax.inputs.Source`
+E         
+E         The above exception was the direct cause of the following exception:
+E         
+E         Traceback (most recent call last):
+E           File "/home/user/bytewax-apdex/apdex_flow.py", line 183, in <module>
+E             run_main(flow)
+E         bytewax.errors.BytewaxRuntimeError: (src/worker.rs:149:10): error building production dataflow
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python', 'apdex_flow.py'], returncode=1, stdout='', stderr='thread \'<unnamed>\' panicked at s...n    run_main(flow)\nbytewax.errors.BytewaxRuntimeError: (src/worker.rs:149:10): error building production dataflow\n').returncode
+
+tests/test_final_state.py:40: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_apdex_flow - AssertionError: apdex_flo...
+============================== 1 failed in 0.29s ===============================

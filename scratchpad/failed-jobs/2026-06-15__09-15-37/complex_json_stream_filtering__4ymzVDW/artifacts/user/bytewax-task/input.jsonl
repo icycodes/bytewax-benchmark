@@ -1,0 +1,13 @@
+{"type": "config", "device_id": "sensor-1", "payload": {"threshold": 75.0}}
+{"type": "metric", "device_id": "sensor-1", "payload": {"temperature": 80.0}}
+{"type": "metric", "device_id": "sensor-1", "payload": {"temperature": 70.0}}
+{"type": "metric", "device_id": "sensor-2", "payload": {"temperature": 105.0}}
+{"type": "config", "device_id": "sensor-2", "payload": {"threshold": 90.0}}
+{"type": "metric", "device_id": "sensor-2", "payload": {"temperature": 95.0}}
+{"type": "metric", "device_id": "sensor-1", "payload": {"temperature": 76.5}}
+this is not valid json
+{"missing_type": true, "device_id": "sensor-3", "payload": {}}
+{"type": "metric", "device_id": "sensor-3", "payload": {"temperature": 110.0}}
+{"type": "metric", "device_id": "sensor-2", "payload": {"temperature": 88.0}}
+{"type": "config", "device_id": "sensor-1", "payload": {"threshold": 60.0}}
+{"type": "metric", "device_id": "sensor-1", "payload": {"temperature": 65.0}}

@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /bootstrap
+plugins: anyio-4.13.0, json-ctrf-0.5.2
+collected 4 items
+
+bootstrap/test_initial_state.py::test_bytewax_is_installed PASSED
+bootstrap/test_initial_state.py::test_sentence_transformers_is_installed PASSED
+bootstrap/test_initial_state.py::test_project_dir_exists PASSED
+bootstrap/test_initial_state.py::test_input_jsonl_exists FAILED
+
+=================================== FAILURES ===================================
+___________________________ test_input_jsonl_exists ____________________________
+
+    def test_input_jsonl_exists():
+        input_path = os.path.join(PROJECT_DIR, "input.jsonl")
+>       assert os.path.isfile(input_path), f"Input file {input_path} does not exist."
+E       AssertionError: Input file /home/user/ml_pipeline/input.jsonl does not exist.
+E       assert False
+E        +  where False = <function isfile at 0x7f6a38594220>('/home/user/ml_pipeline/input.jsonl')
+E        +    where <function isfile at 0x7f6a38594220> = <module 'posixpath' (frozen)>.isfile
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+bootstrap/test_initial_state.py:18: AssertionError
+=========================== short test summary info ============================
+FAILED bootstrap/test_initial_state.py::test_input_jsonl_exists - AssertionEr...
+========================= 1 failed, 3 passed in 0.04s ==========================

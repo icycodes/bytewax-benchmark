@@ -1,0 +1,49 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 1 item
+
+tests/test_final_state.py E                                              [100%]
+
+==================================== ERRORS ====================================
+____________________ ERROR at setup of test_pipeline_output ____________________
+
+    @pytest.fixture(scope="module", autouse=True)
+    def setup_and_run_pipeline():
+        # 1. Prepare Input Data
+        input_data = [["A", 1], ["B", 1], ["C", 1], ["A", 2], ["D", 4], ["B", 1], ["C", 5]]
+        with open(INPUT_FILE, "w") as f:
+            json.dump(input_data, f)
+    
+        # Clean up recovery dir if it exists
+        if os.path.exists(RECOVERY_DIR):
+            import shutil
+            shutil.rmtree(RECOVERY_DIR)
+    
+        # Clean up output log if it exists
+        if os.path.exists(OUTPUT_LOG):
+            os.remove(OUTPUT_LOG)
+    
+        # 2. Initialize Recovery
+        init_result = subprocess.run(
+            ["python", "-m", "bytewax.recovery", "./recovery_dir", "1"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+>       assert init_result.returncode == 0, f"Failed to initialize recovery: {init_result.stderr}"
+E       AssertionError: Failed to initialize recovery: Traceback (most recent call last):
+E           File "<frozen runpy>", line 198, in _run_module_as_main
+E           File "<frozen runpy>", line 88, in _run_code
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/recovery.py", line 45, in <module>
+E             init_db_dir(args.db_dir, args.part_count)
+E         FileNotFoundError: recovery directory "recovery_dir" does not exist; please create it with `mkdir`
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.recovery', './recovery_dir', '1'], returncode=1, stdout='', stderr='Tr...rgs.part_count)\nFileNotFoundError: recovery directory "recovery_dir" does not exist; please create it with `mkdir`\n').returncode
+
+tests/test_final_state.py:34: AssertionError
+=========================== short test summary info ============================
+ERROR tests/test_final_state.py::test_pipeline_output - AssertionError: Faile...
+=============================== 1 error in 0.09s ===============================

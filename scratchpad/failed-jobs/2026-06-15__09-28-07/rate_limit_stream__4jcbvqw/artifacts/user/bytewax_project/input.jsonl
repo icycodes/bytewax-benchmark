@@ -1,0 +1,7 @@
+{"user_id": "u1", "event_id": "e1", "timestamp": 100.0}
+{"user_id": "u1", "event_id": "e2", "timestamp": 100.1}
+{"user_id": "u1", "event_id": "e3", "timestamp": 100.2}
+{"user_id": "u1", "event_id": "e4", "timestamp": 100.3}
+{"user_id": "u1", "event_id": "e5", "timestamp": 100.4}
+{"user_id": "u1", "event_id": "e6", "timestamp": 100.5}
+{"user_id": "u1", "event_id": "e7", "timestamp": 101.5}

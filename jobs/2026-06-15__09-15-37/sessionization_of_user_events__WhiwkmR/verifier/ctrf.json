@@ -1,0 +1,59 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:21:35.378776+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781515295073,
+            "stop": 1781515295378
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_dataflow_execution",
+                "status": "passed",
+                "duration": 259,
+                "start": 1781515295095,
+                "stop": 1781515295354,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "passed",
+                "duration": 1,
+                "start": 1781515295355,
+                "stop": 1781515295356,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_session_metrics",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 22,
+                "start": 1781515295356,
+                "stop": 1781515295378,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_session_metrics():\n        \"\"\"Verify the exact contents of the output file against expected sessionization logic.\"\"\"\n        output_file = os.path.join(PROJECT_DIR, \"sessions.jsonl\")\n    \n        sessions = []\n        with open(output_file, \"r\") as f:\n            for line in f:\n                if line.strip():\n                    sessions.append(json.loads(line))\n    \n        assert len(sessions) > 0, \"The output file sessions.jsonl is empty.\"\n    \n        # Sort sessions by user_id and then session_start to make assertions deterministic\n        sessions.sort(key=lambda x: (x[\"user_id\"], x[\"session_start\"]))\n    \n        # We expect specific sessions based on the user_events.jsonl generated in the Dockerfile\n        expected_sessions = [\n            {\n                \"user_id\": \"user1\",\n                \"session_start\": \"2023-10-01T10:00:00Z\",\n                \"session_end\": \"2023-10-01T10:15:00Z\",\n                \"event_count\": 2\n            },\n            {\n                \"user_id\": \"user1\",\n                \"session_start\": \"2023-10-01T11:00:00Z\",\n                \"session_end\": \"2023-10-01T11:00:00Z\",\n                \"event_count\": 1\n            },\n            {\n                \"user_id\": \"user2\",\n                \"session_start\": \"2023-10-01T10:05:00Z\",\n                \"session_end\": \"2023-10-01T10:30:00Z\",\n                \"event_count\": 3\n            }\n        ]\n    \n        assert len(sessions) == len(expected_sessions), f\"Expected {len(expected_sessions)} sessions, got {len(sessions)}\"\n    \n        for i, expected in enumerate(expected_sessions):\n            actual = sessions[i]\n            assert actual[\"user_id\"] == expected[\"user_id\"], f\"Expected user_id {expected['user_id']}, got {actual['user_id']}\"\n>           assert actual[\"session_start\"] == expected[\"session_start\"], f\"Expected session_start {expected['session_start']}, got {actual['session_start']}\"\nE           AssertionError: Expected session_start 2023-10-01T10:00:00Z, got 2023-10-01T10:00:00+00:00\nE           assert '2023-10-01T10:00:00+00:00' == '2023-10-01T10:00:00Z'\nE             - 2023-10-01T10:00:00Z\nE             ?                    ^\nE             + 2023-10-01T10:00:00+00:00\nE             ?                    ^^^^^^\n\ntests/test_final_state.py:73: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

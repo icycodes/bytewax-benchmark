@@ -1,0 +1,2 @@
+{"error": "invalid json", "raw": "this is not json"}
+{"error": "missing sensor_type", "raw": "{\"invalid_json\": true}"}

@@ -1,0 +1,53 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:58:22.556293+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781517502334,
+            "stop": 1781517502556
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 187,
+                "start": 1781517502363,
+                "stop": 1781517502550,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_pipeline_execution():\n        \"\"\"Run the pipeline with recovery enabled and verify it succeeds.\"\"\"\n        result = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.run\", \"dataflow:flow\", \"-r\", \"./recovery\", \"-b\", \"0\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert result.returncode == 0, f\"Pipeline execution failed: {result.stderr}\"\nE       AssertionError: Pipeline execution failed: usage: python -m bytewax.run [-h] [-r RECOVERY_DIRECTORY]\nE                                      [-s SNAPSHOT_INTERVAL] [-b BACKUP_INTERVAL]\nE                                      [-w WORKERS_PER_PROCESS] [-i PROCESS_ID]\nE                                      [-a ADDRESSES]\nE                                      import_str\nE         python -m bytewax.run: error: when running with recovery, the `-s/--snapshot_interval` and `-b/--backup_interval` values must be set. For more information about setting these values, please see https://bytewax.io/docs/concepts/recovery.\nE         \nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'dataflow:flow', '-r', './recovery', '-b', '0'], returncode=2, s...must be set. For more information about setting these values, please see https://bytewax.io/docs/concepts/recovery.\\n').returncode\n\ntests/test_final_state.py:42: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_rate_limiting_output",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 4,
+                "start": 1781517502551,
+                "stop": 1781517502555,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_rate_limiting_output():\n        \"\"\"Verify the output JSON lines match the expected rate-limited events.\"\"\"\n>       assert os.path.exists(OUTPUT_FILE), \"Output file was not created.\"\nE       AssertionError: Output file was not created.\nE       assert False\nE        +  where False = <function exists at 0x7fad0f05f560>('/home/user/bytewax_project/output.jsonl')\nE        +    where <function exists at 0x7fad0f05f560> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:46: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

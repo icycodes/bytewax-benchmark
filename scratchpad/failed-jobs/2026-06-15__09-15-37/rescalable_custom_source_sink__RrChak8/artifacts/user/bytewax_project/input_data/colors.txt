@@ -1,0 +1,4 @@
+red orange yellow
+green blue indigo
+violet pink purple
+cyan magenta teal

@@ -1,0 +1,785 @@
+{
+    "schema_version": 1,
+    "created_at": "2026-06-15T10:10:03.582397Z",
+    "harbor": {
+        "version": "0.8.0",
+        "is_editable": false
+    },
+    "invocation": [
+        "/home/kweizh/.local/bin/harbor",
+        "run",
+        "--yes",
+        "--agent-import-path",
+        "agents.pochi:Pochi",
+        "--artifact",
+        "/home/user",
+        "--mounts",
+        "[{\"type\": \"bind\",\"source\":\"test_initial_state.py\",\"target\":\"/bootstrap/test_initial_state.py\"}]",
+        "--model",
+        "deepseek/deepseek-4-pro",
+        "-p",
+        "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks",
+        "--n-attempts",
+        "1",
+        "--max-retries",
+        "0",
+        "--job-name",
+        "2026-06-15__10-10-01",
+        "-n",
+        "5"
+    ],
+    "n_concurrent_trials": 5,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "RewardFileEmptyError",
+            "VerifierOutputParseError",
+            "RewardFileNotFoundError",
+            "AgentTimeoutError",
+            "VerifierTimeoutError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "task": {
+                "name": "event_time_session_windowing",
+                "type": "local",
+                "digest": "sha256:eb4b1a1afa9f8355ca73ded89bf8a2574f2aec539ee0ad28c3452ef810373ecb",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/event_time_session_windowing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "custom_source_micro_batching",
+                "type": "local",
+                "digest": "sha256:627df275bef3bb2a65d9dc3eb5c20b0832071d0864c6cb28010d07686f1177f3",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/custom_source_micro_batching"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "complex_json_stream_filtering",
+                "type": "local",
+                "digest": "sha256:c44228dea4fd205d54fc0a3bdc777d09295e76b80631fcb6829c744a9bc6e9d5",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/complex_json_stream_filtering"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "join_clicks_impressions",
+                "type": "local",
+                "digest": "sha256:0801c1b31ea190552d7cbbc0ab994a73ce1e548a5cf62f6a83892bda7469dbab",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/join_clicks_impressions"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "rescalable_custom_source_sink",
+                "type": "local",
+                "digest": "sha256:ee00bca4916f3b7b22ab9484d4965e75739a0e6dc12d075eed113419b0310301",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/rescalable_custom_source_sink"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "bytewax_stateful_dedup_window",
+                "type": "local",
+                "digest": "sha256:073cbd19997918a81390e84df675f0d2c8a7bab4fc0c9780adeaa25397685b53",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/bytewax_stateful_dedup_window"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "anomaly_detection_streaming",
+                "type": "local",
+                "digest": "sha256:5c04db59b1123646113d092e3ec1bae8cf3d6c9b0b48f354345790ef8c907bf5",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/anomaly_detection_streaming"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "bytewax_stateful_moving_average",
+                "type": "local",
+                "digest": "sha256:331a89f9dc947f77f56f21b8241c20de7a9ff13338e2a04189fdec9c824df725",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/bytewax_stateful_moving_average"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "sessionization_of_user_events",
+                "type": "local",
+                "digest": "sha256:109b878c5d22a029bfef3963da02bce45a0e1aeddd90c8cd79cbcb4124feacf2",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/sessionization_of_user_events"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "real_time_apdex_score",
+                "type": "local",
+                "digest": "sha256:056487afa50ade198b91ef7ae80a427685f276b5d8e0a6937e52783bbee6496d",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/real_time_apdex_score"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "rate_limit_stream",
+                "type": "local",
+                "digest": "sha256:350a19304c9d7dd8986e5b9d3e994d7eb4e300d39b0a26a504a0122683ce3868",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/rate_limit_stream"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "merge_streams_different_schemas",
+                "type": "local",
+                "digest": "sha256:231bd377b39527a13910afd48a76f6095306284c1f36ff482cc12ff16368ed69",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/merge_streams_different_schemas"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "stateful_recovery_pipeline",
+                "type": "local",
+                "digest": "sha256:e24dcb11d126a3713238c108afb727cae992317f01467d319fee4154c7a1f50b",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/stateful_recovery_pipeline"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "word_count_with_windowing",
+                "type": "local",
+                "digest": "sha256:d183fe1de48b506526ee979478fb807bde17935237617c3e146069748cda39f9",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/word_count_with_windowing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "ml_inference_stream",
+                "type": "local",
+                "digest": "sha256:dd3399d1d676fb3d30fa551546efca3c334e141f092cd0d02fb58905ebb8f24d",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/ml_inference_stream"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "dynamic_routing_branch",
+                "type": "local",
+                "digest": "sha256:483f2ed9d4289b234bc7e0a278ed126e8b868bd4902d62d7788793c7b40f37fe",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/dynamic_routing_branch"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "realtime_top_k_aggregation",
+                "type": "local",
+                "digest": "sha256:fb006ab3ce93b522fc945bd7919ec80e60c7b25fb7ecec59a8eeb010e5a2b065",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/realtime_top_k_aggregation"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "streaming_connected_components",
+                "type": "local",
+                "digest": "sha256:da4673d43b511f622881fd3da797f95761914b4c3902a6e65af80c09855b74f0",
+                "source": "pending-tasks",
+                "path": "/home/kweizh/zealt/bytewax-benchmark/scratchpad/pending-tasks/streaming_connected_components"
+            },
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "import_path": "agents.pochi:Pochi",
+                "model_name": "deepseek/deepseek-4-pro",
+                "skills": [],
+                "kwargs": {},
+                "env": {},
+                "mcp_servers": []
+            },
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "test_initial_state.py",
+                        "target": "/bootstrap/test_initial_state.py"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        }
+    ]
+}

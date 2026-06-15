@@ -1,0 +1,16 @@
+{"sensor_id": "S1", "time": "2026-01-01T00:00:15Z", "temp": 20.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:00:30Z", "temp": 22.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:00:45Z", "temp": 21.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:01:00Z", "temp": 23.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:01:15Z", "temp": 19.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:01:30Z", "temp": 25.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:00:10Z", "temp": 30.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:00:40Z", "temp": 32.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:01:10Z", "temp": 31.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:01:40Z", "temp": 33.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:01:45Z", "temp": 24.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:02:00Z", "temp": 29.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:02:10Z", "temp": 26.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:02:20Z", "temp": 35.0}
+{"sensor_id": "S1", "time": "2026-01-01T00:02:30Z", "temp": 18.0}
+{"sensor_id": "S2", "time": "2026-01-01T00:02:40Z", "temp": 27.0}

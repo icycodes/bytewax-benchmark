@@ -1,0 +1,4 @@
+foo bar baz
+another line in file b
+the quick brown fox
+jumps over the lazy dog

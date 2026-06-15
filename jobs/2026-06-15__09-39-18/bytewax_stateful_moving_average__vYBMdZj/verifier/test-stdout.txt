@@ -1,0 +1,46 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py .F                                             [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_output_csv_contents ___________________________
+
+    def test_output_csv_contents():
+        """Verify that the output CSV contains the correct moving averages."""
+        assert os.path.exists(OUTPUT_CSV), "output.csv was not created by the pipeline."
+    
+        with open(OUTPUT_CSV, "r") as f:
+            lines = [line.strip() for line in f if line.strip()]
+    
+        expected_lines = [
+            "s1,10.00",
+            "s2,20.00",
+            "s1,12.50",
+            "s1,15.00",
+            "s2,22.50",
+            "s1,20.00",
+            "s3,5.00"
+        ]
+    
+>       assert lines == expected_lines, (
+            f"Output CSV contents do not match expected moving averages.\n"
+            f"Expected: {expected_lines}\n"
+            f"Got: {lines}"
+        )
+E       AssertionError: Output CSV contents do not match expected moving averages.
+E         Expected: ['s1,10.00', 's2,20.00', 's1,12.50', 's1,15.00', 's2,22.50', 's1,20.00', 's3,5.00']
+E         Got: ['s1,10.00', 's1,12.50', 's1,15.00', 's1,20.00', 's2,20.00', 's2,22.50', 's3,5.00']
+E       assert ['s1,10.00', ...2,22.50', ...] == ['s1,10.00', ...1,20.00', ...]
+E         At index 1 diff: 's1,12.50' != 's2,20.00'
+E         Use -v to get more diff
+
+tests/test_final_state.py:57: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_pipeline_execution
+FAILED tests/test_final_state.py::test_output_csv_contents - AssertionError: ...
+========================= 1 failed, 1 passed in 0.26s ==========================

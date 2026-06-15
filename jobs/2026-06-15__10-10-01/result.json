@@ -1,0 +1,68 @@
+{
+    "id": "9f499cd2-c7d2-4236-9b2a-112541976daf",
+    "started_at": "2026-06-15T10:10:03.538283",
+    "updated_at": "2026-06-15T10:38:14.332649",
+    "finished_at": "2026-06-15T10:38:14.332649",
+    "n_total_trials": 18,
+    "stats": {
+        "n_completed_trials": 18,
+        "n_errored_trials": 6,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "pochi__deepseek-4-pro__pending-tasks": {
+                "n_trials": 17,
+                "n_errors": 6,
+                "metrics": [
+                    {
+                        "mean": 0.4444444444444444
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "event_time_session_windowing__9qNxCP2",
+                            "custom_source_micro_batching__nvHnN9j",
+                            "complex_json_stream_filtering__rbR4ZEz",
+                            "bytewax_stateful_dedup_window__iqJXdu2",
+                            "bytewax_stateful_moving_average__r2EUKRw",
+                            "merge_streams_different_schemas__XBD7FLD",
+                            "dynamic_routing_branch__be3QD7d",
+                            "streaming_connected_components__EHZkFx8"
+                        ],
+                        "0.0": [
+                            "join_clicks_impressions__6CzsshS",
+                            "rescalable_custom_source_sink__E3TfcCq",
+                            "anomaly_detection_streaming__BTJg7h2",
+                            "sessionization_of_user_events__mxg8Fw9",
+                            "real_time_apdex_score__4CyThaK",
+                            "rate_limit_stream__MyyMkAd",
+                            "stateful_recovery_pipeline__aFexVi4",
+                            "word_count_with_windowing__rdYBseZ",
+                            "realtime_top_k_aggregation__HQSvFqb"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "rescalable_custom_source_sink__E3TfcCq",
+                        "bytewax_stateful_moving_average__r2EUKRw",
+                        "sessionization_of_user_events__mxg8Fw9",
+                        "real_time_apdex_score__4CyThaK",
+                        "stateful_recovery_pipeline__aFexVi4"
+                    ],
+                    "InitialStateError": [
+                        "ml_inference_stream__YEqps7c"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 0,
+        "n_cache_tokens": 0,
+        "n_output_tokens": 339554,
+        "cost_usd": null
+    }
+}

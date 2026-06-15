@@ -1,0 +1,7 @@
+{"type": "metric", "device_id": "A", "payload": {"temperature": 105}}
+{"type": "config", "device_id": "A", "payload": {"threshold": 110}}
+{"type": "metric", "device_id": "A", "payload": {"temperature": 108}}
+{"type": "metric", "device_id": "A", "payload": {"temperature": 115}}
+{"type": "metric", "device_id": "B", "payload": {"temperature": 101}}
+{"invalid json
+{"type": "config", "device_id": "B"}

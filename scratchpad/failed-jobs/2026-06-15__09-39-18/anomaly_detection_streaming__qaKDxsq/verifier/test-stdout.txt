@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py FF                                             [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_pipeline_execution ____________________________
+
+    def test_pipeline_execution():
+        """Run the Bytewax pipeline with recovery enabled."""
+        result = subprocess.run(
+            ["python", "-m", "bytewax.run", "pipeline:flow", "-r", "./recovery_dir", "-s", "1", "-b", "0"],
+            cwd=PROJECT_DIR,
+            capture_output=True,
+            text=True
+        )
+>       assert result.returncode == 0, f"Pipeline execution failed. stderr: {result.stderr}"
+E       AssertionError: Pipeline execution failed. stderr: Traceback (most recent call last):
+E           File "<frozen runpy>", line 198, in _run_module_as_main
+E           File "<frozen runpy>", line 88, in _run_code
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/run.py", line 353, in <module>
+E             kwargs["flow"] = _locate_dataflow(mod_str, attr_str)
+E                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/run.py", line 42, in _locate_dataflow
+E             __import__(module_name)
+E         ModuleNotFoundError: No module named 'pipeline'
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow', '-r', './recovery_dir', '-s', '1', '-b', '0'], ...n.py", line 42, in _locate_dataflow\n    __import__(module_name)\nModuleNotFoundError: No module named \'pipeline\'\n').returncode
+
+tests/test_final_state.py:63: AssertionError
+____________________________ test_anomalies_output _____________________________
+
+    def test_anomalies_output():
+        """Verify that the anomalies were correctly identified and written to the output file."""
+>       assert os.path.exists(ANOMALIES_FILE), f"Output file {ANOMALIES_FILE} was not created."
+E       AssertionError: Output file /home/user/anomaly_detection/anomalies.jsonl was not created.
+E       assert False
+E        +  where False = <function exists at 0x7f596ab0f560>('/home/user/anomaly_detection/anomalies.jsonl')
+E        +    where <function exists at 0x7f596ab0f560> = <module 'posixpath' (frozen)>.exists
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_final_state.py:67: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_pipeline_execution - AssertionError: P...
+FAILED tests/test_final_state.py::test_anomalies_output - AssertionError: Out...
+============================== 2 failed in 0.24s ===============================

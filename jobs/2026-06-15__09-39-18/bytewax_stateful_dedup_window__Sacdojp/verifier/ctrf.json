@@ -1,0 +1,53 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:53:44.389994+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781517224047,
+            "stop": 1781517224389
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 311,
+                "start": 1781517224073,
+                "stop": 1781517224384,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "setup_and_run = CompletedProcess(args=['python3', 'run.py'], returncode=1, stdout='', stderr='thread \\'<unnamed>\\' panicked at src/ope...pstream for routing; got a `str` instead\\nCaused by => TypeError: \\'str\\' object cannot be converted to \\'PyTuple\\'\\n')\n\n    def test_output_file_exists(setup_and_run):\n        result = setup_and_run\n>       assert result.returncode == 0, f\"run.py failed with stderr: {result.stderr}\"\nE       AssertionError: run.py failed with stderr: thread '<unnamed>' panicked at src/operators.rs:390:25:\nE         Box<dyn Any>\nE         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\nE         \nE         Traceback (most recent call last):\nE           File \"/home/user/myproject/run.py\", line 109, in <module>\nE             run_main(build_flow())\nE         TypeError: (src/operators.rs:395:38) step \"dedup.write\" requires `(key, value)` 2-tuple from upstream for routing; got a `str` instead\nE         Caused by => TypeError: 'str' object cannot be converted to 'PyTuple'\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python3', 'run.py'], returncode=1, stdout='', stderr='thread \\'<unnamed>\\' panicked at src/ope...pstream for routing; got a `str` instead\\nCaused by => TypeError: \\'str\\' object cannot be converted to \\'PyTuple\\'\\n').returncode\n\ntests/test_final_state.py:48: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_output_contents",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 5,
+                "start": 1781517224384,
+                "stop": 1781517224389,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "setup_and_run = CompletedProcess(args=['python3', 'run.py'], returncode=1, stdout='', stderr='thread \\'<unnamed>\\' panicked at src/ope...pstream for routing; got a `str` instead\\nCaused by => TypeError: \\'str\\' object cannot be converted to \\'PyTuple\\'\\n')\n\n    def test_output_contents(setup_and_run):\n        assert os.path.isfile(OUTPUT_FILE), f\"Output file {OUTPUT_FILE} was not created.\"\n    \n        with open(OUTPUT_FILE, \"r\") as f:\n            lines = f.readlines()\n    \n>       assert len(lines) == 4, f\"Expected exactly 4 lines in output.jsonl, got {len(lines)}\"\nE       AssertionError: Expected exactly 4 lines in output.jsonl, got 0\nE       assert 0 == 4\nE        +  where 0 = len([])\n\ntests/test_final_state.py:57: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

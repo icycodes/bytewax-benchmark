@@ -1,0 +1,5 @@
+{"sensor_type": "temperature", "value_c": 25.0}
+{"sensor_type": "humidity", "value": 60.5}
+{"sensor_type": "temperature", "value_c": 30.0}
+{"invalid_json": true}
+this is not json

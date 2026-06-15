@@ -1,0 +1,3 @@
+{"device_id": "A", "alert_type": "temperature_high", "value": 105.0, "threshold": 100.0}
+{"device_id": "A", "alert_type": "temperature_high", "value": 115.0, "threshold": 110.0}
+{"device_id": "B", "alert_type": "temperature_high", "value": 101.0, "threshold": 100.0}

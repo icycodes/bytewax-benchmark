@@ -1,0 +1,61 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 1 item
+
+tests/test_final_state.py F                                              [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_pipeline_execution_and_recovery _____________________
+
+    def test_pipeline_execution_and_recovery():
+        # Step 1: Create directories
+        os.makedirs(INPUT_DIR, exist_ok=True)
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
+        os.makedirs(RECOVERY_DIR, exist_ok=True)
+    
+        # Step 2: Create initial input files
+        file1_input = os.path.join(INPUT_DIR, "file1.txt")
+        file2_input = os.path.join(INPUT_DIR, "file2.txt")
+    
+        with open(file1_input, "w") as f:
+            f.write("line1\nline2\nline3\n")
+    
+        with open(file2_input, "w") as f:
+            f.write("hello\nworld\n")
+    
+        # Step 3: Initialize recovery directory
+        result = subprocess.run(
+            ["python3", "-m", "bytewax.recovery", RECOVERY_DIR, "1"],
+            capture_output=True, text=True, cwd=PROJECT_DIR
+        )
+        assert result.returncode == 0, f"Failed to initialize recovery directory: {result.stderr}"
+    
+        # Step 4: Run pipeline
+        result = subprocess.run(
+            ["python3", "-m", "bytewax.run", "pipeline:flow"],
+            capture_output=True, text=True, cwd=PROJECT_DIR
+        )
+>       assert result.returncode == 0, f"Pipeline execution failed: {result.stderr}"
+E       AssertionError: Pipeline execution failed: thread '<unnamed>' panicked at src/outputs.rs:332:45:
+E         Box<dyn Any>
+E         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+E         
+E         Traceback (most recent call last):
+E           File "<frozen runpy>", line 198, in _run_module_as_main
+E           File "<frozen runpy>", line 88, in _run_code
+E           File "/usr/local/lib/python3.12/dist-packages/bytewax/run.py", line 355, in <module>
+E             cli_main(**kwargs)
+E           File "/home/user/bytewax_project/connectors.py", line 101, in write_batch
+E             _, line_content = item
+E             ^^^^^^^^^^^^^^^
+E         ValueError: too many values to unpack (expected 2)
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['python3', '-m', 'bytewax.run', 'pipeline:flow'], returncode=1, stdout='', stderr='thread \'<un...in write_batch\n    _, line_content = item\n    ^^^^^^^^^^^^^^^\nValueError: too many values to unpack (expected 2)\n').returncode
+
+tests/test_final_state.py:38: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_pipeline_execution_and_recovery - Asse...
+============================== 1 failed in 0.37s ===============================

@@ -1,0 +1,53 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T10:21:17.581882+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781518877128,
+            "stop": 1781518877581
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 427,
+                "start": 1781518877148,
+                "stop": 1781518877575,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_pipeline_execution():\n        \"\"\"Run the Bytewax pipeline with recovery enabled.\"\"\"\n        result = subprocess.run(\n            [\"python\", \"-m\", \"bytewax.run\", \"pipeline:flow\", \"-r\", \"./recovery_dir\", \"-s\", \"1\", \"-b\", \"0\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True\n        )\n>       assert result.returncode == 0, f\"Pipeline execution failed. stderr: {result.stderr}\"\nE       AssertionError: Pipeline execution failed. stderr: thread '<unnamed>' panicked at src/inputs.rs:446:37:\nE         Box<dyn Any>\nE         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\nE         \nE         Traceback (most recent call last):\nE           File \"/home/user/anomaly_detection/pipeline.py\", line 55, in next_batch\nE             return [json.loads(line)]\nE                     ^^^^^^^^^^^^^^^^\nE           File \"/usr/lib/python3.12/json/__init__.py\", line 346, in loads\nE             return _default_decoder.decode(s)\nE                    ^^^^^^^^^^^^^^^^^^^^^^^^^^\nE           File \"/usr/lib/python3.12/json/decoder.py\", line 340, in decode\nE             raise JSONDecodeError(\"Extra data\", s, end)\nE         json.decoder.JSONDecodeError: Extra data: line 1 column 78 (char 77)\nE         \nE         The above exception was the direct cause of the following exception:\nE         \nE         Traceback (most recent call last):\nE           File \"<frozen runpy>\", line 198, in _run_module_as_main\nE           File \"<frozen runpy>\", line 88, in _run_code\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/run.py\", line 355, in <module>\nE             cli_main(**kwargs)\nE         bytewax.errors.BytewaxRuntimeError: (src/inputs.rs:453:50): error calling `StatefulSourcePartition.next_batch` in step \"anomaly_detection.read_jsonl\" for partition \"0\"\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python', '-m', 'bytewax.run', 'pipeline:flow', '-r', './recovery_dir', '-s', '1', '-b', '0'], ...53:50): error calling `StatefulSourcePartition.next_batch` in step \"anomaly_detection.read_jsonl\" for partition \"0\"\\n').returncode\n\ntests/test_final_state.py:63: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_anomalies_output",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 5,
+                "start": 1781518877576,
+                "stop": 1781518877581,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_anomalies_output():\n        \"\"\"Verify that the anomalies were correctly identified and written to the output file.\"\"\"\n        assert os.path.exists(ANOMALIES_FILE), f\"Output file {ANOMALIES_FILE} was not created.\"\n    \n        anomalies = []\n        with open(ANOMALIES_FILE, \"r\") as f:\n            for line in f:\n                if line.strip():\n                    anomalies.append(json.loads(line))\n    \n>       assert len(anomalies) > 0, \"No anomalies were detected in the output.\"\nE       AssertionError: No anomalies were detected in the output.\nE       assert 0 > 0\nE        +  where 0 = len([])\n\ntests/test_final_state.py:75: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

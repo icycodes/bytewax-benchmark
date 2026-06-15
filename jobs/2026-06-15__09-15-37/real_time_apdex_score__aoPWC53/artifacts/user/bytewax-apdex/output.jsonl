@@ -1,0 +1,15 @@
+{"window_start": "2023-10-01T10:00:00Z", "service": "api", "apdex_score": 0.5}
+{"window_start": "2023-10-01T10:00:10Z", "service": "api", "apdex_score": 1.0}
+{"window_start": "2023-10-01T10:00:20Z", "service": "api", "apdex_score": 0.5}
+{"window_start": "2023-10-01T10:00:30Z", "service": "api", "apdex_score": 1.0}
+{"window_start": "2023-10-01T10:00:00Z", "service": "auth", "apdex_score": 0.88}
+{"window_start": "2023-10-01T10:00:10Z", "service": "auth", "apdex_score": 0.5}
+{"window_start": "2023-10-01T10:00:20Z", "service": "auth", "apdex_score": 0.75}
+{"window_start": "2023-10-01T10:00:30Z", "service": "auth", "apdex_score": 1.0}
+{"window_start": "2023-10-01T10:00:00Z", "service": "payment", "apdex_score": 0.5}
+{"window_start": "2023-10-01T10:00:10Z", "service": "payment", "apdex_score": 0.75}
+{"window_start": "2023-10-01T10:00:20Z", "service": "payment", "apdex_score": 1.0}
+{"window_start": "2023-10-01T10:00:30Z", "service": "payment", "apdex_score": 1.0}
+{"window_start": "2023-10-01T10:00:40Z", "service": "api", "apdex_score": 1.0}
+{"window_start": "2023-10-01T10:00:40Z", "service": "auth", "apdex_score": 0.5}
+{"window_start": "2023-10-01T10:00:40Z", "service": "payment", "apdex_score": 0.0}

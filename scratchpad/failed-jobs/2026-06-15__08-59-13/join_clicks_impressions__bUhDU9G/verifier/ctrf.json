@@ -1,0 +1,59 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:04:20.898835+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781514260343,
+            "stop": 1781514260898
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution",
+                "status": "passed",
+                "duration": 490,
+                "start": 1781514260372,
+                "stop": 1781514260862,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "passed",
+                "duration": 2,
+                "start": 1781514260863,
+                "stop": 1781514260865,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_contents",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 33,
+                "start": 1781514260865,
+                "stop": 1781514260898,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_file_contents():\n        \"\"\"Verify that the joined output contains the correct records.\"\"\"\n        with open(JOINED_FILE, \"r\") as f:\n            lines = [line.strip() for line in f if line.strip()]\n    \n        assert len(lines) == 2, f\"Expected exactly 2 lines in {JOINED_FILE}, but got {len(lines)}.\"\n    \n        records = []\n        for line in lines:\n            try:\n                records.append(json.loads(line))\n            except json.JSONDecodeError:\n                pytest.fail(f\"Line in {JOINED_FILE} is not valid JSON: {line}\")\n    \n        expected_record_1 = {\"ad_id\": \"1\", \"user_id\": \"u1\", \"click_time\": \"2026-06-15T10:00:00Z\"}\n        expected_record_3 = {\"ad_id\": \"3\", \"user_id\": \"u3\", \"click_time\": \"2026-06-15T10:05:00Z\"}\n    \n>       assert expected_record_1 in records, f\"Expected record {expected_record_1} not found in output.\"\nE       AssertionError: Expected record {'ad_id': '1', 'user_id': 'u1', 'click_time': '2026-06-15T10:00:00Z'} not found in output.\nE       assert {'ad_id': '1', 'click_time': '2026-06-15T10:00:00Z', 'user_id': 'u1'} in [{'ad_id': 1, 'click_time': '2026-06-15T10:00:00Z', 'user_id': 'u1'}, {'ad_id': 3, 'click_time': '2026-06-15T10:05:00Z', 'user_id': 'u3'}]\n\ntests/test_final_state.py:40: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

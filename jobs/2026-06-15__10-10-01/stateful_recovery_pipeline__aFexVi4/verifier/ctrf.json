@@ -1,0 +1,62 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T10:35:04.294042+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 1,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781519703876,
+            "stop": 1781519704293
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "passed",
+                "duration": 363,
+                "start": 1781519703900,
+                "stop": 1781519704263,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_first_window_results",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 20,
+                "start": 1781519704264,
+                "stop": 1781519704284,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_first_window_results():\n        \"\"\"Verify the first window (00:00:00 to 00:01:00).\"\"\"\n        records = []\n        with open(OUTPUT_FILE, \"r\") as f:\n            for line in f:\n                if line.strip():\n                    records.append(json.loads(line))\n    \n        # Find the first window record\n        first_window = None\n        for r in records:\n            if r.get(\"window_start\") == \"2026-01-01T00:00:00Z\" and r.get(\"window_end\") == \"2026-01-01T00:01:00Z\":\n                first_window = r\n                break\n    \n        assert first_window is not None, \"First window (00:00:00 to 00:01:00) results not found in output.\"\n        assert first_window.get(\"sensor_id\") == \"S1\", f\"Expected sensor_id 'S1', got {first_window.get('sensor_id')}\"\n>       assert first_window.get(\"mean\") == 20.0, f\"Expected mean 20.0, got {first_window.get('mean')}\"\nE       AssertionError: Expected mean 20.0, got 30.0\nE       assert 30.0 == 20.0\nE        +  where 30.0 = <built-in method get of dict object at 0x7f4a34618540>('mean')\nE        +    where <built-in method get of dict object at 0x7f4a34618540> = {'mean': 30.0, 'sensor_id': 'S1', 'stddev': 0.0, 'window_end': '2026-01-01T00:01:00Z', ...}.get\n\ntests/test_final_state.py:73: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_second_window_results",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 9,
+                "start": 1781519704284,
+                "stop": 1781519704293,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_second_window_results():\n        \"\"\"Verify the second window (00:00:30 to 00:01:30).\"\"\"\n        records = []\n        with open(OUTPUT_FILE, \"r\") as f:\n            for line in f:\n                if line.strip():\n                    records.append(json.loads(line))\n    \n        # Find the second window record\n        second_window = None\n        for r in records:\n            if r.get(\"window_start\") == \"2026-01-01T00:00:30Z\" and r.get(\"window_end\") == \"2026-01-01T00:01:30Z\":\n                second_window = r\n                break\n    \n>       assert second_window is not None, \"Second window (00:00:30 to 00:01:30) results not found in output.\"\nE       AssertionError: Second window (00:00:30 to 00:01:30) results not found in output.\nE       assert None is not None\n\ntests/test_final_state.py:94: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

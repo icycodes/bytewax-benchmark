@@ -1,0 +1,65 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T10:24:58.588384+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 0,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781519098279,
+            "stop": 1781519098588
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_dataflow_execution",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 278,
+                "start": 1781519098300,
+                "stop": 1781519098578,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_dataflow_execution():\n        \"\"\"Run the dataflow script and verify it completes successfully.\"\"\"\n        result = subprocess.run(\n            [\"python\", \"run.py\"],\n            capture_output=True,\n            text=True,\n            cwd=PROJECT_DIR\n        )\n>       assert result.returncode == 0, f\"Dataflow execution failed: {result.stderr}\"\nE       AssertionError: Dataflow execution failed: thread '<unnamed>' panicked at src/operators.rs:198:33:\nE         Box<dyn Any>\nE         note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\nE         \nE         Traceback (most recent call last):\nE           File \"/usr/local/lib/python3.12/dist-packages/bytewax/operators/__init__.py\", line 2552, in <genexpr>\nE             return (mapper(x) for x in xs)\nE                     ^^^^^^^^^\nE           File \"/home/user/bytewax-sessionization/run.py\", line 29, in session_to_output\nE             (user_id, _window_id), (window_meta, events) = session_tuple\nE             ^^^^^^^^^^^^^^^^^^^^^\nE         ValueError: too many values to unpack (expected 2)\nE         \nE         The above exception was the direct cause of the following exception:\nE         \nE         bytewax.errors.BytewaxRuntimeError: (src/operators.rs:115:28): error while iterating through batch\nE         \nE         The above exception was the direct cause of the following exception:\nE         \nE         Traceback (most recent call last):\nE           File \"/home/user/bytewax-sessionization/run.py\", line 98, in <module>\nE             run_main(flow)\nE         bytewax.errors.BytewaxRuntimeError: (src/operators.rs:206:80): error calling `mapper` in step \"sessionization.format_output.flat_map_batch\"\nE         \nE       assert 1 == 0\nE        +  where 1 = CompletedProcess(args=['python', 'run.py'], returncode=1, stdout='', stderr='thread \\'<unnamed>\\' panicked at src/oper...ntimeError: (src/operators.rs:206:80): error calling `mapper` in step \"sessionization.format_output.flat_map_batch\"\\n').returncode\n\ntests/test_final_state.py:24: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 4,
+                "start": 1781519098579,
+                "stop": 1781519098583,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_file_exists():\n        \"\"\"Check that the output file sessions.jsonl was created.\"\"\"\n        output_file = os.path.join(PROJECT_DIR, \"sessions.jsonl\")\n>       assert os.path.isfile(output_file), f\"Output file {output_file} was not created.\"\nE       AssertionError: Output file /home/user/bytewax-sessionization/sessions.jsonl was not created.\nE       assert False\nE        +  where False = <function isfile at 0x7fefc8880220>('/home/user/bytewax-sessionization/sessions.jsonl')\nE        +    where <function isfile at 0x7fefc8880220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:29: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_session_metrics",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 3,
+                "start": 1781519098584,
+                "stop": 1781519098587,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_session_metrics():\n        \"\"\"Verify the exact contents of the output file against expected sessionization logic.\"\"\"\n        output_file = os.path.join(PROJECT_DIR, \"sessions.jsonl\")\n    \n        sessions = []\n>       with open(output_file, \"r\") as f:\nE       FileNotFoundError: [Errno 2] No such file or directory: '/home/user/bytewax-sessionization/sessions.jsonl'\n\ntests/test_final_state.py:36: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}

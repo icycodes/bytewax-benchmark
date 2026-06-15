@@ -1,0 +1,3 @@
+{"sensor_type": "temperature", "sensor_id": "t1", "value_f": 32.0}
+{"sensor_type": "temperature", "sensor_id": "t2", "value_f": 212.0}
+{"sensor_type": "temperature", "sensor_id": "t3", "value_f": -40.0}

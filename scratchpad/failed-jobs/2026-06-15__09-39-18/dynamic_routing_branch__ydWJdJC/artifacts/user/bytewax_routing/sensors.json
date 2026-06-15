@@ -1,0 +1,7 @@
+{"sensor_type": "temperature", "sensor_id": "t1", "value_c": 0}
+{"sensor_type": "humidity", "sensor_id": "h1", "value_percent": 45}
+{"sensor_type": "temperature", "sensor_id": "t2", "value_c": 100}
+not valid json
+{"sensor_type": "humidity", "sensor_id": "h2", "value_percent": 80}
+{"sensor_id": "x1", "value_c": 25}
+{"sensor_type": "temperature", "sensor_id": "t3", "value_c": -40}

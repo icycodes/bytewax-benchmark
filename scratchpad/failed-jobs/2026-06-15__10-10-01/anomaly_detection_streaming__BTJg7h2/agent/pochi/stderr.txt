@@ -1,0 +1,49 @@
+[37m2026-06-15 10:14:34.962[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	pochi v0.6.14
+[37m2026-06-15 10:14:35.128[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	BuiltInBundle[39m[22m[0m[0m	Materializing 16 built-in files to /tmp/pochi-builtin-5f7c1b2d4157fa59
+[37m2026-06-15 10:14:35.476[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517730[39m[0m[0m[1m[37m	loadAgents[39m[22m[0m[0m	Loaded 6 custom agents (6 valid, 0 invalid)
+[37m2026-06-15 10:14:35.601[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517731[39m[0m[0m[1m[37m	loadSkills[39m[22m[0m[0m	Loaded 3 skills (3 valid, 0 invalid)
+[37m2026-06-15 10:14:35.654[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:442311[39m[0m[0m[1m[37m	PochiVendor[39m[22m[0m[0m	JWT is expiring or missing, fetching a new one
+[37m2026-06-15 10:14:36.947[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418456[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	MCP servers configuration changed via signal:
+[37m2026-06-15 10:14:36.948[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418568[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	Build MCPHub Status
+[37m2026-06-15 10:14:37.047[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Starting task runner...
+[37m2026-06-15 10:14:37.184[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: null, new: # Anomaly Detection in Streaming Data with Bytewax
+[37m2026-06-15 10:14:49.695[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516111[39m[0m[0m[1m[37m	listFiles[39m[22m[0m[0m	handling listFile with dirPath /home/user/anomaly_detection and recursive [33mtrue[39m
+[37m2026-06-15 10:14:51.651[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: # Anomaly Detection in Streaming Data with Bytewax, new: Build a stateful anomaly detection pipeline with Bytewax using sliding windows and SQLite recovery
+[37m2026-06-15 10:14:54.577[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/anomaly_detection/data.jsonl" resolvedPath="/home/user/anomaly_detection/data.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:14:54.578[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:14:54.581[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/anomaly_detection/data.jsonl" mtime=1781514151109 contentLen=1015
+[37m2026-06-15 10:19:11.064[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/anomaly_detection/anomalies.jsonl" resolvedPath="/home/user/anomaly_detection/anomalies.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:19:11.065[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:19:11.069[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/anomaly_detection/anomalies.jsonl" mtime=1781518738071 contentLen=120
+[37m2026-06-15 10:19:27.620[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:19:27.651[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:19:43.748[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/anomaly_detection/anomalies.jsonl" resolvedPath="/home/user/anomaly_detection/anomalies.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:19:43.748[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:19:43.752[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/anomaly_detection/anomalies.jsonl" mtime=1781518778175 contentLen=0
+[37m2026-06-15 10:19:53.953[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/anomaly_detection/anomalies.jsonl" resolvedPath="/home/user/anomaly_detection/anomalies.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:19:53.953[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState={startLine=undefined, endLine=undefined, timestamp=1781518778175}
+[37m2026-06-15 10:19:53.957[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: range match, currentMtime=1781518790877 cachedMtime=1781518778175 match=false
+[37m2026-06-15 10:19:53.958[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/anomaly_detection/anomalies.jsonl" mtime=1781518790877 contentLen=120
+[37m2026-06-15 10:20:12.107[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:20:12.127[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:20:32.933[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/anomaly_detection/anomalies.jsonl" resolvedPath="/home/user/anomaly_detection/anomalies.jsonl" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:20:32.934[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:20:32.939[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/anomaly_detection/anomalies.jsonl" mtime=1781518828825 contentLen=120
+[37m2026-06-15 10:21:14.612[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Task runner finished successfully.
+[37m2026-06-15 10:21:14.613[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutting down...
+[37m2026-06-15 10:21:14.636[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Shutdown completed. Process will exit.
+[37m2026-06-15 10:21:14.637[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Process exiting with code 0

@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 2 items
+
+tests/test_final_state.py .F                                             [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_verify_output ______________________________
+
+    def test_verify_output():
+        """Verify the contents of the output file match the expected results."""
+        assert os.path.isfile(OUTPUT_FILE), "output.jsonl does not exist."
+    
+        with open(OUTPUT_FILE, "r") as f:
+            lines = f.readlines()
+    
+        results = []
+        for line in lines:
+            try:
+                results.append(json.loads(line.strip()))
+            except json.JSONDecodeError:
+                pytest.fail(f"Invalid JSON in output file: {line}")
+    
+        expected_results = [
+            {"word": "apple", "window_id": "2023-01-01 12:00:00+00:00", "count": 2},
+            {"word": "banana", "window_id": "2023-01-01 12:00:00+00:00", "count": 1},
+            {"word": "apple", "window_id": "2023-01-01 13:00:00+00:00", "count": 1},
+            {"word": "cherry", "window_id": "2023-01-01 13:00:00+00:00", "count": 1}
+        ]
+    
+        assert len(results) == len(expected_results), f"Expected {len(expected_results)} output lines, got {len(results)}"
+    
+        for expected in expected_results:
+>           assert expected in results, f"Expected output {expected} not found in {results}"
+E           AssertionError: Expected output {'word': 'apple', 'window_id': '2023-01-01 12:00:00+00:00', 'count': 2} not found in [{'word': 'apple', 'window_id': '2023-01-01T12:00:00+00:00', 'count': 2}, {'word': 'apple', 'window_id': '2023-01-01T13:00:00+00:00', 'count': 1}, {'word': 'banana', 'window_id': '2023-01-01T12:00:00+00:00', 'count': 1}, {'word': 'cherry', 'window_id': '2023-01-01T13:00:00+00:00', 'count': 1}]
+E           assert {'count': 2, 'window_id': '2023-01-01 12:00:00+00:00', 'word': 'apple'} in [{'count': 2, 'window_id': '2023-01-01T12:00:00+00:00', 'word': 'apple'}, {'count': 1, 'window_id': '2023-01-01T13:00:...023-01-01T12:00:00+00:00', 'word': 'banana'}, {'count': 1, 'window_id': '2023-01-01T13:00:00+00:00', 'word': 'cherry'}]
+
+tests/test_final_state.py:64: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_run_dataflow
+FAILED tests/test_final_state.py::test_verify_output - AssertionError: Expect...
+========================= 1 failed, 1 passed in 0.31s ==========================

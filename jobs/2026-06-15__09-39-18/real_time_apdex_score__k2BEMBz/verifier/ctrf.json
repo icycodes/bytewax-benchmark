@@ -1,0 +1,41 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:59:17.176447+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781517557112,
+            "stop": 1781517557176
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_apdex_flow",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 40,
+                "start": 1781517557135,
+                "stop": 1781517557175,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_apdex_flow():\n        # Setup: Create input.jsonl\n        input_data = [\n            {\"timestamp\": \"2023-10-01T10:00:00Z\", \"service\": \"auth\", \"response_time_ms\": 200},\n            {\"timestamp\": \"2023-10-01T10:00:02Z\", \"service\": \"auth\", \"response_time_ms\": 600},\n            {\"timestamp\": \"2023-10-01T10:00:05Z\", \"service\": \"auth\", \"response_time_ms\": 2500},\n            {\"timestamp\": \"2023-10-01T10:00:08Z\", \"service\": \"auth\", \"response_time_ms\": 400},\n            {\"timestamp\": \"2023-10-01T10:00:12Z\", \"service\": \"auth\", \"response_time_ms\": 100},\n            {\"timestamp\": \"2023-10-01T10:00:01Z\", \"service\": \"api\", \"response_time_ms\": 1000},\n            {\"timestamp\": \"2023-10-01T10:00:04Z\", \"service\": \"api\", \"response_time_ms\": 1500}\n        ]\n    \n        os.makedirs(PROJECT_DIR, exist_ok=True)\n        with open(INPUT_FILE, \"w\") as f:\n            for item in input_data:\n                f.write(json.dumps(item) + \"\\n\")\n    \n        # Clean up output.jsonl if it exists\n        if os.path.exists(OUTPUT_FILE):\n            os.remove(OUTPUT_FILE)\n    \n        # Run the dataflow\n        result = subprocess.run(\n            [\"python\", \"apdex_flow.py\"],\n            cwd=PROJECT_DIR,\n            capture_output=True,\n            text=True,\n            timeout=60\n        )\n    \n>       assert result.returncode == 0, f\"apdex_flow.py failed with error: {result.stderr}\"\nE       AssertionError: apdex_flow.py failed with error: python: can't open file '/home/user/bytewax-apdex/apdex_flow.py': [Errno 2] No such file or directory\nE         \nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['python', 'apdex_flow.py'], returncode=2, stdout='', stderr=\"python: can't open file '/home/user/bytewax-apdex/apdex_flow.py': [Errno 2] No such file or directory\\n\").returncode\n\ntests/test_final_state.py:40: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

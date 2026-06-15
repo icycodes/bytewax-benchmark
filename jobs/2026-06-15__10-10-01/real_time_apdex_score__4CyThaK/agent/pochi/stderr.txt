@@ -1,0 +1,71 @@
+[37m2026-06-15 10:20:59.448[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	pochi v0.6.14
+[37m2026-06-15 10:20:59.847[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	BuiltInBundle[39m[22m[0m[0m	Materializing 16 built-in files to /tmp/pochi-builtin-5f7c1b2d4157fa59
+[37m2026-06-15 10:21:00.150[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517730[39m[0m[0m[1m[37m	loadAgents[39m[22m[0m[0m	Loaded 6 custom agents (6 valid, 0 invalid)
+[37m2026-06-15 10:21:00.248[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:517731[39m[0m[0m[1m[37m	loadSkills[39m[22m[0m[0m	Loaded 3 skills (3 valid, 0 invalid)
+[37m2026-06-15 10:21:00.296[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:442311[39m[0m[0m[1m[37m	PochiVendor[39m[22m[0m[0m	JWT is expiring or missing, fetching a new one
+[37m2026-06-15 10:21:01.955[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418456[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	MCP servers configuration changed via signal:
+[37m2026-06-15 10:21:01.956[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:418568[39m[0m[0m[1m[37m	MCPHub[39m[22m[0m[0m	Build MCPHub Status
+[37m2026-06-15 10:21:02.088[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37mnative:7[39m[0m[0m[1m[37m	Pochi[39m[22m[0m[0m	Starting task runner...
+[37m2026-06-15 10:21:02.212[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: null, new: # Real-Time Apdex Score Calculation with Bytewax
+[37m2026-06-15 10:21:13.692[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516111[39m[0m[0m[1m[37m	listFiles[39m[22m[0m[0m	handling listFile with dirPath /home/user/bytewax-apdex and recursive [33mtrue[39m
+[37m2026-06-15 10:21:15.313[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:508502[39m[0m[0m[1m[37m	generateTaskTitle[39m[22m[0m[0m	Generating task title, old: # Real-Time Apdex Score Calculation with Bytewax, new: Real-Time Apdex Score Calculation with Bytewax
+[37m2026-06-15 10:23:27.513[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:23:27.539[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:25:12.109[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:25:12.134[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:26:12.111[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:26:12.135[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:27:42.398[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:27:42.430[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:28:27.508[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:28:27.522[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:28:38.481[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/bytewax-apdex/apdex_flow.py" resolvedPath="/home/user/bytewax-apdex/apdex_flow.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:28:38.481[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:28:38.483[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/bytewax-apdex/apdex_flow.py" mtime=1781519102069 contentLen=4564
+[37m2026-06-15 10:28:42.119[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:437017[39m[0m[0m[1m[37m	LiveChatKit[39m[22m[0m[0m	onError
+
+[97m[101m[1m Error [22m[49m[39m[0m[0m The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch(), ECONNRESET, https://app.getpochi.com/api/chat/v6/stream, 0[0m[0m
+error stack:
+[0m[0m
+[37m2026-06-15 10:28:42.136[39m[0m[0m	[31m[1mERROR[22m[39m[0m[0m	[37m$bunfs/root/pochi:517216[39m[0m[0m[1m[37m	TaskRunner[39m[22m[0m[0m	Task is failed, trying to resend last message to resume it. {
+  kind: [32m'InternalError'[39m,
+  message: [32m'The socket connection was closed unexpectedly. For more information, pass `verbose: true` in the second argument to fetch()'[39m
+}
+[37m2026-06-15 10:29:49.189[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: path="/home/user/bytewax-apdex/apdex_flow.py" resolvedPath="/home/user/bytewax-apdex/apdex_flow.py" isVirtual=false cacheExists=true shouldCache=true startLine=undefined endLine=undefined
+[37m2026-06-15 10:29:49.189[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: existingState=undefined
+[37m2026-06-15 10:29:49.193[39m[0m[0m	[32m[1mDEBUG[22m[39m[0m[0m	[37m$bunfs/root/pochi:516783[39m[0m[0m[1m[37m	FileStateCache[39m[22m[0m[0m	withReadFileCache: populating cache for "/home/user/bytewax-apdex/apdex_flow.py" mtime=1781519102069 contentLen=4564

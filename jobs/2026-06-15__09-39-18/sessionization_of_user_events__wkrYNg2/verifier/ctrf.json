@@ -1,0 +1,65 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:58:14.873148+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 0,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781517494795,
+            "stop": 1781517494872
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_dataflow_execution",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 41,
+                "start": 1781517494820,
+                "stop": 1781517494861,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_dataflow_execution():\n        \"\"\"Run the dataflow script and verify it completes successfully.\"\"\"\n        result = subprocess.run(\n            [\"python\", \"run.py\"],\n            capture_output=True,\n            text=True,\n            cwd=PROJECT_DIR\n        )\n>       assert result.returncode == 0, f\"Dataflow execution failed: {result.stderr}\"\nE       AssertionError: Dataflow execution failed: python: can't open file '/home/user/bytewax-sessionization/run.py': [Errno 2] No such file or directory\nE         \nE       assert 2 == 0\nE        +  where 2 = CompletedProcess(args=['python', 'run.py'], returncode=2, stdout='', stderr=\"python: can't open file '/home/user/bytewax-sessionization/run.py': [Errno 2] No such file or directory\\n\").returncode\n\ntests/test_final_state.py:24: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_output_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 4,
+                "start": 1781517494862,
+                "stop": 1781517494866,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_output_file_exists():\n        \"\"\"Check that the output file sessions.jsonl was created.\"\"\"\n        output_file = os.path.join(PROJECT_DIR, \"sessions.jsonl\")\n>       assert os.path.isfile(output_file), f\"Output file {output_file} was not created.\"\nE       AssertionError: Output file /home/user/bytewax-sessionization/sessions.jsonl was not created.\nE       assert False\nE        +  where False = <function isfile at 0x7fb43004c220>('/home/user/bytewax-sessionization/sessions.jsonl')\nE        +    where <function isfile at 0x7fb43004c220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:29: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_session_metrics",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 5,
+                "start": 1781517494867,
+                "stop": 1781517494872,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_session_metrics():\n        \"\"\"Verify the exact contents of the output file against expected sessionization logic.\"\"\"\n        output_file = os.path.join(PROJECT_DIR, \"sessions.jsonl\")\n    \n        sessions = []\n>       with open(output_file, \"r\") as f:\nE       FileNotFoundError: [Errno 2] No such file or directory: '/home/user/bytewax-sessionization/sessions.jsonl'\n\ntests/test_final_state.py:36: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}

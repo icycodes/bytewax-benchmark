@@ -1,0 +1,50 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:25:55.765368+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781515555445,
+            "stop": 1781515555765
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_run_dataflow",
+                "status": "passed",
+                "duration": 279,
+                "start": 1781515555467,
+                "stop": 1781515555746,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_verify_output",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 17,
+                "start": 1781515555747,
+                "stop": 1781515555764,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_verify_output():\n        \"\"\"Verify the contents of the output file match the expected results.\"\"\"\n        assert os.path.isfile(OUTPUT_FILE), \"output.jsonl does not exist.\"\n    \n        with open(OUTPUT_FILE, \"r\") as f:\n            lines = f.readlines()\n    \n        results = []\n        for line in lines:\n            try:\n                results.append(json.loads(line.strip()))\n            except json.JSONDecodeError:\n                pytest.fail(f\"Invalid JSON in output file: {line}\")\n    \n        expected_results = [\n            {\"word\": \"apple\", \"window_id\": \"2023-01-01 12:00:00+00:00\", \"count\": 2},\n            {\"word\": \"banana\", \"window_id\": \"2023-01-01 12:00:00+00:00\", \"count\": 1},\n            {\"word\": \"apple\", \"window_id\": \"2023-01-01 13:00:00+00:00\", \"count\": 1},\n            {\"word\": \"cherry\", \"window_id\": \"2023-01-01 13:00:00+00:00\", \"count\": 1}\n        ]\n    \n        assert len(results) == len(expected_results), f\"Expected {len(expected_results)} output lines, got {len(results)}\"\n    \n        for expected in expected_results:\n>           assert expected in results, f\"Expected output {expected} not found in {results}\"\nE           AssertionError: Expected output {'word': 'apple', 'window_id': '2023-01-01 12:00:00+00:00', 'count': 2} not found in [{'word': 'apple', 'window_id': '2023-01-01T12:00:00+00:00', 'count': 2}, {'word': 'apple', 'window_id': '2023-01-01T13:00:00+00:00', 'count': 1}, {'word': 'banana', 'window_id': '2023-01-01T12:00:00+00:00', 'count': 1}, {'word': 'cherry', 'window_id': '2023-01-01T13:00:00+00:00', 'count': 1}]\nE           assert {'count': 2, 'window_id': '2023-01-01 12:00:00+00:00', 'word': 'apple'} in [{'count': 2, 'window_id': '2023-01-01T12:00:00+00:00', 'word': 'apple'}, {'count': 1, 'window_id': '2023-01-01T13:00:...023-01-01T12:00:00+00:00', 'word': 'banana'}, {'count': 1, 'window_id': '2023-01-01T13:00:00+00:00', 'word': 'cherry'}]\n\ntests/test_final_state.py:64: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

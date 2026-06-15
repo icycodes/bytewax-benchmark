@@ -1,0 +1,4 @@
+{"user_id": "u1", "page": "A", "timestamp": "2023-01-01T12:00:00Z"}
+{"user_id": "u1", "page": "B", "timestamp": "2023-01-01T12:00:05Z"}
+{"user_id": "u2", "page": "A", "timestamp": "2023-01-01T12:00:00Z"}
+{"user_id": "u1", "page": "C", "timestamp": "2023-01-01T12:00:20Z"}

@@ -1,0 +1,1401 @@
+Skipping image OS validation for hb__event_time_session_windowing: docker inspect returned 1
+Skipping image OS validation for hb__custom_source_micro_batching: docker inspect returned 1
+Skipping image OS validation for hb__complex_json_stream_filtering: docker inspect returned 1
+Skipping image OS validation for hb__join_clicks_impressions: docker inspect returned 1
+Skipping image OS validation for hb__rescalable_custom_source_sink: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Command outputs captured
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Command outputs captured
+Running command: echo zr-zdjac9w > /logs/artifacts/run-id && echo complex_json_stream_filtering__zDJaC9W > /logs/artifacts/trial_id
+Running command: echo zr-dvkdis9 > /logs/artifacts/run-id && echo event_time_session_windowing__dVKdiS9 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Running command: echo zr-vqt9fxl > /logs/artifacts/run-id && echo rescalable_custom_source_sink__vQT9fxL > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Running command: echo zr-ypvtbdm > /logs/artifacts/run-id && echo join_clicks_impressions__YPvtBDM > /logs/artifacts/trial_id
+Running command: echo zr-auelyom > /logs/artifacts/run-id && echo custom_source_micro_batching__AUELYom > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Complex JSON Stream Filtering with Bytewax
+
+## Background
+You are building a streaming application using Bytewax to process IoT telemetry data. The data stream contains mixed JSON events for device configuration and metric reports. The pipeline must dynamically update alerting thresholds and filter metrics based on the latest state.
+
+## Requirements
+- Create a Bytewax dataflow in `pipeline.py` that reads from `input.jsonl`.
+- Parse each line as JSON. Gracefully ignore any lines that are invalid JSON or missing required fields (`type`, `device_id`, `payload`).
+- Events with `"type": "config"` contain a `"threshold"` inside `payload`. Use this to update the temperature threshold for the specific `device_id`.
+- The default temperature threshold for any device is `100.0`.
+- Events with `"type": "metric"` contain a `"temperature"` inside `payload`. If the temperature is strictly greater than the device's current threshold, emit an alert.
+- The alert must be a JSON string: `{"device_id": "...", "alert_type": "temperature_high", "value": <temp>, "threshold": <current_threshold>}`.
+- Read the `run-id` from the `ZEALT_RUN_ID` environment variable.
+- Write the resulting alert JSON strings to `output-${run-id}.jsonl`.
+
+## Implementation Hints
+- Use `bytewax.connectors.files.FileSource` and `FileSink` for I/O.
+- Use `op.filter_map` or a combination of `op.map` and `op.filter` to parse JSON and drop invalid/malformed records.
+- Ensure the stream is keyed by `device_id` (must be a string) before applying stateful operations.
+- Use `op.stateful_map` to maintain the threshold state per device and process the events.
+- Format the output as JSON strings before sending to `FileSink`.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax-task
+- Command: `python -m bytewax.run pipeline:flow`
+- The command must successfully execute and produce `output-${run-id}.jsonl` (where `run-id` is read from the `ZEALT_RUN_ID` environment variable).
+- The output file must contain exactly the expected alert JSON objects, one per line, based on the dynamic thresholds.
+- The pipeline must not crash when encountering invalid JSON or missing fields.
+
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Session-Based Clickstream Aggregator
+
+## Background
+You need to implement a session-based clickstream aggregator using Bytewax. The pipeline will group user click events into dynamic session windows based on inactivity gaps, enabling real-time computation of metrics like total pages visited per session.
+
+## Requirements
+- Implement a Bytewax dataflow in `pipeline.py` named `flow`.
+- Read timestamped user click events from `input.jsonl`. Each line is a JSON object with `user_id`, `page`, and `timestamp` (ISO 8601 string, UTC).
+- Group the events into dynamic session windows using event-time. A session is closed after 10 seconds of inactivity for a given user.
+- For each session, calculate the total number of pages visited.
+- Write the output to `output.jsonl` where each line is a JSON object containing `user_id` and `total_pages`.
+
+## Implementation Hints
+- Use `bytewax.operators.windowing` with `EventClock` and `SessionWindower`.
+- You will need to parse the ISO 8601 string into a timezone-aware `datetime` object for the `EventClock`.
+- Remember that Bytewax stateful operators require the stream to be keyed (a tuple of `(key, value)`) and the key must be a string.
+- Use `bytewax.connectors.files.FileSource` and a custom sink or standard file sink to handle JSONL I/O.
+- The output of `fold_window` includes window metadata. You will need to map this to the expected output format before writing.
+
+## Acceptance Criteria
+- Project path: /home/user/project
+- Command: `python -m bytewax.run pipeline:flow`
+- The input file `input.jsonl` will contain JSON objects, one per line:
+  ```json
+  {"user_id": "string", "page": "string", "timestamp": "string"}
+  ```
+- The command must read `input.jsonl` and successfully process the dataflow.
+- The output file `output.jsonl` must be created and contain JSON objects, one per line:
+  ```json
+  {"user_id": "string", "total_pages": "number"}
+  ```
+- The output must correctly reflect the total pages per session for each user, grouped by 10-second inactivity windows based on the event timestamps.
+
+
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Rescalable Custom Source and Sink
+
+## Background
+Bytewax provides `FixedPartitionedSource` and `FixedPartitionedSink` to build stateful, rescalable input and output connectors. These connectors maintain their position in the stream, allowing dataflows to recover gracefully from failures without data loss or duplication (exactly-once processing).
+
+## Requirements
+- Implement a `CustomFileSource` inheriting from `FixedPartitionedSource`. It should read all `.txt` files in a given `input_dir`. Each file acts as a distinct partition.
+- The source must yield string items representing the lines of the files (without trailing newlines) and maintain the current line number as `resume_state` in its `StatefulSourcePartition`.
+- Implement a `CustomFileSink` inheriting from `FixedPartitionedSink`. It should write items to a given `output_dir`. The partition key should be the filename, and the sink should append lines to the corresponding file.
+- The sink's `StatefulSinkPartition` must maintain the number of lines written as `resume_state`. Upon initialization (or recovery), it must truncate the file to the exact number of lines specified in the `resume_state` to prevent duplicate writes.
+- Create a dataflow in `pipeline.py` that reads from `CustomFileSource` (reading from `input_data/`), converts each line to uppercase using `op.map`, and writes to `CustomFileSink` (writing to `output_data/`).
+- The dataflow must be executable via the Bytewax CLI with recovery enabled.
+
+## Implementation Hints
+- In `CustomFileSource.list_parts()`, return the list of filenames in the input directory.
+- In `CustomFileSource.build_part()`, return a custom `StatefulSourcePartition` that opens the file, seeks to the correct line based on `resume_state`, and yields batches of lines in `next_batch()`.
+- In `CustomFileSink.list_parts()`, return the same list of filenames.
+- In `CustomFileSink.part_fn()`, route the item to the correct partition (you can format the output of the source as `(filename, line)` or just rely on a static mapping if the dataflow processes items one by one. Actually, for simplicity, have the source yield `(filename, line_content)`, use that key for the sink, and write the `line_content` to the file).
+- Ensure both partitions return their current state in the `snapshot()` method.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax_project
+- Ensure the script is executed and the artifacts exist.
+- The source must read files from `/home/user/bytewax_project/input_data`.
+- The sink must write files to `/home/user/bytewax_project/output_data`.
+- The dataflow must process all lines, convert them to uppercase, and write them to the corresponding files in the output directory.
+- The pipeline must support recovery. If interrupted and restarted with the same recovery directory, it should not produce duplicate lines in the output files.
+
+
+EOF
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Bytewax Stream Join with Type Casting and Recovery
+
+## Background
+In ad-tech, it is common to join two streams of data: ad impressions and ad clicks. You need to build a Bytewax dataflow that processes these two streams, joins them on the ad ID, and outputs the joined records. The dataflow must be fully compatible with Bytewax's SQLite recovery mechanism.
+
+## Requirements
+- Read impressions from `impressions.jsonl`. Each line is a JSON object with `ad_id` (an integer) and `user_id` (a string).
+- Read clicks from `clicks.jsonl`. Each line is a JSON object with `ad_id` (a string) and `click_time` (a string).
+- Parse the JSON lines into Python dictionaries.
+- Join the two streams on `ad_id`. Note the type mismatch: `ad_id` is an integer in the impressions stream but a string in the clicks stream.
+- Format the joined result into a JSON string containing the keys `ad_id`, `user_id`, and `click_time`.
+- Output the joined JSON strings to `joined.jsonl`.
+- The pipeline must be runnable with SQLite recovery enabled, meaning all state objects must be picklable.
+
+## Implementation Hints
+- Use `bytewax.connectors.files.FileSource` to read the JSONL files and `FileSink` to write the output.
+- Use `bytewax.operators.map` to parse JSON strings and to format the output.
+- Use `bytewax.operators.key_on` to convert the streams into Keyed Streams. Bytewax strictly requires routing keys to be Python strings.
+- Use `bytewax.operators.join` to perform an inner join on the keyed streams.
+- Ensure your pipeline logic does not store unpicklable objects (like lambdas, file handles, or generators) in state, as this will crash the pipeline when recovery snapshots are taken.
+
+## Acceptance Criteria
+- Project path: /home/user/ad_pipeline
+- Command: python -m bytewax.run pipeline:flow -r ./recovery_dir
+- The input files `impressions.jsonl` and `clicks.jsonl` will be provided in the project directory.
+- The output file `joined.jsonl` must be created in the project directory.
+- The output file `joined.jsonl` must contain one JSON object per line, with keys `ad_id`, `user_id`, and `click_time`.
+- The command must exit with status code 0.
+
+
+EOF
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Bytewax Batching and Micro-Batching Pipeline
+
+## Background
+Build a Bytewax pipeline that implements both custom source batching and downstream micro-batching. You need to read events from an SQLite database in batches, group them by user, and micro-batch them before writing to standard output.
+
+## Requirements
+- Create a Bytewax pipeline in `/home/user/app/pipeline.py` with a `Dataflow` named `batching_flow` assigned to the variable `flow`.
+- Implement a custom `FixedPartitionedSource` and `StatefulSourcePartition` to read from an SQLite database at `/home/user/app/events.db`.
+- The table `events` has columns: `id` (INTEGER PRIMARY KEY), `user_id` (TEXT), `event_type` (TEXT), `payload` (TEXT).
+- The source must have exactly 1 partition (e.g., named `"single"`).
+- `next_batch()` must fetch up to 5 records per call, ordered by `id` ASC. It should return a list of dictionaries with keys `id`, `user_id`, `event_type`, `payload`. If there are no more records, it should raise `StopIteration`.
+- `snapshot()` must return the last processed `id` to support exactly-once processing (or `None`/`0` if none processed).
+- Key the stream by `user_id`.
+- Use the `op.collect` operator to micro-batch events for each user. Set the timeout to 1 second and `max_size` to 3.
+- Map the output of `collect` to a JSON string with the format: `{"user_id": "<user_id>", "events": [<list_of_event_dicts>]}`.
+- Write the JSON strings to standard output using `StdOutSink`.
+
+## Implementation Hints
+- Use `sqlite3` to connect to the database. Ensure the connection is established in the partition, not the source, to avoid pickling errors during recovery.
+- The `resume_state` passed to `build_part` will be the last `id` yielded. Use this to construct your `SELECT` query with `WHERE id > ?`.
+- When fetching records, if no records are returned, raise `StopIteration` to signal the end of the partition.
+- `op.collect` returns a stream of `(key, list_of_items)`. Use `op.map` to convert this tuple to the required JSON string format before passing it to `StdOutSink`.
+- `StdOutSink` requires the items in the stream to be strings.
+
+## Acceptance Criteria
+- Project path: /home/user/app
+- Command: `python -m bytewax.run pipeline:flow`
+- The script must successfully process all records from the database and exit.
+- The standard output must contain the JSON serialized micro-batches, one per line.
+- The micro-batching must respect the `max_size=3` limit, meaning a user with 5 events will be split into a batch of 3 and a batch of 2.
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Skipping image OS validation for hb__bytewax_stateful_dedup_window: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-sacdojp > /logs/artifacts/run-id && echo bytewax_stateful_dedup_window__Sacdojp > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Bytewax Stateful Deduplication
+
+## Background
+Bytewax is a Python stateful stream processing framework. In many streaming applications, you receive duplicate events that need to be filtered out. In this task, you will use Bytewax's stateful processing capabilities to deduplicate events over a sliding time window.
+
+## Requirements
+- Create a Bytewax dataflow in `run.py` that reads JSON objects from `input.jsonl`.
+- Each JSON object has the following format: `{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:00Z"}`.
+- The dataflow must group events by `user_id`.
+- Implement a stateful deduplication logic using Bytewax's `stateful` operator and `StatefulLogic`.
+- An event should be emitted to the downstream only if its `event_id` has not been seen for the same `user_id` within the last 10 seconds (based on the event's `timestamp`).
+- If the same `event_id` arrives within 10 seconds of the previous occurrence (inclusive of exactly 10 seconds, meaning `event_timestamp <= previous_timestamp + 10s`), it should be dropped. If it arrives strictly after 10 seconds, it should be emitted and the 10-second window restarts for that `event_id`.
+- The state must be cleaned up dynamically: any `event_id` that is older than 10 seconds from the *current event's timestamp* should be removed from the state to prevent memory leaks.
+- The deduplicated events must be written as JSON strings to `output.jsonl`.
+
+## Implementation Hints
+- Use `bytewax.connectors.files.FileSource` and `FileSink` (or `DirSink` depending on Bytewax 0.21 API) to read and write files, or write a custom input/output logic if needed.
+- Parse the JSON strings into Python dictionaries and parse the ISO 8601 timestamps into `datetime` objects.
+- To use the `stateful` operator, map your stream into a keyed stream: `(user_id, event_dict)`.
+- Create a class inheriting from `bytewax.operators.StatefulLogic`. In the `on_item` method, implement the deduplication and state cleanup logic.
+- The state should map `event_id` to the timestamp of its last emitted occurrence.
+- Format the output back to JSON strings before writing to the sink.
+- Execute the dataflow using `bytewax.testing.run_main` or the `bytewax.run` CLI.
+
+## Acceptance Criteria
+- Project path: /home/user/myproject
+- Command: python3 run.py
+- Input file: `/home/user/myproject/input.jsonl` (provided before running the command)
+- Output file: `/home/user/myproject/output.jsonl`
+- The output file must contain only the deduplicated events, in the same relative order as the input, formatted as valid JSON strings (one per line).
+
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Skipping image OS validation for hb__anomaly_detection_streaming: docker inspect returned 1
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-qakdxsq > /logs/artifacts/run-id && echo anomaly_detection_streaming__qaKDxsq > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Anomaly Detection in Streaming Data with Bytewax
+
+## Background
+You need to build a stateful stream processing pipeline using Bytewax to detect anomalies in IoT sensor data. The pipeline must be fault-tolerant and support state recovery.
+
+## Requirements
+- Read sensor readings from a JSONL file.
+- Parse the data and group it by `sensor_id`.
+- Apply a sliding window over the event time of the readings. The window length should be 60 seconds, and the step size should be 20 seconds.
+- For each window, calculate the mean and standard deviation of the sensor values.
+- Identify any reading in the window that is an outlier (value > mean + 3 * std_dev OR value < mean - 3 * std_dev). If the standard deviation is 0, there are no outliers.
+- Output the detected outliers to a JSONL file.
+- The pipeline MUST support Bytewax's SQLite-based recovery mechanism. Ensure that any state maintained by the pipeline is fully picklable.
+
+## Implementation Hints
+- Use `bytewax.operators.windowing` for time-based windowing.
+- You will need an `EventClock` to use the timestamps in the data, and a `SlidingWindower`.
+- Ensure your data sources and sinks are compatible with Bytewax's execution model and can run non-interactively.
+- Remember that Bytewax requires keys to be strings for stateful operations.
+
+## Acceptance Criteria
+- Project path: /home/user/anomaly_detection
+- Command: `python -m bytewax.run pipeline:flow -r ./recovery_dir -s 1 -b 0`
+- Input file: `/home/user/anomaly_detection/data.jsonl`
+  - Format: `{"sensor_id": "sensor_1", "timestamp": "2026-01-01T12:00:00Z", "value": 22.5}`
+- Output file: `/home/user/anomaly_detection/anomalies.jsonl`
+  - Format: `{"sensor_id": "sensor_1", "timestamp": "2026-01-01T12:00:00Z", "value": 25.0, "mean": 22.5, "std_dev": 0.5}`
+- The pipeline must execute successfully with the recovery directory enabled, proving that the state is picklable.
+- The output file must contain exactly the detected anomalies based on the sliding window calculations.
+
+
+EOF
+Skipping image OS validation for hb__bytewax_stateful_moving_average: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-vybmdzj > /logs/artifacts/run-id && echo bytewax_stateful_moving_average__vYBMdZj > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Bytewax Stateful Moving Average
+
+## Background
+Build a stateful stream processing pipeline using Bytewax that computes the moving average of sensor temperature readings.
+
+## Requirements
+- Create a Bytewax dataflow named `flow` in `pipeline.py`.
+- The dataflow should read sensor readings from `input.csv` in the current directory.
+- Compute the moving average of the last 3 temperature readings for each distinct sensor ID.
+- If a sensor has fewer than 3 readings so far, compute the average of the available readings.
+- The pipeline must use Bytewax's stateful processing capabilities.
+- Write the output to `output.csv` in the current directory.
+
+## Implementation Hints
+- Run the dataflow using `python -m bytewax.run pipeline:flow`.
+- Use a custom stateful logic function with `op.stateful_map`.
+- Ensure keys are strings.
+- Return a new state object (do not mutate the state in-place) to ensure compatibility with recovery snapshots.
+- Use standard Python file I/O or Bytewax connectors for reading and writing CSV lines.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax-task
+- Command: python -m bytewax.run pipeline:flow
+- Input: `input.csv` with lines formatted as `sensor_id,temperature` (e.g., `s1,20.5`).
+- Output: The pipeline must create `output.csv` with lines formatted as `sensor_id,moving_average` (e.g., `s1,20.50`).
+- The moving average must be a float rounded to 2 decimal places.
+- The output file must contain exactly one line per input line, representing the moving average at that point in time.
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Skipping image OS validation for hb__sessionization_of_user_events: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-wkryng2 > /logs/artifacts/run-id && echo sessionization_of_user_events__wkrYNg2 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Sessionization of User Events with Bytewax
+
+## Background
+Sessionization is a common stream processing task where user events are grouped into sessions based on inactivity. Bytewax provides windowing operators to handle this dynamically.
+
+## Requirements
+Create a Bytewax dataflow in `run.py` that reads user events from a JSON lines file, groups them into session windows based on event time, and writes the summarized sessions to an output JSON lines file.
+
+- Read events from `user_events.jsonl`.
+- Group events by `user_id`.
+- Use a session window with a 30-minute inactivity gap.
+- Use event time for the clock.
+- For each session, calculate the total number of events, the start time (timestamp of the first event in the session), and the end time (timestamp of the last event in the session).
+- Write the results to `sessions.jsonl`.
+
+## Implementation Hints
+- Parse the input JSON lines to extract the `user_id` as the key and the event payload as the value.
+- Use Bytewax's `EventClock` and `SessionWindower`.
+- Use a windowing operator like `collect_window` to gather events in each session, then map the result to calculate the required metrics.
+- Ensure timestamps are parsed into `datetime` objects for the clock and formatted back to ISO 8601 strings for the output.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax-sessionization
+- Command: `python run.py`
+- The script must read from `user_events.jsonl` and write to `sessions.jsonl` in the same directory.
+- `user_events.jsonl` contains JSON objects with `user_id` (string), `event_type` (string), and `timestamp` (ISO 8601 string).
+- `sessions.jsonl` must contain exactly one JSON object per session with the following format:
+  ```json
+  {
+    "user_id": "<user_id>",
+    "session_start": "<iso_8601_string>",
+    "session_end": "<iso_8601_string>",
+    "event_count": <integer>
+  }
+  ```
+- The output must correctly reflect 30-minute session gaps based on the event time.
+
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Skipping image OS validation for hb__real_time_apdex_score: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-k2bembz > /logs/artifacts/run-id && echo real_time_apdex_score__k2BEMBz > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Real-Time Apdex Score Calculation with Bytewax
+
+## Background
+Calculate the Application Performance Index (Apdex) score in real-time for different services using Bytewax. The Apdex score is a standard method for reporting and comparing the performance of software applications in computing.
+
+## Requirements
+- Build a Bytewax dataflow that reads JSON lines from `input.jsonl`.
+- Each input line contains: `timestamp` (ISO 8601 string), `service` (string), and `response_time_ms` (integer).
+- Calculate the Apdex score per `service` using a **10-second tumbling window** based on the event time (`timestamp`).
+- Apdex Threshold (`T`) is **500ms**.
+  - **Satisfied**: `response_time_ms <= 500`
+  - **Tolerating**: `500 < response_time_ms <= 2000`
+  - **Frustrated**: `response_time_ms > 2000`
+- Apdex formula: `(Satisfied Count + (Tolerating Count / 2)) / Total Count`.
+- Write the results to `output.jsonl`.
+- Output JSON format must include `window_start` (ISO 8601 string), `service`, and `apdex_score` (float, rounded to 2 decimal places).
+
+## Implementation Hints
+- Use Bytewax's windowing operators (e.g., `fold_window` or `collect_window`) to group and aggregate data by service and time window.
+- Configure an event clock to use the `timestamp` field from the input data.
+- Use a tumbling windower with a length of 10 seconds.
+- Ensure the dataflow can be executed directly as a Python script.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax-apdex
+- Command: `python apdex_flow.py`
+- The script must read from `input.jsonl` and write to `output.jsonl`.
+- Expected input format:
+  ```json
+  {"timestamp": "2023-10-01T10:00:00Z", "service": "auth", "response_time_ms": 200}
+  ```
+- Expected output format:
+  ```json
+  {"window_start": "2023-10-01T10:00:00Z", "service": "auth", "apdex_score": 1.0}
+  ```
+- The output must accurately reflect the Apdex score for each service within each 10-second window.
+
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Skipping image OS validation for hb__rate_limit_stream: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-tfc7ugu > /logs/artifacts/run-id && echo rate_limit_stream__tFc7Ugu > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Stateful Rate Limiting in Bytewax
+
+## Background
+Bytewax allows building stateful stream processing pipelines. In this task, you will implement a Token Bucket rate limiting algorithm to throttle an input stream of events per user.
+
+## Requirements
+- Build a Bytewax dataflow that reads an input stream of JSON events, applies a token-bucket rate limit per user, and writes the allowed events to an output JSON file.
+- The rate limiter must maintain its state using `op.stateful_map`.
+- The pipeline state must be fully picklable to support Bytewax's SQLite recovery mechanism.
+
+## Implementation Hints
+- Use `op.stateful_map` to maintain the token bucket state per `user_id`.
+- The state should be a simple serializable object (e.g., a tuple of `(current_tokens, last_update_timestamp)`) to ensure picklability.
+- Remember to cast the `user_id` to a string before using it as a key for stateful operations, as Bytewax requires string keys.
+- You can use the `FileSource` and `FileSink` from `bytewax.connectors.files` (or similar standard connectors) to read and write JSON lines.
+- To drop throttled events, your `stateful_map` can emit `None` for them, and a subsequent `op.filter` can remove the `None` values.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax_project
+- Command: `python -m bytewax.run dataflow:flow`
+- Input: The pipeline must read from `/home/user/bytewax_project/input.jsonl`. Each line is a JSON object with `user_id` (string), `event_id` (string), and `timestamp` (float representing epoch seconds).
+- Output: The pipeline must write only the allowed events to `/home/user/bytewax_project/output.jsonl` as JSON objects, one per line.
+- Rate Limiting Logic:
+  - Token bucket per `user_id`.
+  - Max capacity = 5.0 tokens.
+  - Initial tokens = 5.0.
+  - For each incoming event, calculate the elapsed time since the `timestamp` of the previously seen event for that user (or 0 if it's the first event).
+  - Add `elapsed_time * 1.0` to the current token count, capping at the maximum capacity of 5.0.
+  - If the token count is >= 1.0, subtract 1.0 and allow the event.
+  - If the token count is < 1.0, do not subtract and drop the event.
+  - The state's last timestamp must be updated to the current event's `timestamp` in both cases (whether allowed or dropped).
+- Fault Tolerance: The state used in `stateful_map` must be picklable. The verifier will run the pipeline with recovery enabled.
+
+EOF
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Skipping image OS validation for hb__merge_streams_different_schemas: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-4sgc7hc > /logs/artifacts/run-id && echo merge_streams_different_schemas__4sGc7hc > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Merge Multiple Streams into a Unified Profile
+
+## Background
+You need to build a stateful stream processing pipeline using Bytewax (v0.21.1) to merge user data from three different sources into a single, unified user profile. The data sources are already provided in the project directory.
+
+## Requirements
+- Create a Bytewax dataflow in `merge_flow.py`.
+- Read data from three pre-existing local JSONL files: `users.jsonl`, `emails.jsonl`, and `activities.jsonl`.
+- The schema for each file differs:
+  - `users.jsonl`: `{"user_id": <int or str>, "name": <str>}`
+  - `emails.jsonl`: `{"id": <int or str>, "email_address": <str>}`
+  - `activities.jsonl`: `{"uid": <int or str>, "last_login": <str>}`
+- Join the three streams on the user ID to create a unified profile.
+- The output must be a single stream of JSON strings, where each JSON object has the exact keys: `id` (string), `name` (string), `email` (string), and `last_login` (string).
+- The join must be an inner join (only output profiles that have data from all three sources).
+- Output the final JSON strings to standard output.
+
+## Acceptance Criteria
+- Project path: `/home/user/bytewax_project`
+- Command: `python -m bytewax.run merge_flow:flow`
+- The command input format: The dataflow reads `users.jsonl`, `emails.jsonl`, and `activities.jsonl` from the current directory.
+- The expected command output format: The stdout should print JSON strings, one per line. Each JSON string must contain the exact keys `id`, `name`, `email`, and `last_login`. There should be no other output except the JSON lines.
+
+
+EOF
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Skipping image OS validation for hb__stateful_recovery_pipeline: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-nv4atzf > /logs/artifacts/run-id && echo stateful_recovery_pipeline__NV4AtZF > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Bytewax Sliding Window Outlier Detector with Recovery
+
+## Background
+Build a fault-tolerant Bytewax (v0.21.1) dataflow to process sensor temperatures, calculate sliding-window statistics, and ensure state is picklable for SQLite-based recovery.
+
+## Requirements
+- Read JSON lines from `input.jsonl` containing `sensor_id`, `time` (ISO8601 string), and `temp` (float).
+- Process the stream using event-time based sliding windows.
+- Compute the mean and population standard deviation of the temperatures for each window per sensor.
+- The state used in the windowing logic must be fully picklable to support Bytewax's SQLite recovery mechanism.
+- Output the results as JSON lines to `output.jsonl`.
+
+## Implementation Hints
+- Keys for stateful operators must be strings.
+- Use `EventClock` parsing the `time` field into a timezone-aware `datetime` object (UTC).
+- Use `SlidingWindower` with a length of 60 seconds and an offset/step of 30 seconds. Align to `2026-01-01T00:00:00Z`.
+- Implement `builder`, `folder`, and `merger` for `win.fold_window` to accumulate temperature values.
+- Ensure all accumulator state structures are pure Python objects (no unpicklable types, like lambdas or unpicklable custom classes) to survive recovery snapshots.
+- Map the window output to the required JSON format and write to `output.jsonl`.
+
+## Acceptance Criteria
+- Project path: `/home/user/myproject`
+- Command: `python -m bytewax.run pipeline:flow -r ./recovery_dir -s 1 -b 0`
+- Input format (`input.jsonl`): `{"sensor_id": "S1", "time": "2026-01-01T00:00:15Z", "temp": 20.0}`
+- Output format (`output.jsonl`): Each line must be a JSON object with keys: `sensor_id` (string), `window_start` (ISO8601 string in UTC, e.g., `2026-01-01T00:00:00Z`), `window_end` (ISO8601 string in UTC), `mean` (float), and `stddev` (float, population standard deviation). The output stream should be formatted properly before writing.
+- The pipeline must execute successfully with recovery enabled (`-r ./recovery_dir`), meaning the state must be successfully pickled during snapshots.
+
+
+EOF
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Skipping image OS validation for hb__word_count_with_windowing: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Skipping image OS validation for hb__ml_inference_stream: docker inspect returned 1
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-ghshwkt > /logs/artifacts/run-id && echo word_count_with_windowing__GHSHwKt > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Bytewax Windowed Word Count
+
+## Background
+Implement a stream processing dataflow using Bytewax that counts the occurrences of words within specific time windows based on event time.
+
+## Requirements
+- Read a JSON Lines (JSONL) input file containing events with a word and a timestamp.
+- Use event time processing.
+- Group the words using a 1-hour tumbling window aligned to `2023-01-01T00:00:00Z`.
+- Count the occurrences of each word within each window.
+- Write the results to a JSON Lines (JSONL) output file.
+
+## Implementation Hints
+- Use `bytewax.operators.windowing.count_window`.
+- Use `EventClockConfig` to extract the timestamp from each event. You will need to parse the ISO8601 string into a `datetime` object with a UTC timezone.
+- Use `TumblingWindow` for the 1-hour windows.
+- Bytewax window operators expect keyed data `(key, value)`. You should key by the word.
+- The downstream output of `count_window` yields tuples like `(key, (window_id, count))`. Format this into a dictionary before writing to the output file.
+
+## Acceptance Criteria
+- Project path: `/home/user/myproject`
+- Command: `python dataflow.py <input_file> <output_file>`
+- Input format: JSON Lines where each line is `{"time": "ISO8601_string", "word": "string"}`.
+- Output format: JSON Lines where each line is `{"word": "string", "window_id": "ISO8601_string", "count": integer}`. The `window_id` should be the string representation of the window's start time in UTC.
+
+
+EOF
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-dzvtfxw > /logs/artifacts/run-id && echo ml_inference_stream__dZVTfxw > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command failed
+Trial ml_inference_stream__dZVTfxw failed: Initial state test failed
+Not retrying trial because the maximum number of retries has been reached
+Skipping image OS validation for hb__dynamic_routing_branch: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-ydwjdjc > /logs/artifacts/run-id && echo dynamic_routing_branch__ydWJdJC > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Dynamic Routing of Sensor Data
+
+## Background
+You are building a real-time IoT sensor data processing pipeline using Bytewax. The pipeline needs to read JSON records from a file, route them to different sinks based on their content, transform specific fields, and capture malformed records into an error sink.
+
+## Requirements
+- Create a Bytewax dataflow that reads lines from `sensors.json`.
+- Parse each line as JSON.
+- If a line is not valid JSON, or is missing the `sensor_type` field, route it to an error stream. The error stream should output JSON strings in the format: `{"error": "invalid json", "raw": "<original_string>"}` or `{"error": "missing sensor_type", "raw": "<original_string>"}`.
+- If `sensor_type` is `"temperature"`, route it to a temperature stream. Convert the `value_c` field from Celsius to Fahrenheit (`value_f = value_c * 9/5 + 32`), remove the `value_c` field, and add the `value_f` field.
+- If `sensor_type` is `"humidity"`, route it to a humidity stream without modification.
+- Write the error stream to `errors.json`.
+- Write the temperature stream to `temperature.json`.
+- Write the humidity stream to `humidity.json`.
+
+## Implementation Hints
+- Use `bytewax.connectors.files.FileSource` and `FileSink`.
+- Use `bytewax.operators.branch` to dynamically route records.
+- You may need multiple branches (e.g., one for valid vs invalid, one for temperature vs humidity).
+- Ensure the items are converted back to JSON strings before sending them to `FileSink`.
+
+## Acceptance Criteria
+- Project path: `/home/user/bytewax_routing`
+- Command: `python dataflow.py`
+- The script must read from `/home/user/bytewax_routing/sensors.json`.
+- The script must output to three files in `/home/user/bytewax_routing`: `temperature.json`, `humidity.json`, and `errors.json`.
+- The output files must contain exactly the expected JSON strings, one per line.
+
+
+EOF
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Skipping image OS validation for hb__realtime_top_k_aggregation: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-zvjanzt > /logs/artifacts/run-id && echo realtime_top_k_aggregation__zVJANZt > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Real-Time Top-K Aggregation with Bytewax
+
+## Background
+Bytewax is a Python-native stateful stream processing framework. In this task, you will build a dataflow that computes the global Top-3 most viewed products in real-time, while ensuring the pipeline state is fully recoverable.
+
+## Requirements
+- Create a Bytewax dataflow in `pipeline.py` named `flow`.
+- The dataflow should read product view events from a local `input.json` file.
+- It must maintain the exact total view count for each product.
+- It must maintain the global Top-3 products by view count across all products.
+- The pipeline state must be fully compatible with Bytewax's SQLite recovery mechanism.
+- Whenever the Top-3 list changes or is updated, output the new Top-3 list to standard output.
+
+## Implementation Hints
+- You can use `op.stateful_map` twice: first to maintain the running count per product (keyed by the product ID), and second to maintain the global Top-3 list (using a single constant routing key, e.g., `"global"`).
+- Remember that Bytewax requires all routing keys to be Python strings.
+- To support SQLite recovery, ensure all state objects are picklable (e.g., use native Python dicts or tuples, avoid complex objects or lambdas in state).
+- When updating state in `op.stateful_map`, always return a new copy or deep-copy of the state to avoid silent state corruption during Bytewax's snapshotting process.
+- You can use `TestingSource` to emit the items read from `input.json`.
+
+## Acceptance Criteria
+- Project path: `/home/user/bytewax_project`
+- Command: `python -m bytewax.run pipeline:flow -r ./recovery_dir -s 10 -b 0`
+- Input format: The pipeline reads `input.json`, which contains a JSON array of events. Each event is a list `[product_id, increment]` (e.g., `["prod_1", 1]`).
+- Output format: The stdout should print the current Top-3 products as a JSON-encoded list of `[product_id, total_count]` arrays, sorted by count in descending order. Ensure only the JSON list is printed per update (e.g., `[["prod_1", 5], ["prod_2", 3]]`).
+- Recovery: The executor must initialize the SQLite recovery partitions in `./recovery_dir` before running the pipeline.
+
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Skipping image OS validation for hb__streaming_connected_components: docker inspect returned 1
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.14 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zr-3wxfpg3 > /logs/artifacts/run-id && echo streaming_connected_components__3WxfPg3 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: if [ -f /bootstrap/test_initial_state.py ]; then pytest -s --log-cli-level=DEBUG /bootstrap/test_initial_state.py > >(tee /logs/agent/pochi/initial-test-stdout.txt) 2> >(tee /logs/agent/pochi/initial-test-stderr.txt >&2); fi
+Command outputs captured
+Running command: pochi --model zai/glm-5.1 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Streaming Connected Components with Bytewax
+
+## Background
+You are building a real-time graph analytics pipeline using Bytewax (v0.21.1). The pipeline processes a stream of new connections (edges) between nodes and dynamically maintains the connected components (communities) of the graph.
+
+## Requirements
+- Create a Bytewax dataflow in `pipeline.py`.
+- **Input**: Read edges from `input_edges.jsonl`. Each line is a JSON object: `{"u": "node1", "v": "node2"}`.
+- **Stateful Processing**: Maintain a Union-Find (Disjoint Set) data structure to track connected components. Since Union-Find requires a global view, ensure all edges are routed to a single stateful partition.
+- **Output Logic**: For each edge `(u, v)`:
+  - If `u` and `v` are already in the same component, emit: `{"u": u, "v": v, "status": "already_connected", "component_size": <size of the component>}`.
+  - If `u` and `v` are in different components, merge them and emit: `{"u": u, "v": v, "status": "merged", "new_component_size": <size of the new merged component>}`.
+- **Sink**: Write the emitted JSON objects to `output_events_${run-id}.jsonl`.
+- **Execution**: The pipeline must be executable via the Bytewax CLI with SQLite recovery enabled.
+
+## Implementation Hints
+- Read the `ZEALT_RUN_ID` environment variable to construct the output filename.
+- Use a constant key to route all edges to a single `stateful_map` partition.
+- Ensure your Union-Find state is fully picklable to support Bytewax's SQLite recovery.
+
+## Acceptance Criteria
+- Project path: `/home/user/graph_pipeline`
+- Ensure the script is executed and the artifacts exist.
+- Output artifact: `/home/user/graph_pipeline/output_events_${run-id}.jsonl`
+- The output file must contain exactly one JSON object per line, corresponding to the input edges in order.
+- The output must correctly reflect the Union-Find logic, accurately reporting `merged` or `already_connected` and the correct component sizes.
+
+
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached

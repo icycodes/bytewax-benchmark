@@ -1,0 +1,50 @@
+{
+    "reportFormat": "CTRF",
+    "specVersion": "0.0.0",
+    "timestamp": "2026-06-15T09:25:27.110794+00:00",
+    "generatedBy": "pytest",
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "7.4.4"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1781515526703,
+            "stop": 1781515527110
+        },
+        "environment": {
+            "buildName": "Pytest JSON CTRF Report",
+            "buildNumber": "000",
+            "buildUrl": "https://ctrf.io"
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_pipeline_execution",
+                "status": "passed",
+                "duration": 368,
+                "start": 1781515526721,
+                "stop": 1781515527089,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_anomalies_output",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 21,
+                "start": 1781515527089,
+                "stop": 1781515527110,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_anomalies_output():\n        \"\"\"Verify that the anomalies were correctly identified and written to the output file.\"\"\"\n        assert os.path.exists(ANOMALIES_FILE), f\"Output file {ANOMALIES_FILE} was not created.\"\n    \n        anomalies = []\n        with open(ANOMALIES_FILE, \"r\") as f:\n            for line in f:\n                if line.strip():\n                    anomalies.append(json.loads(line))\n    \n>       assert len(anomalies) > 0, \"No anomalies were detected in the output.\"\nE       AssertionError: No anomalies were detected in the output.\nE       assert 0 > 0\nE        +  where 0 = len([])\n\ntests/test_final_state.py:75: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

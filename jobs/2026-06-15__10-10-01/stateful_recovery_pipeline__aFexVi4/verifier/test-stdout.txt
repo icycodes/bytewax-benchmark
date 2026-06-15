@@ -1,0 +1,63 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /tests
+plugins: json-ctrf-0.5.2
+collected 3 items
+
+tests/test_final_state.py .FF                                            [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_first_window_results ___________________________
+
+    def test_first_window_results():
+        """Verify the first window (00:00:00 to 00:01:00)."""
+        records = []
+        with open(OUTPUT_FILE, "r") as f:
+            for line in f:
+                if line.strip():
+                    records.append(json.loads(line))
+    
+        # Find the first window record
+        first_window = None
+        for r in records:
+            if r.get("window_start") == "2026-01-01T00:00:00Z" and r.get("window_end") == "2026-01-01T00:01:00Z":
+                first_window = r
+                break
+    
+        assert first_window is not None, "First window (00:00:00 to 00:01:00) results not found in output."
+        assert first_window.get("sensor_id") == "S1", f"Expected sensor_id 'S1', got {first_window.get('sensor_id')}"
+>       assert first_window.get("mean") == 20.0, f"Expected mean 20.0, got {first_window.get('mean')}"
+E       AssertionError: Expected mean 20.0, got 30.0
+E       assert 30.0 == 20.0
+E        +  where 30.0 = <built-in method get of dict object at 0x7f4a34618540>('mean')
+E        +    where <built-in method get of dict object at 0x7f4a34618540> = {'mean': 30.0, 'sensor_id': 'S1', 'stddev': 0.0, 'window_end': '2026-01-01T00:01:00Z', ...}.get
+
+tests/test_final_state.py:73: AssertionError
+__________________________ test_second_window_results __________________________
+
+    def test_second_window_results():
+        """Verify the second window (00:00:30 to 00:01:30)."""
+        records = []
+        with open(OUTPUT_FILE, "r") as f:
+            for line in f:
+                if line.strip():
+                    records.append(json.loads(line))
+    
+        # Find the second window record
+        second_window = None
+        for r in records:
+            if r.get("window_start") == "2026-01-01T00:00:30Z" and r.get("window_end") == "2026-01-01T00:01:30Z":
+                second_window = r
+                break
+    
+>       assert second_window is not None, "Second window (00:00:30 to 00:01:30) results not found in output."
+E       AssertionError: Second window (00:00:30 to 00:01:30) results not found in output.
+E       assert None is not None
+
+tests/test_final_state.py:94: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_output_file_exists
+FAILED tests/test_final_state.py::test_first_window_results - AssertionError:...
+FAILED tests/test_final_state.py::test_second_window_results - AssertionError...
+========================= 2 failed, 1 passed in 0.42s ==========================
