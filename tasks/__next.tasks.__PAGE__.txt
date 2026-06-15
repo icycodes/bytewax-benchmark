@@ -1,5 +1,195 @@
 1:"$Sreact.fragment"
-2:I[75049,["/bytewax-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/bytewax-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"buildId":"MLkmaqNtOggoE3IkkCC8g","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-background text-foreground font-sans selection:bg-primary/20","children":[["$","div",null,{"className":"fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 dark:opacity-40"}],["$","div",null,{"className":"container mx-auto px-4 sm:px-8 lg:px-12 py-8 max-w-screen-2xl h-[100dvh] flex flex-col overflow-hidden","children":[["$","div",null,{"className":"mb-6 space-y-4 shrink-0","children":[["$","div",null,{"className":"flex items-center gap-4","children":["$","a",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-foreground transition-colors","children":"← Back to Leaderboard"}]}],["$","div",null,{"children":["$","h1",null,{"className":"text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/50","children":"Task"}]}]]}],["$","div",null,{"className":"relative overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card/90 to-background/90 px-5 pb-10 pt-6 text-center shadow-[0_0_0_1px_hsl(var(--primary)/0.18),0_28px_72px_-32px_hsl(var(--foreground)/0.45)] backdrop-blur-sm sm:px-8 sm:pb-14 sm:pt-8","children":[["$","div",null,{"className":"pointer-events-none absolute -right-16 -top-16 h-36 w-36 rounded-full bg-primary/20 blur-3xl sm:-right-14 sm:-top-14 sm:h-40 sm:w-40"}],["$","div",null,{"className":"pointer-events-none absolute -left-20 bottom-0 h-32 w-32 rounded-full bg-foreground/10 blur-3xl sm:h-36 sm:w-36"}],["$","div",null,{"className":"relative mx-auto mb-8 inline-flex items-center rounded-full border border-primary/40 bg-primary/15 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-foreground sm:text-sm sm:tracking-[0.16em]","children":"⏳ PIPELINE PENDING REVIEW"}],["$","p",null,{"className":"relative mx-auto max-w-2xl px-4 text-center text-lg font-semibold tracking-wide text-foreground sm:px-5 sm:text-xl","children":[0," sample cases generated — pending review"]}],["$","p",null,{"className":"relative mx-auto mt-2 max-w-2xl px-4 text-left text-sm leading-relaxed text-muted-foreground sm:px-5","children":"Your sample cases are ready. Before moving forward, we do a quick review together to make sure everything looks right and aligns with real-world usage."}],["$","div",null,{"className":"relative mx-auto mt-8 max-w-2xl rounded-xl bg-primary/10 px-4 py-4 text-left sm:px-5","children":[["$","p",null,{"className":"text-base font-semibold text-foreground sm:text-lg text-center","children":"Next step: join Slack for review"}],["$","p",null,{"className":"mt-1 text-sm leading-relaxed text-muted-foreground","children":"We've sent you a Slack invitation to your registered email with Zealt. Please join and we'll walk through the next step together."}],["$","p",null,{"className":"mt-3 text-xs text-muted-foreground","children":["If you don't see it, just reach out at"," ",["$","a",null,{"href":"mailto:zealtdev@tabbyml.com","className":"font-normal text-foreground underline decoration-primary/60 underline-offset-4 hover:text-primary transition-colors","children":"zealtdev@tabbyml.com"}],"."]}]]}]]}]]}]]}],[["$","script","script-0",{"src":"/bytewax-benchmark/_next/static/chunks/6792cdcfbcbb7cc3.js","async":true}],["$","script","script-1",{"src":"/bytewax-benchmark/_next/static/chunks/c4daf028cb2bd20d.js","async":true}]],["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
-4:null
+2:"$Sreact.suspense"
+3:I[42654,["/bytewax-benchmark/_next/static/chunks/babff0e7418ab052.js","/bytewax-benchmark/_next/static/chunks/3ecbb78a8ff87549.js","/bytewax-benchmark/_next/static/chunks/6792cdcfbcbb7cc3.js","/bytewax-benchmark/_next/static/chunks/c4daf028cb2bd20d.js"],"TasksPageClient"]
+d:I[75049,["/bytewax-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/bytewax-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"OutletBoundary"]
+4:Ta1f,# Bytewax Stateful Deduplication
+
+## Background
+Bytewax is a Python stateful stream processing framework. In many streaming applications, you receive duplicate events that need to be filtered out. In this task, you will use Bytewax's stateful processing capabilities to deduplicate events over a sliding time window.
+
+## Requirements
+- Create a Bytewax dataflow in `run.py` that reads JSON objects from `input.jsonl`.
+- Each JSON object has the following format: `{"user_id": "u1", "event_id": "e1", "timestamp": "2023-01-01T12:00:00Z"}`.
+- The dataflow must group events by `user_id`.
+- Implement a stateful deduplication logic using Bytewax's `stateful` operator and `StatefulLogic`.
+- An event should be emitted to the downstream only if its `event_id` has not been seen for the same `user_id` within the last 10 seconds (based on the event's `timestamp`).
+- If the same `event_id` arrives within 10 seconds of the previous occurrence (inclusive of exactly 10 seconds, meaning `event_timestamp <= previous_timestamp + 10s`), it should be dropped. If it arrives strictly after 10 seconds, it should be emitted and the 10-second window restarts for that `event_id`.
+- The state must be cleaned up dynamically: any `event_id` that is older than 10 seconds from the *current event's timestamp* should be removed from the state to prevent memory leaks.
+- The deduplicated events must be written as JSON strings to `output.jsonl`.
+
+## Implementation Hints
+- Use `bytewax.connectors.files.FileSource` and `FileSink` (or `DirSink` depending on Bytewax 0.21 API) to read and write files, or write a custom input/output logic if needed.
+- Parse the JSON strings into Python dictionaries and parse the ISO 8601 timestamps into `datetime` objects.
+- To use the `stateful` operator, map your stream into a keyed stream: `(user_id, event_dict)`.
+- Create a class inheriting from `bytewax.operators.StatefulLogic`. In the `on_item` method, implement the deduplication and state cleanup logic.
+- The state should map `event_id` to the timestamp of its last emitted occurrence.
+- Format the output back to JSON strings before writing to the sink.
+- Execute the dataflow using `bytewax.testing.run_main` or the `bytewax.run` CLI.
+
+## Acceptance Criteria
+- Project path: /home/user/myproject
+- Command: python3 run.py
+- Input file: `/home/user/myproject/input.jsonl` (provided before running the command)
+- Output file: `/home/user/myproject/output.jsonl`
+- The output file must contain only the deduplicated events, in the same relative order as the input, formatted as valid JSON strings (one per line).
+
+5:T5fd,# Bytewax Stateful Moving Average
+
+## Background
+Build a stateful stream processing pipeline using Bytewax that computes the moving average of sensor temperature readings.
+
+## Requirements
+- Create a Bytewax dataflow named `flow` in `pipeline.py`.
+- The dataflow should read sensor readings from `input.csv` in the current directory.
+- Compute the moving average of the last 3 temperature readings for each distinct sensor ID.
+- If a sensor has fewer than 3 readings so far, compute the average of the available readings.
+- The pipeline must use Bytewax's stateful processing capabilities.
+- Write the output to `output.csv` in the current directory.
+
+## Implementation Hints
+- Run the dataflow using `python -m bytewax.run pipeline:flow`.
+- Use a custom stateful logic function with `op.stateful_map`.
+- Ensure keys are strings.
+- Return a new state object (do not mutate the state in-place) to ensure compatibility with recovery snapshots.
+- Use standard Python file I/O or Bytewax connectors for reading and writing CSV lines.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax-task
+- Command: python -m bytewax.run pipeline:flow
+- Input: `input.csv` with lines formatted as `sensor_id,temperature` (e.g., `s1,20.5`).
+- Output: The pipeline must create `output.csv` with lines formatted as `sensor_id,moving_average` (e.g., `s1,20.50`).
+- The moving average must be a float rounded to 2 decimal places.
+- The output file must contain exactly one line per input line, representing the moving average at that point in time.
+6:T782,# Real-Time Apdex Score Calculation with Bytewax
+
+## Background
+Calculate the Application Performance Index (Apdex) score in real-time for different services using Bytewax. The Apdex score is a standard method for reporting and comparing the performance of software applications in computing.
+
+## Requirements
+- Build a Bytewax dataflow that reads JSON lines from `input.jsonl`.
+- Each input line contains: `timestamp` (ISO 8601 string), `service` (string), and `response_time_ms` (integer).
+- Calculate the Apdex score per `service` using a **10-second tumbling window** based on the event time (`timestamp`).
+- Apdex Threshold (`T`) is **500ms**.
+  - **Satisfied**: `response_time_ms <= 500`
+  - **Tolerating**: `500 < response_time_ms <= 2000`
+  - **Frustrated**: `response_time_ms > 2000`
+- Apdex formula: `(Satisfied Count + (Tolerating Count / 2)) / Total Count`.
+- Write the results to `output.jsonl`.
+- Output JSON format must include `window_start` (ISO 8601 string), `service`, and `apdex_score` (float, rounded to 2 decimal places).
+
+## Implementation Hints
+- Use Bytewax's windowing operators (e.g., `fold_window` or `collect_window`) to group and aggregate data by service and time window.
+- Configure an event clock to use the `timestamp` field from the input data.
+- Use a tumbling windower with a length of 10 seconds.
+- Ensure the dataflow can be executed directly as a Python script.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax-apdex
+- Command: `python apdex_flow.py`
+- The script must read from `input.jsonl` and write to `output.jsonl`.
+- Expected input format:
+  ```json
+  {"timestamp": "2023-10-01T10:00:00Z", "service": "auth", "response_time_ms": 200}
+  ```
+- Expected output format:
+  ```json
+  {"window_start": "2023-10-01T10:00:00Z", "service": "auth", "apdex_score": 1.0}
+  ```
+- The output must accurately reflect the Apdex score for each service within each 10-second window.
+
+7:T7a3,# Sessionization of User Events with Bytewax
+
+## Background
+Sessionization is a common stream processing task where user events are grouped into sessions based on inactivity. Bytewax provides windowing operators to handle this dynamically.
+
+## Requirements
+Create a Bytewax dataflow in `run.py` that reads user events from a JSON lines file, groups them into session windows based on event time, and writes the summarized sessions to an output JSON lines file.
+
+- Read events from `user_events.jsonl`.
+- Group events by `user_id`.
+- Use a session window with a 30-minute inactivity gap.
+- Use event time for the clock.
+- For each session, calculate the total number of events, the start time (timestamp of the first event in the session), and the end time (timestamp of the last event in the session).
+- Write the results to `sessions.jsonl`.
+
+## Implementation Hints
+- Parse the input JSON lines to extract the `user_id` as the key and the event payload as the value.
+- Use Bytewax's `EventClock` and `SessionWindower`.
+- Use a windowing operator like `collect_window` to gather events in each session, then map the result to calculate the required metrics.
+- Ensure timestamps are parsed into `datetime` objects for the clock and formatted back to ISO 8601 strings for the output.
+
+## Acceptance Criteria
+- Project path: /home/user/bytewax-sessionization
+- Command: `python run.py`
+- The script must read from `user_events.jsonl` and write to `sessions.jsonl` in the same directory.
+- `user_events.jsonl` contains JSON objects with `user_id` (string), `event_type` (string), and `timestamp` (ISO 8601 string).
+- `sessions.jsonl` must contain exactly one JSON object per session with the following format:
+  ```json
+  {
+    "user_id": "<user_id>",
+    "session_start": "<iso_8601_string>",
+    "session_end": "<iso_8601_string>",
+    "event_count": <integer>
+  }
+  ```
+- The output must correctly reflect 30-minute session gaps based on the event time.
+
+8:T80a,# Bytewax Sliding Window Outlier Detector with Recovery
+
+## Background
+Build a fault-tolerant Bytewax (v0.21.1) dataflow to process sensor temperatures, calculate sliding-window statistics, and ensure state is picklable for SQLite-based recovery.
+
+## Requirements
+- Read JSON lines from `input.jsonl` containing `sensor_id`, `time` (ISO8601 string), and `temp` (float).
+- Process the stream using event-time based sliding windows.
+- Compute the mean and population standard deviation of the temperatures for each window per sensor.
+- The state used in the windowing logic must be fully picklable to support Bytewax's SQLite recovery mechanism.
+- Output the results as JSON lines to `output.jsonl`.
+
+## Implementation Hints
+- Keys for stateful operators must be strings.
+- Use `EventClock` parsing the `time` field into a timezone-aware `datetime` object (UTC).
+- Use `SlidingWindower` with a length of 60 seconds and an offset/step of 30 seconds. Align to `2026-01-01T00:00:00Z`.
+- Implement `builder`, `folder`, and `merger` for `win.fold_window` to accumulate temperature values.
+- Ensure all accumulator state structures are pure Python objects (no unpicklable types, like lambdas or unpicklable custom classes) to survive recovery snapshots.
+- Map the window output to the required JSON format and write to `output.jsonl`.
+
+## Acceptance Criteria
+- Project path: `/home/user/myproject`
+- Command: `python -m bytewax.run pipeline:flow -r ./recovery_dir -s 1 -b 0`
+- Input format (`input.jsonl`): `{"sensor_id": "S1", "time": "2026-01-01T00:00:15Z", "temp": 20.0}`
+- Output format (`output.jsonl`): Each line must be a JSON object with keys: `sensor_id` (string), `window_start` (ISO8601 string in UTC, e.g., `2026-01-01T00:00:00Z`), `window_end` (ISO8601 string in UTC), `mean` (float), and `stddev` (float, population standard deviation). The output stream should be formatted properly before writing.
+- The pipeline must execute successfully with recovery enabled (`-r ./recovery_dir`), meaning the state must be successfully pickled during snapshots.
+
+9:T79a,# Streaming Connected Components with Bytewax
+
+## Background
+You are building a real-time graph analytics pipeline using Bytewax (v0.21.1). The pipeline processes a stream of new connections (edges) between nodes and dynamically maintains the connected components (communities) of the graph.
+
+## Requirements
+- Create a Bytewax dataflow in `pipeline.py`.
+- **Input**: Read edges from `input_edges.jsonl`. Each line is a JSON object: `{"u": "node1", "v": "node2"}`.
+- **Stateful Processing**: Maintain a Union-Find (Disjoint Set) data structure to track connected components. Since Union-Find requires a global view, ensure all edges are routed to a single stateful partition.
+- **Output Logic**: For each edge `(u, v)`:
+  - If `u` and `v` are already in the same component, emit: `{"u": u, "v": v, "status": "already_connected", "component_size": <size of the component>}`.
+  - If `u` and `v` are in different components, merge them and emit: `{"u": u, "v": v, "status": "merged", "new_component_size": <size of the new merged component>}`.
+- **Sink**: Write the emitted JSON objects to `output_events_${run-id}.jsonl`.
+- **Execution**: The pipeline must be executable via the Bytewax CLI with SQLite recovery enabled.
+
+## Implementation Hints
+- Read the `ZEALT_RUN_ID` environment variable to construct the output filename.
+- Use a constant key to route all edges to a single `stateful_map` partition.
+- Ensure your Union-Find state is fully picklable to support Bytewax's SQLite recovery.
+
+## Acceptance Criteria
+- Project path: `/home/user/graph_pipeline`
+- Ensure the script is executed and the artifacts exist.
+- Output artifact: `/home/user/graph_pipeline/output_events_${run-id}.jsonl`
+- The output file must contain exactly one JSON object per line, corresponding to the input edges in order.
+- The output must correctly reflect the Union-Find logic, accurately reporting `merged` or `already_connected` and the correct component sizes.
+
+0:{"buildId":"lrJDCmN2HDu1HK4NK24Us","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-background text-foreground font-sans selection:bg-primary/20","children":[["$","div",null,{"className":"fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 dark:opacity-40"}],["$","$2",null,{"fallback":["$","div",null,{"className":"container mx-auto py-8 text-center","children":"Loading tasks..."}],"children":["$","$L3",null,{"tasksData":[{"taskName":"bytewax_stateful_dedup_window","instruction":"$4","trials":[{"job_name":"2026-06-15__08-59-13","trial_name":"bytewax_stateful_dedup_window__7xjG2xq","model":"gemini-3.5-flash","rawModel":"google/gemini-3.5-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":272.457,"latency_breakdown":{"env_setup":32.405,"agent_setup":12.461,"agent_exec":212.925,"verifier":1.269},"taskName":"bytewax_stateful_dedup_window","exec_duration":212.925},{"job_name":"2026-06-15__09-15-37","trial_name":"bytewax_stateful_dedup_window__BmBivfL","model":"claude-4-6-sonnet","rawModel":"anthropic/claude-4-6-sonnet","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":166.665,"latency_breakdown":{"env_setup":2.616,"agent_setup":11.745,"agent_exec":137.501,"verifier":1.084},"taskName":"bytewax_stateful_dedup_window","exec_duration":137.501},{"job_name":"2026-06-15__09-28-07","trial_name":"bytewax_stateful_dedup_window__tSTyqRk","model":"gemini-3.1-pro","rawModel":"google/gemini-3.1-pro","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":339.088,"latency_breakdown":{"env_setup":2.549,"agent_setup":11.687,"agent_exec":310.642,"verifier":1.105},"taskName":"bytewax_stateful_dedup_window","exec_duration":310.642},{"job_name":"2026-06-15__09-39-18","trial_name":"bytewax_stateful_dedup_window__Sacdojp","model":"glm-5.1","rawModel":"zai/glm-5.1","agent":"Pochi","passed":false,"reward":0,"error":true,"latency_sec":632.653,"latency_breakdown":{"env_setup":2.631,"agent_setup":12.898,"agent_exec":600.248,"verifier":1.489},"taskName":"bytewax_stateful_dedup_window","exec_duration":600.248},{"job_name":"2026-06-15__10-10-01","trial_name":"bytewax_stateful_dedup_window__iqJXdu2","model":"deepseek-4-pro","rawModel":"deepseek/deepseek-4-pro","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":496.648,"latency_breakdown":{"env_setup":2.616,"agent_setup":12.908,"agent_exec":466.556,"verifier":1.139},"taskName":"bytewax_stateful_dedup_window","exec_duration":466.556}]},{"taskName":"bytewax_stateful_moving_average","instruction":"$5","trials":[{"job_name":"2026-06-15__08-59-13","trial_name":"bytewax_stateful_moving_average__ZtFigLi","model":"gemini-3.5-flash","rawModel":"google/gemini-3.5-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":288.386,"latency_breakdown":{"env_setup":2.652,"agent_setup":12.343,"agent_exec":257.718,"verifier":1.148},"taskName":"bytewax_stateful_moving_average","exec_duration":257.718},{"job_name":"2026-06-15__09-15-37","trial_name":"bytewax_stateful_moving_average__8uXTc3k","model":"claude-4-6-sonnet","rawModel":"anthropic/claude-4-6-sonnet","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":140.489,"latency_breakdown":{"env_setup":2.606,"agent_setup":12.091,"agent_exec":111.227,"verifier":1.108},"taskName":"bytewax_stateful_moving_average","exec_duration":111.227},{"job_name":"2026-06-15__09-28-07","trial_name":"bytewax_stateful_moving_average__SfLShv2","model":"gemini-3.1-pro","rawModel":"google/gemini-3.1-pro","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":182.85,"latency_breakdown":{"env_setup":2.649,"agent_setup":13.001,"agent_exec":152.078,"verifier":1.203},"taskName":"bytewax_stateful_moving_average","exec_duration":152.078},{"job_name":"2026-06-15__09-39-18","trial_name":"bytewax_stateful_moving_average__vYBMdZj","model":"glm-5.1","rawModel":"zai/glm-5.1","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":295.116,"latency_breakdown":{"env_setup":2.674,"agent_setup":11.694,"agent_exec":266.324,"verifier":1.125},"taskName":"bytewax_stateful_moving_average","exec_duration":266.324},{"job_name":"2026-06-15__10-10-01","trial_name":"bytewax_stateful_moving_average__r2EUKRw","model":"deepseek-4-pro","rawModel":"deepseek/deepseek-4-pro","agent":"Pochi","passed":true,"reward":1,"error":true,"latency_sec":629.509,"latency_breakdown":{"env_setup":2.74,"agent_setup":12.557,"agent_exec":600.207,"verifier":1.042},"taskName":"bytewax_stateful_moving_average","exec_duration":600.207}]},{"taskName":"real_time_apdex_score","instruction":"$6","trials":[{"job_name":"2026-06-15__08-59-13","trial_name":"real_time_apdex_score__sPinCyx","model":"gemini-3.5-flash","rawModel":"google/gemini-3.5-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":332.103,"latency_breakdown":{"env_setup":4.975,"agent_setup":20.407,"agent_exec":284.484,"verifier":1.402},"taskName":"real_time_apdex_score","exec_duration":284.484},{"job_name":"2026-06-15__09-15-37","trial_name":"real_time_apdex_score__aoPWC53","model":"claude-4-6-sonnet","rawModel":"anthropic/claude-4-6-sonnet","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":224.751,"latency_breakdown":{"env_setup":2.574,"agent_setup":11.947,"agent_exec":195.493,"verifier":1.073},"taskName":"real_time_apdex_score","exec_duration":195.493},{"job_name":"2026-06-15__09-28-07","trial_name":"real_time_apdex_score__Td3HJ2J","model":"gemini-3.1-pro","rawModel":"google/gemini-3.1-pro","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":186.911,"latency_breakdown":{"env_setup":2.784,"agent_setup":11.997,"agent_exec":156.083,"verifier":1.361},"taskName":"real_time_apdex_score","exec_duration":156.083},{"job_name":"2026-06-15__09-39-18","trial_name":"real_time_apdex_score__k2BEMBz","model":"glm-5.1","rawModel":"zai/glm-5.1","agent":"Pochi","passed":false,"reward":0,"error":true,"latency_sec":629.76,"latency_breakdown":{"env_setup":2.606,"agent_setup":11.83,"agent_exec":600.209,"verifier":0.945},"taskName":"real_time_apdex_score","exec_duration":600.209},{"job_name":"2026-06-15__10-10-01","trial_name":"real_time_apdex_score__4CyThaK","model":"deepseek-4-pro","rawModel":"deepseek/deepseek-4-pro","agent":"Pochi","passed":false,"reward":0,"error":true,"latency_sec":631.061,"latency_breakdown":{"env_setup":3.003,"agent_setup":13.1,"agent_exec":600.204,"verifier":1.118},"taskName":"real_time_apdex_score","exec_duration":600.204}]},{"taskName":"sessionization_of_user_events","instruction":"$7","trials":[{"job_name":"2026-06-15__08-59-13","trial_name":"sessionization_of_user_events__hVy67vw","model":"gemini-3.5-flash","rawModel":"google/gemini-3.5-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":212.713,"latency_breakdown":{"env_setup":4.983,"agent_setup":22.126,"agent_exec":171.293,"verifier":1.149},"taskName":"sessionization_of_user_events","exec_duration":171.293},{"job_name":"2026-06-15__09-15-37","trial_name":"sessionization_of_user_events__WhiwkmR","model":"claude-4-6-sonnet","rawModel":"anthropic/claude-4-6-sonnet","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":155.052,"latency_breakdown":{"env_setup":3.151,"agent_setup":12.737,"agent_exec":124.286,"verifier":1.116},"taskName":"sessionization_of_user_events","exec_duration":124.286},{"job_name":"2026-06-15__09-28-07","trial_name":"sessionization_of_user_events__7HBqp3u","model":"gemini-3.1-pro","rawModel":"google/gemini-3.1-pro","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":176.176,"latency_breakdown":{"env_setup":2.594,"agent_setup":12.674,"agent_exec":145.752,"verifier":1.291},"taskName":"sessionization_of_user_events","exec_duration":145.752},{"job_name":"2026-06-15__09-39-18","trial_name":"sessionization_of_user_events__wkrYNg2","model":"glm-5.1","rawModel":"zai/glm-5.1","agent":"Pochi","passed":false,"reward":0,"error":true,"latency_sec":629.362,"latency_breakdown":{"env_setup":2.58,"agent_setup":11.967,"agent_exec":600.224,"verifier":0.93},"taskName":"sessionization_of_user_events","exec_duration":600.224},{"job_name":"2026-06-15__10-10-01","trial_name":"sessionization_of_user_events__mxg8Fw9","model":"deepseek-4-pro","rawModel":"deepseek/deepseek-4-pro","agent":"Pochi","passed":false,"reward":0,"error":true,"latency_sec":630.165,"latency_breakdown":{"env_setup":2.712,"agent_setup":12.203,"agent_exec":600.228,"verifier":1.185},"taskName":"sessionization_of_user_events","exec_duration":600.228}]},{"taskName":"stateful_recovery_pipeline","instruction":"$8","trials":[{"job_name":"2026-06-15__08-59-13","trial_name":"stateful_recovery_pipeline__LchtqZe","model":"gemini-3.5-flash","rawModel":"google/gemini-3.5-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":272.508,"latency_breakdown":{"env_setup":2.704,"agent_setup":12.078,"agent_exec":237.765,"verifier":1.347},"taskName":"stateful_recovery_pipeline","exec_duration":237.765},{"job_name":"2026-06-15__09-15-37","trial_name":"stateful_recovery_pipeline__56FCewU","model":"claude-4-6-sonnet","rawModel":"anthropic/claude-4-6-sonnet","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":245.847,"latency_breakdown":{"env_setup":2.61,"agent_setup":11.733,"agent_exec":216.39,"verifier":1.331},"taskName":"stateful_recovery_pipeline","exec_duration":216.39},{"job_name":"2026-06-15__09-28-07","trial_name":"stateful_recovery_pipeline__5QsYABD","model":"gemini-3.1-pro","rawModel":"google/gemini-3.1-pro","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":311.453,"latency_breakdown":{"env_setup":2.818,"agent_setup":12.566,"agent_exec":278.929,"verifier":2},"taskName":"stateful_recovery_pipeline","exec_duration":278.929},{"job_name":"2026-06-15__09-39-18","trial_name":"stateful_recovery_pipeline__NV4AtZF","model":"glm-5.1","rawModel":"zai/glm-5.1","agent":"Pochi","passed":false,"reward":0,"error":true,"latency_sec":630.815,"latency_breakdown":{"env_setup":2.636,"agent_setup":12.333,"agent_exec":600.224,"verifier":1.344},"taskName":"stateful_recovery_pipeline","exec_duration":600.224},{"job_name":"2026-06-15__10-10-01","trial_name":"stateful_recovery_pipeline__aFexVi4","model":"deepseek-4-pro","rawModel":"deepseek/deepseek-4-pro","agent":"Pochi","passed":false,"reward":0,"error":true,"latency_sec":629.086,"latency_breakdown":{"env_setup":2.556,"agent_setup":12.018,"agent_exec":600.218,"verifier":1.246},"taskName":"stateful_recovery_pipeline","exec_duration":600.218}]},{"taskName":"streaming_connected_components","instruction":"$9","trials":[{"job_name":"2026-06-15__08-59-13","trial_name":"streaming_connected_components__6sisPbS","model":"gemini-3.5-flash","rawModel":"google/gemini-3.5-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":221.677,"latency_breakdown":{"env_setup":3.124,"agent_setup":11.88,"agent_exec":192.578,"verifier":0.913},"taskName":"streaming_connected_components","exec_duration":192.578},{"job_name":"2026-06-15__09-15-37","trial_name":"streaming_connected_components__cXgxFnu","model":"claude-4-6-sonnet","rawModel":"anthropic/claude-4-6-sonnet","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":147.248,"latency_breakdown":{"env_setup":2.661,"agent_setup":12.355,"agent_exec":117.383,"verifier":1.321},"taskName":"streaming_connected_components","exec_duration":117.383},{"job_name":"2026-06-15__09-28-07","trial_name":"streaming_connected_components__s4cJA7w","model":"gemini-3.1-pro","rawModel":"google/gemini-3.1-pro","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":187.149,"latency_breakdown":{"env_setup":2.526,"agent_setup":11.718,"agent_exec":155.969,"verifier":1.654},"taskName":"streaming_connected_components","exec_duration":155.969},{"job_name":"2026-06-15__09-39-18","trial_name":"streaming_connected_components__3WxfPg3","model":"glm-5.1","rawModel":"zai/glm-5.1","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":353.961,"latency_breakdown":{"env_setup":2.553,"agent_setup":12.29,"agent_exec":325.106,"verifier":0.934},"taskName":"streaming_connected_components","exec_duration":325.106},{"job_name":"2026-06-15__10-10-01","trial_name":"streaming_connected_components__EHZkFx8","model":"deepseek-4-pro","rawModel":"deepseek/deepseek-4-pro","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":398.815,"latency_breakdown":{"env_setup":2.567,"agent_setup":11.647,"agent_exec":370.767,"verifier":0.883},"taskName":"streaming_connected_components","exec_duration":370.767}]}]}]}]]}],["$La","$Lb"],"$Lc"]}],"loading":null,"isPartial":false}
+a:["$","script","script-0",{"src":"/bytewax-benchmark/_next/static/chunks/6792cdcfbcbb7cc3.js","async":true}]
+b:["$","script","script-1",{"src":"/bytewax-benchmark/_next/static/chunks/c4daf028cb2bd20d.js","async":true}]
+c:["$","$Ld",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+e:null
